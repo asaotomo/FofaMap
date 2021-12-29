@@ -58,18 +58,21 @@ end_page = 2
 ```
 $ python3 fofamap.py -q title="Apache APISIX Dashboard"
 ```
-![image-20211229160059142](/Users/qiuan/Library/Application Support/typora-user-images/image-20211229160059142.png)
+<img width="803" alt="image" src="https://user-images.githubusercontent.com/67818638/147641693-0ea34c53-2a44-4871-9831-d4f98906de27.png">
+
 
 **2.-o 自定义输出文件名[默认为fofa.xlsx]**
 
 ```
 $ python3 fofamap.py -q title="Apache APISIX Dashboard" -o aaa.xlsx
 ```
-![image-20211229160446094](/Users/qiuan/Library/Application Support/typora-user-images/image-20211229160446094.png)
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/67818638/147641734-2e756c4f-f583-4c06-88c3-95cfdaa273b5.png">
+
 
 **输出的aaa.xlsx内容如下：**
 
-![image-20211229160614948](/Users/qiuan/Library/Application Support/typora-user-images/image-20211229160614948.png)
+<img width="961" alt="image" src="https://user-images.githubusercontent.com/67818638/147641745-d719573f-7ae7-4f98-97e0-537083de8fa5.png">
+
 
 **3.-s 输出扫描格式** 
 
@@ -78,7 +81,8 @@ $ python3 fofamap.py -q title="Apache APISIX Dashboard" -o aaa.xlsx
 ```
 $ python3 searchmap.py -q title="Apache APISIX Dashboard" -s  
 ```
-![image-20211229161050702](/Users/qiuan/Library/Application Support/typora-user-images/image-20211229161050702.png)
+<img width="1122" alt="image" src="https://user-images.githubusercontent.com/67818638/147641769-16db687b-1ee4-47f5-a319-4ea3fb1993c8.png">
+
 
 ****************************
 
@@ -91,4 +95,4 @@ $ python3 searchmap.py -q title="Apache APISIX Dashboard" -s
 
 **本工具由Hx0战队开发维护**
 
-[![iShot2021-12-23 15 42 05](https://user-images.githubusercontent.com/67818638/147206433-402f9d35-7187-4417-b60c-afb0e8ec4686.png)](https://user-images.githubusercontent.com/67818638/147206433-402f9d35-7187-4417-b60c-afb0e8ec4686.png)
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
