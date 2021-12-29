@@ -1,6 +1,6 @@
 **FofaMap_V1.0.0** 
 
-**FofaMap是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格**
+**FofaMap是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格。**
 
 **一.安装说明**
 
@@ -76,7 +76,7 @@ $ python3 fofamap.py -q title="Apache APISIX Dashboard" -o aaa.xlsx
 
 **3.-s 输出扫描格式** 
 
-扫描格式，系统只会获取目标ip地址和端口号两个字段，方便大家导出到扫描器进行扫描。
+使用输出扫描格式功能时，系统只会获取目标ip地址和端口号两个字段，方便大家导出到扫描器进行扫描。
 
 ```
 $ python3 searchmap.py -q title="Apache APISIX Dashboard" -s  
