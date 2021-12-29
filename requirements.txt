@@ -1,0 +1,2 @@
+colorama==0.4.4
+XlsxWriter==3.0.2
