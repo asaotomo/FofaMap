@@ -1,4 +1,5 @@
 **FofaMap_V1.0.0** 
+![uugai com_1640828840556](https://user-images.githubusercontent.com/67818638/147715620-993c2373-3a46-4150-a94e-90efa7db3049.png)
 
 **FofaMap是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格。**
 
@@ -8,7 +9,7 @@
 
 2.首次使用请使用 **python3 -m pip install -r requirements.txt** 命令，来安装必要的外部依赖包。
 
-3.**fofa.ini**为Fofamap的配置文件，可以通过修改配置文件内容来定制化采集FOFA数据
+3.**fofa.ini**为Fofamap的配置文件，可以通过修改配置文件内容来定制化采集FOFA数据。
 
 4.在使用该工具前，请先填写用户信息**[userinfo]**中的**email**和**key**,**fofa.ini**配置文件说明如下：
 
