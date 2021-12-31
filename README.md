@@ -62,7 +62,7 @@ end_page = 2
 **1.-q 使用FOFA查询语句查询数据**
 
 ```
-$ python3 fofamap.py -q title="Apache APISIX Dashboard"
+$ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
 <img width="803" alt="image" src="https://user-images.githubusercontent.com/67818638/147641693-0ea34c53-2a44-4871-9831-d4f98906de27.png">
 
@@ -70,7 +70,7 @@ $ python3 fofamap.py -q title="Apache APISIX Dashboard"
 **2.-o 自定义输出文件名[默认为fofa.xlsx]**
 
 ```
-$ python3 fofamap.py -q title="Apache APISIX Dashboard" -o aaa.xlsx
+$ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o aaa.xlsx
 ```
 <img width="918" alt="image" src="https://user-images.githubusercontent.com/67818638/147641734-2e756c4f-f583-4c06-88c3-95cfdaa273b5.png">
 
@@ -85,7 +85,7 @@ $ python3 fofamap.py -q title="Apache APISIX Dashboard" -o aaa.xlsx
 使用输出扫描格式功能时，系统只会获取目标ip地址和端口号两个字段，方便大家导出到扫描器进行扫描。
 
 ```
-$ python3 searchmap.py -q title="Apache APISIX Dashboard" -s  
+$ python3 searchmap.py -q 'title="Apache APISIX Dashboard"' -s  
 ```
 <img width="1122" alt="image" src="https://user-images.githubusercontent.com/67818638/147641769-16db687b-1ee4-47f5-a319-4ea3fb1993c8.png">
 
