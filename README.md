@@ -64,7 +64,8 @@ end_page = 2
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
-<img width="803" alt="image" src="https://user-images.githubusercontent.com/67818638/147641693-0ea34c53-2a44-4871-9831-d4f98906de27.png">
+<img width="952" alt="image" src="https://user-images.githubusercontent.com/67818638/147813525-dccd33a1-2d6d-40a4-b12e-07accf167814.png">
+
 
 
 **2.-o 自定义输出文件名[默认为fofa.xlsx]**
@@ -77,7 +78,9 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o aaa.xlsx
 
 **输出的aaa.xlsx内容如下：**
 
-<img width="961" alt="image" src="https://user-images.githubusercontent.com/67818638/147641745-d719573f-7ae7-4f98-97e0-537083de8fa5.png">
+<img width="1180" alt="image" src="https://user-images.githubusercontent.com/67818638/147813567-4e6ffec2-efea-4d2c-afb6-7cc5463f5f8c.png">
+
+
 
 
 **3.-s 输出扫描格式** 
@@ -85,9 +88,10 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o aaa.xlsx
 使用输出扫描格式功能时，系统只会获取目标ip地址和端口号两个字段，方便大家导出到扫描器进行扫描。
 
 ```
-$ python3 searchmap.py -q 'title="Apache APISIX Dashboard"' -s  
+$ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  
 ```
-<img width="1122" alt="image" src="https://user-images.githubusercontent.com/67818638/147641769-16db687b-1ee4-47f5-a319-4ea3fb1993c8.png">
+<img width="933" alt="image" src="https://user-images.githubusercontent.com/67818638/147813655-41e4dd23-b379-433f-9324-6710f962cd76.png">
+
 
 
 ****************************
