@@ -78,7 +78,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o aaa.xlsx
 
 **输出的aaa.xlsx内容如下：**
 
-<img width="1180" alt="image" src="https://user-images.githubusercontent.com/67818638/147813567-4e6ffec2-efea-4d2c-afb6-7cc5463f5f8c.png">
+<img width="1439" alt="image" src="https://user-images.githubusercontent.com/67818638/148341308-2cd77251-b173-4ccf-b6ad-430f92015ffb.png">
 
 
 
