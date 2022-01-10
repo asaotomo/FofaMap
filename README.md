@@ -103,6 +103,6 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 *********
 
-**本工具由Hx0战队开发维护**
+**FofaMap由Hx0战队开发维护**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
