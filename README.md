@@ -1,4 +1,4 @@
-**FofaMap_V1.0.0** 
+**FofaMap_V1.0.1** 
 
 ![uugai com_1640828840556](https://user-images.githubusercontent.com/67818638/147715620-993c2373-3a46-4150-a94e-90efa7db3049.png)
 
@@ -38,11 +38,11 @@ end_page = 2
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
 
    企业会员 免费前100,000条/次
-   
+
    高级会员 免费前10000条/次
-   
+
    普通会员 免费前100条/次
-   
+
    注册用户 1F币（最多10,000条）/次 
 
 用户可以根据自己的账号类型设置对应的查询页数。
@@ -106,3 +106,13 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 **FofaMap由Hx0战队开发维护**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
+
+---
+
+**更新日志 1.0.1**
+
+[+] 优化代码逻辑,修复已经BUG。
+
+[+] 优化输出样式，命令行输出结果将以表格形式展示。
+
+[+] 已扫描模式输出结果将自动进行去重处理，并会自动将结果保存为txt文档。
