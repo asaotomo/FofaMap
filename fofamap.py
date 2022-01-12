@@ -35,8 +35,6 @@ def out_file_scan(filename, database):
     print(colorama.Fore.GREEN + "[+] 文档输出成功！文件名为：{}".format(filename))
 
 
-
-
 def out_file_excel(filename, database, scan_format):
     print(colorama.Fore.RED + "======文档输出=======")
     if scan_format:
@@ -103,9 +101,9 @@ def get_search(query_str, scan_format):
     return database, fields
 
 
-def print_result(database, fields):
+def print_result(database, fields, scan_format):
     print(colorama.Fore.RED + "======查询结果=======")
-    if fields == "ip,port":
+    if scan_format:
         scan_list = []
         for ip, port in database:
             if port == "80":
@@ -163,4 +161,4 @@ if __name__ == '__main__':
         # 输出excel文档
         out_file_excel(filename, database, scan_format)
         # 打印结果
-        print_result(database, fields)
+        print_result(database, fields, scan_format)
