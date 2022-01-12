@@ -97,14 +97,16 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 **4.通过修改配置文件，控制输出内容** 
 
-我们可以通过修改fofa.ini配置文件中的fields值来控制工具输出的顺序与字段。
+我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
 <img width="989" alt="image" src="https://user-images.githubusercontent.com/67818638/149067409-df7ca188-c06b-4ef3-89a3-95f8460a7aef.png">
+
+接着执行以下命令
 
 ```
 $ python3 fofamap.py -q 'app="discuz"'   
 ```
-输出结果就会变为协议、IP地址、端口、网站标题、ICP备案号。
+输出内容就会变为协议、IP地址、端口、网站标题、ICP备案号。
 <img width="1126" alt="image" src="https://user-images.githubusercontent.com/67818638/149067474-acfdfa54-d55a-4350-b531-607d41584b0e.png">
 
 
