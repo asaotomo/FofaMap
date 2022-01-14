@@ -75,7 +75,7 @@ end_page = 2
 ├── requirements.txt ##依赖包要求
 ```
 
-6.适配情况：目前FofaMap春节特别版以及适配了**macOS、Windows、Kali LInux、Ubuntu**等操作系统。
+7.适配情况：目前FofaMap春节特别版以及适配了**macOS、Windows、Kali LInux、Ubuntu**等操作系统。
 
 **二.使用方法**
 
