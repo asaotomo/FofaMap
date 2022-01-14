@@ -61,6 +61,14 @@ end_page = 2
 
 **1.-q 使用FOFA查询语句查询数据**
 
+**关于命令说明：** 
+
+如果用户想要使用fofa联合查询语句，例如：**app="grafana" && country="US"**。
+
+Linux和macOS用户直接使用**python3 fofamap.py -q 'app="grafana" && country="US"'**即可成功查询。
+
+Windows用户因为系统原因，需要使用**python3 fofamap.py -q "app=\\"grafana\\" && country=\\"CN\\"" -s -n**系统才可成功识别，即Windows用户需要对查询命令内部的"使用\进行转义，否则系统识别错误。
+
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
