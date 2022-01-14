@@ -194,6 +194,11 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
 
+**扫描关注战队公众号，获取最新动态**
+
+![image](https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png)
+
+
 ---
 
 **更新日志 V1.1.0 春节特别版**
@@ -206,7 +211,7 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 **更新日志 V1.0.1**
 
-[+] 优化代码逻辑,修复已经BUG。
+[+] 优化代码逻辑，修复已经BUG。
 
 [+] 优化输出样式，命令行输出结果将以表格形式展示。
 
