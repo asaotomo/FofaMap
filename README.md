@@ -1,6 +1,7 @@
 **FofaMap_V1.1.0 春节特别版【联动 Nuclei】**
 
-![image-20220114094505178](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114094505178.png)
+![image](https://user-images.githubusercontent.com/67818638/149505431-06fbc14b-ac0c-4ccb-a316-949fe08e9ee5.png)
+
 
 **[FofaMap](https://github.com/asaotomo/FofaMap)是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格或TXT扫描目标。**
 
@@ -127,15 +128,15 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 ```
 
-![image-20220114131435392](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131435392.png)
+![image](https://user-images.githubusercontent.com/67818638/149505569-a5356a33-f02a-4c44-ab52-87bab369380c.png)
 
 **FofaMap支持全功能扫描和自定义扫描两种模式**
 
-**全功能扫描：**根据提示输入“N”，对目标进行全扫描，默认内置全部PoC。
+**全功能扫描:** 根据提示输入“N”，对目标进行全扫描，默认内置全部PoC。
 
-![image-20220114131326726](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131326726.png)
+![image](https://user-images.githubusercontent.com/67818638/149505603-cbc2dc73-fbf2-4e52-923c-dc3d424a13a5.png)
 
-**自定义扫描：**根据提示输入“Y”，启动自定义扫描，通过设置过滤器对目标进行自定义扫描，只使用指定的PoC。
+**自定义扫描:** 根据提示输入“Y”，启动自定义扫描，通过设置过滤器对目标进行自定义扫描，只使用指定的PoC。
 
 **FofaMap支持三个基本过滤器来自定义扫描方式。**
 
@@ -149,17 +150,19 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 **例如：一下我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
 
-![image-20220114131230379](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131230379.png)
+![image](https://user-images.githubusercontent.com/67818638/149505639-a740076d-4e96-438b-b0e1-b54edb39547b.png)
 
 另外**FofaMap**会对扫描后的**结果**进行统计，并将结果保存在**scan_result.txt**中。
 
-![image-20220114130559904](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114130559904.png)
+![image](https://user-images.githubusercontent.com/67818638/149505663-c1988ffe-1bed-49f6-80c2-4910e614dee3.png)
 
 **scan_result.txt文件内容：**
 
-![image-20220114130828782](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114130828782.png)在获得**scan_result.txt**后系统会提取**scan_result.txt**中的**IP地址和域名**，并调用**fofa api**去查询其**其域名和备案信息**，辅助用户了解资产归属情况。
+![image](https://user-images.githubusercontent.com/67818638/149505770-582d802d-e46b-4174-8161-fe5d9dbd9ece.png)
 
-![image-20220114170530070](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114170530070.png)
+在获得**scan_result.txt**后系统会提取**scan_result.txt**中的**IP地址和域名**，并调用**fofa api**去查询其**其域名和备案信息**，辅助用户了解资产归属情况。
+
+![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
 **4.通过修改配置文件，控制输出内容** 
 
