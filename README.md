@@ -1,8 +1,12 @@
-**FofaMap_V1.0.1** 
+**FofaMap_V1.1.0 春节特别版【联动 Nuclei】**
 
-![uugai com_1640828840556](https://user-images.githubusercontent.com/67818638/147715620-993c2373-3a46-4150-a94e-90efa7db3049.png)
+![image-20220114094505178](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114094505178.png)
 
-**FofaMap是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格。**
+**[FofaMap](https://github.com/asaotomo/FofaMap)是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格或TXT扫描目标。**
+
+**[Nuclei](https://github.com/projectdiscovery/nuclei)是一款基于YAML语法模板的开发的定制化快速漏洞扫描器。它使用Go语言开发，具有很强的可配置性、可扩展性和易用性。**
+
+**本次我们将Fofamap和Nuclei进行联动，通过Fofamap查询到资产目标后，自动调用Nuclei对发现目标进行漏洞扫描，实现资产探测到漏洞扫描的全流程漏洞发掘工作，极大的提升了白帽子挖掘SRC的效率。**
 
 **一.安装说明**
 
@@ -37,13 +41,13 @@ end_page = 2
 
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
 
-   企业会员 免费前100,000条/次
+   **企业会员** 免费前100,000条/次
 
-   高级会员 免费前10000条/次
+   **高级会员** 免费前10000条/次
 
-   普通会员 免费前100条/次
+   **普通会员** 免费前100条/次
 
-   注册用户 1F币（最多10,000条）/次 
+   **注册用户** 1F币（最多10,000条）/次 
 
 用户可以根据自己的账号类型设置对应的查询页数。
 
@@ -52,22 +56,37 @@ end_page = 2
 ```
 ├── README.md ##使用说明
 ├── fofa.ini ##fofa配置文件
-├── fofa.py  ##fofa api调用类
-├── fofamap.py  ##fofamap主程序
-└── requirements.txt  ##依赖包要求
+├── fofa.py ##fofa api调用类
+├── fofamap.py ##fofamap主程序
+├── nuclei ##nuclei主程序，若nuclei主程序有更新，可去https://github.com/projectdiscovery/nuclei/releases下载替换
+│   ├── linux ##linux版主程序
+│   │   ├── nuclei_386
+│   │   ├── nuclei_amd
+│   │   ├── nuclei_arm
+│   │   └── nuclei_armv6
+│   ├── macos ##macos版主程序
+│   │   ├── nuclei_amd
+│   │   └── nuclei_arm
+│   └── windows ##windows版主程序
+│       ├── nuclei_386.exe
+│       └── nuclei_amd.exe
+├── nuclei.py ##nuclei api调用类
+├── requirements.txt ##依赖包要求
 ```
+
+6.适配情况：目前FofaMap春节特别版以及适配了**macOS、Windows、Kali LInux、Ubuntu**等操作系统。
 
 **二.使用方法**
 
 **1.-q 使用FOFA查询语句查询数据**
 
-**关于命令说明：** 
+**关于命令说明：**
 
-如果用户想要使用fofa联合查询语句，例如：app="grafana" && country="US"。
+如果用户想要使用fofa联合查询语句，例如：**app="grafana" && country="US"**。
 
-Linux和macOS用户直接使用python3 fofamap.py -q 'app="grafana" && country="US"'即可成功查询。
+Linux和macOS用户直接使用**python3 fofamap.py -q 'app="grafana" && country="US"'**即可成功查询。
 
-Windows用户因为系统原因，需要使用python3 fofamap.py -q "app=\\"grafana\\" && country=\\"US\\""系统才可成功识别，即Windows用户需要对查询命令内部的"使用\进行转义，否则系统识别错误。
+Windows用户因为系统原因，需要使用**python3 fofamap.py -q "app=\\"grafana\\" && country=\\"CN\\""**系统才可成功识别，即Windows用户需要对查询命令内部的"使用\进行转义，否则系统识别错误。
 
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
@@ -93,7 +112,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 
 **3.-s 输出扫描格式** 
 
-使用输出扫描格式功能时，系统只会获取目标ip地址和端口号两个字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便大家导出到扫描器进行扫描。
+使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  
@@ -102,6 +121,45 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
+**5.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+
+```
+python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
+```
+
+![image-20220114131435392](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131435392.png)
+
+**FofaMap支持全功能扫描和自定义扫描两种模式**
+
+**全功能扫描：**根据提示输入“N”，对目标进行全扫描，默认内置全部PoC。
+
+![image-20220114131326726](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131326726.png)
+
+**自定义扫描：**根据提示输入“Y”，启动自定义扫描，通过设置过滤器对目标进行自定义扫描，只使用指定的PoC。
+
+**FofaMap支持三个基本过滤器来自定义扫描方式。**
+
+1.标签（-tags）根据模板中可用的标签字段进行筛选。如：cev、cms、tech等
+
+2.严重级别（-severity）根据模板中可用的严重级别字段进行筛选。如：critical、high、medium等
+
+3.作者（-author）根据模板中可用的作者字段进行筛选。如：geeknik、pdteam、pikpikcu等
+
+4.自定义 （customize）用户可以根据需求使用nuclei的其它高级命令对目标进行扫描。如：-tags cve -severity critical,high -author geeknik
+
+**例如：一下我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
+
+![image-20220114131230379](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114131230379.png)
+
+另外**FofaMap**会对扫描后的**结果**进行统计，并将结果保存在**scan_result.txt**中。
+
+![image-20220114130559904](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114130559904.png)
+
+**scan_result.txt文件内容：**
+
+![image-20220114130828782](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114130828782.png)在获得**scan_result.txt**后系统会提取**scan_result.txt**中的**IP地址和域名**，并调用**fofa api**去查询其**其域名和备案信息**，辅助用户了解资产归属情况。
+
+![image-20220114170530070](/Users/qiuan/Library/Application Support/typora-user-images/image-20220114170530070.png)
 
 **4.通过修改配置文件，控制输出内容** 
 
@@ -115,9 +173,8 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 $ python3 fofamap.py -q 'app="discuz"'   
 ```
 输出内容就会变为协议、IP地址、端口、网站标题、ICP备案号。
+
 <img width="1126" alt="image" src="https://user-images.githubusercontent.com/67818638/149067474-acfdfa54-d55a-4350-b531-607d41584b0e.png">
-
-
 
 
 
@@ -136,10 +193,19 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 ---
 
-**更新日志 1.0.1**
+**更新日志 V1.1.0 春节特别版**
+
+[+] 增加与nuclei联动，用户在查询到资产后可使用nuclei进行漏洞扫描。
+
+[+] 增加扫描结果分析统计。
+
+[+] 增加对nuclei扫描出的资产进行域名查询。
+
+**更新日志 V1.0.1**
 
 [+] 优化代码逻辑,修复已经BUG。
 
 [+] 优化输出样式，命令行输出结果将以表格形式展示。
 
 [+] 扫描模式输出结果将自动进行去重处理，并会自动将结果保存为txt文档。
+
