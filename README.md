@@ -196,7 +196,7 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 **扫描关注战队公众号，获取最新动态**
 
-![image](https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png)
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
 
 
 ---
