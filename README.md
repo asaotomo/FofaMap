@@ -122,7 +122,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
-**5.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**4.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -164,7 +164,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**4.通过修改配置文件，控制输出内容** 
+**5.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
