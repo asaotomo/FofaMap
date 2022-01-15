@@ -181,6 +181,7 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 
 
+
 ****************************
 
 **本工具仅提供给安全测试人员进行安全自查使用**
@@ -198,6 +199,9 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
 
+**【知识星球】福利大放送**
+
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/148732165-e3f2c44b-7017-47c3-9a3c-d9ebcd18eae6.png">
 
 ---
 
