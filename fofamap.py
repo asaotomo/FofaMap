@@ -5,6 +5,7 @@ import fofa
 import colorama
 import xlsxwriter
 from prettytable import PrettyTable
+import time
 
 
 # 当前软件版本信息
@@ -98,6 +99,7 @@ def get_search(query_str, scan_format):
     for page in range(start_page, end_page):  # 从第1页查到第50页
         data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
         database = database + data["results"]
+        time.sleep(1.5)
     return database, fields
 
 
