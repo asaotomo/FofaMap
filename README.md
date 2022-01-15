@@ -148,7 +148,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 4.自定义 （customize）用户可以根据需求使用nuclei的其它高级命令对目标进行扫描。如：-tags cve -severity critical,high -author geeknik
 
-**例如：一下我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
+**例如：我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505639-a740076d-4e96-438b-b0e1-b54edb39547b.png)
 
