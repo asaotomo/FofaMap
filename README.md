@@ -191,20 +191,6 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 *********
 
-**FofaMap由Hx0战队开发维护**
-
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
-
-**扫描关注战队公众号，获取最新动态**
-
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
-
-**【知识星球】福利大放送**
-
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/148732165-e3f2c44b-7017-47c3-9a3c-d9ebcd18eae6.png">
-
----
-
 **更新日志 V1.1.0 春节特别版**
 
 [+] 增加与nuclei联动，用户在查询到资产后可使用nuclei进行漏洞扫描。
