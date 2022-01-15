@@ -10,6 +10,20 @@ import os
 import time
 import re
 
+
+# 当前软件版本信息
+def banner():
+    colorama.init(autoreset=True)
+    print(colorama.Fore.LIGHTGREEN_EX + """
+ _____      __       __  __     [*]联动 Nuclei           
+|  ___|__  / _| __ _|  \/  | __ _ _ __  
+| |_ / _ \| |_ / _` | |\/| |/ _` | '_ \ 
+|  _| (_) |  _| (_| | |  | | (_| | |_) |
+|_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
+                                 |_|   V1.1.0  
+#Coded By Hx0战队  Update:2022.01.14""")
+
+
 # 查询域名信息
 def search_domain(query_str, fields, no):
     start_page = 1
@@ -20,6 +34,7 @@ def search_domain(query_str, fields, no):
         data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
         database = database + data["results"]
     return database
+
 
 # 打印信息
 def print_domain():
@@ -35,7 +50,7 @@ def print_domain():
     key_list = set(key_list)
     database = []
     print(colorama.Fore.RED + "======域名查询=======")
-    print(colorama.Fore.GREEN + "[+] 本次待查询任务数为{}，预计耗时{}s".format(len(key_list),len(key_list)*1.5))
+    print(colorama.Fore.GREEN + "[+] 本次待查询任务数为{}，预计耗时{}s".format(len(key_list), len(key_list) * 1.5))
     no = 1
     for key in key_list:
         if re.search(r"(?<![\.\d])(?:\d{1,3}\.){3}\d{1,3}(?![\.\d])", key):  # 匹配IP
@@ -62,19 +77,6 @@ def print_domain():
             id += 1
     print(colorama.Fore.GREEN + '[+] 共计发现{}条域名信息'.format(id - 1))
     print(colorama.Fore.GREEN + '{}'.format(table))  # 打印查询表格
-
-
-# 当前软件版本信息
-def banner():
-    colorama.init(autoreset=True)
-    print(colorama.Fore.LIGHTGREEN_EX + """
- _____      __       __  __     [*]联动 Nuclei           
-|  ___|__  / _| __ _|  \/  | __ _ _ __  
-| |_ / _ \| |_ / _` | |\/| |/ _` | '_ \ 
-|  _| (_) |  _| (_| | |  | | (_| | |_) |
-|_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
-                                 |_|   V1.1.0  
-#Coded By Hx0战队  Update:2022.01.14""")
 
 
 # 统计关键词出现频率
@@ -241,6 +243,7 @@ def get_search(query_str, scan_format):
     for page in range(start_page, end_page):  # 从第1页查到第50页
         data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
         database = database + data["results"]
+        time.sleep(1.5)
     return database, fields
 
 
