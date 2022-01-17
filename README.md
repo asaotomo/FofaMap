@@ -17,7 +17,7 @@
 
 3.**fofa.ini**为Fofamap的配置文件，可以通过修改配置文件内容来定制化采集FOFA数据。
 
-4.在使用该工具前，请先填写用户信息**[userinfo]**中的**email**和**key**,**fofa.ini**配置文件说明如下：
+4.在使用该工具前，请先填写用户信息[userinfo]中的email和key，**fofa.ini**配置文件说明如下：
 
 ```
 [userinfo]#用户信息
@@ -75,7 +75,7 @@ end_page = 2
 ├── requirements.txt ##依赖包要求
 ```
 
-7.适配情况：目前FofaMap春节特别版以及适配了**macOS、Windows、Kali LInux、Ubuntu**等操作系统。
+7.适配情况：目前FofaMap春节特别版以及适配了**macOS、Windows、Kali Linux、Ubuntu**等操作系统。
 
 **二.使用方法**
 
@@ -151,6 +151,8 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 **例如：我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505639-a740076d-4e96-438b-b0e1-b54edb39547b.png)
+
+**更多Nuceli的用法可以参考[这里](https://blog.csdn.net/asaotomo/article/details/122395708)**
 
 另外**FofaMap**会对扫描后的**结果**进行统计，并将结果保存在**scan_result.txt**中。
 
