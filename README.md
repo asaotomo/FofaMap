@@ -92,6 +92,7 @@ Windows用户因为系统原因，需要使用python3 fofamap.py -q "app=\\"graf
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
+
 <img width="1007" alt="image" src="https://user-images.githubusercontent.com/67818638/149065065-205e1f0f-35e1-4c65-a80b-1c632f1f0f58.png">
 
 
@@ -101,6 +102,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 ```
+
 <img width="1073" alt="image" src="https://user-images.githubusercontent.com/67818638/149065219-ebaf0649-c756-44d9-a61e-c2b3414311b2.png">
 
 
@@ -110,19 +112,48 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 
 
 
+**3.-bq 批量查询数据**
 
-**3.-s 输出扫描格式** 
+FofaMap V1.1.1新版支持批量查询，用户可新建一个记事本文件，如bat.txt,
+
+然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
+
+```plain
+$ python3 fofamap.py -bq bat.txt
+```
+
+**bat.txt文件内容：**
+
+```plain
+domain="youku.com"   
+server=="Microsoft-IIS/7.0" 
+ip="211.45.30.16/24"
+icp="京ICP备10036305号"
+```
+
+![img](https://cdn.nlark.com/yuque/0/2022/png/12839102/1642591372395-0f7c1e18-2d39-400a-9258-b5c4afb587e7.png)
+
+查询完成后，系统会自动工具任务顺序为每个任务生成一个Excel版的查询结果文件。
+
+**如下：**
+
+![img](https://cdn.nlark.com/yuque/0/2022/png/12839102/1642591515080-a0220744-be8c-4030-a5ca-5ba60fa2366f.png)
+
+
+
+**4.-s 输出扫描格式** 
 
 使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  
 ```
+
 <img width="1147" alt="image" src="https://user-images.githubusercontent.com/67818638/149065853-aa8a6739-0cce-489a-a081-e3862c8f8eea.png">
 
 
 
-**4.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**5.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -166,7 +197,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**5.通过修改配置文件，控制输出内容** 
+**6.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -177,6 +208,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 ```
 $ python3 fofamap.py -q 'app="discuz"'   
 ```
+
 输出内容就会变为协议、IP地址、端口、网站标题、ICP备案号。
 
 <img width="1126" alt="image" src="https://user-images.githubusercontent.com/67818638/149067474-acfdfa54-d55a-4350-b531-607d41584b0e.png">
@@ -206,6 +238,10 @@ $ python3 fofamap.py -q 'app="discuz"'
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/148732165-e3f2c44b-7017-47c3-9a3c-d9ebcd18eae6.png">
 
 ---
+
+**更新日志 V1.1.1 春节特别版**
+
+[+] 增加批量查询功能。
 
 **更新日志 V1.1.0 春节特别版**
 
