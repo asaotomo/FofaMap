@@ -114,9 +114,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 
 **3.-bq 批量查询数据**
 
-FofaMap V1.1.1新版支持批量查询，用户可新建一个记事本文件，如bat.txt,
-
-然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
+FofaMap V1.1.1新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 
 ```plain
 $ python3 fofamap.py -bq bat.txt
