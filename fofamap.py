@@ -20,8 +20,8 @@ def banner():
 | |_ / _ \| |_ / _` | |\/| |/ _` | '_ \ 
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
-                                 |_|   V1.1.0  
-#Coded By Hx0战队  Update:2022.01.14""")
+                                 |_|   V1.1.1  
+#Coded By Hx0战队  Update:2022.01.19""")
 
 
 # 查询域名信息
@@ -212,8 +212,8 @@ def out_file_excel(filename, database, scan_format):
         print(colorama.Fore.GREEN + "[+] 文档输出成功！文件名为：{}".format(filename))
 
 
+# 获取用户信息
 def get_userinfo():
-    # 获取用户信息
     user_info = client.get_userinfo()
     email = user_info["email"]  # 查询用户邮箱
     username = user_info["username"]  # 查询用户名
@@ -247,6 +247,7 @@ def get_search(query_str, scan_format):
     return database, fields
 
 
+# 打印查询结果
 def print_result(database, fields, scan_format):
     print(colorama.Fore.RED + "======查询结果=======")
     if scan_format:
@@ -282,6 +283,26 @@ def print_result(database, fields, scan_format):
         print(colorama.Fore.GREEN + '{}'.format(table))  # 打印查询表格
 
 
+def bat_query(bat_query_file, scan_format):
+    with open(bat_query_file, "r+", encoding="utf-8") as f:
+        bat_str = f.readlines()
+    id = 1
+    total = len(bat_str)
+    for query_str in bat_str:
+        print(colorama.Fore.RED + "======批量查询=======")
+        print(colorama.Fore.GREEN + "[+] 任务文件：{}".format(bat_query_file))
+        print(colorama.Fore.GREEN + "[+] 任务总数：{}".format(total))
+        print(colorama.Fore.GREEN + "[+] 当前任务：task-{}".format(id))
+        query_str = "{}".format(query_str).replace("\n", "")
+        database, fields = get_search(query_str, scan_format)
+        # 输出excel文档
+        filename = "task-{}.xlsx".format(id)
+        out_file_excel(filename, database, scan_format)
+        # 打印结果
+        print_result(database, fields, scan_format)
+        id += 1
+
+
 if __name__ == '__main__':
     # 获取版本信息
     colorama.init(autoreset=True)
@@ -289,17 +310,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="SearchMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
+    parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
     parser.add_argument('-o', '--outfile', default="fofa.xlsx", help='File Save Name')
     parser.add_argument('-n', '--nuclie', help='Use Nuclie To Scan Targets', action='store_true')
     parser.add_argument('-up', '--update', help='OneKey Update Nuclie-engine And Nuclei-templates', action='store_true')
     args = parser.parse_args()
     query_str = args.query
+    bat_query_file = args.bat_query
     filename = args.outfile
     scan_format = args.scan_format
     is_scan = args.nuclie
     update = args.update
-    if query_str:
+    if query_str or bat_query_file:
         # 初始化参数
         config = configparser.ConfigParser()
         # 读取配置文件
@@ -309,11 +332,15 @@ if __name__ == '__main__':
         # 获取账号信息
         get_userinfo()
         # 获取查询信息
-        database, fields = get_search(query_str, scan_format)
-        # 输出excel文档
-        out_file_excel(filename, database, scan_format)
-        # 打印结果
-        print_result(database, fields, scan_format)
+        if bat_query_file:
+            bat_query(bat_query_file, scan_format)
+        else:
+            # 获得查询结果
+            database, fields = get_search(query_str, scan_format)
+            # 输出excel文档
+            out_file_excel(filename, database, scan_format)
+            # 打印结果
+            print_result(database, fields, scan_format)
         if update:
             nuclei_update()
         if scan_format and is_scan:
