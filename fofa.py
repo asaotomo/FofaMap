@@ -14,6 +14,11 @@ class Client:
         self.email = config.get("userinfo", "email")
         self.key = config.get("userinfo", "key")
         self.base_url = "https://fofa.so"
+        try:
+            req = urllib.request.Request(self.base_url)
+            urllib.request.urlopen(req).read().decode('utf-8')
+        except:
+            self.base_url = "https://fofa.info"
         self.search_api_url = "/api/v1/search/all"
         self.login_api_url = "/api/v1/info/my"
         self.get_userinfo()  # check email and key
