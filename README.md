@@ -1,4 +1,4 @@
-**FofaMap_V1.1.1 春节特别版【联动 Nuclei】**
+**FofaMap_V1.1.1 春节特别版【联动 Nuclei】｜ [FofaMap云查询版](https://github.com/asaotomo/FofaMap-Cloud)**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505431-06fbc14b-ac0c-4ccb-a316-949fe08e9ee5.png)
 
