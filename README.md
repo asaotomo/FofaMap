@@ -1,4 +1,4 @@
-**FofaMap_V1.1.1 春节特别版【联动 Nuclei】｜ [FofaMap云查询版](https://github.com/asaotomo/FofaMap-Cloud)**
+**FofaMap_V1.1.2 春节特别版【联动 Nuclei】｜ [FofaMap云查询版](https://github.com/asaotomo/FofaMap-Cloud)**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505431-06fbc14b-ac0c-4ccb-a316-949fe08e9ee5.png)
 
@@ -36,9 +36,9 @@ fields = ip,port,title,country,city
 
 [page]#查询页数
 #查询启始页数
-start_page = 1
+start_page = 0
 #查询结束页数
-end_page = 2
+end_page = 1
 ```
 
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
@@ -112,10 +112,23 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 <img width="1088" alt="image" src="https://user-images.githubusercontent.com/67818638/149065268-d7306a51-10f0-4df8-b132-94012e07d73d.png">
 
 
+**3.-ico 使用网站图标Hash值进行查询**
 
-**3.-bq 批量查询数据**
+FofaMap V1.1.2新版支持网站图标查询【仅支持Fofa高级会员及以上用户】。
 
-FofaMap V1.1.1新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
+用户可通过填入任意一网站地址，Fofamap会自动获取该网站的favicon.ico图标文件，并计算其hash值。
+
+```
+$ python3 fofamap.py -ico 网站url
+```
+
+例如我们查询含有必应(bing)图标的网站，**python3 fofamap.py -ico https://www.bing.com**
+
+<img width="926" alt="image" src="https://user-images.githubusercontent.com/67818638/153366400-7344cd00-f050-42f7-b20d-e46b7466387f.png">
+
+**4.-bq 批量查询数据**
+
+FofaMap V1.1.2新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 
 ```plain
 $ python3 fofamap.py -bq bat.txt
@@ -140,7 +153,7 @@ icp="京ICP备10036305号"
 
 
 
-**4.-s 输出扫描格式** 
+**5.-s 输出扫描格式** 
 
 使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
@@ -152,7 +165,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
-**5.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**6.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -196,7 +209,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**6.通过修改配置文件，控制输出内容** 
+**7.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -234,9 +247,12 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 **【知识星球】福利大放送**
 
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/148732165-e3f2c44b-7017-47c3-9a3c-d9ebcd18eae6.png">
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/153367029-e6820e70-b0e6-4949-b5bc-abee1421101b.png">
 
 ---
+**更新日志 V1.1.2 春节特别版**
+
+[+] 增加网站图标查询功能，该功能仅支持高级会员及以上用户使用。
 
 **更新日志 V1.1.1 春节特别版**
 
