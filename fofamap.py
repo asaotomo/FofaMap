@@ -319,7 +319,7 @@ if __name__ == '__main__':
     colorama.init(autoreset=True)
     banner()
     parser = argparse.ArgumentParser(
-        description="SearchMap (A fofa API information collection tool)")
+        description="FofaMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
     parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
