@@ -247,7 +247,11 @@ def get_search(query_str, scan_format):
         data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
         database = database + data["results"]
         time.sleep(0.1)
-    return database, fields
+    set_database = []
+    for data in database:
+        if data not in set_database:
+            set_database.append(data)
+    return set_database, fields
 
 
 # 打印查询结果
