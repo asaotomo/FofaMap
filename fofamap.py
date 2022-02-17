@@ -24,7 +24,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.2  
-#Coded By Hx0战队  Update:2022.02.10""")
+#Coded By Hx0战队  Update:2022.02.17""")
 
 
 # 查询域名信息
@@ -275,6 +275,8 @@ def print_result(database, fields, scan_format):
         table.align = "c"
         table.valign = "m"
         for item in database:
+            if type(item) == str:
+                item = [item]
             if "title" in fields:
                 title = "{}".format(item[field.index("title") - 1]).strip()
                 if len(title) > 20:
@@ -319,7 +321,7 @@ if __name__ == '__main__':
     colorama.init(autoreset=True)
     banner()
     parser = argparse.ArgumentParser(
-        description="FofaMap (A fofa API information collection tool)")
+        description="SearchMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
     parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
