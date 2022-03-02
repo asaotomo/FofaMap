@@ -24,7 +24,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.2  
-#Coded By Hx0战队  Update:2022.02.17""")
+#Coded By Hx0战队  Update:2022.03.02""")
 
 
 # 查询域名信息
@@ -63,6 +63,10 @@ def print_domain():
         database = database + search_domain(query_str, fields, no)
         no += 1
         time.sleep(1.5)
+    set_database = []
+    for data in database:
+        if data not in set_database:
+            set_database.append(data)
     id = 1
     field = fields.split(",")
     field.insert(0, 'ID')
@@ -72,7 +76,7 @@ def print_domain():
     table.header_style = "title"
     table.align = "c"
     table.valign = "m"
-    for item in database:
+    for item in set_database:
         if item[field.index("domain") - 1] != '':
             item.insert(0, id)
             item.insert(len(field), 'https://icp.chinaz.com/home/info?host={}'.format(item[field.index("domain")]))
@@ -118,7 +122,7 @@ def nuclei_update():
 
 # 调用nuclie进行扫描
 def nuclie_scan(filename):
-    print(colorama.Fore.RED + "=====Nuclie扫描======")
+    print(colorama.Fore.RED + "=====Nuclei扫描======")
     scan = nuclei.Scan()
     print(colorama.Fore.GREEN + "[+] 即将启动nuclie对目标进行扫描")
     print(colorama.Fore.GREEN + "[+] 扫描引擎路径[{}]".format(scan.path))
