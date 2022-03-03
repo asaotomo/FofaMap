@@ -247,7 +247,7 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 **【知识星球】福利大放送**
 
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/153367029-e6820e70-b0e6-4949-b5bc-abee1421101b.png">
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/156556995-f3798cb1-027e-47e6-84ba-b7537d85b158.png">
 
 ---
 **更新日志 V1.1.2 春节特别版**
