@@ -241,6 +241,10 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
 
+**特别鸣谢～渊龙Sec团队**
+
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/167256183-7c485b4c-1e5f-4bbe-a8de-3cf267ebd5ec.jpg">
+
 **扫描关注战队公众号，获取最新动态**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
