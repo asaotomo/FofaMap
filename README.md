@@ -36,9 +36,9 @@ fields = ip,port,title,country,city
 
 [page]#查询页数
 #查询启始页数
-start_page = 0
+start_page = 1
 #查询结束页数
-end_page = 1
+end_page = 2
 ```
 
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
