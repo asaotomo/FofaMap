@@ -24,7 +24,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.2  
-#Coded By Hx0战队  Update:2022.03.02""")
+#Coded By Hx0战队  Update:2022.05.10""")
 
 
 # 查询域名信息
@@ -247,8 +247,12 @@ def get_search(query_str, scan_format):
     print(colorama.Fore.GREEN + "[+] 查询参数：{}".format(fields))
     print(colorama.Fore.GREEN + "[+] 查询页数：{}-{}".format(start_page, end_page))
     database = []
-    for page in range(start_page, end_page):  # 从第1页查到第50页
-        data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
+    for page in range(start_page, end_page):  # 从第1页查到第n页
+        try:
+            data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据
+        except Exception as e:
+            fields = "Error"
+            data = {"results": ["{}".format(e)]}
         database = database + data["results"]
         time.sleep(0.1)
     set_database = []
