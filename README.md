@@ -2,6 +2,12 @@
 
 ![image](https://user-images.githubusercontent.com/67818638/149505431-06fbc14b-ac0c-4ccb-a316-949fe08e9ee5.png)
 
+<p align="center">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-_red.svg"></a>
+<a href="https://github.com/asaotomo/fofamap/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+<a href="https://github.com/sqlmapproject/sqlmap/actions/workflows/tests.yml"><img src="https://img.shields.io/badge/python-3.x-blue.svg"></a>
+</p>
+
 **好消息：FofaMap又可以正常使用了，感谢🙏大家一直以来对FofaMap的支持，我们将继续对FofaMap进行更新和维护。**
 
 **[FofaMap](https://github.com/asaotomo/FofaMap)是一款基于Python3开发的跨平台FOFA数据采集器。用户可以通过修改配置文件，定制化的采集FOFA数据，并导出生成对应的Excel表格或TXT扫描目标。**
