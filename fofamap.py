@@ -24,7 +24,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.2  
-#Coded By Hx0战队  Update:2022.05.10""")
+#Coded By Hx0战队  Update:2022.05.12""")
 
 
 # 查询域名信息
@@ -33,8 +33,8 @@ def search_domain(query_str, fields, no):
     end_page = 2
     print(colorama.Fore.GREEN + "[+] 正在查询第{}个目标：{}".format(no, query_str))
     database = []
-    for page in range(start_page, end_page):  # 从第1页查到第50页
-        data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据的ip和城市
+    for page in range(start_page, end_page):  # 从第1页查到第N页
+        data = client.get_data(query_str, page=page, fields=fields)  # 查询第page页数据
         database = database + data["results"]
     return database
 
@@ -124,13 +124,13 @@ def nuclei_update():
 def nuclie_scan(filename):
     print(colorama.Fore.RED + "=====Nuclei扫描======")
     scan = nuclei.Scan()
-    print(colorama.Fore.GREEN + "[+] 即将启动nuclie对目标进行扫描")
+    print(colorama.Fore.GREEN + "[+] 即将启动nuclei对目标进行扫描")
     print(colorama.Fore.GREEN + "[+] 扫描引擎路径[{}]".format(scan.path))
     filename = "{}".format(filename).split(".")[0] + ".txt"
     print(colorama.Fore.GREEN + "[-] nuclie默认使用全扫描，是否改用自定义扫描功能？[Y/N][温馨提示：若要修改扫描目标，可在此时手动修改{}文件内容]".format(filename))
     switch = input()
     if switch == "Y" or switch == "y":
-        print(colorama.Fore.GREEN + "[+] 正在调用nuclie对目标进行自定义扫描")
+        print(colorama.Fore.GREEN + "[+] 正在调用nuclei对目标进行自定义扫描")
         print(colorama.Fore.GREEN + "[-] 请输入要使用的过滤器[1.tags 2.severity 3.author 4.customize]")
         mode = input()
         if mode == "1":
@@ -155,7 +155,7 @@ def nuclie_scan(filename):
             print(colorama.Fore.GREEN + "[+] 本次扫描语句[{}]".format(cmd))
 
     else:
-        print(colorama.Fore.GREEN + "[+] 正在调用nuclie对目标进行全扫描")
+        print(colorama.Fore.GREEN + "[+] 正在调用nuclei对目标进行全扫描")
         cmd = scan.multi_target(filename)
         print(colorama.Fore.GREEN + "[+] 本次扫描语句：{}".format(cmd))
     time.sleep(1)
