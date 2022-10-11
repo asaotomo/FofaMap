@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import argparse
 import configparser
+import sys
 import fofa
 import colorama
 import xlsxwriter
@@ -23,8 +24,8 @@ def banner():
 | |_ / _ \| |_ / _` | |\/| |/ _` | '_ \ 
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
-                                 |_|   V1.1.2  
-#Coded By Hx0战队  Update:2022.05.12""")
+                                 |_|   V1.1.3  
+#Coded By Hx0战队  Update:2022.10.11""")
 
 
 # 查询域名信息
@@ -131,7 +132,7 @@ def nuclie_scan(filename):
     switch = input()
     if switch == "Y" or switch == "y":
         print(colorama.Fore.GREEN + "[+] 正在调用nuclei对目标进行自定义扫描")
-        print(colorama.Fore.GREEN + "[-] 请输入要使用的过滤器[1.tags 2.severity 3.author 4.customize]")
+        print(colorama.Fore.GREEN + "[-] 请输入要使用的过滤器[1.tags 2.severity 3.author 4.templates 5.customize]")
         mode = input()
         if mode == "1":
             mode_v = "tags"
@@ -139,6 +140,8 @@ def nuclie_scan(filename):
             mode_v = "severity"
         elif mode == "3":
             mode_v = "author"
+        elif mode == "4":
+            mode_v = "templates"
         else:
             mode_v = "customize"
         print(colorama.Fore.GREEN + "[+] 已选择[{}]过滤器".format(mode_v))
@@ -148,7 +151,7 @@ def nuclie_scan(filename):
             cmd = scan.customize_cmd(filename, customize_cmd)
             print(colorama.Fore.GREEN + "[+] 本次扫描语句[{}]".format(cmd))
         else:
-            print(colorama.Fore.GREEN + "[-] 请输入过滤器的内容[如：tech、cve、cms、fuzz等]")
+            print(colorama.Fore.GREEN + "[-] 请输入过滤器的内容[如：tech、cve、cms、fuzz、templates-path等]")
             value = input()
             print(colorama.Fore.GREEN + "[+] 过滤器内容为[{}]".format(value))
             cmd = scan.keyword_multi_target(filename, mode_v, value)
@@ -328,9 +331,29 @@ def get_icon_hash(ico):
     return 'icon_hash="{}"'.format(icon_hash)
 
 
+# 日志功能
+class Logger(object):
+    def __init__(self, filename):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w+")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(
+            "{}".format(message).replace("\033[31m", "").replace("\033[32m", "").replace("\033[36m", "").replace(
+                "\033[34m", "").replace("\033[0m", ""))
+
+    def flush(self):
+        pass
+
+
 if __name__ == '__main__':
     # 获取版本信息
     colorama.init(autoreset=True)
+    # 初始化参数
+    config = configparser.ConfigParser()
+    # 读取配置文件
+    config.read('fofa.ini', encoding="utf-8")
     banner()
     parser = argparse.ArgumentParser(
         description="SearchMap (A fofa API information collection tool)")
@@ -349,11 +372,13 @@ if __name__ == '__main__':
     is_scan = args.nuclie
     update = args.update
     ico = args.icon_query
+    logger_sw = config.get("logger", "logger")
+    if logger_sw == "on":
+        print(colorama.Fore.GREEN + "[*]日志状态:开启")
+        sys.stdout = Logger("fofamap.log")
+    else:
+        print(colorama.Fore.RED + "[*]日志状态:关闭")
     if query_str or bat_query_file or ico:
-        # 初始化参数
-        config = configparser.ConfigParser()
-        # 读取配置文件
-        config.read('fofa.ini', encoding="utf-8")
         # 生成一个fofa客户端实例
         client = fofa.Client()
         # 获取账号信息
