@@ -1,4 +1,4 @@
-**FofaMap_V1.1.2 春节特别版【联动 Nuclei】｜ [FofaMap云查询版](https://github.com/asaotomo/FofaMap-Cloud)**
+**FofaMap_V1.1.3 国庆特别版【联动 Nuclei】｜ [FofaMap云查询版](https://github.com/asaotomo/FofaMap-Cloud)**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505431-06fbc14b-ac0c-4ccb-a316-949fe08e9ee5.png)
 
@@ -39,12 +39,15 @@ fields = ip,port,title,country,city
 
 #fields可选项有：['host', 'title', 'ip', 'domain', 'port', 'country', 'province', 'city', 'country_name', 'header', 'server', 'protocol', 'banner', 'cert', 'isp', 'as_number', 'as_organization', 'latitude', 'longitude', 'structinfo','icp', 'fid', 'cname']
 
-
 [page]#查询页数
 #查询启始页数
 start_page = 1
 #查询结束页数
 end_page = 2
+
+[logger]#日志开关
+#全局日志开关，开启后会默认输入软件执行日志到fofamap.log文件
+logger = on
 ```
 
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
@@ -187,7 +190,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 **自定义扫描:** 根据提示输入“Y”，启动自定义扫描，通过设置过滤器对目标进行自定义扫描，只使用指定的PoC。
 
-**FofaMap支持三个基本过滤器来自定义扫描方式。**
+**FofaMap支持四个基本过滤器来自定义扫描方式。**
 
 1.标签（-tags）根据模板中可用的标签字段进行筛选。如：cev、cms、tech等
 
@@ -195,11 +198,18 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 3.作者（-author）根据模板中可用的作者字段进行筛选。如：geeknik、pdteam、pikpikcu等
 
-4.自定义 （customize）用户可以根据需求使用nuclei的其它高级命令对目标进行扫描。如：-tags cve -severity critical,high -author geeknik
+4.指定模板（-templates）根据用户指定的nuclei模板文件进行扫描。如：CVE-2017-6090.yaml、CVE-2021-43798.yaml、CVE-2022-0149.yaml等
 
-**例如：我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
+5.自定义 （customize）用户可以根据需求使用nuclei的其它高级命令对目标进行扫描。如：-tags cve -severity critical,high -author geeknik
+
+**例1：我们使用自定义扫描的tags过滤器，tags的内容为tech，那么fofamap只会调用nuclei的tech-detect模板对网站进行检测，扫描结果为网站所使用的中间件、数据库、操作系统版本等系统。**
 
 ![image](https://user-images.githubusercontent.com/67818638/149505639-a740076d-4e96-438b-b0e1-b54edb39547b.png)
+
+**例2：我们使用指定模板的templates过滤器，-templates的内容为CVE-2021-43798.yaml，那么fofamap只会调用用户指定路径下的特定扫描模板对网站进行检测。**
+
+<img width="955" alt="image" src="https://user-images.githubusercontent.com/67818638/195055536-c08d4989-329e-41d9-bab2-88aeeee2fb04.png">
+
 
 **更多Nuceli的用法可以参考[这里](https://blog.csdn.net/asaotomo/article/details/122395708)**
 
@@ -260,6 +270,18 @@ $ python3 fofamap.py -q 'app="discuz"'
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/156556995-f3798cb1-027e-47e6-84ba-b7537d85b158.png">
 
 ---
+**更新日志 V1.1.3 国庆特别版**
+
+[+] 增加nuclie扫描指定单一扫描模板（templates）的功能。
+
+[+] 增加全局日志功能，用户可自行选择是否开启日志。
+
+[+] 增加附录：查询接口支持的字段。
+
+附录：
+
+![image](https://user-images.githubusercontent.com/67818638/195052175-5d94401c-9784-4f54-be81-45db00fdaad3.png)
+
 **更新日志 V1.1.2 春节特别版**
 
 [+] 增加网站图标查询功能，该功能仅支持高级会员及以上用户使用。
