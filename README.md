@@ -33,6 +33,14 @@ email = xxxxx@qq.com
 #会员到个人资料可得到key，为32位的hash值
 key = 001xxxxxxxxxxxxxxxxxxxxx8b2dc5
 
+[size]#查询数量
+#每页查询数量，默认为100条，最大支持10,000条/页
+size = 100
+
+[full]#查询范围
+#默认搜索一年内的数据，指定为true即可搜索全部数据，false为一年内数据
+full = false
+
 [fields]#查询内容选项
 #默认查询内容为：ip、端口、网站标题、国家和城市
 fields = ip,port,title,country,city
@@ -105,9 +113,20 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 
 <img width="1007" alt="image" src="https://user-images.githubusercontent.com/67818638/149065065-205e1f0f-35e1-4c65-a80b-1c632f1f0f58.png">
 
+**2.-hq 使用FOFA查询Host聚合数据**
+
+**关于命令说明：**
+
+用户使用Host聚合查询模式时，系统可以根据当前的查询内容，生成聚合信息，host通常是ip，包含基础信息和IP标签。
+
+```
+$ python3 fofamap.py -hq 8.8.8.8
+```
+
+<img width="524" alt="image" src="https://user-images.githubusercontent.com/67818638/195379354-4a5f703b-cadc-439f-90c1-659272c858c2.png">
 
 
-**2.-o 自定义输出文件名[默认为fofa.xlsx]**
+**3.-o 自定义输出文件名[默认为fofa.xlsx]**
 
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
@@ -121,7 +140,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 <img width="1088" alt="image" src="https://user-images.githubusercontent.com/67818638/149065268-d7306a51-10f0-4df8-b132-94012e07d73d.png">
 
 
-**3.-ico 使用网站图标Hash值进行查询**
+**4.-ico 使用网站图标Hash值进行查询**
 
 FofaMap V1.1.2新版支持网站图标查询【仅支持Fofa高级会员及以上用户】。
 
@@ -135,7 +154,7 @@ $ python3 fofamap.py -ico 网站url
 
 <img width="926" alt="image" src="https://user-images.githubusercontent.com/67818638/153366400-7344cd00-f050-42f7-b20d-e46b7466387f.png">
 
-**4.-bq 批量查询数据**
+**5.-bq 批量查询数据**
 
 FofaMap V1.1.2新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 
@@ -162,7 +181,7 @@ icp="京ICP备10036305号"
 
 
 
-**5.-s 输出扫描格式** 
+**6.-s 输出扫描格式** 
 
 使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
@@ -174,7 +193,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
-**6.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**7.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -225,7 +244,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**7.通过修改配置文件，控制输出内容** 
+**8.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -275,6 +294,10 @@ $ python3 fofamap.py -q 'app="discuz"'
 [+] 增加nuclie扫描指定单一扫描模板（templates）的功能。
 
 [+] 增加全局日志功能，用户可自行选择是否开启日志。
+
+[+] 增加Host聚合查询模式，可以根据当前的查询内容，生成聚合信息。
+
+[+] 新增每页查询数量和数据查询范围设置功能，用户可以根据自己的需求选择每页查询的数据数量以及数据查询的范围（1年内 or 全部数据）。
 
 [+] 增加附录：查询接口支持的字段。
 
