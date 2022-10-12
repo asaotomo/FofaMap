@@ -25,7 +25,21 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.10.11""")
+#Coded By Hx0战队  Update:2022.10.12""")
+    logger_sw = config.get("logger", "logger")
+    full_sw = config.get("full", "full")
+    if not query_host:
+        print(colorama.Fore.RED + "======基础配置=======")
+        if logger_sw == "on":
+            print(colorama.Fore.GREEN + "[*]日志状态:开启")
+            sys.stdout = Logger("fofamap.log")
+        else:
+            print(colorama.Fore.RED + "[*]日志状态:关闭")
+        if full_sw == "false":
+            print(colorama.Fore.GREEN + "[*]搜索范围:一年内数据")
+        else:
+            print(colorama.Fore.RED + "[*]搜索范围:全部数据")
+        print(colorama.Fore.GREEN + "[*]每页查询数量:{}条/页".format(config.getint("size", "size")))
 
 
 # 查询域名信息
@@ -156,7 +170,6 @@ def nuclie_scan(filename):
             print(colorama.Fore.GREEN + "[+] 过滤器内容为[{}]".format(value))
             cmd = scan.keyword_multi_target(filename, mode_v, value)
             print(colorama.Fore.GREEN + "[+] 本次扫描语句[{}]".format(cmd))
-
     else:
         print(colorama.Fore.GREEN + "[+] 正在调用nuclei对目标进行全扫描")
         cmd = scan.multi_target(filename)
@@ -331,6 +344,29 @@ def get_icon_hash(ico):
     return 'icon_hash="{}"'.format(icon_hash)
 
 
+# host聚合
+def host_merge(query_host, email, key):
+    print(colorama.Fore.RED + "======Host聚合=======")
+    try:
+        url = "https://fofa.info/api/v1/host/{}?email={}&key={}".format(query_host, email, key
+                                                                        , timeout=20)
+        res = requests.get(url)
+        data = res.json()
+        print(colorama.Fore.GREEN + "[+] 主机名:{}".format(data["host"]))
+        print(colorama.Fore.GREEN + "[+] IP地址:{}".format(data["ip"]))
+        print(colorama.Fore.GREEN + "[+] asn编号:{}".format(data["asn"]))
+        print(colorama.Fore.GREEN + "[+] asn组织:{}".format(data["org"]))
+        print(colorama.Fore.GREEN + "[+] 国家名:{}".format(data["country_name"]))
+        print(colorama.Fore.GREEN + "[+] 国家代码:{}".format(data["country_code"]))
+        print(colorama.Fore.GREEN + "[+] 协议名:{}".format("{}".format(",".join(data["protocol"]))))
+        print(colorama.Fore.GREEN + "[+] 端口:{}".format(",".join('%s' % port for port in data["port"])))
+        print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
+    except Exception as e:
+        print(colorama.Fore.RED + "[!] 错误:{}".format(e))
+    finally:
+        exit(0)
+
+
 # 日志功能
 class Logger(object):
     def __init__(self, filename):
@@ -348,16 +384,15 @@ class Logger(object):
 
 
 if __name__ == '__main__':
-    # 获取版本信息
-    colorama.init(autoreset=True)
     # 初始化参数
+    colorama.init(autoreset=True)
     config = configparser.ConfigParser()
     # 读取配置文件
     config.read('fofa.ini', encoding="utf-8")
-    banner()
     parser = argparse.ArgumentParser(
         description="SearchMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
+    parser.add_argument('-hq', '--host', help='Host Merge Query')
     parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
@@ -366,23 +401,22 @@ if __name__ == '__main__':
     parser.add_argument('-up', '--update', help='OneKey Update Nuclie-engine And Nuclei-templates', action='store_true')
     args = parser.parse_args()
     query_str = args.query
+    query_host = args.host
     bat_query_file = args.bat_query
     filename = args.outfile
     scan_format = args.scan_format
     is_scan = args.nuclie
     update = args.update
     ico = args.icon_query
-    logger_sw = config.get("logger", "logger")
-    if logger_sw == "on":
-        print(colorama.Fore.GREEN + "[*]日志状态:开启")
-        sys.stdout = Logger("fofamap.log")
-    else:
-        print(colorama.Fore.RED + "[*]日志状态:关闭")
+    # 获取版本信息
+    banner()
+    # 生成一个fofa客户端实例
+    client = fofa.Client()
+    # 获取账号信息
+    get_userinfo()
+    if query_host:
+        host_merge(query_host, client.email, client.key)
     if query_str or bat_query_file or ico:
-        # 生成一个fofa客户端实例
-        client = fofa.Client()
-        # 获取账号信息
-        get_userinfo()
         # 获取查询信息
         if bat_query_file:
             bat_query(bat_query_file, scan_format)
