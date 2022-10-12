@@ -28,13 +28,13 @@ def banner():
 #Coded By Hx0战队  Update:2022.10.12""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
+    print(colorama.Fore.RED + "======基础配置=======")
+    if logger_sw == "on":
+        print(colorama.Fore.GREEN + "[*]日志状态:开启")
+        sys.stdout = Logger("fofamap.log")
+    else:
+        print(colorama.Fore.RED + "[*]日志状态:关闭")
     if not query_host:
-        print(colorama.Fore.RED + "======基础配置=======")
-        if logger_sw == "on":
-            print(colorama.Fore.GREEN + "[*]日志状态:开启")
-            sys.stdout = Logger("fofamap.log")
-        else:
-            print(colorama.Fore.RED + "[*]日志状态:关闭")
         if full_sw == "false":
             print(colorama.Fore.GREEN + "[*]搜索范围:一年内数据")
         else:
