@@ -13,6 +13,8 @@ class Client:
         config.read('fofa.ini', encoding="utf-8")
         self.email = config.get("userinfo", "email")
         self.key = config.get("userinfo", "key")
+        self.size = config.get("size", "size")
+        self.full = config.get("full", "full")
         self.base_url = "https://fofa.so"
         try:
             req = urllib.request.Request(self.base_url)
@@ -37,7 +39,9 @@ class Client:
         api_full_url = "%s%s" % (self.base_url, self.search_api_url)
         param = {"qbase64": base64.b64encode(bytes(query_str.encode('utf-8'))), "email": self.email, "key": self.key,
                  "page": page,
-                 "fields": fields}
+                 "fields": fields,
+                 "size": self.size,
+                 "full": self.full}
         res = self.__http_get(api_full_url, param)
         return res
 
