@@ -25,7 +25,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.10.12""")
+#Coded By Hx0战队  Update:2022.10.14""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
     print(colorama.Fore.RED + "======基础配置=======")
@@ -34,7 +34,8 @@ def banner():
         sys.stdout = Logger("fofamap.log")
     else:
         print(colorama.Fore.RED + "[*]日志状态:关闭")
-    if not query_host:
+    if not query_host and not bat_host_file:
+        print(bat_host_file)
         if full_sw == "false":
             print(colorama.Fore.GREEN + "[*]搜索范围:一年内数据")
         else:
@@ -316,6 +317,7 @@ def print_result(database, fields, scan_format):
         print(colorama.Fore.GREEN + '{}'.format(table))  # 打印查询表格
 
 
+# 批量查询
 def bat_query(bat_query_file, scan_format):
     with open(bat_query_file, "r+", encoding="utf-8") as f:
         bat_str = f.readlines()
@@ -344,9 +346,8 @@ def get_icon_hash(ico):
     return 'icon_hash="{}"'.format(icon_hash)
 
 
-# host聚合
+# host聚合查询
 def host_merge(query_host, email, key):
-    print(colorama.Fore.RED + "======Host聚合=======")
     try:
         url = "https://fofa.info/api/v1/host/{}?email={}&key={}".format(query_host, email, key
                                                                         , timeout=20)
@@ -363,8 +364,22 @@ def host_merge(query_host, email, key):
         print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
     except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:{}".format(e))
-    finally:
-        exit(0)
+
+
+#  批量host聚合查询
+def bat_host_query(bat_host_file):
+    with open(bat_host_file, "r+", encoding="utf-8") as f:
+        bat_host = f.readlines()
+    id = 1
+    total = len(bat_host)
+    print(colorama.Fore.RED + "====批量Host查询=====")
+    print(colorama.Fore.GREEN + "[+] 任务文件：{}".format(bat_host_file))
+    print(colorama.Fore.GREEN + "[+] 任务总数：{}".format(total))
+    for query_host in bat_host:
+        print(colorama.Fore.YELLOW + "=======任务-{}========".format(id))
+        host_merge(query_host.strip("\n"), client.email, client.key)
+        id += 1
+        time.sleep(0.1)
 
 
 # 日志功能
@@ -376,7 +391,8 @@ class Logger(object):
     def write(self, message):
         self.terminal.write(message)
         self.log.write(
-            "{}".format(message).replace("\033[31m", "").replace("\033[32m", "").replace("\033[36m", "").replace(
+            "{}".format(message).replace("\033[31m", "").replace("\033[32m", "").replace("\033[33m", "").replace(
+                "\033[36m", "").replace(
                 "\033[34m", "").replace("\033[0m", ""))
 
     def flush(self):
@@ -392,8 +408,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="SearchMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
-    parser.add_argument('-hq', '--host', help='Host Merge Query')
+    parser.add_argument('-hq', '--host_query', help='Host Merge Query')
     parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
+    parser.add_argument('-bhq', '--bat_host_query', help='Fofa Batch Host Query')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
     parser.add_argument('-o', '--outfile', default="fofa.xlsx", help='File Save Name')
@@ -401,8 +418,9 @@ if __name__ == '__main__':
     parser.add_argument('-up', '--update', help='OneKey Update Nuclie-engine And Nuclei-templates', action='store_true')
     args = parser.parse_args()
     query_str = args.query
-    query_host = args.host
+    query_host = args.host_query
     bat_query_file = args.bat_query
+    bat_host_file = args.bat_host_query
     filename = args.outfile
     scan_format = args.scan_format
     is_scan = args.nuclie
@@ -415,7 +433,10 @@ if __name__ == '__main__':
     # 获取账号信息
     get_userinfo()
     if query_host:
+        print(colorama.Fore.RED + "======Host聚合=======")
         host_merge(query_host, client.email, client.key)
+    if bat_host_file:
+        bat_host_query(bat_host_file)
     if query_str or bat_query_file or ico:
         # 获取查询信息
         if bat_query_file:
