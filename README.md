@@ -156,7 +156,7 @@ $ python3 fofamap.py -ico 网站url
 
 **5.-bq 批量查询数据**
 
-FofaMap V1.1.2新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
+FofaMap V1.1.3新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 
 ```plain
 $ python3 fofamap.py -bq bat.txt
@@ -179,9 +179,26 @@ icp="京ICP备10036305号"
 
 ![img](https://cdn.nlark.com/yuque/0/2022/png/12839102/1642591515080-a0220744-be8c-4030-a5ca-5ba60fa2366f.png)
 
+**6.-bhq 批量Host聚合查询**
+
+FofaMap V1.1.3新版支持批量host聚合查询，用户可新建一个记事本文件，如host.txt，然后将准备查询的主机名或IP地址写入其中，运行以下命令即可进行批量查询。
+
+```plain
+$ python3 fofamap.py -bhq host.txt
+```
+
+**host.txt文件内容：**
+
+```plain
+114.114.114.114
+8.8.8.8
+123.123.123.123
+```
+
+<img width="596" alt="image" src="https://user-images.githubusercontent.com/67818638/195737442-d0f4f55f-7e47-42e3-9150-126b909340d8.png">
 
 
-**6.-s 输出扫描格式** 
+**7.-s 输出扫描格式** 
 
 使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
@@ -193,7 +210,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
-**7.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**8.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -244,7 +261,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**8.通过修改配置文件，控制输出内容** 
+**9.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -296,6 +313,8 @@ $ python3 fofamap.py -q 'app="discuz"'
 [+] 增加全局日志功能，用户可自行选择是否开启日志。
 
 [+] 增加Host聚合查询模式，可以根据当前的查询内容，生成聚合信息。
+
+[+] 增加批量Host聚合查询模式，可以批量查询Host聚合信息。
 
 [+] 新增每页查询数量和数据查询范围设置功能，用户可以根据自己的需求选择每页查询的数据数量以及数据查询的范围（1年内 or 全部数据）。
 
