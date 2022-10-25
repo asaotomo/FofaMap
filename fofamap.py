@@ -35,7 +35,6 @@ def banner():
     else:
         print(colorama.Fore.RED + "[*]日志状态:关闭")
     if not query_host and not bat_host_file:
-        print(bat_host_file)
         if full_sw == "false":
             print(colorama.Fore.GREEN + "[*]搜索范围:一年内数据")
         else:
