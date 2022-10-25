@@ -123,7 +123,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 $ python3 fofamap.py -hq 8.8.8.8
 ```
 
-<img width="524" alt="image" src="https://user-images.githubusercontent.com/67818638/195379354-4a5f703b-cadc-439f-90c1-659272c858c2.png">
+<img width="578" alt="image" src="https://user-images.githubusercontent.com/67818638/197658462-7f5b8086-7e8a-4466-951f-46572ab3e55c.png">
 
 
 **3.-o 自定义输出文件名[默认为fofa.xlsx]**
@@ -195,7 +195,7 @@ $ python3 fofamap.py -bhq host.txt
 123.123.123.123
 ```
 
-<img width="596" alt="image" src="https://user-images.githubusercontent.com/67818638/195737442-d0f4f55f-7e47-42e3-9150-126b909340d8.png">
+<img width="599" alt="image" src="https://user-images.githubusercontent.com/67818638/197658410-835f2014-2358-43ba-9c47-4ea80fc06fb0.png">
 
 
 **7.-s 输出扫描格式** 
@@ -318,7 +318,10 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 [+] 新增每页查询数量和数据查询范围设置功能，用户可以根据自己的需求选择每页查询的数据数量以及数据查询的范围（1年内 or 全部数据）。
 
+[+] 优化Host聚合查询模式中端口详情的显示格式和内容。
+
 [+] 增加附录：查询接口支持的字段。
+
 
 附录：
 
