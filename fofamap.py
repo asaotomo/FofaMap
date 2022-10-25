@@ -25,7 +25,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.10.14""")
+#Coded By Hx0战队  Update:2022.10.25""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
     print(colorama.Fore.RED + "======基础配置=======")
@@ -349,8 +349,8 @@ def get_icon_hash(ico):
 # host聚合查询
 def host_merge(query_host, email, key):
     try:
-        url = "https://fofa.info/api/v1/host/{}?email={}&key={}".format(query_host, email, key
-                                                                        , timeout=20)
+        url = "https://fofa.info/api/v1/host/{}?detail=true&email={}&key={}".format(query_host, email, key
+                                                                                    , timeout=20)
         res = requests.get(url)
         data = res.json()
         print(colorama.Fore.GREEN + "[+] 主机名:{}".format(data["host"]))
@@ -359,11 +359,32 @@ def host_merge(query_host, email, key):
         print(colorama.Fore.GREEN + "[+] asn组织:{}".format(data["org"]))
         print(colorama.Fore.GREEN + "[+] 国家名:{}".format(data["country_name"]))
         print(colorama.Fore.GREEN + "[+] 国家代码:{}".format(data["country_code"]))
-        print(colorama.Fore.GREEN + "[+] 协议名:{}".format("{}".format(",".join(data["protocol"]))))
-        print(colorama.Fore.GREEN + "[+] 端口:{}".format(",".join('%s' % port for port in data["port"])))
+        print(colorama.Fore.GREEN + '[+] 端口详情:\n{}'.format(merge_port_detail(data["ports"])))  # 打印port聚合表格
         print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
     except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:{}".format(e))
+
+
+# 美化端口详情
+def merge_port_detail(ports):
+    set_database = []
+    for port_info in ports:
+        products = []
+        for product in port_info['products']:
+            products.append(product['product'])
+        item = [port_info['port'], port_info['protocol'], ",".join(products)]
+        set_database.append(item)
+    table = PrettyTable(["id", "port", "protocol", "products"])
+    table.padding_width = 1
+    table.header_style = "title"
+    table.align = "c"
+    table.valign = "m"
+    id = 1
+    for item in set_database:
+        item.insert(0, id)
+        table.add_row(item)
+        id += 1
+    return table
 
 
 #  批量host聚合查询
