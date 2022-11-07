@@ -1,5 +1,6 @@
-XlsxWriter==3.0.2
-mmh3==3.0.0
-colorama==0.4.4
-prettytable==3.0.0
-requests==2.22.0
+configparser~=5.2.0
+colorama~=0.4.4
+XlsxWriter~=3.0.2
+requests~=2.22.0
+mmh3~=3.0.0
+prettytable~=3.0.0
