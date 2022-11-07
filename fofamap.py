@@ -2,6 +2,7 @@
 import argparse
 import configparser
 import sys
+from urllib.parse import urlparse
 import fofa
 import colorama
 import xlsxwriter
@@ -25,7 +26,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.10.25""")
+#Coded By Hx0战队  Update:2022.11.07""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
     print(colorama.Fore.RED + "======基础配置=======")
@@ -251,6 +252,7 @@ def get_userinfo():
     print(colorama.Fore.GREEN + "[+] VIP等级：{}".format(vip_level))
 
 
+# 调用fofa_api进行搜索
 def get_search(query_str, scan_format):
     start_page = config.getint("page", "start_page")
     end_page = config.getint("page", "end_page")
@@ -339,17 +341,32 @@ def bat_query(bat_query_file, scan_format):
 
 # 网站图标查询
 def get_icon_hash(ico):
-    favicon = requests.get("{}/favicon.ico".format(ico)).content
-    icon_hash = mmh3.hash(
-        codecs.lookup('base64').encode(favicon)[0])
-    return 'icon_hash="{}"'.format(icon_hash)
+    obj = urlparse(ico)
+    ico = "{}://{}".format(obj.scheme, obj.hostname)
+    res = requests.get(url=ico, verify=False, timeout=30)
+    res.encoding = res.apparent_encoding
+    html = res.text
+    ico_path = re.findall('rel="icon" href="(.*?)"', html, re.S)
+    if ico_path:
+        ico_url = "{}/{}".format(ico, ico_path[0])
+    else:
+        ico_url = "{}/favicon.ico".format(ico)
+    res = requests.get(ico_url, verify=False, timeout=30)
+    if res.status_code == 200:
+        favicon = res.content
+        icon_hash = mmh3.hash(
+            codecs.lookup('base64').encode(favicon)[0])
+        return 'icon_hash="{}"'.format(icon_hash)
+    else:
+        print(colorama.Fore.RED + "[-] 抱歉，系统暂时未找到该网站图标")
+        exit(0)
 
 
 # host聚合查询
 def host_merge(query_host, email, key):
     try:
         url = "https://fofa.info/api/v1/host/{}?detail=true&email={}&key={}".format(query_host, email, key
-                                                                                    , timeout=20)
+                                                                                    , timeout=30)
         res = requests.get(url)
         data = res.json()
         print(colorama.Fore.GREEN + "[+] 主机名:{}".format(data["host"]))
@@ -420,6 +437,7 @@ class Logger(object):
 
 
 if __name__ == '__main__':
+    requests.packages.urllib3.disable_warnings()
     # 初始化参数
     colorama.init(autoreset=True)
     config = configparser.ConfigParser()
