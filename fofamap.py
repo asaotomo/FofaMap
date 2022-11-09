@@ -186,12 +186,14 @@ def nuclie_scan(filename):
 def out_file_scan(filename, database):
     scan_list = []
     for target in database:
-        if "https://" not in target:
-            scan_list.append("http://{}\n".format(target))
-        elif "https://" in target and ":443" in target:
-            scan_list.append("{}\n".format(target).replace(":443", ""))
-        else:
-            scan_list.append("{}\n".format(target))
+        if target[1] == "http":
+            if "https://" not in target[0]:
+                scan_list.append("http://{}\n".format(target[0]))
+            elif "https://" in target and ":443" in target[0]:
+                scan_list.append("{}\n".format(target[0]).replace(":443", ""))
+            else:
+                scan_list.append("{}\n".format(target[0]))
+    scan_list = set(scan_list)
     scan_list = set(scan_list)
     print(colorama.Fore.GREEN + "[+] 已自动对结果做去重处理".format(filename))
     filename = "{}".format(filename).split(".")[0] + ".txt"
