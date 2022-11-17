@@ -26,7 +26,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.11.09""")
+#Coded By Hx0战队  Update:2022.11.17""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
     print(colorama.Fore.RED + "======基础配置=======")
@@ -186,11 +186,9 @@ def nuclie_scan(filename):
 def out_file_scan(filename, database):
     scan_list = []
     for target in database:
-        if target[1] == "http":
-            if "https://" not in target[0]:
+        if "http" in target[1]:
+            if target[1] == "http":
                 scan_list.append("http://{}\n".format(target[0]))
-            elif "https://" in target and ":443" in target[0]:
-                scan_list.append("{}\n".format(target[0]).replace(":443", ""))
             else:
                 scan_list.append("{}\n".format(target[0]))
     scan_list = set(scan_list)
@@ -288,11 +286,9 @@ def print_result(database, fields, scan_format):
     if scan_format:
         scan_list = []
         for target in database:
-            if target[1] == "http":
-                if "https://" not in target[0]:
+            if "http" in target[1]:
+                if target[1] == "http":
                     scan_list.append(colorama.Fore.GREEN + "http://{}".format(target[0]))
-                elif "https://" in target and ":443" in target[0]:
-                    scan_list.append(colorama.Fore.GREEN + "{}".format(target[0]).replace(":443", ""))
                 else:
                     scan_list.append(colorama.Fore.GREEN + "{}".format(target[0]))
         scan_list = set(scan_list)
@@ -431,7 +427,9 @@ class Logger(object):
     def write(self, message):
         self.terminal.write(message)
         self.log.write(
-            "{}".format(message).replace("\033[31m", "").replace("\033[32m", "").replace("\033[33m", "").replace(
+            "{}".format(message).replace("\033[91m", "").replace("\033[92m", "").replace("\033[93m", "").replace(
+                "\033[94m", "").replace("\033[96m", "").replace("\033[31m", "").replace("\033[32m", "").replace(
+                "\033[33m", "").replace(
                 "\033[36m", "").replace(
                 "\033[34m", "").replace("\033[0m", ""))
 
