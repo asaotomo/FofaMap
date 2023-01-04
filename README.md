@@ -297,13 +297,20 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/167256183-7c485b4c-1e5f-4bbe-a8de-3cf267ebd5ec.jpg">
 
+**特别鸣谢～FOFA官方**
+
+FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢 FOFA 提供的账号支持。
+
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/210543196-b76f6808-b5dd-4933-9451-0c3217dca8f5.png">
+
 **扫描关注战队公众号，获取最新动态**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
 
 **【知识星球】福利大放送**
 
-<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/156556995-f3798cb1-027e-47e6-84ba-b7537d85b158.png">
+<img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/210543877-95b791f0-c677-4019-bb6e-504eefd8164e.png">
+
 
 ---
 **更新日志 V1.1.3 国庆特别版**
