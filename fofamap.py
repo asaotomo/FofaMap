@@ -26,7 +26,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2022.11.17""")
+#Coded By Hx0战队  Update:2023.02.19""")
     logger_sw = config.get("logger", "logger")
     full_sw = config.get("full", "full")
     print(colorama.Fore.RED + "======基础配置=======")
@@ -422,7 +422,7 @@ def bat_host_query(bat_host_file):
 class Logger(object):
     def __init__(self, filename):
         self.terminal = sys.stdout
-        self.log = open(filename, "w+")
+        self.log = open(filename, "w+", encoding="utf-8")
 
     def write(self, message):
         self.terminal.write(message)
