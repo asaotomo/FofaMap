@@ -427,9 +427,10 @@ def print_table_detail(type, data):
         for agg in data:
             if "regions" in agg.keys():
                 city_rank = ""
-                for region in agg["regions"]:
-                    city_rank += "{0}({1})".format(region["name"], region["count"])
-                    city_rank += ","
+                if agg["regions"] is not None:
+                    for region in agg["regions"]:
+                        city_rank += "{0}({1})".format(region["name"], region["count"])
+                        city_rank += ","
                 item = [agg["name"], agg["count"], city_rank.rstrip(",")]
                 set_database.append(item)
                 count_num += 1
