@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import argparse
+import base64
 import configparser
 import sys
 from urllib.parse import urlparse
@@ -374,26 +375,71 @@ def host_merge(query_host, email, key):
         print(colorama.Fore.GREEN + "[+] asn组织:{}".format(data["org"]))
         print(colorama.Fore.GREEN + "[+] 国家名:{}".format(data["country_name"]))
         print(colorama.Fore.GREEN + "[+] 国家代码:{}".format(data["country_code"]))
-        print(colorama.Fore.GREEN + '[+] 端口详情:\n{}'.format(merge_port_detail(data["ports"])))  # 打印port聚合表格
+        print(colorama.Fore.GREEN + '[*] 端口详情:\n{}'.format(print_table_detail("ports", data["ports"])))  # 打印port聚合表格
         print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
     except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:{}".format(e))
 
 
-# 美化端口详情
-def merge_port_detail(ports):
-    set_database = []
-    for port_info in ports:
-        products = []
-        if "products" in port_info.keys():
-            for product in port_info['products']:
-                product_info = "{0}({1})".format(product['product'], product['category'])
-                products.append(product_info)
+# 统计聚合查询
+def count_merge(fields, count_query, email, key):
+    try:
+        qbase64 = base64.b64encode(bytes(count_query.encode('utf-8'))).decode()
+        url = "https://fofa.info/api/v1/search/stats?fields={}&qbase64={}&email={}&key={}".format(fields, qbase64,
+                                                                                                  email, key
+                                                                                                  , timeout=30)
+        res = requests.get(url)
+        data = res.json()
+        if data['error']:
+            print(colorama.Fore.RED + "[!] 错误:{}".format(data["errmsg"]))
         else:
-            products.append("")
-        item = [port_info['port'], port_info['protocol'], ",".join(products), port_info['update_time']]
-        set_database.append(item)
-    table = PrettyTable(["id", "port", "protocol", "products", "update_time"])
+            print(colorama.Fore.GREEN + "[+] 查询内容:{}".format(count_query))
+            print(colorama.Fore.GREEN + "[+] 统计总数:{}".format(data["size"]))
+            for key in data["distinct"].keys():
+                print(colorama.Fore.GREEN + "[+] {}:{}".format(key, data["distinct"][key]))
+            for key in data["aggs"].keys():
+                if data["aggs"][key] != [] and data["aggs"][key] is not None:
+                    print(colorama.Fore.GREEN + '[*] 统计详情（{0}）:\n{1}'.format(key,
+                                                                             print_table_detail("aggs", data["aggs"][
+                                                                                 key])))  # 打印统计聚合表格
+            print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["lastupdatetime"]))
+    except Exception as e:
+        print(colorama.Fore.RED + "[!] 错误:{}".format(e))
+
+
+# 打印表单详情
+def print_table_detail(type, data):
+    set_database = []
+    if type == "ports":
+        for port_info in data:
+            products = []
+            if "products" in port_info.keys():
+                for product in port_info['products']:
+                    product_info = "{0}({1})".format(product['product'], product['category'])
+                    products.append(product_info)
+            else:
+                products.append("")
+            item = [port_info['port'], port_info['protocol'], ",".join(products), port_info['update_time']]
+            set_database.append(item)
+        table = PrettyTable(["id", "port", "protocol", "products", "update_time"])
+    if type == "aggs":
+        count_num = 0
+        for agg in data:
+            if "regions" in agg.keys():
+                city_rank = ""
+                for region in agg["regions"]:
+                    city_rank += "{0}({1})".format(region["name"], region["count"])
+                    city_rank += ","
+                item = [agg["name"], agg["count"], city_rank.rstrip(",")]
+                set_database.append(item)
+                count_num += 1
+            else:
+                item = [agg["name"], agg["count"]]
+                set_database.append(item)
+        if count_num == 0:
+            table = PrettyTable(["id", "name", "count_top5"])
+        else:
+            table = PrettyTable(["id", "name", "count_top5", "city_rank_top5"])
     table.padding_width = 1
     table.header_style = "title"
     table.align = "c"
@@ -454,6 +500,8 @@ if __name__ == '__main__':
     parser.add_argument('-hq', '--host_query', help='Host Merge Query')
     parser.add_argument('-bq', '--bat_query', help='Fofa Batch Query')
     parser.add_argument('-bhq', '--bat_host_query', help='Fofa Batch Host Query')
+    parser.add_argument('-cq', '--count_query', help='Fofa Count Query')
+    parser.add_argument('-f', '--query_fields', help='Fofa Query Fields', default="title")
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
     parser.add_argument('-o', '--outfile', default="fofa.xlsx", help='File Save Name')
@@ -464,6 +512,8 @@ if __name__ == '__main__':
     query_host = args.host_query
     bat_query_file = args.bat_query
     bat_host_file = args.bat_host_query
+    count_query = args.count_query
+    query_fields = args.query_fields
     filename = args.outfile
     scan_format = args.scan_format
     is_scan = args.nuclie
@@ -478,6 +528,9 @@ if __name__ == '__main__':
     if query_host:
         print(colorama.Fore.RED + "======Host聚合=======")
         host_merge(query_host, client.email, client.key)
+    if count_query:
+        print(colorama.Fore.RED + "======统计聚合=======")
+        count_merge(query_fields, count_query, client.email, client.key)
     if bat_host_file:
         bat_host_query(bat_host_file)
     if query_str or bat_query_file or ico:
