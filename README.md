@@ -113,7 +113,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 
 <img width="1007" alt="image" src="https://user-images.githubusercontent.com/67818638/149065065-205e1f0f-35e1-4c65-a80b-1c632f1f0f58.png">
 
-**2.-hq 使用FOFA查询Host聚合数据**
+**2.-hq 使用FOFAMAP查询Host聚合查询**
 
 **关于命令说明：**
 
@@ -125,8 +125,21 @@ $ python3 fofamap.py -hq 8.8.8.8
 
 <img width="1375" alt="image" src="https://user-images.githubusercontent.com/67818638/221450671-ab53aeed-b436-4cd9-a99a-719b3222b3be.png">
 
+**3.-cq 使用FOFAMAP查询统计聚合数据**
 
-**3.-o 自定义输出文件名[默认为fofa.xlsx]**
+**关于命令说明：**
+
+使用统计聚合功能，可以根据当前的查询内容，生成全球统计信息，当前可统计每个字段的前5排名。例如，我们使用下列命令统计全球范围内使用Redis应用的Top5国家。其中-cq为查询内容，-f为需要统计聚合的字段，默认为title，可按照示例配置多个字段 fields=country,protocol,domain,port。详细用法见[FOFA API 官方文档](https://fofa.info/api/stats/statistical)
+
+```
+$  python3 fofamap.py -cq 'app="redis"' -f country
+```
+
+<img width="1050" alt="image" src="https://user-images.githubusercontent.com/67818638/221577605-23451f2d-66d7-4fc8-922a-cc7cfd717963.png">
+
+**PS：该功能限制为每隔5秒查询1次，查询频率太快会被FOFA拒绝。**
+
+**4.-o 自定义输出文件名[默认为fofa.xlsx]**
 
 ```
 $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
@@ -140,7 +153,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -o 结果.xlsx
 <img width="1088" alt="image" src="https://user-images.githubusercontent.com/67818638/149065268-d7306a51-10f0-4df8-b132-94012e07d73d.png">
 
 
-**4.-ico 使用网站图标Hash值进行查询**
+**5.-ico 使用网站图标Hash值进行查询**
 
 FofaMap V1.1.2新版支持网站图标查询【仅支持Fofa高级会员及以上用户】。
 
@@ -154,7 +167,7 @@ $ python3 fofamap.py -ico 网站url
 
 <img width="926" alt="image" src="https://user-images.githubusercontent.com/67818638/153366400-7344cd00-f050-42f7-b20d-e46b7466387f.png">
 
-**5.-bq 批量查询数据**
+**6.-bq 批量查询数据**
 
 FofaMap V1.1.3新版支持批量查询，用户可新建一个记事本文件，如bat.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 
@@ -179,7 +192,7 @@ icp="京ICP备10036305号"
 
 ![img](https://cdn.nlark.com/yuque/0/2022/png/12839102/1642591515080-a0220744-be8c-4030-a5ca-5ba60fa2366f.png)
 
-**6.-bhq 批量Host聚合查询**
+**7.-bhq 批量Host聚合查询**
 
 FofaMap V1.1.3新版支持批量host聚合查询，用户可新建一个记事本文件，如host.txt，然后将准备查询的主机名或IP地址写入其中，运行以下命令即可进行批量查询。
 
@@ -198,7 +211,7 @@ $ python3 fofamap.py -bhq host.txt
 <img width="1373" alt="image" src="https://user-images.githubusercontent.com/67818638/221450858-45832b0b-4f71-4746-9b59-29d281b7b150.png">
 
 
-**7.-s 输出扫描格式** 
+**8.-s 输出扫描格式** 
 
 使用输出扫描格式功能时，系统只会获取目标host字段，并自动做去重处理，输出结果同时会自动保存为txt文件，方便后面nuclei进行目标调用扫描。
 
@@ -210,7 +223,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s
 
 
 
-**8.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
+**9.使用 -s -n 调用nuclei对查询到的资产进行漏洞扫描** 
 
 ```
 python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
@@ -261,7 +274,7 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**9.通过修改配置文件，控制输出内容** 
+**10.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -332,6 +345,8 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 [+] 修复使用-s命令时，输出内容包含非http协议的问题。
 
 [+] 优化聚合搜索内容，修复部分搜索结果报错的问题。
+
+[+] 增加统计聚合功能，可根据当前的查询内容，生成全球统计信息，当前可统计每个字段的前5排名。
 
 [+] 增加附录：查询接口支持的字段。
 
