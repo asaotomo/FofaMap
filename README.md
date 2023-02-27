@@ -123,7 +123,7 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 $ python3 fofamap.py -hq 8.8.8.8
 ```
 
-<img width="578" alt="image" src="https://user-images.githubusercontent.com/67818638/197658462-7f5b8086-7e8a-4466-951f-46572ab3e55c.png">
+<img width="1375" alt="image" src="https://user-images.githubusercontent.com/67818638/221450671-ab53aeed-b436-4cd9-a99a-719b3222b3be.png">
 
 
 **3.-o 自定义输出文件名[默认为fofa.xlsx]**
@@ -195,7 +195,7 @@ $ python3 fofamap.py -bhq host.txt
 123.123.123.123
 ```
 
-<img width="599" alt="image" src="https://user-images.githubusercontent.com/67818638/197658410-835f2014-2358-43ba-9c47-4ea80fc06fb0.png">
+<img width="1373" alt="image" src="https://user-images.githubusercontent.com/67818638/221450858-45832b0b-4f71-4746-9b59-29d281b7b150.png">
 
 
 **7.-s 输出扫描格式** 
