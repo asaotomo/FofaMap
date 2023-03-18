@@ -56,6 +56,12 @@ end_page = 2
 [logger]#日志开关
 #全局日志开关，开启后会默认输入软件执行日志到fofamap.log文件
 logger = on
+
+[fast_check]#网站存活检测（Beta）
+#网站存活检测开关，默认关闭，开启后系统会对查询到的网站目标进行快速存活性检测
+check_alive = off
+#设置检测爬虫的超时时间
+timeout = 5
 ```
 
 5.不同用户使用**Fofamap**调用FOFA全网资产收集与检索系统API查询次数如下：
@@ -76,6 +82,7 @@ logger = on
 ├── README.md ##使用说明
 ├── fofa.ini ##fofa配置文件
 ├── fofa.py ##fofa api调用类
+├── fastcheck.py ##网站存活检测类（引入协程）
 ├── fofamap.py ##fofamap主程序
 ├── nuclei ##nuclei主程序，若nuclei主程序有更新，可去https://github.com/projectdiscovery/nuclei/releases下载替换
 │   ├── linux ##linux版主程序
@@ -112,6 +119,26 @@ $ python3 fofamap.py -q 'title="Apache APISIX Dashboard"'
 ```
 
 <img width="1007" alt="image" src="https://user-images.githubusercontent.com/67818638/149065065-205e1f0f-35e1-4c65-a80b-1c632f1f0f58.png">
+
+**网站存活检测功能（Beta）：**
+
+用户可以在fofa.ini文件中修改fast_check模块下的check_alive值，当check_alive为on时，系统将会开启网站存活检测功能，该功能会对用户查询到的数据进行智能识别，筛选出开启http或https协议的网站，并对这些网站进行存活检测，生成检测结果。该功能可以帮助用户快速识别查询到的网站是否可以进行正常访问。
+
+
+```
+$ python3 fofamap.py -q 'title="Grafana"'
+```
+
+<img width="1007" alt="image" src="https://user-images.githubusercontent.com/67818638/226097116-849b9d6c-3b17-48c7-8714-8f5f022ec0b9.png">
+
+
+如上图，在开启fast_check功能后，输出结果会增加Http Status Code一列，该列内容是本机访问对应网站时，服务器返回的状态码，我们可以通过该状态码，判定本机是否可以正常访问查询到的网站，建议将timeout值（默认为5s），超时时间设置越大，系统返回到结果将会越精准。
+
+
+（PS：1.该功能目前为测试功能，在Python版本低于3.10的平台上运行可能会输出一些报错信息，但不影响总体结果的输出；
+
+2.该功能默认为关闭状态，需要启用该功能，请在fofa.ini文件中将check_alive的值由off改为on。）
+
 
 **2.-hq 使用FOFAMAP查询Host聚合查询**
 
@@ -347,6 +374,8 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 [+] 优化聚合搜索内容，修复部分搜索结果报错的问题。
 
 [+] 增加统计聚合功能，可根据当前的查询内容，生成全球统计信息，当前可统计每个字段的前5排名。
+
+[+] 增加网站存活检测功能（Beta）。
 
 [+] 增加附录：查询接口支持的字段。
 
