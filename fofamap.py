@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import argparse
+import asyncio
 import base64
 import configparser
 import sys
@@ -15,6 +16,7 @@ import re
 import requests
 import codecs
 import mmh3
+from fastcheck import FastCheck
 
 
 # 当前软件版本信息
@@ -27,21 +29,15 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.02.27""")
-    logger_sw = config.get("logger", "logger")
-    full_sw = config.get("full", "full")
+#Coded By Hx0战队  Update:2023.03.18""")
     print(colorama.Fore.RED + "======基础配置=======")
+    print(colorama.Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
-        print(colorama.Fore.GREEN + "[*]日志状态:开启")
         sys.stdout = Logger("fofamap.log")
-    else:
-        print(colorama.Fore.RED + "[*]日志状态:关闭")
+    print(colorama.Fore.GREEN + f"[*]存活检测:{'开启' if check_alive == 'on' else '关闭'}")
     if not query_host and not bat_host_file:
-        if full_sw == "false":
-            print(colorama.Fore.GREEN + "[*]搜索范围:一年内数据")
-        else:
-            print(colorama.Fore.RED + "[*]搜索范围:全部数据")
-        print(colorama.Fore.GREEN + "[*]每页查询数量:{}条/页".format(config.getint("size", "size")))
+        print(colorama.Fore.GREEN + f"[*]搜索范围:{'全部数据' if full_sw == 'true' else '一年内数据'}")
+    print(colorama.Fore.GREEN + f"[*]每页查询数量:{config.getint('size', 'size')}条/页")
 
 
 # 查询域名信息
@@ -188,11 +184,7 @@ def out_file_scan(filename, database):
     scan_list = []
     for target in database:
         if "http" in target[1]:
-            if target[1] == "http":
-                scan_list.append("http://{}\n".format(target[0]))
-            else:
-                scan_list.append("{}\n".format(target[0]))
-    scan_list = set(scan_list)
+            scan_list.append("{0}{1}\n".format(protocols[target[1]], target[0]))
     scan_list = set(scan_list)
     print(colorama.Fore.GREEN + "[+] 已自动对结果做去重处理".format(filename))
     filename = "{}".format(filename).split(".")[0] + ".txt"
@@ -205,13 +197,13 @@ def out_file_scan(filename, database):
 
 
 # 输出excel表格结果
-def out_file_excel(filename, database, scan_format):
+def out_file_excel(filename, database, scan_format, fields):
     print(colorama.Fore.RED + "======文档输出=======")
     if scan_format:
         # 输出扫描格式文档
         out_file_scan(filename, database)
     else:
-        field = config.get("fields", "fields").split(",")  # 获取查询参数
+        field = fields.split(",")  # 获取查询参数
         column_lib = {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I', 10: 'J', 11: 'K', 12: 'L',
                       13: 'M', 14: 'N', 15: 'O', 16: 'P', 17: 'Q', 18: 'R', 19: 'S', 20: 'T', 21: 'U', 22: 'V', 23: 'W',
                       24: 'X', 25: 'Y', 26: 'Z'}
@@ -261,6 +253,11 @@ def get_search(query_str, scan_format):
         fields = "host,protocol"  # 获取查询参数
     else:
         fields = config.get("fields", "fields")  # 获取查询参数
+        if check_alive == "on":
+            if "protocol" not in fields:
+                fields = "protocol," + fields
+            if "host" not in fields:
+                fields = "host," + fields
     print(colorama.Fore.RED + "======查询内容=======")
     print(colorama.Fore.GREEN + "[+] 查询语句：{}".format(query_str))
     print(colorama.Fore.GREEN + "[+] 查询参数：{}".format(fields))
@@ -278,7 +275,42 @@ def get_search(query_str, scan_format):
     for data in database:
         if data not in set_database:
             set_database.append(data)
+    if check_alive == "on" and fields != "Error" and scan_format is not True:
+        fields = fields + ",HTTP Status Code"
+        set_database = check_is_alive(set_database)
     return set_database, fields
+
+
+# 判定目标是否开启http协议
+def http_handle(target):
+    if "http" in target[1]:
+        target = "{0}{1}".format(protocols[target[1]], target[0])
+        return target
+    return False
+
+
+# 网站存活检测
+def check_is_alive(set_database):
+    check_list = []
+    for target in set_database:
+        if "http" in target[1]:
+            check_list.append("{0}{1}".format(protocols[target[1]], target[0]))
+    check_list = set(check_list)
+    time_out = config.getint("fast_check", "timeout")
+    ff = FastCheck(check_list, timeout=time_out)
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(ff.check_urls())
+    c_set_database = []
+    for target in set_database:
+        if http_handle(target) is not False:
+            target.append(ff.result_dict[http_handle(target)])
+            target[0] = http_handle(target)
+        else:
+            target.append("Not a web service")
+        c_set_database.append(target)
+    del ff
+    return set_database
 
 
 # 打印查询结果
@@ -288,10 +320,7 @@ def print_result(database, fields, scan_format):
         scan_list = []
         for target in database:
             if "http" in target[1]:
-                if target[1] == "http":
-                    scan_list.append(colorama.Fore.GREEN + "http://{}".format(target[0]))
-                else:
-                    scan_list.append(colorama.Fore.GREEN + "{}".format(target[0]))
+                scan_list.append(colorama.Fore.GREEN + "{0}{1}".format(protocols[target[1]], target[0]))
         scan_list = set(scan_list)
         for value in scan_list:
             print(value)
@@ -333,7 +362,7 @@ def bat_query(bat_query_file, scan_format):
         database, fields = get_search(query_str, scan_format)
         # 输出excel文档
         filename = "task-{}.xlsx".format(id)
-        out_file_excel(filename, database, scan_format)
+        out_file_excel(filename, database, scan_format, fields)
         # 打印结果
         print_result(database, fields, scan_format)
         id += 1
@@ -491,10 +520,16 @@ class Logger(object):
 if __name__ == '__main__':
     requests.packages.urllib3.disable_warnings()
     # 初始化参数
+    HTTP_PREFIX = "http://"
+    HTTPS_PREFIX = "https://"
+    protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX}
     colorama.init(autoreset=True)
     config = configparser.ConfigParser()
     # 读取配置文件
     config.read('fofa.ini', encoding="utf-8")
+    logger_sw = config.get("logger", "logger")
+    full_sw = config.get("full", "full")
+    check_alive = config.get("fast_check", "check_alive")
     parser = argparse.ArgumentParser(
         description="SearchMap (A fofa API information collection tool)")
     parser.add_argument('-q', '--query', help='Fofa Query Statement')
@@ -544,10 +579,11 @@ if __name__ == '__main__':
             # 获得查询结果
             database, fields = get_search(query_str, scan_format)
             # 输出excel文档
-            out_file_excel(filename, database, scan_format)
+            out_file_excel(filename, database, scan_format, fields)
             # 打印结果
             print_result(database, fields, scan_format)
         if update:
             nuclei_update()
         if scan_format and is_scan:
             nuclie_scan(filename)
+        sys.exit()
