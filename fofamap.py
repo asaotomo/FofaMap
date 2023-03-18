@@ -256,8 +256,16 @@ def get_search(query_str, scan_format):
         if check_alive == "on":
             if "protocol" not in fields:
                 fields = "protocol," + fields
+            else:
+                temp = fields.split(",")
+                temp.remove("protocol")
+                fields = "protocol," + ",".join(temp)
             if "host" not in fields:
                 fields = "host," + fields
+            else:
+                temp = fields.split(",")
+                temp.remove("host")
+                fields = "host," + ",".join(temp)
     print(colorama.Fore.RED + "======查询内容=======")
     print(colorama.Fore.GREEN + "[+] 查询语句：{}".format(query_str))
     print(colorama.Fore.GREEN + "[+] 查询参数：{}".format(fields))
