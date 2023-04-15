@@ -29,7 +29,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.03.18""")
+#Coded By Hx0战队  Update:2023.04.16""")
     print(colorama.Fore.RED + "======基础配置=======")
     print(colorama.Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -309,16 +309,21 @@ def check_is_alive(set_database):
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(ff.check_urls())
-    c_set_database = []
     for target in set_database:
         if http_handle(target) is not False:
             target.append(ff.result_dict[http_handle(target)])
             target[0] = http_handle(target)
         else:
             target.append("Not a web service")
-        c_set_database.append(target)
     del ff
-    return set_database
+    if include:
+        f_set_database = []
+        for data in set_database:
+            if data[-1] in include.split(","):
+                f_set_database.append(data)
+        return f_set_database
+    else:
+        return set_database
 
 
 # 打印查询结果
@@ -546,6 +551,7 @@ if __name__ == '__main__':
     parser.add_argument('-bhq', '--bat_host_query', help='Fofa Batch Host Query')
     parser.add_argument('-cq', '--count_query', help='Fofa Count Query')
     parser.add_argument('-f', '--query_fields', help='Fofa Query Fields', default="title")
+    parser.add_argument('-i', '--include', help='Specify The Included Http Protocol Status Code')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
     parser.add_argument('-o', '--outfile', default="fofa.xlsx", help='File Save Name')
@@ -562,6 +568,7 @@ if __name__ == '__main__':
     scan_format = args.scan_format
     is_scan = args.nuclie
     update = args.update
+    include = args.include
     ico = args.icon_query
     # 获取版本信息
     banner()
