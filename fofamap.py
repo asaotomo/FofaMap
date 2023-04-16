@@ -305,10 +305,14 @@ def check_is_alive(set_database):
             check_list.append("{0}{1}".format(protocols[target[1]], target[0]))
     check_list = set(check_list)
     time_out = config.getint("fast_check", "timeout")
-    ff = FastCheck(check_list, timeout=time_out)
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    loop.run_until_complete(ff.check_urls())
+    try:
+        ff = FastCheck(check_list, timeout=time_out)
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(ff.check_urls())
+    except:
+        print(colorama.Fore.RED + "[!] 错误:网络存活性检测功能出错啦，请重新尝试！")
+        exit(0)
     for target in set_database:
         if http_handle(target) is not False:
             target.append(ff.result_dict[http_handle(target)])
@@ -328,7 +332,10 @@ def check_is_alive(set_database):
 
 # 打印查询结果
 def print_result(database, fields, scan_format):
-    print(colorama.Fore.RED + "======查询结果=======")
+    if key_word:
+        print(colorama.Fore.RED + "======统计结果=======")
+    else:
+        print(colorama.Fore.RED + "======查询结果=======")
     if scan_format:
         scan_list = []
         for target in database:
@@ -373,12 +380,16 @@ def bat_query(bat_query_file, scan_format):
         print(colorama.Fore.GREEN + "[+] 当前任务：task-{}".format(id))
         query_str = "{}".format(query_str).replace("\n", "")
         database, fields = get_search(query_str, scan_format)
+        if key_word:
+            match_key_word(database)
         # 输出excel文档
-        filename = "task-{}.xlsx".format(id)
+        filename = "task-{}-【{}】.xlsx".format(id, query_str)
         out_file_excel(filename, database, scan_format, fields)
         # 打印结果
         print_result(database, fields, scan_format)
         id += 1
+    if key_word:
+        out_key_word(scan_format, fields)
 
 
 # 网站图标查询
@@ -511,6 +522,31 @@ def bat_host_query(bat_host_file):
         time.sleep(0.1)
 
 
+# 筛选关键字
+def match_key_word(database):
+    k = 0
+    pattern = "{}".format(key_word).replace(",", "|")
+    for data in database:
+        for item in data:
+            regular = re.compile(pattern, re.I)
+            m = re.search(regular, item)
+            if m is not None:
+                k += 1
+        if k >= 1:
+            key_database.append(data.copy())
+            k = 0
+
+
+# 输出关键词匹配结果
+def out_key_word(scan_format, fields):
+    print(colorama.Fore.RED + "=====关键字筛选======")
+    print(colorama.Fore.GREEN + "[+] 关键字：{}".format(key_word))
+    print(colorama.Fore.GREEN + "[+] 本次共计筛选处包含关键字的信息：{}条".format(len(key_database)))
+    if len(key_database) > 0:
+        print_result(key_database, fields, scan_format)
+        out_file_excel("关键词匹配结果.xlsx", key_database, scan_format, fields)
+
+
 # 日志功能
 class Logger(object):
     def __init__(self, filename):
@@ -536,6 +572,7 @@ if __name__ == '__main__':
     HTTP_PREFIX = "http://"
     HTTPS_PREFIX = "https://"
     protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX}
+    key_database = []
     colorama.init(autoreset=True)
     config = configparser.ConfigParser()
     # 读取配置文件
@@ -552,6 +589,7 @@ if __name__ == '__main__':
     parser.add_argument('-cq', '--count_query', help='Fofa Count Query')
     parser.add_argument('-f', '--query_fields', help='Fofa Query Fields', default="title")
     parser.add_argument('-i', '--include', help='Specify The Included Http Protocol Status Code')
+    parser.add_argument('-kw', '--key_word', help='Filter Out User Specified Content')
     parser.add_argument('-ico', '--icon_query', help='Fofa Favorites Icon Query')
     parser.add_argument('-s', '--scan_format', help='Output Scan Format', action='store_true')
     parser.add_argument('-o', '--outfile', default="fofa.xlsx", help='File Save Name')
@@ -569,6 +607,7 @@ if __name__ == '__main__':
     is_scan = args.nuclie
     update = args.update
     include = args.include
+    key_word = args.key_word
     ico = args.icon_query
     # 获取版本信息
     banner()
@@ -593,10 +632,14 @@ if __name__ == '__main__':
                 query_str = get_icon_hash(ico)
             # 获得查询结果
             database, fields = get_search(query_str, scan_format)
+            if key_word:
+                match_key_word(database)
             # 输出excel文档
             out_file_excel(filename, database, scan_format, fields)
             # 打印结果
             print_result(database, fields, scan_format)
+            if key_word:
+                out_key_word(scan_format, fields)
         if update:
             nuclei_update()
         if scan_format and is_scan:
