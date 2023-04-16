@@ -543,8 +543,8 @@ def out_key_word(scan_format, fields):
     print(colorama.Fore.GREEN + "[+] 关键字：{}".format(key_word))
     print(colorama.Fore.GREEN + "[+] 本次共计筛选处包含关键字的信息：{}条".format(len(key_database)))
     if len(key_database) > 0:
-        print_result(key_database, fields, scan_format)
         out_file_excel("关键词匹配结果.xlsx", key_database, scan_format, fields)
+        print_result(key_database, fields, scan_format)
 
 
 # 日志功能
