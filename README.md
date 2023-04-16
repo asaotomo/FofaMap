@@ -308,7 +308,24 @@ python3 fofamap.py -q 'title="Apache APISIX Dashboard"' -s  -n
 
 ![image](https://user-images.githubusercontent.com/67818638/149505746-fc27bd19-d027-487e-a944-914bcb30cd58.png)
 
-**10.通过修改配置文件，控制输出内容** 
+**10.-kw，关键词筛选匹配** 
+
+我们可以通过-kw参数对fofamap查询到的数据进行关键词筛选匹配，并输出【关键词匹配结果.xlsx】表。该功能特别推荐在进行批量查询时使用，可以快速将我们指定的包含关键词内容的数据整合到一张汇总表中，方便我们快速定位到特定的资产。
+
+例如：我们使用(-kw "php,登录")筛选出查询结果中包含"php或登录"的数据。
+
+
+```
+$ python3 fofamap.py -q 'app="discuz"' -kw "php,登录"
+```
+
+我们可以看到系统输出的内容为汇总之后的包含"php或登录"关键词的数据。
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/67818638/232302814-29130f6e-a4ef-4489-bda2-b8566702f9c6.png">
+
+PS: 1.-kw命令之后所跟的关键词不区分大小写。 2.需要匹配多个关键词时请使用英文逗号(,)隔开。
+
+**11.通过修改配置文件，控制输出内容** 
 
 我们可以通过修改**fofa.ini**配置文件中的fields值来控制工具输出的顺序与字段。
 例如：我们将**fields = ip,port,title,country,city**改为**fields = protocol,ip,port,title,icp**。
@@ -323,7 +340,6 @@ $ python3 fofamap.py -q 'app="discuz"'
 输出内容就会变为协议、IP地址、端口、网站标题、ICP备案号。
 
 <img width="1126" alt="image" src="https://user-images.githubusercontent.com/67818638/149067474-acfdfa54-d55a-4350-b531-607d41584b0e.png">
-
 
 
 
@@ -383,6 +399,8 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 [+] 增加统计聚合功能，可根据当前的查询内容，生成全球统计信息，当前可统计每个字段的前5排名。
 
 [+] 增加网站存活检测功能（Beta），并支持从输出结果中筛选出自定义的HTTP响应状态码。
+
+[+] 增加关键词筛选匹配功能，可针对查询结果进行自定义关键词筛选，并将匹配结果汇总输出。
 
 [+] 增加附录：查询接口支持的字段。
 
