@@ -242,7 +242,7 @@ $ python3 fofamap.py -bhq host.txt
 123.123.123.123
 ```
 
-<img width="1373" alt="image" src="https://user-images.githubusercontent.com/67818638/221450858-45832b0b-4f71-4746-9b59-29d281b7b150.png">
+<img width="1370" alt="image" src="https://user-images.githubusercontent.com/67818638/233833195-269c205e-83d7-4e8d-bf72-f04c90df6083.png">
 
 
 **8.-s 输出扫描格式** 
@@ -401,6 +401,8 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 [+] 增加网站存活检测功能（Beta），并支持从输出结果中筛选出自定义的HTTP响应状态码。
 
 [+] 增加关键词筛选匹配功能，可针对查询结果进行自定义关键词筛选，并将匹配结果汇总输出。
+
+[+] 增加Host聚合查询结果自动输出Excel表格。
 
 [+] 增加附录：查询接口支持的字段。
 
