@@ -29,7 +29,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.04.16""")
+#Coded By Hx0战队  Update:2023.04.23""")
     print(colorama.Fore.RED + "======基础配置=======")
     print(colorama.Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -416,7 +416,7 @@ def get_icon_hash(ico):
 
 
 # host聚合查询
-def host_merge(query_host, email, key):
+def host_merge(query_host, email, key, filename="Host_Merge.xlsx"):
     try:
         url = "https://fofa.info/api/v1/host/{}?detail=true&email={}&key={}".format(query_host, email, key
                                                                                     , timeout=30)
@@ -430,6 +430,7 @@ def host_merge(query_host, email, key):
         print(colorama.Fore.GREEN + "[+] 国家代码:{}".format(data["country_code"]))
         print(colorama.Fore.GREEN + '[*] 端口详情:\n{}'.format(print_table_detail("ports", data["ports"])))  # 打印port聚合表格
         print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
+        out_file_excel(filename, set_database, scan_format=None, fields="id,port,protocol,products,update_time")
     except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:{}".format(e))
 
@@ -462,6 +463,7 @@ def count_merge(fields, count_query, email, key):
 
 # 打印表单详情
 def print_table_detail(type, data):
+    global set_database
     set_database = []
     if type == "ports":
         for port_info in data:
@@ -517,9 +519,10 @@ def bat_host_query(bat_host_file):
     print(colorama.Fore.GREEN + "[+] 任务总数：{}".format(total))
     for query_host in bat_host:
         print(colorama.Fore.YELLOW + "=======任务-{}========".format(id))
-        host_merge(query_host.strip("\n"), client.email, client.key)
+        host_merge(query_host.strip("\n"), client.email, client.key,
+                   filename="host_merge_task-{}-【{}】.xlsx".format(id, query_host.strip("\n")))
         id += 1
-        time.sleep(0.1)
+        time.sleep(1)
 
 
 # 筛选关键字
