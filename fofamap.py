@@ -29,7 +29,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.04.23""")
+#Coded By Hx0战队  Update:2023.05.25""")
     print(colorama.Fore.RED + "======基础配置=======")
     print(colorama.Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -140,7 +140,9 @@ def nuclie_scan(filename):
     print(colorama.Fore.GREEN + "[+] 即将启动nuclei对目标进行扫描")
     print(colorama.Fore.GREEN + "[+] 扫描引擎路径[{}]".format(scan.path))
     filename = "{}".format(filename).split(".")[0] + ".txt"
-    print(colorama.Fore.GREEN + "[-] nuclie默认使用全扫描，是否改用自定义扫描功能？[Y/N][温馨提示：若要修改扫描目标，可在此时手动修改{}文件内容]".format(filename))
+    print(
+        colorama.Fore.GREEN + "[-] nuclie默认使用全扫描，是否改用自定义扫描功能？[Y/N][温馨提示：若要修改扫描目标，可在此时手动修改{}文件内容]".format(
+            filename))
     switch = input()
     if switch == "Y" or switch == "y":
         print(colorama.Fore.GREEN + "[+] 正在调用nuclei对目标进行自定义扫描")
@@ -158,7 +160,8 @@ def nuclie_scan(filename):
             mode_v = "customize"
         print(colorama.Fore.GREEN + "[+] 已选择[{}]过滤器".format(mode_v))
         if mode_v == "customize":
-            print(colorama.Fore.GREEN + "[-] 请输入完整的自定义命令内容[例如：-tags cve -severity critical,high -author geeknik]")
+            print(
+                colorama.Fore.GREEN + "[-] 请输入完整的自定义命令内容[例如：-tags cve -severity critical,high -author geeknik]")
             customize_cmd = input()
             cmd = scan.customize_cmd(filename, customize_cmd)
             print(colorama.Fore.GREEN + "[+] 本次扫描语句[{}]".format(cmd))
@@ -177,6 +180,14 @@ def nuclie_scan(filename):
     print(colorama.Fore.GREEN + "[+]扫描完成，扫描结果保存为：scan_result.txt")
     result_count()  # 统计扫描结果
     print_domain()  # 查找拥有域名的IP
+
+
+# 过滤输出文件名中包含的特殊字符
+def clean_filename(filename, replace='_'):
+    invalid_chars = '<>:"/\\|?*'
+    for char in invalid_chars:
+        filename = filename.replace(char, replace)
+    return filename
 
 
 # 输出扫描目标
@@ -198,6 +209,7 @@ def out_file_scan(filename, database):
 
 # 输出excel表格结果
 def out_file_excel(filename, database, scan_format, fields):
+    filename = clean_filename(filename)
     print(colorama.Fore.RED + "======文档输出=======")
     if scan_format:
         # 输出扫描格式文档
@@ -310,7 +322,7 @@ def check_is_alive(set_database):
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         loop.run_until_complete(ff.check_urls())
-    except:
+    except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:网络存活性检测功能出错啦，请重新尝试！")
         exit(0)
     for target in set_database:
@@ -428,7 +440,8 @@ def host_merge(query_host, email, key, filename="Host_Merge.xlsx"):
         print(colorama.Fore.GREEN + "[+] asn组织:{}".format(data["org"]))
         print(colorama.Fore.GREEN + "[+] 国家名:{}".format(data["country_name"]))
         print(colorama.Fore.GREEN + "[+] 国家代码:{}".format(data["country_code"]))
-        print(colorama.Fore.GREEN + '[*] 端口详情:\n{}'.format(print_table_detail("ports", data["ports"])))  # 打印port聚合表格
+        print(
+            colorama.Fore.GREEN + '[*] 端口详情:\n{}'.format(print_table_detail("ports", data["ports"])))  # 打印port聚合表格
         print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["update_time"]))
         out_file_excel(filename, set_database, scan_format=None, fields="id,port,protocol,products,update_time")
     except Exception as e:
@@ -454,8 +467,9 @@ def count_merge(fields, count_query, email, key):
             for key in data["aggs"].keys():
                 if data["aggs"][key] != [] and data["aggs"][key] is not None:
                     print(colorama.Fore.GREEN + '[*] 统计详情（{0}）:\n{1}'.format(key,
-                                                                             print_table_detail("aggs", data["aggs"][
-                                                                                 key])))  # 打印统计聚合表格
+                                                                                 print_table_detail("aggs",
+                                                                                                    data["aggs"][
+                                                                                                        key])))  # 打印统计聚合表格
             print(colorama.Fore.GREEN + "[+] 数据更新时间:{}".format(data["lastupdatetime"]))
     except Exception as e:
         print(colorama.Fore.RED + "[!] 错误:{}".format(e))
@@ -605,7 +619,7 @@ if __name__ == '__main__':
     bat_host_file = args.bat_host_query
     count_query = args.count_query
     query_fields = args.query_fields
-    filename = args.outfile
+    filename = clean_filename(args.outfile)
     scan_format = args.scan_format
     is_scan = args.nuclie
     update = args.update
