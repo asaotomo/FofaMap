@@ -404,6 +404,10 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 
 [+] 增加Host聚合查询结果自动输出Excel表格。
 
+[+] 修复fastcheck模块中的存在的一些BUG，并在每次请求时增加了随机User-Agent。
+
+[+] 增加对输出文件名中的特殊字符过滤功能，避免因xlsx文件名中包含特殊字符而导致文件生成失败。（特别感谢用户OKVVbin提出的问题）
+
 [+] 增加附录：查询接口支持的字段。
 
 
