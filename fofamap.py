@@ -29,7 +29,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.05.25""")
+#Coded By Hx0战队  Update:2023.07.19""")
     print(colorama.Fore.RED + "======基础配置=======")
     print(colorama.Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -588,7 +588,7 @@ if __name__ == '__main__':
     # 初始化参数
     HTTP_PREFIX = "http://"
     HTTPS_PREFIX = "https://"
-    protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX}
+    protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX, "nacos(http)": HTTP_PREFIX}
     key_database = []
     colorama.init(autoreset=True)
     config = configparser.ConfigParser()
