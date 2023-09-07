@@ -374,6 +374,9 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/210543877-95b791f0-c677-4019-bb6e-504eefd8164e.png">
 
+## 历史Star
+
+[![Star History Chart](https://api.star-history.com/svg?repos=asaotomo/FofaMap&type=Date)](https://star-history.com/#asaotomo/FofaMap)
 
 ---
 **更新日志 V1.1.3 国庆特别版**
