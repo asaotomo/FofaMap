@@ -41,10 +41,13 @@ size = 100
 #默认搜索一年内的数据，指定为true即可搜索全部数据，false为一年内数据
 full = false
 
+[excel]
+#当sheet_merge设置为on时，批量查询结果将汇聚到一个文件的多个sheet进行输出，设置为false时，每个查询结果将单独作为一个文件进行输出
+sheet_merge = on
+
 [fields]#查询内容选项
 #默认查询内容为：ip、端口、网站标题、国家和城市
 fields = ip,port,title,country,city
-
 #fields可选项有：['host', 'title', 'ip', 'domain', 'port', 'country', 'province', 'city', 'country_name', 'header', 'server', 'protocol', 'banner', 'cert', 'isp', 'as_number', 'as_organization', 'latitude', 'longitude', 'structinfo','icp', 'fid', 'cname']
 
 [page]#查询页数
@@ -58,8 +61,8 @@ end_page = 2
 logger = on
 
 [fast_check]#网站存活检测（Beta）
-#网站存活检测开关，默认关闭，开启后系统会对查询到的网站目标进行快速存活性检测
-check_alive = off
+#网站存活检测开关，默认开启，开启后系统会对查询到的网站目标进行快速存活性检测
+check_alive = on
 #设置检测爬虫的超时时间
 timeout = 5
 ```
@@ -225,6 +228,12 @@ icp="京ICP备10036305号"
 **如下：**
 
 ![img](https://cdn.nlark.com/yuque/0/2022/png/12839102/1642591515080-a0220744-be8c-4030-a5ca-5ba60fa2366f.png)
+
+当然！目前最新版也支持将所有任务查询结果整合到一个文件夹中。
+
+![image](https://github.com/asaotomo/FofaMap/assets/67818638/f6422434-186b-40d7-9a5b-250c4af517ed)
+
+
 
 **7.-bhq 批量Host聚合查询**
 
