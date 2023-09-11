@@ -28,7 +28,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.09.09""")
+#Coded By Hx0战队  Update:2023.09.11""")
     print(Fore.RED + "======基础配置=======")
     print(Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -347,6 +347,7 @@ def get_search(query_str, scan_format):
     for data in database:
         if data not in set_database:
             set_database.append(data)
+    print(database)
     if check_alive == "on" and fields != "Error" and scan_format is not True:
         fields = fields + ",HTTP Status Code"
         set_database = check_is_alive(set_database)
@@ -655,7 +656,8 @@ if __name__ == '__main__':
     # 初始化参数
     HTTP_PREFIX = "http://"
     HTTPS_PREFIX = "https://"
-    protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX, "nacos(http)": HTTP_PREFIX}
+    protocols = {"http": HTTP_PREFIX, "https": "", "kubernetes(https)": HTTPS_PREFIX, "kubernetes(http)": HTTP_PREFIX,
+                 "nacos(https)": HTTPS_PREFIX, "nacos(http)": HTTP_PREFIX}
     key_database = []
     colorama.init(autoreset=True)
     Fore = colorama.Fore
