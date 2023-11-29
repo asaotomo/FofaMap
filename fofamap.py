@@ -28,7 +28,7 @@ def banner():
 |  _| (_) |  _| (_| | |  | | (_| | |_) |
 |_|  \___/|_|  \__,_|_|  |_|\__,_| .__/ 
                                  |_|   V1.1.3  
-#Coded By Hx0战队  Update:2023.11.15""")
+#Coded By Hx0战队  Update:2023.11.29""")
     print(Fore.RED + "======基础配置=======")
     print(Fore.GREEN + f"[*]日志记录:{'开启' if logger_sw == 'on' else '关闭'}")
     if logger_sw == "on":
@@ -230,7 +230,8 @@ def out_file_excel(filename, database, scan_format, fields, options=None):
         with xlsxwriter.Workbook(filename) as workbook:
             if sheet_merge == "on" and type(database) == dict:
                 for key in database.keys():
-                    worksheet = workbook.add_worksheet(key[:31])
+                    cleaned_name = re.sub(r'[\[\]:*?/\\]', '_', key[:31])
+                    worksheet = workbook.add_worksheet(cleaned_name)
                     worksheet.set_column(f'A:{column_lib[len(field)]}', 30)
                     title_format = workbook.add_format(
                         {'font_size': 14, 'border': 1, 'bold': True, 'font_color': 'white', 'bg_color': '#4BACC6',
@@ -347,7 +348,6 @@ def get_search(query_str, scan_format):
     for data in database:
         if data not in set_database:
             set_database.append(data)
-    print(database)
     if check_alive == "on" and fields != "Error" and scan_format is not True:
         fields = fields + ",HTTP Status Code"
         set_database = check_is_alive(set_database)
