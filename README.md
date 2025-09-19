@@ -365,6 +365,12 @@ $ python3 fofamap.py -q 'app="discuz"'
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/147641794-82f32969-4214-48da-9df2-764318225589.png">
 
+**【打赏支持❤️】代码传情跨山海，点滴支持皆温暖✨**
+
+虽然代码完全开源，但每杯咖啡都能让我们走得更远 ☕️
+
+<img width="500" height="400" alt="打赏码" src="https://github.com/user-attachments/assets/02868aed-357e-4740-983a-d5a8ea05bdbf" />
+
 **特别鸣谢～渊龙Sec团队**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/167256183-7c485b4c-1e5f-4bbe-a8de-3cf267ebd5ec.jpg">
@@ -375,11 +381,11 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/210543196-b76f6808-b5dd-4933-9451-0c3217dca8f5.png">
 
-**扫描关注战队公众号，获取最新动态**
+**【战队公众号】扫描关注战队公众号，获取最新动态**
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
 
-**【知识星球】福利大放送**
+**【战队知识星球】福利大放送**
 
 <img width="318" alt="image" src="https://github.com/user-attachments/assets/94849d79-bcac-4a43-9221-3e2718225cb6">
 
