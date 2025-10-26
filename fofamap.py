@@ -21,7 +21,7 @@ from fastcheck import FastCheck
 
 # 当前软件版本信息
 def banner():
-    print(Fore.LIGHTGREEN_EX + """
+    print(Fore.LIGHTGREEN_EX + r"""
  _____      __       __  __     [*]联动 Nuclei           
 |  ___|__  / _| __ _|  \/  | __ _ _ __  
 | |_ / _ \| |_ / _` | |\/| |/ _` | '_ \ 
