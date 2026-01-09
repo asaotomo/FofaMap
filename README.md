@@ -140,6 +140,7 @@ AI 会根据资产指纹：
 ```bash
 .
 ├── config/
+│   ├── __init__.py          # ✅ 负责读取 yaml 并导出 settings 对象
 │   └── settings.yaml        # ⭐ 全局配置（FOFA / AI / 系统）
 │
 ├── core/                    # 🧠 核心引擎层
