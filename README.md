@@ -4,11 +4,13 @@ Self-Reflecting AI Queries → MCP Protocol Integration → Intelligent Vulnerab
 >
 
 <!-- 这是一张图片，ocr 内容为： -->
-![](https://img.shields.io/badge/Python-3.10+-blue.svg)<!-- 这是一张图片，ocr 内容为： -->
-![](https://img.shields.io/badge/License-MIT-green.svg)<!-- 这是一张图片，ocr 内容为： -->
-![](https://img.shields.io/badge/MCP-AI%20Ready-purple.svg)<!-- 这是一张图片，ocr 内容为： -->
-![](https://img.shields.io/badge/Nuclei-Integrated-orange.svg)<!-- 这是一张图片，ocr 内容为： -->
-
+![](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![](https://img.shields.io/badge/Version-2.0.0-blue.svg)
+![](https://img.shields.io/badge/AI-Self--Reflecting-blueviolet.svg)
+![](https://img.shields.io/badge/MCP-AI%20Ready-purple.svg)
+![](https://img.shields.io/badge/Nuclei-Integrated-orange.svg)
+![](https://img.shields.io/badge/DeepSeek-V3-red.svg)
+![](https://img.shields.io/badge/License-MIT-green.svg)
 ---
 
 # ✨ 一句话介绍
