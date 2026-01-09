@@ -1,0 +1,36 @@
+#====== 用户信息 (User Info) ======
+userinfo:
+  # FOFA 账号邮箱
+  email: "your_email@example.com"
+  # FOFA API Key
+  key: "your_fofa_api_key"
+  # [New] DeepSeek 或其他模型的 API Key
+  deepseek_api_key: "sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+
+  # --- [畅想1: 多模型支持新增字段] ---
+  # 接口类型: deepseek / openai / ollama / lmstudio / 第三方兼容 OpenAI 的 Completion API接口
+  api_type: "deepseek"
+  # API 基础路径:
+  # 官方 DeepSeek: https://api.deepseek.com/v1
+  # 本地 Ollama: http://localhost:11434/v1
+  # 本地 LM Studio: http://localhost:1234/v1
+  # 官方 OpenAI: https://api.openai.com/v1
+  # 第三方兼容 OpenAI 的 Completion API接口，如 : https://www.aiping.cn/api/v1
+  base_url: "https://api.deepseek.com/v1"
+  # 指定模型名称: deepseek-chat / qwen2.5:7b / llama3
+  model: "deepseek-chat"
+
+# ====== 搜索设置 (Search Settings) ======
+search:
+  fields: "host,protocol,ip,port,title,domain,country"
+  size: 100
+  full: false
+  start_page: 1
+  end_page: 2
+
+# ====== 性能与输出 (System) ======
+system:
+  logger: true
+  sheet_merge: true
+  # [New] 异步并发数 (对应畅想中提到的并发控制)
+  concurrency: 10
