@@ -1,0 +1,12 @@
+rich-click
+colorama
+prettytable
+httpx[http2]
+openai
+xlsxwriter
+mmh3
+PyYAML
+pydantic
+questionary
+rich
+mcp
