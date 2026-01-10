@@ -401,7 +401,7 @@ https://www.bing.com
 ---
 
 ### 6️⃣ 📁 批量文件查询
-<font style="color:rgb(31, 35, 40);">批量查询，用户可新建一个记事本文件，如targets.txt，然后将准备查询的fofa语句写入其中，输入文件路径即可进行批量查询。</font>
+<font style="color:rgb(31, 35, 40);">批量查询，用户可新建一个记事本文件，如targets.txt，然后将准备查询的fofa语句写入其中，输入文件路径（若放在工具根目录可以直接输入文件名称）即可进行批量查询。</font>
 
 ```plain
 114.114.114.114
@@ -437,14 +437,14 @@ python3 fofamap.py -cq 'app="redis"' -f country,org
 
 ## 5️⃣ 图标 Hash 查询
 ```bash
-python fofamap.py -ico https://www.bing.com
+python3 fofamap.py -ico https://www.bing.com
 ```
 
 ---
 
 ## 6️⃣ 批量查询
 ```bash
-python fofamap.py -bq targets.txt
+python3 fofamap.py -bq targets.txt
 ```
 
 ---
@@ -592,9 +592,9 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 
 <img width="318" alt="image" src="https://user-images.githubusercontent.com/67818638/149507366-4ada14db-a972-4071-bbb6-197659f61ced.png">
 
-**【战队知识星球】福利大放送**
+**【战队知识星球】福利大放送，限时优惠-仅限前100名**
 
-<img width="318" alt="image" src="https://github.com/user-attachments/assets/94849d79-bcac-4a43-9221-3e2718225cb6">
+<img width="318" height="958" alt="星球优惠券" src="https://github.com/user-attachments/assets/ab5b2b9b-82b6-4668-94e1-9e5e3d055f9a" />
 
 
 ## 历史Star
