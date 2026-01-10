@@ -487,7 +487,7 @@ Cursor 对 MCP 的支持非常完善，配置好后，你可以直接在 Compose
 
     - 如果显示红色，点击刷新图标，或者去 Cursor 的 `Output` -> `MCP Log` 或者是我们刚才修好的 `Log` 窗口看报错。
 
-**👉**** 如何使用：** 打开 Cursor Chat (Ctrl+L)，直接输入：
+**👉 如何使用：** 打开 Cursor Chat (Ctrl+L)，直接输入：
 
 “帮我查一下 baidu.com 的资产信息，并检查是否有存活。” 
 
@@ -520,7 +520,7 @@ LM Studio 0.3.0+ 版本开始支持 MCP。这允许你用本地的 DeepSeek 或 
 
 6. 点击 **Save**。
 
-**👉**** 如何使用：**
+**👉 如何使用：**
 
 1. 去 **Chat** 界面。
 2. 加载一个支持 Tool Calling 的模型（推荐 `openai/gpt-oss-20b` 或 `Qwen 2.5 7B Instruct`，或者是 LM Studio 里的 DeepSeek R1/V3）。
