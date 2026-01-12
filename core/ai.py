@@ -8,6 +8,7 @@ from config import settings
 from utils.logger import logger
 import os
 
+
 class DeepSeekHandler:
     def __init__(self):
         """
@@ -46,8 +47,9 @@ class DeepSeekHandler:
             return None
 
         vip_level = user_info.get('vip_level', 0)
-        level_name = {0: "注册用户", 1: "普通会员", 2: "高级会员(专业版)", 3: "企业会员"}.get(vip_level,
-                                                                                              f"Level {vip_level}")
+        level_name = {0: "注册用户", 1: "普通会员", 2: "高级会员(专业版)", 5: "企业版V2", 11: "个人版", 12: "专业版",
+                      13: "商业版"}.get(vip_level,
+                                        f"Level {vip_level}")
 
         logger.ai(f"当前用户等级: [{level_name}]")
         logger.ai(f"正在通过 [{self.model_name}] 结合 [专家指令集] 制定战法...")
@@ -81,7 +83,7 @@ class DeepSeekHandler:
 
         ### 📚 搜索/列表全量字段权限表 (Fields Permission Guide):
         (仅用于 fofa_search，stat_query 请忽略此表)
-        请根据用户等级 **{vip_level} ({level_name})** 智能选择 `fields`：
+        请根据用户等级 **{vip_level} ({level_name})** 智能选择 `fields`（其中企业会员全部可用）：
         **【Level 0+ 全员可用】(注册用户及以上)**
         - **网络层**: `ip`, `port`, `protocol`, `base_protocol`
         - **域名/主机**: `host`, `domain`, `link`
@@ -91,15 +93,18 @@ class DeepSeekHandler:
         - **证书详情**: `cert.issuer.org`, `cert.issuer.cn`, `cert.subject.org`, `cert.subject.cn`
         - **TLS信息**: `tls.ja3s`, `tls.version`, `cert.not_before`, `cert.not_after`
 
-        **【Level 1+ 个人版可用】(普通会员及以上)**
+        **【Level 11+ 个人版可用 和 Level 2 高级会员(专业版)可用】(普通会员及以上)**
         - **Hash/Fid**: `header_hash`, `banner_hash`, `banner_fid`
 
-        **【Level 2+ 专业版可用】(高级会员及以上)**
+        **【level 12+ 专业版 和 Level2 高级会员(专业版)可用】(专业版及以上)**
         - **关键增强**: `product` (产品名), `product_category` (分类), `cname`, `lastupdatetime`
 
-        **【Level 3 独享】(企业会员/商业版)**
-        - **高危字段**: **`body`** (网页正文), `icon_hash`, `fid` (聚合指纹), `icon`, `structinfo`
+        **【Level 13+ 商业版本及以上】(商业版及以上)**
+        - **高危字段**: `body` (网页正文), `icon_hash`,`fid` (指纹特征)
         - **深度验证**: `product.version`, `cert.is_valid`, `cname_domain`, `cert.is_match`, `cert.is_equal`
+        
+        **【Level 5 企业版V2】(企业版)**
+        - **包含上述所有权限**，且额外独享:  `icon`, `structinfo`(结构化信息)
         
         ### 🧠 决策逻辑:
         1. **Action**: 判定动作。
@@ -134,6 +139,7 @@ class DeepSeekHandler:
             content = response.choices[0].message.content
             content = re.sub(r'```json\s*|\s*```', '', content).strip()
             plan = json.loads(content)
+            print(plan)
             return plan
         except Exception as e:
             logger.error(f"AI 决策制定失败: {e}")
