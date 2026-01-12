@@ -93,10 +93,10 @@ class DeepSeekHandler:
         - **证书详情**: `cert.issuer.org`, `cert.issuer.cn`, `cert.subject.org`, `cert.subject.cn`
         - **TLS信息**: `tls.ja3s`, `tls.version`, `cert.not_before`, `cert.not_after`
 
-        **【Level 11+ 个人版可用 和 Level 2 高级会员(专业版)可用】(普通会员及以上)**
+        **【Level 11+ 个人版及以上 和 Level 2 高级会员(专业版)及以上】(普通会员及以上)**
         - **Hash/Fid**: `header_hash`, `banner_hash`, `banner_fid`
 
-        **【level 12+ 专业版 和 Level2 高级会员(专业版)可用】(专业版及以上)**
+        **【level 12+ 专业版及以上 和 Level 2 高级会员(专业版)及以上】(专业版及以上)**
         - **关键增强**: `product` (产品名), `product_category` (分类), `cname`, `lastupdatetime`
 
         **【Level 13+ 商业版本及以上】(商业版及以上)**
