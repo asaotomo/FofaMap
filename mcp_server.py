@@ -11,9 +11,11 @@ from pathlib import Path
 
 _original_print = builtins.print
 
+
 def mcp_safe_print(*args, **kwargs):
     kwargs['file'] = sys.stderr
     _original_print(*args, **kwargs)
+
 
 builtins.print = mcp_safe_print
 
@@ -29,6 +31,7 @@ def setup_global_logging():
     logging.getLogger("httpcore").setLevel(logging.WARNING)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("asyncio").setLevel(logging.WARNING)
+
 
 setup_global_logging()
 
@@ -51,6 +54,7 @@ except ImportError as e:
     sys.stderr.write(f"❌ 依赖导入失败: {e}\n")
     sys.exit(1)
 
+
 # ==============================================================================
 # 🛡️ 二次保险：覆盖业务 Logger 输出到 stderr
 # ==============================================================================
@@ -58,6 +62,7 @@ except ImportError as e:
 def mcp_safe_log(msg):
     sys.stderr.write(f"[MCP-LOG] {str(msg)}\n")
     sys.stderr.flush()
+
 
 app_logger.info = mcp_safe_log
 app_logger.error = mcp_safe_log
@@ -69,6 +74,7 @@ app_logger.ai = mcp_safe_log
 # ==============================================================================
 
 mcp = FastMCP("Fofamap-Platinum-Full-Expert")
+
 
 # ==============================================================================
 # Markdown 表格工具
@@ -96,21 +102,23 @@ def format_table(headers: list, rows: list, max_rows: int = 25) -> str:
 
     return md
 
+
 # ==============================================================================
 # MCP 工具 1：FOFAMAP 搜索
 # ==============================================================================
 
 @mcp.tool()
-async def search_assets(query: str, fields: str = "host,ip,port,protocol,title,product,server,lastupdatetime",
+async def search_assets(query: str, fields: str = None,
                         pages: int = 1, full: bool = False):
     """
     [1. 资产检索] 执行 FOFA 查询。
 
     📚 字段指南:
-    - Level0: ip, port, protocol, host, domain, title, server, country, city, org, asn
-    - Level1: header_hash, banner_hash, banner_fid
-    - Level2: product, product_category, cname, cert, cert.subject.cn
-    - Level3: body, icon_hash, fid, structinfo
+    - Leve 0+ (全员可用): ip, port, protocol, host, domain, title, server, country, city, org, asn
+    - Level 11+ or Level 2+ (个人版及以上、高级会员(专业版)可用): header_hash, banner_hash, banner_fid
+    - Level 12+（专业版及以上，企业会员level 5可用）: product, product_category, cname, cert, cert.subject.cn
+    - Level 13+（商业版本及以上，企业会员level 5可用）: body, icon_hash, fid
+    - Level 5（企业会员专享）: icon, structinfo
 
     ⚠️ AI 专家语法战法:
     - 组合拳: (app="xxx" || app="yyy") && country="CN" 
@@ -132,21 +140,44 @@ async def search_assets(query: str, fields: str = "host,ip,port,protocol,title,p
 
     settings.search.full = full
     client = FofaClient()
-    target_fields = fields if fields else "host,ip,port,protocol,title,product,server,lastupdatetime"
+    # 2. 【新增】主动获取用户等级
+    try:
+        user_info = await client.check_login()
+        vip_level = user_info.get("vip_level", 0)
+    except:
+        vip_level = 0
+
+    # 3. 【新增】根据等级动态计算默认字段
+    # 基础字段
+    allowed_defaults = [
+        "host", "ip", "port", "protocol",
+        "title", "server",
+        "domain", "country_name"
+    ]
+
+    # 只有 Level 12+ 或 Level 2(旧) 才能加 product 和 lastupdatetime
+    if vip_level >= 12 or vip_level == 2 or vip_level == 5:
+        allowed_defaults.extend(["product", "lastupdatetime"])
+
+    if not fields:
+        target_fields = ",".join(allowed_defaults)
+    else:
+        target_fields = fields
 
     try:
-        results = await client.search(query, page=pages, fields=target_fields)
+        results, effective_fields = await client.search(query, page=pages, fields=target_fields)
     except Exception as e:
         return f"❌ FOFA 请求异常: {str(e)}"
 
     if not results:
-        return f"🔍 未发现资产，字段: `{target_fields}`"
+        return f"🔍 未发现资产，实际查询字段: `{effective_fields}`"
 
     formatted_results = [r if isinstance(r, list) else [r] for r in results]
     header_list = [f.strip().capitalize() for f in target_fields.split(",")]
     clean_headers = [h[:10] for h in header_list]
 
     return f"### 🔍 FOFA 检索结果: `{query}`\n" + format_table(clean_headers, formatted_results)
+
 
 # ==============================================================================
 # MCP 工具 2：Host 聚合画像
@@ -183,6 +214,7 @@ async def get_host_aggregation(host: str):
 
     return "\n".join(res)
 
+
 # ==============================================================================
 # MCP 工具 3：统计聚合
 # ==============================================================================
@@ -215,6 +247,7 @@ async def get_stats_aggregation(query: str, fields: str = "country,title,org"):
 
     return summary
 
+
 # ==============================================================================
 # MCP 工具 4：Icon Hash 计算
 # ==============================================================================
@@ -229,6 +262,7 @@ async def calculate_icon_hash(url: str):
         return "❌ 获取 favicon 失败。"
     except Exception as e:
         return f"❌ 异常: {e}"
+
 
 # ==============================================================================
 # MCP 工具 5：FOFAMAP AI 军师
@@ -274,6 +308,7 @@ async def ai_security_consultant(user_intent: str):
         f"- **扫描决策**: {'✅ 建议开启' if plan.get('run_nuclei') else '❌ 不建议执行'}"
     )
 
+
 # ==============================================================================
 # MCP 工具 6：网站存活检测
 # ==============================================================================
@@ -287,6 +322,7 @@ async def check_assets_alive(hosts: list[str]):
         return f"### 🟢 存活资产 ({len(alive_data)}/{len(hosts)})\n" + format_table(["URL", "状态码"], alive_data)
     except Exception as e:
         return f"❌ 检测异常: {e}"
+
 
 # ==============================================================================
 # MCP 工具 7：生成 Nuclei 扫描命令
@@ -337,6 +373,7 @@ async def generate_nuclei_command(targets: list[str], severity: str = "medium,hi
         f"{cmd}\n"
         "```"
     )
+
 
 # ==============================================================================
 # 入口
