@@ -211,7 +211,13 @@ class FofaHandler:
                 current_fields = "host,protocol,ip,port" if scan_format else final_fields_str
 
                 for page in range(1, pages + 1):
-                    data = await self.client.search(q_str, page, current_fields)
+                    # [修改] 接收两个返回值：数据 和 实际使用的字段
+                    data, effective_fields = await self.client.search(q_str, page, current_fields)
+
+                    # [新增] 如果发生了降级，这里同步更新 current_fields，解决错位问题
+                    if current_fields != effective_fields:
+                        current_fields = effective_fields
+
                     if data:
                         # [保留] 兼容性修复 (处理一维数组)
                         if len(data) > 0 and isinstance(data[0], str):
