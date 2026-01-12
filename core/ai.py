@@ -139,7 +139,6 @@ class DeepSeekHandler:
             content = response.choices[0].message.content
             content = re.sub(r'```json\s*|\s*```', '', content).strip()
             plan = json.loads(content)
-            print(plan)
             return plan
         except Exception as e:
             logger.error(f"AI 决策制定失败: {e}")
