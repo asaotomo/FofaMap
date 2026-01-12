@@ -40,7 +40,7 @@ def print_banner():
  / __/ / /_/ / / __/ /_/ / / /  / / /_/ / /_/ /  
 /_/    \____/_/_/  \__,_/ /_/  /_/\__,_/ .___/   
                                       /_/   v2.0 
-    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.01.08
+    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.01.12
     """ + Style.RESET_ALL)
 
 
