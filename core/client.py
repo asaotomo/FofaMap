@@ -9,7 +9,7 @@ from utils.logger import logger
 class FofaClient:
     def __init__(self):
         # 直接指定官方地址，防止配置文件缺失报错
-        self.base_url = "https://fofa.info"
+        self.base_url = "https://v5.fofa.info"
         self.email = settings.userinfo.email
         self.key = settings.userinfo.key
         self.headers = {
