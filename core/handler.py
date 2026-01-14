@@ -30,16 +30,14 @@ class FofaHandler:
     async def init_user(self):
         """初始化并验证用户信息"""
         user_info = await self.client.check_login()
-        # 将 user_info 挂载到 client 实例上，以便后续反思机制调用
         if user_info:
             self.client.user_info = user_info
         return user_info
 
     async def handle_host_query(self, host_query, user_intent=None):
-        """[优化] 处理 Host 单体画像查询，集成 AI 风险评估"""
+        """处理 Host 单体画像查询，集成 AI 风险评估"""
         d = await self.client.host_search(host_query)
 
-        # [新增] 错误检查逻辑
         if not d:
             logger.error(f"未查询到 Host: {host_query} 的详细信息 (返回为空)")
             return
@@ -84,7 +82,6 @@ class FofaHandler:
 
         print(Fore.GREEN + str(table) + Style.RESET_ALL)
 
-        # === AI 智能分析模块 ===
         if self.ai_handler.client:
             report_dir = Path("results") / f"host_analysis_{self.timestamp_suffix}"
             report_dir.mkdir(parents=True, exist_ok=True)
@@ -98,7 +95,7 @@ class FofaHandler:
                 logger.info(f"Host 风险评估报告已保存: {report_path}")
 
     async def handle_stat_query(self, query, fields, user_intent=None):
-        """[优化] 处理统计聚合查询，集成 AI 态势分析"""
+        """处理统计聚合查询，集成 AI 态势分析"""
         stats_fields = fields if fields else "title,port,country"
 
         logger.info(f"正在聚合统计数据... Query: [{query}] Fields: [{stats_fields}]")
@@ -106,6 +103,13 @@ class FofaHandler:
         if not data:
             logger.warning("未获取到统计数据。")
             return
+
+        if data.get("aggs"):
+            for key, items in data["aggs"].items():
+                if items:
+                    for item in items:
+                        if item.get("regions") is None:
+                            item["regions"] = []
 
         print_header("FOFA 全球资产统计聚合")
         print_item("查询内容", query)
@@ -135,16 +139,18 @@ class FofaHandler:
                     if len(str(name)) > 50: name = str(name)[:47] + "..."
                     count = f"{item.get('count'):,}"
                     row = [idx, name, count]
+
                     if has_regions:
-                        regions = item.get('regions', [])
+                        # 修复: 增加 or [] 防止 NoneType 错误
+                        regions = item.get('regions') or []
                         r_str = ", ".join([f"{r['name']}({r['count']})" for r in regions[:3]])
                         row.append(r_str)
+
                     table.add_row(row)
                 print(Fore.GREEN + str(table) + Style.RESET_ALL)
 
         print_item("数据更新时间", data.get('lastupdatetime', 'N/A'))
 
-        # === AI 智能分析模块 ===
         if self.ai_handler.client:
             report_dir = Path("results") / f"stat_analysis_{self.timestamp_suffix}"
             report_dir.mkdir(parents=True, exist_ok=True)
@@ -157,9 +163,17 @@ class FofaHandler:
                     f.write(report_content)
                 logger.info(f"全球态势分析报告已保存: {report_path}")
 
+    def _calculate_field_indices(self, fields_str):
+        """辅助函数：计算字段索引"""
+        fields_list = fields_str.split(",")
+        idx_host = fields_list.index("host") if "host" in fields_list else -1
+        idx_proto = fields_list.index("protocol") if "protocol" in fields_list else -1
+        idx_port = fields_list.index("port") if "port" in fields_list else -1
+        return idx_host, idx_proto, idx_port
+
     async def run_search_task(self, candidate_queries, scan_format, outfile, pages, key_word, include, query_fields,
                               ai_query, nuclei, scan_args, batch=False):
-        """核心查询任务流程 (完整版，含 AI 自我修正逻辑)"""
+        """核心查询任务流程"""
         if not candidate_queries:
             logger.error("无有效查询语句")
             return
@@ -181,25 +195,14 @@ class FofaHandler:
         global_excel_name = f"fofa_asset_all_{self.timestamp_suffix}.xlsx"
 
         final_fields_str = query_fields if query_fields else settings.search.fields
-        temp_fields_list = final_fields_str.split(",")
-
-        # [保留] 字段索引获取 (带异常处理)
-        try:
-            idx_host = temp_fields_list.index("host") if "host" in temp_fields_list else -1
-            idx_proto = temp_fields_list.index("protocol") if "protocol" in temp_fields_list else -1
-        except:
-            idx_host = 0
-            idx_proto = -1
+        idx_host, idx_proto, idx_port = self._calculate_field_indices(final_fields_str)
 
         should_scan = nuclei
-
         logger.info(f"待执行查询: {len(candidate_queries)} 条")
 
-        # === [新增] AI 修正相关的状态变量 ===
         consecutive_failures = 0
         has_retried = False
 
-        # 使用 while 循环代替 for 循环，以便动态追加 AI 修正后的查询
         idx = 0
         try:
             while idx < len(candidate_queries):
@@ -211,15 +214,16 @@ class FofaHandler:
                 current_fields = "host,protocol,ip,port" if scan_format else final_fields_str
 
                 for page in range(1, pages + 1):
-                    # [修改] 接收两个返回值：数据 和 实际使用的字段
+                    # 获取数据与实际字段
                     data, effective_fields = await self.client.search(q_str, page, current_fields)
 
-                    # [新增] 如果发生了降级，这里同步更新 current_fields，解决错位问题
+                    # 修复: 字段降级导致索引错位
                     if current_fields != effective_fields:
                         current_fields = effective_fields
+                        if not scan_format:
+                            idx_host, idx_proto, idx_port = self._calculate_field_indices(current_fields)
 
                     if data:
-                        # [保留] 兼容性修复 (处理一维数组)
                         if len(data) > 0 and isinstance(data[0], str):
                             data = [[x] for x in data]
                         found += len(data)
@@ -229,30 +233,22 @@ class FofaHandler:
                     else:
                         break
 
-                # === [核心逻辑] 失败检测与 AI 反思 ===
                 if found == 0:
                     logger.warning(f"  -> 无数据")
                     consecutive_failures += 1
                     remaining_queries = len(candidate_queries) - (idx + 1)
                     should_retry = (consecutive_failures >= 3) or (consecutive_failures > 0 and remaining_queries == 0)
                     if should_retry and ai_query and not has_retried:
-                        # 获取前几次失败的样本
                         start_fail_idx = max(0, idx - 2)
                         failed_samples = candidate_queries[start_fail_idx: idx + 1]
-
-                        # 获取用户信息用于鉴权 (尝试从 client 获取，如果不存在则给默认值)
                         user_info = getattr(self.client, "user_info", {"vip_level": 2})
 
-                        # 调用 AI 进行反思
                         new_queries = await self.ai_handler.reflect_and_retry(ai_query, failed_samples, user_info)
-
                         if new_queries:
-                            # 将新策略追加到队列末尾
                             candidate_queries.extend(new_queries)
-                            has_retried = True  # 标记已触发修正
-                            consecutive_failures = 0  # 重置计数器
+                            has_retried = True
+                            consecutive_failures = 0
                 else:
-                    # 只要有一次成功，计数器归零
                     consecutive_failures = 0
 
                 if not current_batch_data:
@@ -277,18 +273,25 @@ class FofaHandler:
                     urls = []
                     for item in current_batch_data:
                         c = ""
-                        # [保留] 完整的 URL 构建逻辑
+                        # 尝试通过 host 字段获取
                         if idx_host != -1 and idx_host < len(item):
                             host_val = str(item[idx_host])
                             if host_val.startswith("http"):
                                 c = host_val
                             else:
                                 proto_val = "http"
+                                # 尝试通过 protocol 字段判断
                                 if idx_proto != -1 and idx_proto < len(item):
                                     p = str(item[idx_proto]).lower()
                                     if "https" in p or "ssl" in p: proto_val = "https"
+                                # 修复: 尝试通过端口判断
+                                elif idx_port != -1 and idx_port < len(item):
+                                    port_val = str(item[idx_port])
+                                    if port_val in ['443', '8443']: proto_val = "https"
+
                                 c = f"{proto_val}://{host_val}"
-                        # [保留] 兜底逻辑
+
+                        # 兜底逻辑
                         if not c:
                             for f in item:
                                 s = str(f)
@@ -321,7 +324,6 @@ class FofaHandler:
                 all_results_aggregated.extend(final_batch_data)
 
                 if not scan_format:
-                    # [保留] Excel 保存逻辑
                     if settings.system.sheet_merge:
                         sheet_name = f"{idx + 1}_{safe_q}"
                         merged_data_storage[sheet_name] = final_batch_data
@@ -334,13 +336,12 @@ class FofaHandler:
                         self.exporter.save(all_results_aggregated, filename=str(self.project_dir / global_excel_name),
                                            fields=current_fields_display.split(","))
 
-                # 循环索引递增
                 idx += 1
 
         except KeyboardInterrupt:
             print(Fore.RED + "\n" + "=" * 50)
             logger.warning("[!] ⚠️  检测到用户强制中断 (Ctrl+C)")
-            logger.warning(f"[!] 正在停止查询任务，已获取 {len(all_results_aggregated)} 条资产。正在生成报告...")
+            logger.warning(f"[!] 正在停止查询任务，已获取 {len(all_results_aggregated)} 条资产。")
             print(Fore.RED + "=" * 50 + Style.RESET_ALL)
             pass
 
@@ -368,42 +369,42 @@ class FofaHandler:
 
             print(Fore.MAGENTA + "=" * 60 + Style.RESET_ALL)
             if targets:
-                # 自动带时间戳和 [+] 前缀，无需手动 print(Fore.CYAN...)
                 logger.info(f"待扫描目标预览 (Total: {len(targets)}):")
-
-                # 列表内容保持 print 以维持缩进格式，避免每行都带时间戳
                 preview_count = 15
                 for t in targets[:preview_count]:
                     print(f"   - {t}")
-
                 if len(targets) > preview_count:
-                    print(f"   ... (剩余 {len(targets)-preview_count} 条，完整列表见: {targets_file_path.resolve()})")
+                    print(f"   ... (剩余 {len(targets) - preview_count} 条，完整列表见: {targets_file_path.resolve()})")
                 print(Fore.CYAN + "=" * 60 + Style.RESET_ALL)
+
             decision_color = Fore.GREEN if should_scan else Fore.RED
             decision_text = "YES (建议扫描)" if should_scan else "NO (不建议扫描)"
             logger.ai(f"初始决策 [run_nuclei]: {decision_color}{decision_text}{Style.RESET_ALL}")
             logger.ai(f"推荐 Nuclei 命令: nuclei {scan_args}")
 
-            if not batch:
-                # [关键修复] 使用 await .ask_async() 解决 asyncio 冲突
-                action = await questionary.select(
-                    "请选择下一步操作:",
-                    choices=[
-                        "🚀 执行 AI 推荐的扫描 (Execute Nuclei)",
-                        "✏️  手动修改参数并扫描 (Edit Args)",
-                        "🚫 仅生成报告，不扫描 (Skip Scan)",
-                    ],
-                    default="🚀 执行 AI 推荐的扫描 (Execute Nuclei)" if should_scan else "🚫 仅生成报告，不扫描 (Skip Scan)"
-                ).ask_async()
+            # 修复: 增加 Try-Except 保护交互式菜单
+            try:
+                if not batch:
+                    action = await questionary.select(
+                        "请选择下一步操作:",
+                        choices=[
+                            "🚀 执行 AI 推荐的扫描 (Execute Nuclei)",
+                            "✏️  手动修改参数并扫描 (Edit Args)",
+                            "🚫 仅生成报告，不扫描 (Skip Scan)",
+                        ],
+                        default="🚀 执行 AI 推荐的扫描 (Execute Nuclei)" if should_scan else "🚫 仅生成报告，不扫描 (Skip Scan)"
+                    ).ask_async()
 
-                if "Execute Nuclei" in action:
-                    should_scan = True
-                elif "Edit Args" in action:
-                    should_scan = True
-                    # [关键修复] 使用 await .ask_async()
-                    scan_args = await questionary.text("请输入 Nuclei 参数:", default=scan_args).ask_async()
-                else:
-                    should_scan = False
+                    if "Execute Nuclei" in action:
+                        should_scan = True
+                    elif "Edit Args" in action:
+                        should_scan = True
+                        scan_args = await questionary.text("请输入 Nuclei 参数:", default=scan_args).ask_async()
+                    else:
+                        should_scan = False
+            except KeyboardInterrupt:
+                logger.warning("用户取消了后续操作。")
+                return
 
         if should_scan:
             scan_file_path = await self.scanner.run_scan(all_results_aggregated, project_dir=self.project_dir,
