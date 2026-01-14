@@ -40,7 +40,7 @@ def print_banner():
  / __/ / /_/ / / __/ /_/ / / /  / / /_/ / /_/ /  
 /_/    \____/_/_/  \__,_/ /_/  /_/\__,_/ .___/   
                                       /_/   v2.0 
-    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.01.12
+    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.01.14
     """ + Style.RESET_ALL)
 
 
@@ -204,6 +204,8 @@ def run_interactive_wizard():
 @click.option("-bq", "--bat_query", help="📂 [批量模式] 指定包含查询语法的 TXT 文件路径")
 @click.option("-f", "--query_fields", help="⚙️ [字段配置] 自定义返回字段 (默认为配置文件设置)")
 @click.option("-p", "--pages", default=0, help="📄 [页数设置] 指定查询页数 (0 为使用配置文件默认值)")
+@click.option("-k", "--key_word", help="🔍 [本地筛选] 在结果中进一步搜索特定关键词")
+@click.option("-i", "--include", help="➕ [包含模式] 只保留包含特定字符串的结果")
 @click.option("-n", "--nuclei", is_flag=True, help="☢️ [漏洞扫描] 检索结束后自动调用 Nuclei 进行扫描")
 @click.option("-batch", "--batch", is_flag=True, help="🚀 [无人值守] 自动确认所有提示 (适合AI模式)")
 @click.option("-up", "--update", is_flag=True, help="🔄 [Nuclei更新] 检查并更新 Nuclei 版本")
