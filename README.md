@@ -185,7 +185,8 @@ python3 fofamap.py --help #查看工具用法
 ```
 
 <!-- 这是一张图片，ocr 内容为： -->
-![](https://cdn.nlark.com/yuque/0/2026/png/12839102/1767950323971-23495a54-8810-4f2b-8fc4-6dfe5ab655a9.png)
+<img alt="image" src="https://github.com/user-attachments/assets/752c3b00-4306-429c-a29b-b6ae735b6b6a" />
+
 
 ---
 
@@ -417,35 +418,78 @@ app="kafka"
 ```bash
 python3 fofamap.py -ai "帮我收集一下美国哈佛大学的子域名网站，并扫描一下"
 ```
+<img  alt="image" src="https://github.com/user-attachments/assets/b879ea31-b048-4b68-a505-df304097bc97" />
+<img  alt="image" src="https://github.com/user-attachments/assets/1e95b171-592b-49a7-b64f-c7a69fc562b0" />
+<img  alt="image" src="https://github.com/user-attachments/assets/bf5c4740-b940-4254-aca5-791402950268" />
+
 
 ## 2️⃣ 基础查询
+如果用户想要使用fofa联合查询语句，例如：app="grafana" && country="US"。
+
+Linux和macOS用户直接使用python3 fofamap.py -q 'app="grafana" && country="US"'即可成功查询。
+
+Windows用户因为系统原因，需要使用python3 fofamap.py -q "app=\"ThinkPHP\" && country=\"CN\""系统才可成功识别，即Windows用户需要对查询命令内部的"使用\进行转义，否则系统识别错误。
 ```bash
 python3 fofamap.py -q 'app="ThinkPHP" && country="CN"'
 ```
+<img width="1440" height="702" alt="image" src="https://github.com/user-attachments/assets/2b59ffde-fcb2-4c0b-ba48-c81af19e6142" />
 
 ## 3️⃣ Host 深度画像（AI 报告）
+用户使用Host聚合查询模式时，系统可以根据当前的查询内容，生成聚合信息，host通常是ip，包含基础信息和IP标签。
 ```bash
 python3 fofamap.py -hq 8.8.8.8
 ```
+<img alt="image" src="https://github.com/user-attachments/assets/32a44671-f552-4a8f-a501-807006133923" />
 
 ## 4️⃣ 统计聚合（AI 态势解读）
+使用统计聚合功能，可以根据当前的查询内容，生成全球统计信息，当前可统计每个字段的前5排名。例如，我们使用下列命令统计全球范围内使用Redis应用的Top5国家。其中-cq为查询内容，-f为需要统计聚合的字段，默认为title，可按照示例配置多个字段 fields=country,protocol,domain,port。详细用法见FOFA API 官方文档
 ```bash
 python3 fofamap.py -cq 'app="redis"' -f country,org
 ```
+<img alt="image" src="https://github.com/user-attachments/assets/526dd803-3e6a-4399-a8d3-a0f0c8b2cf21" />
 
 ---
 
 ## 5️⃣ 图标 Hash 查询
+用户可通过填入任意一网站地址，Fofamap会自动获取该网站的favicon.ico图标文件，并计算其hash值，并去查找使用相同favicon.ico图标文件的网站。
 ```bash
 python3 fofamap.py -ico https://www.bing.com
 ```
+<img alt="image" src="https://github.com/user-attachments/assets/65fa09a3-44d2-4414-9e09-f02fbf5e9455" />
 
 ---
 
 ## 6️⃣ 批量查询
+用户可新建一个记事本文件，如targets.txt，然后将准备查询的fofa语句写入其中，运行以下命令即可进行批量查询。
 ```bash
 python3 fofamap.py -bq targets.txt
 ```
+**targets.txt文件内容：**
+
+```plain
+8.8.8.8
+baidu.com
+icp="京ICP备10036305号"
+```
+<img  alt="image" src="https://github.com/user-attachments/assets/67b3057b-e9eb-48cb-9f91-fb4aa2e408fb" />
+
+## 7️⃣ 过滤查询
+| **特性**     | **-i (--include)**       | **-k (--key_word)**                  |
+| ------------ | ------------------------ | ------------------------------------ |
+| **筛选逻辑** | **过滤 (Filter)**        | **搜索 (Search)**                    |
+| **处理阶段** | 第一层 (先执行)          | 第二层 (后执行)                      |
+| **常用对象** | 状态码 | 筛选包含关键词的内容 |
+| **输入示例** | `"200,301"` (支持状态码)                  | `"登录,后台"` (支持多词)             |
+| **目的**     | **“筛选出对应状态码的查询结果”**     | **“把查询结果中保护指定关键词数据找出来”**               |
+
+
+如下命令：在 baidu.com 的所有资产中，保留 状态码为 200 (网页正常) 的结果，并进一步提取出包含 '文心' 或 '旅游' 关键词的目标。
+```bash
+python3 fofamap.py -q 'domain="baidu.com"' -i "200" -k "文心,旅游"
+```
+<img width="1470" height="655" alt="image" src="https://github.com/user-attachments/assets/709eb99e-b942-42ff-8eb7-3167230aeab3" />
+
+
 
 ---
 
