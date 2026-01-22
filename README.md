@@ -19,8 +19,8 @@ Self-Reflecting AI Queries → MCP Protocol Integration → Intelligent Vulnerab
 ✅ 它是：**一个可以被 AI 接管、会自己反思、会自己决策扫描策略的「全网资产测绘智能体」**
 >
 
-<!-- 这是一张图片，ocr 内容为： -->
-![](https://cdn.nlark.com/yuque/0/2026/png/12839102/1767970866287-2b0bc337-6e11-4708-a8d8-a6afe484d4b8.png)
+<img width="1024" height="559" alt="xcy" src="https://github.com/user-attachments/assets/2acfd385-1578-48f6-a385-e44c6346ed05" />
+
 
 ---
 
