@@ -109,7 +109,7 @@ def format_table(headers: list, rows: list, max_rows: int = 25) -> str:
 
 @mcp.tool()
 async def search_assets(query: str, fields: str = None,
-                        pages: int = 1, full: bool = False):
+                        pages: int = 1, full: bool = False, display_rows: int = 25):
     """
     [1. 资产检索] 执行 FOFA 查询。
 
@@ -136,6 +136,8 @@ async def search_assets(query: str, fields: str = None,
         fields: [可选] 逗号分隔的返回字段。默认为基础资产字段。若需查证书或正文，请在此显式添加 (如 "host,ip,cert,body")。
         pages: 查询页数 (默认 1)
         full: 是否搜索历史数据 (默认 False)
+        display_rows: [可选] 决定在返回的 Markdown 表格中最多展示多少行。默认25。如果用户明确要求看更多数据，你可以将其调高(例如 100、200或者其他数值)，但不要过高以免超出对话输出限制。
+        size: 每页查询数量，默认为100条，最大支持10,000条/页。如果用户需要设置，请提醒用户手动去settings.yaml文件中去修改size大小，mcp服务不支持自动修改该参数。
     """
 
     settings.search.full = full
@@ -176,7 +178,7 @@ async def search_assets(query: str, fields: str = None,
     header_list = [f.strip().capitalize() for f in target_fields.split(",")]
     clean_headers = [h[:10] for h in header_list]
 
-    return f"### 🔍 FOFA 检索结果: `{query}`\n" + format_table(clean_headers, formatted_results)
+    return f"### 🔍 FOFA 检索结果: `{query}`\n" + format_table(clean_headers, formatted_results, max_rows=display_rows)
 
 
 # ==============================================================================
