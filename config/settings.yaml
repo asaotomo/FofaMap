@@ -34,3 +34,7 @@ system:
   sheet_merge: true
   # [New] 异步并发数 (对应畅想中提到的并发控制)
   concurrency: 10
+  # 默认导出格式: xlsx / csv
+  export_format: xlsx
+  # 默认输出目录
+  output_dir: results
