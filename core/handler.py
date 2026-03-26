@@ -27,6 +27,50 @@ class FofaHandler:
         self.timestamp_suffix = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self.project_dir = None
 
+    def _build_default_base_name(self, candidate_queries):
+        raw = candidate_queries[0] if candidate_queries else "fofa_task"
+        return re.sub(r'[^\w\-]', '_', raw).strip('_')[:40] or "fofa_task"
+
+    def _detect_export_format(self, export_format=None, outfile=None):
+        if export_format:
+            fmt = str(export_format).lower().strip(".")
+        elif outfile and Path(outfile).suffix.lower() in [".xlsx", ".csv"]:
+            fmt = Path(outfile).suffix.lower().lstrip(".")
+        else:
+            fmt = str(getattr(settings.system, "export_format", "xlsx")).lower().strip(".")
+
+        return fmt if fmt in ["xlsx", "csv"] else "xlsx"
+
+    def _resolve_output_context(self, candidate_queries, outfile=None, outdir=None, export_format=None):
+        requested_path = Path(outfile).expanduser() if outfile else None
+        requested_name = requested_path.name if requested_path else None
+        export_format = self._detect_export_format(export_format=export_format, outfile=outfile)
+
+        if requested_path and requested_path.stem:
+            base_name = requested_path.stem
+        else:
+            base_name = self._build_default_base_name(candidate_queries)
+
+        default_root = Path(getattr(settings.system, "output_dir", "results")).expanduser()
+        if outdir:
+            project_dir = Path(outdir).expanduser()
+        elif requested_path and requested_path.parent != Path("."):
+            project_dir = requested_path.parent
+        else:
+            project_dir = default_root / f"{base_name}_{self.timestamp_suffix}"
+
+        project_dir.mkdir(parents=True, exist_ok=True)
+        return {
+            "base_name": base_name,
+            "project_dir": project_dir,
+            "export_format": export_format,
+            "requested_name": requested_name,
+        }
+
+    def _build_export_path(self, fallback_name, export_format, requested_name=None):
+        filename = requested_name if requested_name else fallback_name
+        return self.project_dir / Path(filename).with_suffix(f".{export_format}").name
+
     async def init_user(self):
         """初始化并验证用户信息"""
         user_info = await self.client.check_login()
@@ -34,7 +78,12 @@ class FofaHandler:
             self.client.user_info = user_info
         return user_info
 
-    async def handle_host_query(self, host_query, user_intent=None):
+    def _get_base_output_dir(self, outdir=None):
+        if outdir:
+            return Path(outdir).expanduser()
+        return Path(getattr(settings.system, "output_dir", "results")).expanduser()
+
+    async def handle_host_query(self, host_query, user_intent=None, outdir=None):
         """处理 Host 单体画像查询，集成 AI 风险评估"""
         d = await self.client.host_search(host_query)
 
@@ -83,7 +132,7 @@ class FofaHandler:
         print(Fore.GREEN + str(table) + Style.RESET_ALL)
 
         if self.ai_handler.client:
-            report_dir = Path("results") / f"host_analysis_{self.timestamp_suffix}"
+            report_dir = self._get_base_output_dir(outdir) / f"host_analysis_{self.timestamp_suffix}"
             report_dir.mkdir(parents=True, exist_ok=True)
             report_path = report_dir / f"host_risk_report_{host_query}.md"
 
@@ -94,7 +143,7 @@ class FofaHandler:
                     f.write(report_content)
                 logger.info(f"Host 风险评估报告已保存: {report_path}")
 
-    async def handle_stat_query(self, query, fields, user_intent=None):
+    async def handle_stat_query(self, query, fields, user_intent=None, outdir=None):
         """处理统计聚合查询，集成 AI 态势分析"""
         stats_fields = fields if fields else "title,port,country"
 
@@ -152,7 +201,7 @@ class FofaHandler:
         print_item("数据更新时间", data.get('lastupdatetime', 'N/A'))
 
         if self.ai_handler.client:
-            report_dir = Path("results") / f"stat_analysis_{self.timestamp_suffix}"
+            report_dir = self._get_base_output_dir(outdir) / f"stat_analysis_{self.timestamp_suffix}"
             report_dir.mkdir(parents=True, exist_ok=True)
             report_path = report_dir / f"trend_report_{self.timestamp_suffix}.md"
 
@@ -171,28 +220,38 @@ class FofaHandler:
         idx_port = fields_list.index("port") if "port" in fields_list else -1
         return idx_host, idx_proto, idx_port
 
-    async def run_search_task(self, candidate_queries, scan_format, outfile, pages, key_word, include, query_fields,
-                              ai_query, nuclei, scan_args, batch=False):
+    async def run_search_task(self, candidate_queries, scan_format, outfile, outdir, export_format, pages, key_word,
+                              include, query_fields, ai_query, nuclei, scan_args, batch=False):
         """核心查询任务流程"""
         if not candidate_queries:
             logger.error("无有效查询语句")
             return
 
-        if outfile:
-            base_name = Path(outfile).stem
-        else:
-            raw = candidate_queries[0] if candidate_queries else "fofa_task"
-            base_name = re.sub(r'[^\w\-]', '_', raw).strip('_')[:40]
+        output_context = self._resolve_output_context(
+            candidate_queries=candidate_queries,
+            outfile=outfile,
+            outdir=outdir,
+            export_format=export_format
+        )
+        self.project_dir = output_context["project_dir"]
+        export_format = output_context["export_format"]
+        requested_export_name = output_context["requested_name"]
 
-        project_name = f"{base_name}_{self.timestamp_suffix}"
-        self.project_dir = Path("results") / project_name
-        self.project_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"项目目录: {self.project_dir}")
+        logger.info(f"导出格式: {export_format.upper()}")
 
         all_results_aggregated = []
         merged_data_storage = {}
-        merge_filename = f"batch_merge_{self.timestamp_suffix}.xlsx"
-        global_excel_name = f"fofa_asset_all_{self.timestamp_suffix}.xlsx"
+        merge_export_path = self._build_export_path(
+            fallback_name=f"batch_merge_{self.timestamp_suffix}.{export_format}",
+            export_format=export_format,
+            requested_name=requested_export_name
+        )
+        global_export_path = self._build_export_path(
+            fallback_name=f"fofa_asset_all_{self.timestamp_suffix}.{export_format}",
+            export_format=export_format,
+            requested_name=requested_export_name
+        )
 
         final_fields_str = query_fields if query_fields else settings.search.fields
         idx_host, idx_proto, idx_port = self._calculate_field_indices(final_fields_str)
@@ -327,14 +386,32 @@ class FofaHandler:
                     if settings.system.sheet_merge:
                         sheet_name = f"{idx + 1}_{safe_q}"
                         merged_data_storage[sheet_name] = final_batch_data
-                        self.exporter.save(merged_data_storage, filename=str(self.project_dir / merge_filename),
-                                           fields=current_fields_display.split(","))
+                        self.exporter.save(
+                            merged_data_storage,
+                            filename=str(merge_export_path),
+                            fields=current_fields_display.split(","),
+                            export_format=export_format
+                        )
                     else:
-                        batch_filename = f"query_{idx + 1}_{safe_q}.xlsx"
-                        self.exporter.save(final_batch_data, filename=str(self.project_dir / batch_filename),
-                                           fields=current_fields_display.split(","))
-                        self.exporter.save(all_results_aggregated, filename=str(self.project_dir / global_excel_name),
-                                           fields=current_fields_display.split(","))
+                        if len(candidate_queries) == 1 and requested_export_name:
+                            batch_export_path = global_export_path
+                        else:
+                            batch_export_path = self.project_dir / f"query_{idx + 1}_{safe_q}.{export_format}"
+
+                        self.exporter.save(
+                            final_batch_data,
+                            filename=str(batch_export_path),
+                            fields=current_fields_display.split(","),
+                            export_format=export_format
+                        )
+
+                        if batch_export_path != global_export_path:
+                            self.exporter.save(
+                                all_results_aggregated,
+                                filename=str(global_export_path),
+                                fields=current_fields_display.split(","),
+                                export_format=export_format
+                            )
 
                 idx += 1
 
