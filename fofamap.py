@@ -27,7 +27,7 @@ click.rich_click.OPTION_GROUPS = {
         {"name": "⚙️ 过滤与配置 (Filter & Config)",
          "options": ["--query_fields", "--pages", "--key_word", "--include"]},
         {"name": "🚀 扫描与输出 (Scan & Output)",
-         "options": ["--batch", "--nuclei", "--update", "--outfile"]},
+         "options": ["--batch", "--nuclei", "--update", "--outfile", "--outdir", "--export-format"]},
     ]
 }
 
@@ -40,7 +40,7 @@ def print_banner():
  / __/ / /_/ / / __/ /_/ / / /  / / /_/ / /_/ /  
 /_/    \____/_/_/  \__,_/ /_/  /_/\__,_/ .___/   
                                       /_/   v2.0 
-    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.01.14
+    [ AI Powered & Interactive Wizard ] -- By Hx0 Team 2026.03.26
     """ + Style.RESET_ALL)
 
 
@@ -112,8 +112,17 @@ def init_config():
         questionary.text("异步并发数 (Concurrency):", default=str(current.get('system', {}).get('concurrency', 10)),
                          validate=lambda t: t.isdigit()).ask())
 
-    merge = questionary.confirm("是否合并批量查询结果到单个 Excel:",
+    merge = questionary.confirm("是否合并批量查询结果到单个导出文件:",
                                 default=current.get('system', {}).get('sheet_merge', True)).ask()
+    export_format = questionary.select(
+        "默认导出格式 (Export Format):",
+        choices=["xlsx", "csv"],
+        default=current.get('system', {}).get('export_format', 'xlsx')
+    ).ask()
+    output_dir = questionary.text(
+        "默认导出目录 (Output Directory):",
+        default=current.get('system', {}).get('output_dir', 'results')
+    ).ask()
 
     new_config = {
         'userinfo': {
@@ -133,7 +142,13 @@ def init_config():
             'end_page': end_page
         },
         'fast_check': {'check_alive': alive, 'timeout': timeout},
-        'system': {'logger': True, 'sheet_merge': merge, 'concurrency': concurrency}
+        'system': {
+            'logger': True,
+            'sheet_merge': merge,
+            'concurrency': concurrency,
+            'export_format': export_format,
+            'output_dir': output_dir or 'results'
+        }
     }
 
     config_path.parent.mkdir(parents=True, exist_ok=True)
@@ -209,7 +224,14 @@ def run_interactive_wizard():
 @click.option("-n", "--nuclei", is_flag=True, help="☢️ [漏洞扫描] 检索结束后自动调用 Nuclei 进行扫描")
 @click.option("-batch", "--batch", is_flag=True, help="🚀 [无人值守] 自动确认所有提示 (适合AI模式)")
 @click.option("-up", "--update", is_flag=True, help="🔄 [Nuclei更新] 检查并更新 Nuclei 版本")
-@click.option("-o", "--outfile", help="💾 [结果输出] 自定义结果保存的文件名")
+@click.option("-o", "--outfile", help="💾 [结果输出] 自定义结果文件名（可带路径）")
+@click.option("--outdir", help="📁 [导出路径] 自定义结果输出目录")
+@click.option(
+    "--export-format",
+    "export_format",
+    type=click.Choice(["xlsx", "csv"], case_sensitive=False),
+    help="📦 [导出格式] 选择结果导出格式（xlsx/csv）"
+)
 def main(cmd, **kwargs):
     print_banner()
 
@@ -269,7 +291,7 @@ async def run_async(**kwargs):
                     # [修复] 强力清洗 target，去除可能存在的引号、空格、换行符
                     target = str(target).strip().strip("'").strip('"').strip()
                     logger.ai(f"AI 智能体路由决策: [Host 单体画像] -> {target}")
-                    await handler.handle_host_query(target, user_intent=ai_query_str)
+                    await handler.handle_host_query(target, user_intent=ai_query_str, outdir=kwargs.get('outdir'))
                 else:
                     logger.error("AI 判定为 Host 查询，但未提供目标 IP。")
                 return
@@ -282,7 +304,12 @@ async def run_async(**kwargs):
                 query_str = queries[0]
                 logger.ai(f"AI 智能体路由决策: [全球统计聚合] -> 语法: {query_str}")
                 logger.ai(f"统计维度 (Fields): {fields}")
-                await handler.handle_stat_query(query=query_str, fields=fields, user_intent=ai_query_str)
+                await handler.handle_stat_query(
+                    query=query_str,
+                    fields=fields,
+                    user_intent=ai_query_str,
+                    outdir=kwargs.get('outdir')
+                )
                 return
 
             # 3. [Icon 逆向] AI 决定反查图标
@@ -319,11 +346,15 @@ async def run_async(**kwargs):
     elif kwargs.get('host_query'):
         # [修复] 手动模式同样清洗 target
         target = kwargs['host_query'].strip().strip("'").strip('"')
-        await handler.handle_host_query(target)
+        await handler.handle_host_query(target, outdir=kwargs.get('outdir'))
         return
     elif kwargs.get('count_query'):
         # [修复] 对接统计查询逻辑
-        await handler.handle_stat_query(kwargs['count_query'], kwargs.get('query_fields'))
+        await handler.handle_stat_query(
+            kwargs['count_query'],
+            kwargs.get('query_fields'),
+            outdir=kwargs.get('outdir')
+        )
         return
     elif kwargs.get('query'):
         candidate_queries = [kwargs['query']]
@@ -342,6 +373,8 @@ async def run_async(**kwargs):
             candidate_queries=candidate_queries,
             scan_format=kwargs.get('scan_format', False),
             outfile=kwargs.get('outfile'),
+            outdir=kwargs.get('outdir'),
+            export_format=kwargs.get('export_format'),
             pages=kwargs.get('pages', 0),
             key_word=kwargs.get('key_word'),
             include=kwargs.get('include'),
