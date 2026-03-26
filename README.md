@@ -269,6 +269,8 @@ system:
   logger: true
   sheet_merge: true
   concurrency: 15  # 建议根据网络状况调整 (10-50)
+  export_format: "xlsx"  # 支持 xlsx / csv
+  output_dir: "results"  # 默认输出目录
 ```
 
 ---
@@ -489,6 +491,32 @@ python3 fofamap.py -q 'domain="baidu.com"' -i "200" -k "文心,旅游"
 ```
 <img width="1470" height="655" alt="image" src="https://github.com/user-attachments/assets/709eb99e-b942-42ff-8eb7-3167230aeab3" />
 
+## 8️⃣ 自定义导出格式与导出路径
+默认导出格式由 `config/settings.yaml` 中的 `system.export_format` 控制，也可以在命令行临时覆盖。
+
+导出为 CSV：
+
+```bash
+python3 fofamap.py -q 'app="grafana" && country="US"' --export-format csv
+```
+
+导出到自定义目录：
+
+```bash
+python3 fofamap.py -q 'app="nginx"' --outdir ./exports
+```
+
+同时指定文件名和路径：
+
+```bash
+python3 fofamap.py -q 'domain="example.com"' -o ./exports/example_assets.csv
+```
+
+说明：
++ `--export-format` 支持 `xlsx` 和 `csv`
++ `--outdir` 用于指定输出目录
++ `-o/--outfile` 可直接传文件名，也可附带完整路径；若文件后缀为 `.csv` 或 `.xlsx`，程序会自动识别导出格式
+
 
 
 ---
@@ -603,6 +631,8 @@ results/
     └── targets_20260108_173107.txt
 ```
 
+如果使用 `--export-format csv`，对应的导出文件会变为 `.csv`；如果使用 `--outdir` 或带路径的 `--outfile`，结果会输出到你指定的目录。
+
 ---
 
 # 🛡️ 免责声明
@@ -638,7 +668,7 @@ FoFaMap 已加入 FOFA [共创者计划](https://fofa.info/development)，感谢
 
 **【战队知识星球】福利大放送，限时优惠-仅限前100名**
 
-<img width="318" height="958" alt="星球优惠券" src="https://github.com/user-attachments/assets/ab5b2b9b-82b6-4668-94e1-9e5e3d055f9a" />
+<img width="318" height="958" alt="image" src="https://github.com/user-attachments/assets/0cf90105-be7d-49ee-bcd2-b62434e2093a" />
 
 
 ## 历史Star
