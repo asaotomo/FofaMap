@@ -31,6 +31,8 @@ class SystemConfig(BaseModel):
     logger: bool = True
     sheet_merge: bool = True
     concurrency: int = 10
+    export_format: str = "xlsx"
+    output_dir: str = "results"
 
 
 class Config(BaseModel):
