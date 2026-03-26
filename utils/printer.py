@@ -23,6 +23,8 @@ def print_config():
     print(f"{Fore.GREEN}[*] 日志记录:{Style.RESET_ALL}{'开启' if settings.system.logger else '关闭'}")
     print(f"{Fore.GREEN}[*] 存活检测:{Style.RESET_ALL}{'开启' if settings.fast_check.check_alive else '关闭'}")
     print(f"{Fore.GREEN}[*] 合并导出:{Style.RESET_ALL}{'开启' if settings.system.sheet_merge else '关闭'}")
+    print(f"{Fore.GREEN}[*] 默认导出格式:{Style.RESET_ALL}{getattr(settings.system, 'export_format', 'xlsx').upper()}")
+    print(f"{Fore.GREEN}[*] 默认导出目录:{Style.RESET_ALL}{getattr(settings.system, 'output_dir', 'results')}")
     print(f"{Fore.GREEN}[*] 每页查询数量:{Style.RESET_ALL}{settings.search.size}条/页")
 
 
@@ -142,7 +144,7 @@ class ResultPrinter:
             hidden = len(raw_headers) - len(display_headers)
             if hidden > 0:
                 print(
-                    Fore.LIGHTBLACK_EX + f"[*] AI 智能精简: 已隐藏 {hidden} 个冗余字段(如Cert)，完整数据请查看 Excel。" + Style.RESET_ALL)
+                    Fore.LIGHTBLACK_EX + f"[*] AI 智能精简: 已隐藏 {hidden} 个冗余字段(如Cert)，完整数据请查看导出文件。" + Style.RESET_ALL)
         elif len(data) >= 100:
             print(Fore.LIGHTBLACK_EX + f"[*] 当前页显示 {len(data)} 条数据。" + Style.RESET_ALL)
 
