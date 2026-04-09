@@ -18,7 +18,7 @@ Self-Reflecting AI Queries → MCP Protocol Integration → Intelligent Vulnerab
 ❌ 也不是 Nuclei 封装  
 ✅ 它是：**一个可以被 AI 接管、会自己反思、会自己决策扫描策略的「全网资产测绘智能体」**
 
-目前fofamapv2.0版本已作为 Skill 上线 ClawHub 技能商城，您可通过以下命令安装，让您的 AI 助手（“龙虾”）也能使用资产测绘：
+目前fofamapv2.0版本已作为 Skill 上线 [ClawHub 技能商城](https://clawhub.ai/asaotomo/fofamap)，您可通过以下命令安装，让您的 AI 助手（“龙虾”）也能使用资产测绘：
 
 ```
 clawhub install fofamap
