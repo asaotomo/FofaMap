@@ -555,6 +555,25 @@ Cursor 对 MCP 的支持非常完善，配置好后，你可以直接在 Compose
         * 例如：`python3.10`
     - **Args**: `你的脚本绝对路径`
         * 例如：`/Users/ka/Downloads/fofamap/fofa/mcp_server.py`
+    - **Env** (可选): `FOFA_EMAIL` 和 `FOFA_KEY`
+        * 支持直接在 mcp.json 的 `env` 中配置 FOFA 凭据，**优先级高于** `config/settings.yaml` 中的 `email` / `key`，适合不想把凭据写进项目配置文件的场景。
+
+    完整的 mcp.json 参考示例：
+
+    ```json
+    {
+      "mcpServers": {
+        "fofamap-v2": {
+          "command": "python3.10",
+          "args": ["/Users/ka/Downloads/fofamap/fofa/mcp_server.py"],
+          "env": {
+            "FOFA_EMAIL": "your_email@example.com",
+            "FOFA_KEY": "your_fofa_api_key"
+          }
+        }
+      }
+    }
+    ```
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/12839102/1767953312691-9b0133cf-fc4c-47d7-82d8-a2bf55d2efec.png)
@@ -594,6 +613,7 @@ LM Studio 0.3.0+ 版本开始支持 MCP。这允许你用本地的 DeepSeek 或 
     - **Command**: `你的Python解释器绝对路径`
     - **Args**: `你的脚本绝对路径` (注意：LM Studio 有时需要把 args 分开填，或者填在一个框里，视版本而定)。
         * _建议形式_: `["/Users/ka/.../mcp_server.py"]`
+    - **Env** (可选): 同样支持 `FOFA_EMAIL` / `FOFA_KEY` 环境变量，用法见上文 Cursor 的 mcp.json 示例。
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/12839102/1767954026399-f53295dc-ac1e-4101-9f54-dc87fd438ea5.png)

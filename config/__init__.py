@@ -1,3 +1,5 @@
+import os
+
 import yaml
 from pydantic import BaseModel, Field
 from pathlib import Path
@@ -54,11 +56,22 @@ def load_config() -> Config:
         with open(config_path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
             # 现在 Config(**data) 会正确映射 base_url 和 model 了
-            return Config(**data)
+            config = Config(**data)
     except Exception as e:
         print(f"[!] 配置文件解析失败: {e}")
         print("[!] 请检查 config/settings.yaml 的格式是否正确")
         exit(1)
+
+    # 环境变量优先级高于 settings.yaml，便于在 mcp.json 的 "env" 中直接配置凭据：
+    #   "env": { "FOFA_EMAIL": "your_email@example.com", "FOFA_KEY": "your_fofa_api_key" }
+    env_email = os.environ.get("FOFA_EMAIL")
+    env_key = os.environ.get("FOFA_KEY")
+    if env_email:
+        config.userinfo.email = env_email
+    if env_key:
+        config.userinfo.key = env_key
+
+    return config
 
 
 # 初始化全局单例配置
