@@ -2,7 +2,7 @@
 
 [中文](README.md) · **English**
 
-![FofaMap 2.0.2 · Asset discovery, AI analysis and evidence-backed reports](https://github.com/user-attachments/assets/2705da2b-aadf-413e-95ce-18ebefc1fc57)
+![FofaMap 2.0.2 · Asset discovery, AI analysis and evidence-backed reports](https://camo.githubusercontent.com/16bb7c23ff95938f25784f7fa9824fe2f09fbcff44cb1f9e76c1be31648f655c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f666f66616d61702d322e302e322d636f7665722d656e2e706e67)
 
 <p align="center">
   <img alt="Version 2.0.2" src="https://camo.githubusercontent.com/99c5262e5a7aa000f2de7d43d75b9fe7ee02e63ece87a8649bb405878eddec84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56657273696f6e2d322e302e322d3045373439303f7374796c653d666c61742d737175617265">
@@ -11,9 +11,11 @@
   <img alt="Apache 2.0" src="https://camo.githubusercontent.com/00ca4663013d91953dfeee230ab95eef262b3c3d17e2abe9755ed98dcadbd9f9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d417061636865253230322e302d3437353536393f7374796c653d666c61742d737175617265">
 </p>
 
-**Find assets, examine the evidence, produce a report, and approve scans when you need them.**
+**An evidence-driven AI tool for asset discovery and security analysis.**
 
-FofaMap is a FOFA asset-discovery tool by **Hx0 Studio**. Start with the keyboard-driven wizard, write FOFA queries directly, describe a task in natural language, or connect your existing AI assistant. **Ordinary searches need a FOFA API key; no model setup is required.**
+Developed by **Hx0 Studio**, FofaMap brings **FOFA asset discovery, AI reflection, user-approved Nuclei validation and interactive reporting** into one traceable workflow, connecting each assessment with its queries, reasoning and validation results.
+
+Start with the keyboard-driven wizard, keep using the classic CLI, or connect AI assistants and automation through **MCP / Skill / REST API**. **Ordinary searches need only a FOFA API key, with no model setup required; active scans require user approval.**
 
 <a id="whats-new"></a>
 
@@ -51,14 +53,14 @@ Download the [FofaMap 2.0.2 user source package](https://github.com/asaotomo/Fof
 
 **Choose your language first.** The installer starts with **简体中文 / English**. Installation messages, account setup and future sessions use your saved choice; no configuration-file editing is needed. Enter keeps the previous installation language or the system-language default.
 
-![Choose the installation language](https://github.com/user-attachments/assets/18df691a-7f97-4b48-bd24-22a38e621eec)
+![Choose the installation language](https://camo.githubusercontent.com/ffbed96d5c525d5d27a1a485a35fb6defa1991234f835760fc1e4da75791d59a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2d6c616e67756167652e706e67)
 
 The first installation needs network access. The installer prepares isolated Python and dependencies, checks the installation and registers `fofamap`. **No manual environment activation or administrator access is required. Account setup opens at the end; continue with step 2.** Reopen your terminal if the command is not yet available.
 
 <details>
 <summary>View the first-install menu</summary>
 
-![First-install menu](https://github.com/user-attachments/assets/fd8ee903-bd65-4401-b29f-c9ba5c1ab283)
+![First-install menu](https://camo.githubusercontent.com/5bd79dbbfb14e26c56bf7768ce3897aa288d5c50fef99a20eb1d7d045dfdca3e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2d6d656e752e706e67)
 
 </details>
 
@@ -77,7 +79,7 @@ bash start.sh --version
 <details>
 <summary>Actual task output: one-click installation and verification</summary>
 
-![One-click installation and verification](https://github.com/user-attachments/assets/2c3b48f3-ddb6-4a6f-b47a-122c8dbeccc2)
+![One-click installation and verification](https://camo.githubusercontent.com/b15dbcafb6e1ad0401fd16c2aa7860c90b1edb919e46c351f7c5dce27c3ef628/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f717569636b2d696e7374616c6c2e706e67)
 
 </details>
 
@@ -103,7 +105,7 @@ If the form did not open, or you need to change the key, run:
 fofamap --setup
 ```
 
-![Account setup: enter the FOFA key in your own terminal](https://github.com/user-attachments/assets/a45e37a4-7346-4834-893e-98a62fe008d2)
+![Account setup: enter the FOFA key in your own terminal](https://camo.githubusercontent.com/6883169ba25a830c0e6f72f3aa3fbb768aef18a39662a5be7051ecd0ea44cb1f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6f6e626f617264696e672e706e67)
 
 **A FOFA key searches assets; a model key calls AI. They serve different purposes.** Keep real keys out of chats, issues and screenshots. Missing, damaged or invalid required configuration opens repair guidance on a later launch.
 
@@ -117,7 +119,7 @@ fofamap --setup
 fofamap
 ```
 
-![Current interface: enter a query after choosing Asset search](https://github.com/user-attachments/assets/2a4e6a26-5390-4806-9b98-dbb978fdc8b9)
+![Current interface: enter a query after choosing Asset search](https://camo.githubusercontent.com/63240ac6147348c1b1eb18a7e5f0fb65a68249e9c90d4b15fb5124557563d72b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f66697273742d7365617263682e706e67)
 
 1. Use the arrow keys to choose **Asset search**, then press Enter.
 2. Paste `domain="baidu.com"` to find Baidu’s public websites. This is FOFA syntax entered into the app; no outer shell quotes are needed.
@@ -136,7 +138,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,protocol,title \
   --no-check-alive --no-full --no-save
 ```
 
-![Find Baidu’s public websites](https://github.com/user-attachments/assets/907709ef-3fd2-4b77-a6eb-50fb6dae55c7)
+![Find Baidu’s public websites](https://camo.githubusercontent.com/fc92f07318c5b90c67ca6a3fb9894e6c6432253bfee18e249c1d93d90d1dc00a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7365617263682e706e67)
 
 A table of hosts, IPs, ports, protocols, and titles confirms the real query succeeded. The capture distinguishes the upstream matching population from the three-row collection cap; **matched population is not collected inventory**. HTTP/HTTPS and apex/www may be distinct endpoints even when they share an IP.
 
@@ -165,9 +167,9 @@ Windows beginners can use the wizard above to avoid CMD/PowerShell quoting diffe
 
 The home screen prioritizes the AI task assistant, asset search, host details, and distribution statistics. Batch/favicon searches live under More search methods, rules/fields under Query reference, and account/model/preferences/setup/updates under Settings. Esc returns from a submenu without exiting the application.
 
-![Simplified home menu](https://github.com/user-attachments/assets/4774a661-f8fe-4c28-a581-c658e34f01b9)
+![Simplified home menu](https://camo.githubusercontent.com/aa4978dd5e8055df5028f7a6073026de6d99d196378695957f044bec53ec548c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d656e752e706e67)
 
-![Grouped settings menu](https://github.com/user-attachments/assets/5ed568af-1624-4b6f-bc96-ce971312a76b)
+![Grouped settings menu](https://camo.githubusercontent.com/1a4b82e49687ac62b6f1bcba8db5226d4bd921764b2dec2b1006efe6f6af562e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73657474696e67732d6d656e752e706e67)
 
 Explicit scan/no-scan instructions take priority over AI advice. A user-requested scan prepares candidates and asks for exact plan approval even when AI advises against it. Statistics-plus-scan retains aggregates and fetches bounded targets within the same query scope, reporting partial coverage. Empty targets, query errors, and missing plan approval prevent execution.
 
@@ -179,7 +181,7 @@ Open **Settings → Interface language**, choose Chinese or English, and save. I
 fofamap
 ```
 
-![Change the interface language directly](https://github.com/user-attachments/assets/c0602109-02db-4f31-b2d6-d827cb9007e4)
+![Change the interface language directly](https://camo.githubusercontent.com/be4338f93645351525a278a01067e7faee5ad4b0a85c9cb9bbe3f47da4963859/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6c616e67756167652d73657474696e672e706e67)
 
 <a id="query-language"></a>
 
@@ -212,7 +214,7 @@ fofamap syntax
 <details>
 <summary>Actual task output: Inspect the local syntax catalogue</summary>
 
-![Inspect the local syntax catalogue](https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30)
+![Inspect the local syntax catalogue](https://camo.githubusercontent.com/4b2c1d1c9da076b744439a93607e482cdd1d240bf8445e06fadda9f1a3ee6d08/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73796e7461782e706e67)
 
 </details>
 
@@ -227,7 +229,7 @@ fofamap fields
 <details>
 <summary>Actual task output: Inspect return fields and membership capabilities</summary>
 
-![Inspect return fields and membership capabilities](https://github.com/user-attachments/assets/3280985b-6857-4549-8f90-d724bd719a27)
+![Inspect return fields and membership capabilities](https://camo.githubusercontent.com/cca35d13935c5c3a6699f30a550232ba744bc1e5fab213c439187b97c4348d3c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6669656c64732e706e67)
 
 </details>
 
@@ -241,7 +243,7 @@ fofamap fields
 fofamap
 ```
 
-![Smart fields: select immediately after the page limit](https://github.com/user-attachments/assets/7fd2a6b7-c189-4b53-81a8-28a17d97dfd2)
+![Smart fields: select immediately after the page limit](https://camo.githubusercontent.com/b547237a040fab4c886c33dde444835e394056c15046e1fe0050a409bd07d4ac/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736d6172742d6669656c64732d73657474696e672e706e67)
 
 Ordinary queries initially default to off, configurable in Settings; AI tasks default to on. Add `--smart-fields` to enable or `--no-smart-fields` to disable. Selection follows account capabilities and the task; **ordinary searches do not need an extra model key for this feature**. Check “Smart fields: Yes” in the query overview. For fixed columns, use `-f host,ip,port,title` and disable smart fields; smart selection takes priority when both are enabled.
 
@@ -260,7 +262,7 @@ fofamap rules --rule ThinkPHP
 <details>
 <summary>Actual task output: Look up an official app name first</summary>
 
-![Look up an official app name first](https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f)
+![Look up an official app name first](https://camo.githubusercontent.com/1a15e9e6b5ace00f5d2389cfef2d02eaf4aedbb3799c3084164a2ec17c4e31aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c65732e706e67)
 
 </details>
 
@@ -277,7 +279,7 @@ fofamap rules --rule-categories
 <details>
 <summary>Actual task output: categories and counts</summary>
 
-![Categories and counts](https://github.com/user-attachments/assets/3e7bb7d1-3391-4da9-95d2-88aafc76083a)
+![Categories and counts](https://camo.githubusercontent.com/26f2e3e929218cbcbf5fe547d770dd207619ec8b2ace279c7327f45dbbca7070/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d63617465676f726965732e706e67)
 
 </details>
 
@@ -292,7 +294,7 @@ fofamap rules --rule-category 工业控制
 <details>
 <summary>Actual task output: industrial-control rules</summary>
 
-![Industrial-control rules](https://github.com/user-attachments/assets/bc07ddc4-499e-4d6c-b18d-af6e9f2ed008)
+![Industrial-control rules](https://camo.githubusercontent.com/fcee58946e817428d7010516ff3fd5bc353eecc2a10709497f030fd8d4980326/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d696e647573747269616c2e706e67)
 
 </details>
 
@@ -307,7 +309,7 @@ fofamap rules --rule-category 人工智能
 <details>
 <summary>Actual task output: artificial-intelligence rules</summary>
 
-![Artificial-intelligence rules](https://github.com/user-attachments/assets/9b9ffedc-79f2-4f68-82e6-b1d6b66756b2)
+![Artificial-intelligence rules](https://camo.githubusercontent.com/64fdb65fa38a6f3b706060f4f0b52dd2e4301e67c1d55d32297494c31da91198/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d61692e706e67)
 
 </details>
 
@@ -324,7 +326,7 @@ fofamap -q 'domain="baidu.com" && status_code=200' -f host,port,status_code --si
 <details>
 <summary>Actual task output: Combine a domain with an indexed HTTP status</summary>
 
-![Combine a domain with an indexed HTTP status](https://github.com/user-attachments/assets/0ed2f6e6-61a7-4e47-a20e-71bdb49a3086)
+![Combine a domain with an indexed HTTP status](https://camo.githubusercontent.com/52331e5203e7ea2776c37ee1a1c80ba7e72585d916f92b22fbbbf56e837c044d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7374617475732e706e67)
 
 </details>
 
@@ -339,7 +341,7 @@ fofamap -q 'domain="baidu.com"' -f host,port,status_code,title -i 200 -k 百度 
 <details>
 <summary>Actual task output: Filter collected rows by status and keyword</summary>
 
-![Filter collected rows by status and keyword](https://github.com/user-attachments/assets/53c83b6d-1f91-44f8-a3f8-70424bcd800b)
+![Filter collected rows by status and keyword](https://camo.githubusercontent.com/ffe0a71dffeb35341d7f48335097eceff6c9aa299b9aa1d4fc8d130215f62c19/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f66696c746572732e706e67)
 
 </details>
 
@@ -354,7 +356,7 @@ fofamap -q 'domain="bing.com" && host="www.bing.com"' -f host,port --size 1 --pa
 <details>
 <summary>Actual task output: Optional: actively check one website now</summary>
 
-![Optional: actively check one website now](https://github.com/user-attachments/assets/f24e6760-fdbb-4da1-aa78-5a4b2bdd875b)
+![Optional: actively check one website now](https://camo.githubusercontent.com/6be0ef09f882d0171e522212b92a3d89356d8c8f9f2f976e4aa9d050896c4793/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f616c6976652e706e67)
 
 </details>
 
@@ -369,7 +371,7 @@ fofamap -hq www.bing.com --no-host-detail --no-save
 <details>
 <summary>Actual task output: Profile a single host</summary>
 
-![Profile a single host](https://github.com/user-attachments/assets/b2e0fdc0-7deb-4790-9596-809215e5e469)
+![Profile a single host](https://camo.githubusercontent.com/294ed2acb8e165843114ac90382897c34f9a8d7a6e15b88a9acd0d274f6fd1a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f73742e706e67)
 
 </details>
 
@@ -384,7 +386,7 @@ fofamap -cq 'domain="baidu.com"' -f port,protocol --size 5 --no-save
 <details>
 <summary>Actual task output: Aggregate ports and protocols</summary>
 
-![Aggregate ports and protocols](https://github.com/user-attachments/assets/87cbefe2-dd2c-44c0-9ea5-88bd38a0275b)
+![Aggregate ports and protocols](https://camo.githubusercontent.com/02f8dc10ad02b4c2620ff25252486669c1e507faa346e5159d9348923878a748/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73746174732e706e67)
 
 </details>
 
@@ -401,7 +403,7 @@ fofamap -ico https://www.bing.com --size 3 --pages 1 --max-records 3 --no-check-
 <details>
 <summary>Actual task output: Search by a website favicon hash</summary>
 
-![Search by a website favicon hash](https://github.com/user-attachments/assets/6a4572ec-9796-45b9-8689-548eaff3ab80)
+![Search by a website favicon hash](https://camo.githubusercontent.com/8d4302828ee5c541e8e77753bba537a7582bf259008d903e99e90a49e4e4488b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f69636f6e2e706e67)
 
 </details>
 
@@ -418,7 +420,7 @@ fofamap -bq examples/queries.txt --batch-group-size 1 --size 3 --pages 1 --max-r
 <details>
 <summary>Actual task output: Search multiple statements from a file</summary>
 
-![Search multiple statements from a file](https://github.com/user-attachments/assets/970f5731-6315-4ddb-9946-eb8d930206b4)
+![Search multiple statements from a file](https://camo.githubusercontent.com/495470474a9796a3c44ec4cd408fc885fa61861e2b196ab9368260459a2dc83a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f62617463682e706e67)
 
 </details>
 
@@ -441,7 +443,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>Actual task output: Export CSV</summary>
 
-![Export CSV](https://github.com/user-attachments/assets/072015da-8b71-4deb-9060-1cbe888b1641)
+![Export CSV](https://camo.githubusercontent.com/b0adb84d8ef0d4d3e1f8d210280a121382ede57923aaf95a49273e2b8b7049ae/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d6373762e706e67)
 
 </details>
 
@@ -456,7 +458,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>Actual task output: Export JSONL</summary>
 
-![Export JSONL](https://github.com/user-attachments/assets/f38e30ab-7bd6-4584-8e53-365a8e340cf5)
+![Export JSONL](https://camo.githubusercontent.com/4ef1f602e376f0854b2cb71637aad5f969cef1130ba2bef4883b209149234938/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d6a736f6e6c2e706e67)
 
 </details>
 
@@ -471,7 +473,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>Actual task output: Export XLSX</summary>
 
-![Export XLSX](https://github.com/user-attachments/assets/664d64f6-34d7-4948-974a-02334b83734c)
+![Export XLSX](https://camo.githubusercontent.com/0988e1c467a914e71d12312c715ff4549a8e897871a45194bde934261e53bcbe/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d786c73782e706e67)
 
 </details>
 
@@ -486,7 +488,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 1 --pages 1 --max-records
 <details>
 <summary>Actual task output: Send machine-readable JSON to another program</summary>
 
-![Send machine-readable JSON to another program](https://github.com/user-attachments/assets/e73a0aa2-aa05-4822-8cec-38e22af6d3ea)
+![Send machine-readable JSON to another program](https://camo.githubusercontent.com/f7e59f632d0d4d2b87b5cae9f33220e42d8c328207ae3bd0c863a2aa8c61f3a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6a736f6e2e706e67)
 
 </details>
 
@@ -518,7 +520,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 2 --pages 2 --max-records
 <details>
 <summary>Actual task output: Fetch two real pages: two rows each, four total</summary>
 
-![Fetch two real pages: two rows each, four total](https://github.com/user-attachments/assets/041494c0-8d61-4b4c-8e8b-67a52fda525f)
+![Fetch two real pages: two rows each, four total](https://camo.githubusercontent.com/84194e6528d1dac6f85ac43105db3cbe9e3abe24dc89a74a1cd0ccc939d17574/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f706167696e6174696f6e2e706e67)
 
 </details>
 
@@ -541,7 +543,7 @@ fofamap
 <details>
 <summary>Actual task output: refreshed model defaults</summary>
 
-![Current default models and common providers](https://github.com/user-attachments/assets/76af0b37-5d53-4f5a-9feb-5f4804b8f21b)
+![Current default models and common providers](https://camo.githubusercontent.com/0356dc76997432b28a4c8b4dbc45edc776ed0f855c86340538eb461e42ab9fde/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c2d707265736574732e706e67)
 
 </details>
 
@@ -556,7 +558,7 @@ fofamap models
 <details>
 <summary>Actual task output: Check configured models</summary>
 
-![Check configured models](https://github.com/user-attachments/assets/27006a6d-f2e2-4475-a6f4-a1a58c73898c)
+![Check configured models](https://camo.githubusercontent.com/4013adbb3afc0220b5817b4c1788f481f709f4870f314fcc67058adc1e2202aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c732e706e67)
 
 </details>
 
@@ -568,7 +570,7 @@ The request pins a domain, caps it at two records, forbids expansion/scanning, a
 fofamap -ai 'Query only domain="baidu.com", at most 2 public website records. Do not expand scope or scan. Write an English briefing under 250 words.' --size 2 --pages 1 --max-records 2 --no-check-alive --no-deepseek-search --no-save --report-lang en --report-file results/readme-demo/report-en.md
 ```
 
-![Run a bounded real Agent task](https://github.com/user-attachments/assets/f18d81a1-a0f5-4b78-bc1e-974d6f42616d)
+![Run a bounded real Agent task](https://camo.githubusercontent.com/7669ab8c777323af1b679d03c418f9effa28949741b8d2e1343ac5acde5d1b64/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6167656e742e706e67)
 
 Model prose is advisory and can contain inference errors. Review evidence, gaps, and counts. Corroboration is not legal ownership; no finding is not proof of no vulnerability. Preserve distinct hostnames as separate endpoints even on the same IP.
 
@@ -595,7 +597,7 @@ python scripts/readme_demo.py exposure --language en --output results/readme-dem
 <details>
 <summary>Actual task output: Product exposure review: statistics and a one-row sample</summary>
 
-![Product exposure review: statistics and a one-row sample](https://github.com/user-attachments/assets/a786d6ea-ecaa-4158-acb5-83835ea4287f)
+![Product exposure review: statistics and a one-row sample](https://camo.githubusercontent.com/00399541a83215ebe40f2fc07a7af0e6ccf2a3ec2f2548d28728c635824cad54/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f737572652e706e67)
 
 </details>
 
@@ -610,7 +612,7 @@ fofamap
 <details>
 <summary>Actual task output: Prefer the keyboard-driven wizard</summary>
 
-![Prefer the keyboard-driven wizard](https://github.com/user-attachments/assets/6d7273f0-531b-4aae-a5b3-d6b02beceaff)
+![Prefer the keyboard-driven wizard](https://camo.githubusercontent.com/fa235eb3a7025289c08156ba499c77ab78f3dacf985e427060e6f0359a2f6648/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f77697a6172642e706e67)
 
 </details>
 
@@ -649,7 +651,7 @@ fofamap integrate --list
 <details>
 <summary>Actual task output: List supported hosts</summary>
 
-![List supported hosts](https://github.com/user-attachments/assets/a57c365f-c8c0-491c-81fe-4eda2ad089e7)
+![List supported hosts](https://camo.githubusercontent.com/9ddd481fe3263f34f9b1435f774c85a83ae3291e8e4ac8fc83fdf2111df7efd3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f7374732e706e67)
 
 </details>
 
@@ -673,7 +675,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>Actual task output: Install an integration into an isolated project folder</summary>
 
-![Install an integration into an isolated project folder](https://github.com/user-attachments/assets/6135e6e4-b7ce-47d6-80fa-b162567ff247)
+![Install an integration into an isolated project folder](https://camo.githubusercontent.com/0ac0b92e63976dd8b66a7397d6fe87a9a113483204901f7436911fbd6c4ae950/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e746567726174652e706e67)
 
 </details>
 
@@ -690,7 +692,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>Actual task output: Check whether an installed Skill is stale</summary>
 
-![Check whether an installed Skill is stale](https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5)
+![Check whether an installed Skill is stale](https://camo.githubusercontent.com/2a1e6f4d3fdfc1a8bbbcfd9d5d9649803c016fe65a73584ecf1870ab55a152d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d636865636b2e706e67)
 
 </details>
 
@@ -707,7 +709,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>Actual task output: Export, import, and verify a .skill package</summary>
 
-![Export, import, and verify a .skill package](https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44)
+![Export, import, and verify a .skill package](https://camo.githubusercontent.com/84f9cd72ec8aaed3ff162de966c786bf084f4f17f68c165f478f735430b53ee0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d7061636b6167652e706e67)
 
 </details>
 
@@ -722,7 +724,7 @@ fofamap-mcp --check --expect-version 2.0.2 --expect-build-date 2026-11-02 --expe
 <details>
 <summary>Actual task output: Perform a real handshake and release check</summary>
 
-![Perform a real handshake and release check](https://github.com/user-attachments/assets/bb373d8b-fbcd-4ddd-86f1-25e083544142)
+![Perform a real handshake and release check](https://camo.githubusercontent.com/387531e71ca7a8247a977dc129377e3588f55d2128e748037e1ae9f903a982f8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d63702d636865636b2e706e67)
 
 </details>
 
@@ -737,7 +739,7 @@ python scripts/readme_demo.py mcp --language en --output results/readme-demo/mcp
 <details>
 <summary>Actual task output: Run a real MCP query workflow</summary>
 
-![Run a real MCP query workflow](https://github.com/user-attachments/assets/3156fa30-a416-4d23-9f11-241b0b5df11d)
+![Run a real MCP query workflow](https://camo.githubusercontent.com/2c980c666ba4492409c4ed08507948eb2fb7b92aa958f6293f438f5383cf6128/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d63702d7461736b2e706e67)
 
 </details>
 
@@ -781,7 +783,7 @@ python scripts/readme_demo.py transports --language en --output results/readme-d
 <details>
 <summary>Actual task output: Reproduce real HTTP and SSE startup/checks</summary>
 
-![Reproduce real HTTP and SSE startup/checks](https://github.com/user-attachments/assets/2030d85f-3827-410d-88a5-15687bfdee66)
+![Reproduce real HTTP and SSE startup/checks](https://camo.githubusercontent.com/a636df7b09e782f9fdc4fc92370cf0406232a1c2cd260db66e0372133617b7b5/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7472616e73706f7274732e706e67)
 
 </details>
 
@@ -802,7 +804,7 @@ fofamap schedule --schedule-action list --json
 <details>
 <summary>Actual task output: Inspect schedules and worker heartbeat</summary>
 
-![Inspect schedules and worker heartbeat](https://github.com/user-attachments/assets/655afeb3-e7ea-4782-8dd1-fab721a6d639)
+![Inspect schedules and worker heartbeat](https://camo.githubusercontent.com/b682da3a0708927fb4440bad57b5c71f823ea78d397d08fe42aaafe99b9468d7/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363686564756c652d6c6973742e706e67)
 
 </details>
 
@@ -819,7 +821,7 @@ python scripts/readme_demo.py schedule --language en --output results/readme-dem
 <details>
 <summary>Actual task output: Real due-time execution: create → worker → history → reports</summary>
 
-![Real due-time execution: create → worker → history → reports](https://github.com/user-attachments/assets/f093e71f-5919-4adc-9f36-66aabf951cce)
+![Real due-time execution: create → worker → history → reports](https://camo.githubusercontent.com/1f995117c5a2d9e7a36e649adefbadc1da15105d9d39b647d0c4f0c688323a7f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363686564756c652d7461736b2e706e67)
 
 </details>
 
@@ -853,7 +855,7 @@ fofamap --update-nuclei
 <details>
 <summary>Actual task output: Y/N choice for a missing scan component</summary>
 
-![Nuclei installation choice](https://github.com/user-attachments/assets/5a042dd6-20ba-4e1b-8fd5-f33bdeffda15)
+![Nuclei installation choice](https://camo.githubusercontent.com/8f4f628fcb8b1a847200a2972de0c658dceeab91229e4d316959a12ef3223580/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f636f6d706f6e656e742d696e7374616c6c2e706e67)
 
 </details>
 
@@ -864,7 +866,7 @@ nuclei -version
 <details>
 <summary>Actual task output: Verify the installed Nuclei binary</summary>
 
-![Verify the installed Nuclei binary](https://github.com/user-attachments/assets/acb715e5-0533-43e7-8781-4d8277c8fd2d)
+![Verify the installed Nuclei binary](https://camo.githubusercontent.com/aac6d4dea8c9d56b3f23f39b556afd109db9a2246c873c53162dbc6b6142f8c4/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6e75636c65692e706e67)
 
 </details>
 
@@ -879,7 +881,7 @@ fofamap -q 'domain="baidu.com"' --size 1 --pages 1 --max-records 1 --no-check-al
 <details>
 <summary>Actual task output: Inspect a real public-scope approval screen without executing</summary>
 
-![Inspect a real public-scope approval screen without executing](https://github.com/user-attachments/assets/01e3121a-50f8-4dab-a1d8-cf20da9c1ef6)
+![Inspect a real public-scope approval screen without executing](https://camo.githubusercontent.com/a7fabef9bfb8a767568c4da7f386fdf056d77587e44f882c32cf2c13564284a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f617070726f76616c2e706e67)
 
 </details>
 
@@ -896,7 +898,7 @@ python scripts/readme_demo.py scan --approve-local-fixture --language en --outpu
 <details>
 <summary>Actual task output: Actually execute a controlled local scan</summary>
 
-![Actually execute a controlled local scan](https://github.com/user-attachments/assets/a39055a6-62cb-439e-9fd3-2a24b737c65d)
+![Actually execute a controlled local scan](https://camo.githubusercontent.com/154cbdd4306871005d02efe531b6995d278c9dc62ac910bef78ce7ce0d4e02da/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363616e2d7461736b2e706e67)
 
 </details>
 
@@ -929,7 +931,7 @@ fofamap --update
 <details>
 <summary>Actual task output: checking the latest stable GitHub release</summary>
 
-![One-command update check](https://github.com/user-attachments/assets/555b32e9-7279-4d77-8b9e-f4f9ab335325)
+![One-command update check](https://camo.githubusercontent.com/327b5e70a07f7a3fd8f9b0d9ba8f5295a19e23375541ea06d721628329a7a1ef/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7570646174652e706e67)
 
 </details>
 
@@ -953,7 +955,7 @@ Run the same installer again to manage the application. A fresh installation off
 <details>
 <summary>Existing installation: repair and uninstall menu</summary>
 
-![Repair and uninstall menu](https://github.com/user-attachments/assets/1e0b0b40-564e-4fd8-98ae-e2b4cd2cbcf2)
+![Repair and uninstall menu](https://camo.githubusercontent.com/07830293766726e6b87b8965095117587eeb9b6a80a8a89b41b621cc5c30b335/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7265706169722d6d656e752e706e67)
 
 </details>
 
@@ -984,7 +986,7 @@ python --version
 <details>
 <summary>Actual task output: Confirm FofaMap and Python versions</summary>
 
-![Confirm FofaMap and Python versions](https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f)
+![Confirm FofaMap and Python versions](https://camo.githubusercontent.com/93589e8baf8acda4891f52934d77334eaa538a67b7e605b29692cc0a500b0444/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f76657273696f6e2e706e67)
 
 </details>
 
@@ -999,7 +1001,7 @@ fofamap --help
 <details>
 <summary>Actual task output: Read the installed command help</summary>
 
-![Read the installed command help](https://github.com/user-attachments/assets/3f2d9989-5a67-4202-87f4-8f7a125b4eeb)
+![Read the installed command help](https://camo.githubusercontent.com/8a41de2d2287e248bdff2f7de84dfc1f59f722d6d300f1011579b083d221a58b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f68656c702e706e67)
 
 </details>
 
@@ -1123,7 +1125,7 @@ fofamap -q 'title="x" &&' --no-save --size 1 --pages 1 --max-records 1
 <details>
 <summary>Actual task output: Real error example: errors are not empty results</summary>
 
-![Real error example: errors are not empty results](https://github.com/user-attachments/assets/3a1a3573-a6f7-4e71-b628-3c829137c05b)
+![Real error example: errors are not empty results](https://camo.githubusercontent.com/d36061b54bd412f70d78b19f7287ab572530cfafade4e9da7f17dcb03073250d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e76616c69642d71756572792e706e67)
 
 </details>
 
@@ -1297,7 +1299,7 @@ fofamap init
 <details>
 <summary>Actual task output: Run the initial setup wizard</summary>
 
-![Run the initial setup wizard](https://github.com/user-attachments/assets/83cb38df-7099-4963-a2b5-347288dd6d06)
+![Run the initial setup wizard](https://camo.githubusercontent.com/817d77c4d72d474ecc3dbc01204a1831001b33f165c2f69a8aca47f7e8fcb136/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73657475702e706e67)
 
 </details>
 
@@ -1316,7 +1318,7 @@ fofamap account
 <details>
 <summary>Actual task output: Verify FOFA login, membership, and quota</summary>
 
-![Verify FOFA login, membership, and quota](https://github.com/user-attachments/assets/c77c3c32-53ad-4439-a8c5-1124e4ed707a)
+![Verify FOFA login, membership, and quota](https://camo.githubusercontent.com/5b4bac8de5b6a704a33635396b84f0a50799d8ac8e9a5f04272a1004e4af9fb2/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6163636f756e742e706e67)
 
 </details>
 
@@ -1348,7 +1350,7 @@ python scripts/readme_demo.py rest --language en --output results/readme-demo/re
 <details>
 <summary>Actual task output: Real REST: start → request → return one row</summary>
 
-![Real REST: start → request → return one row](https://github.com/user-attachments/assets/60a24925-7e3e-4882-bcda-ac45b2dfa708)
+![Real REST: start → request → return one row](https://camo.githubusercontent.com/69e93de6fb7cf55d64ba947d5c31865eff5259dd980bb6db159875afa8b32d09/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f726573742d7461736b2e706e67)
 
 </details>
 
@@ -1400,7 +1402,7 @@ See the [command/capture evidence index](docs/assets/readme/2.0.2/CAPTURE_MANIFE
 
 FofaMap is developed and maintained by **Hx0 Studio**. Report problems through [Issues](https://github.com/asaotomo/FofaMap/issues), contribute a pull request, or support the project with a star.
 
-<img src="https://github.com/user-attachments/assets/dce7a454-0a1c-4224-a099-2c4c8c5158cb" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
+<img src="https://camo.githubusercontent.com/7e60d91ede6ac02739b119dedec240ebc487454962404c4ba814974935af06dd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f6878302d73747564696f2e706e67" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
 
 [Studio website](https://hx0studio.com) · [Repository](https://github.com/asaotomo/FofaMap)
 

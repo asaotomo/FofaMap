@@ -64,7 +64,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/exposure.png",
       "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7",
-      "url": "https://github.com/user-attachments/assets/3f67426c-c967-4641-ab3b-842872ada754"
+      "url": "https://camo.githubusercontent.com/00399541a83215ebe40f2fc07a7af0e6ccf2a3ec2f2548d28728c635824cad54/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f737572652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/exposure.png"
     },
     {
       "id": "setup",
@@ -76,7 +77,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/setup.png",
       "sha256": "c155f35a820b1b40a32be57862a1421c76cbb8c4d10e12fc40b1741a205a42ea",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-setup.png"
+      "url": "https://camo.githubusercontent.com/e2612233330e69b9a661914db261ff0d0f8b996b3a41201b20d7fe0555874158/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73657475702e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/setup.png"
     },
     {
       "id": "account",
@@ -88,7 +90,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/account.png",
       "sha256": "df7a8314a23700bf2eda751f1fc2f1cadfbc592d82c61e2ad997111dd1a83d25",
-      "url": "https://github.com/user-attachments/assets/c0e6ac5d-bdf0-4bec-a42e-b7c8e9ca6589"
+      "url": "https://camo.githubusercontent.com/a0028835a665fb42766a11708e4ca11f8535459bba7a700772320f26dea3da26/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6163636f756e742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/account.png"
     },
     {
       "id": "fields",
@@ -100,7 +103,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/fields.png",
       "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc",
-      "url": "https://github.com/user-attachments/assets/97f5f5e4-5c65-4bfc-a315-eaad83562260"
+      "url": "https://camo.githubusercontent.com/cca35d13935c5c3a6699f30a550232ba744bc1e5fab213c439187b97c4348d3c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6669656c64732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/fields.png"
     },
     {
       "id": "syntax",
@@ -112,7 +116,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/syntax.png",
       "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba",
-      "url": "https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30"
+      "url": "https://camo.githubusercontent.com/4b2c1d1c9da076b744439a93607e482cdd1d240bf8445e06fadda9f1a3ee6d08/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73796e7461782e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/syntax.png"
     },
     {
       "id": "hosts",
@@ -124,7 +129,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/hosts.png",
       "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e",
-      "url": "https://github.com/user-attachments/assets/fec11383-e9de-47d1-9514-7cd5ba35f9ed"
+      "url": "https://camo.githubusercontent.com/9ddd481fe3263f34f9b1435f774c85a83ae3291e8e4ac8fc83fdf2111df7efd3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f7374732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/hosts.png"
     },
     {
       "id": "integrate",
@@ -136,7 +142,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/integrate.png",
       "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958",
-      "url": "https://github.com/user-attachments/assets/84258705-578f-4cc8-85d0-13e75baa1a96"
+      "url": "https://camo.githubusercontent.com/0ac0b92e63976dd8b66a7397d6fe87a9a113483204901f7436911fbd6c4ae950/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e746567726174652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/integrate.png"
     },
     {
       "id": "skill-check",
@@ -148,7 +155,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/skill-check.png",
       "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3",
-      "url": "https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5"
+      "url": "https://camo.githubusercontent.com/2a1e6f4d3fdfc1a8bbbcfd9d5d9649803c016fe65a73584ecf1870ab55a152d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d636865636b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/skill-check.png"
     },
     {
       "id": "skill-package",
@@ -160,7 +168,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/skill-package.png",
       "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7",
-      "url": "https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44"
+      "url": "https://camo.githubusercontent.com/84f9cd72ec8aaed3ff162de966c786bf084f4f17f68c165f478f735430b53ee0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d7061636b6167652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/skill-package.png"
     },
     {
       "id": "mcp-task",
@@ -172,7 +181,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/mcp-task.png",
       "sha256": "35ff56b3223fabca3b03049167a6b773a21278fb9a1afd2083709d03f9f785f1",
-      "url": "https://github.com/user-attachments/assets/7fbd897b-cb43-4e64-906c-2bc0f6a2147a"
+      "url": "https://camo.githubusercontent.com/6ca4c1123e920f6393f42a5ce3a7a8cf4d10517bc9ae0e7b75cfc30367825fba/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d63702d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/mcp-task.png"
     },
     {
       "id": "schedule-list",
@@ -184,7 +194,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/schedule-list.png",
       "sha256": "14d310fa44bf84cce90e23be2cdcaa8a1cae6b03e6647bd5b39bdfbcbc475b0a",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-list.png"
+      "url": "https://camo.githubusercontent.com/0d28102e4073839a8f3ffe8313e81100067b665686646620e8e2a2f1a33ba468/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363686564756c652d6c6973742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/schedule-list.png"
     },
     {
       "id": "schedule-task",
@@ -196,7 +207,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/schedule-task.png",
       "sha256": "cd866d83255baae9fbf07fa4cfe4fea250864091ed3e542e36bcff13d3b6b4ad",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-task.png"
+      "url": "https://camo.githubusercontent.com/127f2dfb41187cd189ad2ec1eb887685cf134c61f35ab10d6b372b8d510b8a94/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363686564756c652d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/schedule-task.png"
     },
     {
       "id": "nuclei",
@@ -208,7 +220,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/nuclei.png",
       "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628",
-      "url": "https://github.com/user-attachments/assets/45801b70-bd72-4a1a-abe1-10be3f5fafd3"
+      "url": "https://camo.githubusercontent.com/aac6d4dea8c9d56b3f23f39b556afd109db9a2246c873c53162dbc6b6142f8c4/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6e75636c65692e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/nuclei.png"
     },
     {
       "id": "scan-task",
@@ -220,7 +233,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/scan-task.png",
       "sha256": "56bedd14f007a4357f95c613ddfc1ca8a0741d94ec0a80c7e5784d0b8ea873cf",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-scan-task.png"
+      "url": "https://camo.githubusercontent.com/ea648e8e4bd8f8efd4f0c6a01b7dacc70e394a55d89db994be199b61b316b6bd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363616e2d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/scan-task.png"
     },
     {
       "id": "rest-task",
@@ -232,7 +246,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rest-task.png",
       "sha256": "1d65ea97cfc524802d931fcb1fa23edc250b0ab5ee14f0249c17be3d0977c150",
-      "url": "https://github.com/user-attachments/assets/359847ff-b2cc-43e7-b856-7e7c29399509"
+      "url": "https://camo.githubusercontent.com/667ba9bff93ff5b18efd7b085503875dbafceaf9d6b010867dff2a61ff9954fb/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f726573742d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/rest-task.png"
     },
     {
       "id": "invalid-query",
@@ -244,7 +259,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/invalid-query.png",
       "sha256": "75dabcad39e59da82264230ec34aa36f3cc779e12e92b0e8d2fda30eb929cef2",
-      "url": "https://github.com/user-attachments/assets/9aae0733-c90c-41f4-a291-4a5b0b45f4e3"
+      "url": "https://camo.githubusercontent.com/280b170eae3f8c21ff91660d311aa49bd50ff1fef9f588632b6327254440e738/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e76616c69642d71756572792e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/invalid-query.png"
     },
     {
       "id": "install",
@@ -256,7 +272,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install.png",
       "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8",
-      "url": "https://github.com/user-attachments/assets/be63f48b-bfdb-431e-a488-19ef96abfea7"
+      "url": "https://camo.githubusercontent.com/5edd4b75c1dd373838248906bb64c4bbe259ec586200f06d506ad409820a509b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/install.png"
     },
     {
       "id": "transports",
@@ -268,7 +285,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/transports.png",
       "sha256": "a0b181b7a6109cd38a67c5377a0bae9617c8b3d7a55a8769af1b1b383902f029",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-transports.png"
+      "url": "https://camo.githubusercontent.com/cd66602aa26155f0f57fa88fc23fe0e2034bb0086d95255d06c25f0d2388c393/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7472616e73706f7274732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/transports.png"
     },
     {
       "id": "rules",
@@ -280,7 +298,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rules.png",
       "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf",
-      "url": "https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f"
+      "url": "https://camo.githubusercontent.com/1a15e9e6b5ace00f5d2389cfef2d02eaf4aedbb3799c3084164a2ec17c4e31aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c65732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rules.png"
     },
     {
       "id": "rule-categories",
@@ -292,7 +311,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-categories.png",
       "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a",
-      "url": "https://github.com/user-attachments/assets/fb90ea1b-9ed7-47f7-9131-83f42d98aa08"
+      "url": "https://camo.githubusercontent.com/26f2e3e929218cbcbf5fe547d770dd207619ec8b2ace279c7327f45dbbca7070/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d63617465676f726965732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-categories.png"
     },
     {
       "id": "rule-industrial",
@@ -304,7 +324,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-industrial.png",
       "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e",
-      "url": "https://github.com/user-attachments/assets/83fcb3f6-1893-45af-b299-951b129964cc"
+      "url": "https://camo.githubusercontent.com/fcee58946e817428d7010516ff3fd5bc353eecc2a10709497f030fd8d4980326/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d696e647573747269616c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-industrial.png"
     },
     {
       "id": "rule-ai",
@@ -316,7 +337,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-ai.png",
       "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15",
-      "url": "https://github.com/user-attachments/assets/f441a60b-7d81-4ba0-bccf-c703ae8d0dc6"
+      "url": "https://camo.githubusercontent.com/64fdb65fa38a6f3b706060f4f0b52dd2e4301e67c1d55d32297494c31da91198/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d61692e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-ai.png"
     },
     {
       "id": "mcp-check",
@@ -328,7 +350,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/mcp-check.png",
       "sha256": "bf2ace0a42f00db5eb50126a096b33371578c95775e9b6656d522319d8bc6b5e",
-      "url": "https://github.com/user-attachments/assets/037c1b36-c6ee-47f6-b99b-8a9a027cff76"
+      "url": "https://camo.githubusercontent.com/3eb961ad7b1e772a3a292900024a5f4bd77eef31413d1c6fe114f90f01bcf763/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d63702d636865636b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/mcp-check.png"
     },
     {
       "id": "update",
@@ -340,7 +363,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/update.png",
       "sha256": "8d3604fd1c00c572e8d8ac25b075226e5afd76a943bb3354de5f04d8033eaced",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-update.png"
+      "url": "https://camo.githubusercontent.com/31e3b247868e86bebdafa6f9e157ba6fe04d84d99edd6eff39adb080cae25284/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7570646174652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/update.png"
     },
     {
       "id": "onboarding",
@@ -352,7 +376,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/onboarding.png",
       "sha256": "425cea0b24bd0790becd5e9153195950bf460360ec40dfdca08cc10e67fab772",
-      "url": "https://github.com/user-attachments/assets/52322746-2569-425b-ba72-3d6a384385b4"
+      "url": "https://camo.githubusercontent.com/d8c5be8005e7515035b722b378c54be5cb1a5c167450f85b2d395a945893636f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6f6e626f617264696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/onboarding.png"
     },
     {
       "id": "version",
@@ -364,7 +389,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/version.png",
       "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37",
-      "url": "https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f"
+      "url": "https://camo.githubusercontent.com/93589e8baf8acda4891f52934d77334eaa538a67b7e605b29692cc0a500b0444/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f76657273696f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/version.png"
     },
     {
       "id": "models",
@@ -376,7 +402,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/models.png",
       "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff",
-      "url": "https://github.com/user-attachments/assets/d46542fb-4fe8-4591-8460-c9ea80af0aae"
+      "url": "https://camo.githubusercontent.com/4013adbb3afc0220b5817b4c1788f481f709f4870f314fcc67058adc1e2202aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/models.png"
     },
     {
       "id": "model-presets",
@@ -388,7 +415,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/model-presets.png",
       "sha256": "daccc6d5d27001c0d1f9fb42f315fc49dcd6d513fb804e3c6353ed6c4a26aa2f",
-      "url": "https://github.com/user-attachments/assets/ace266f4-5e46-47dc-838e-cb0e95877a66"
+      "url": "https://camo.githubusercontent.com/69a76a48908a44851a464c483aa70964bd4b7ec1aa8a585828086c70afc02595/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d6f64656c2d707265736574732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/model-presets.png"
     },
     {
       "id": "menu",
@@ -400,7 +428,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/menu.png",
       "sha256": "b3bff32a958b4e51aa97ae31487177abad2ccd2b67193de23885408e4ed954d1",
-      "url": "https://github.com/user-attachments/assets/718fc3c4-509b-4286-9aab-7de893ffb50f"
+      "url": "https://camo.githubusercontent.com/217eb7ec6c3608df106de50310d525544f73c7eb4de73c29cb3cb6ea0110ccae/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/menu.png"
     },
     {
       "id": "first-search",
@@ -412,7 +441,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/first-search.png",
       "sha256": "e672e30a82609262b6b3b4a2271e97f5257dd66ba324a9bd24a9c5f0069b50b1",
-      "url": "https://github.com/user-attachments/assets/449b070e-dc61-45a4-af83-1c48f4a3dfb0"
+      "url": "https://camo.githubusercontent.com/943432736653be07de36a261e26588f47cb8f01c3dc1b53f1a141111021fd696/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f66697273742d7365617263682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/first-search.png"
     },
     {
       "id": "smart-fields-setting",
@@ -424,7 +454,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/smart-fields-setting.png",
       "sha256": "493b565763d7ecfbb44db869cbea7386ad0fce5066c4e977c4e8c592ab30eba0",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-smart-fields-setting.png"
+      "url": "https://camo.githubusercontent.com/67164d69962895f90706b74e2ad38e1447a9998fc9628c59e92d14c9334c0977/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f736d6172742d6669656c64732d73657474696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/smart-fields-setting.png"
     },
     {
       "id": "language-setting",
@@ -436,7 +467,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/language-setting.png",
       "sha256": "2a4d979cacad0d1bd8d47c5239e3b84d25a914f72e1c30f04c380a7074aa6b5b",
-      "url": "https://github.com/user-attachments/assets/233557c3-f747-4e46-a452-a7dd15933f50"
+      "url": "https://camo.githubusercontent.com/8e6db0e2a2c62a01215f7eae310eb2a1752b53e318f330b4a54c86ce0a610aea/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6c616e67756167652d73657474696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/language-setting.png"
     },
     {
       "id": "settings-menu",
@@ -448,7 +480,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/settings-menu.png",
       "sha256": "50ad8fa4871fa2eb060d679a3f75e4da450f4351687813b3ee0e2ddae0981f05",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-settings-menu.png"
+      "url": "https://camo.githubusercontent.com/19f8b118178e35665d2485ac9e5fd238fa7bc3fb52f1cb90360d557efd4ed4f5/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73657474696e67732d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/settings-menu.png"
     },
     {
       "id": "help",
@@ -460,7 +493,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/help.png",
       "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269",
-      "url": "https://github.com/user-attachments/assets/ea448df2-de97-40ec-b3eb-4c9d28de7dd7"
+      "url": "https://camo.githubusercontent.com/8a41de2d2287e248bdff2f7de84dfc1f59f722d6d300f1011579b083d221a58b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f68656c702e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/help.png"
     },
     {
       "id": "wizard",
@@ -472,7 +506,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/wizard.png",
       "sha256": "f8ee7c1ad43009178185ba2cd4bf54c66ae765c97212c62f7bf0dbb94ca37062",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-wizard.png"
+      "url": "https://camo.githubusercontent.com/a27f10aafffa455bba820cf70de09e09ddc9d2ccf3ecbd3d2eaa6e4de39d978a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f77697a6172642e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/wizard.png"
     },
     {
       "id": "install-language",
@@ -484,7 +519,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install-language.png",
       "sha256": "9c3723a6307f056545191203aefaa66f906c082b13671bb8fd2819181e605c16",
-      "url": "https://github.com/user-attachments/assets/b9467c26-67ca-460b-a8e0-8225653432e0"
+      "url": "https://camo.githubusercontent.com/dbad5cc768c41204bddcde0c1d696b99b13e19047841220daab5e6faa6e332ce/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e7374616c6c2d6c616e67756167652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/install-language.png"
     },
     {
       "id": "install-menu",
@@ -496,7 +532,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install-menu.png",
       "sha256": "bb301169de5bc91babd696f6e90c7f0627bb8af72926fe751c0b9954fdb8810b",
-      "url": "https://github.com/user-attachments/assets/9ee30e33-56cc-4225-819a-c324fe4fa282"
+      "url": "https://camo.githubusercontent.com/cab2e26a3f8a94b9de18549d10b10893907bbe73aa0323b9e720820de4e21a88/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e7374616c6c2d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/install-menu.png"
     },
     {
       "id": "repair-menu",
@@ -508,7 +545,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/repair-menu.png",
       "sha256": "69008098d4b9ca90f4eff5166d25df074f6cc4e6c249bf72018aaa4c12f6b7ec",
-      "url": "https://github.com/user-attachments/assets/ffd59e76-dfbc-408a-821b-ce5cf4fc92a2"
+      "url": "https://camo.githubusercontent.com/5a213a5b75d52a90ff125656e07d216a190219532633b0ef25e7ac9f33b34804/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7265706169722d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/repair-menu.png"
     },
     {
       "id": "component-install",
@@ -520,7 +558,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/component-install.png",
       "sha256": "92144ff83d7c5e8f38a3c5488182fb5a706c2db721dd2f93c7255a92d226b4b2",
-      "url": "https://github.com/user-attachments/assets/df53a070-2be2-46c6-9478-42341fd6366c"
+      "url": "https://camo.githubusercontent.com/6d81d58a13eed62ae43da0e19cd1f8ac6e81bdbe4387dcde4998db914795b401/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f636f6d706f6e656e742d696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/component-install.png"
     },
     {
       "id": "pagination",
@@ -532,7 +571,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/pagination.png",
       "sha256": "f1bd944ad3c3b159fa5049806ee01247df54683923d447c22e6d32a4157f8bc9",
-      "url": "https://github.com/user-attachments/assets/e26b47bb-a401-4be6-b5a2-a609a39c6efa"
+      "url": "https://camo.githubusercontent.com/04d9884ca1be0c008625308959c23b7fd0eb8a326a4513b66695772a338ed98f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f706167696e6174696f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/pagination.png"
     },
     {
       "id": "filters",
@@ -544,7 +584,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/filters.png",
       "sha256": "35bdb41f18ecfe437602d5be9737ecd1aedd7fc4fb584623d69daa7e2c052af7",
-      "url": "https://github.com/user-attachments/assets/650ce9cb-022f-4807-9da0-6992a85024f7"
+      "url": "https://camo.githubusercontent.com/0ccf1ad455c97153b417550062f0baf2ab4441c9241312a732a55e4cf57755a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f66696c746572732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/filters.png"
     },
     {
       "id": "alive",
@@ -556,7 +597,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/alive.png",
       "sha256": "cb526c737c851d9c887d6b54794a07c6868a06ddaffdf25e63908ee509b9500f",
-      "url": "https://github.com/user-attachments/assets/fbdded95-7c41-4518-bfa9-e7b8281708d9"
+      "url": "https://camo.githubusercontent.com/3cf3072fcaf8db7c0a907f92bfc3113ba9ccfe4fa61ee4db4bfbd1c82535a69b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f616c6976652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/alive.png"
     },
     {
       "id": "search",
@@ -568,7 +610,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/search.png",
       "sha256": "f7fabfbb46694edb88b8fc162885111d91e04774d7dac1dac515d1cefa50f79c",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-search.png"
+      "url": "https://camo.githubusercontent.com/921f4543804a1b61bb0f18d36bb5328e5f57c43e36c9e9b159798219d6e50bcd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7365617263682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/search.png"
     },
     {
       "id": "status",
@@ -580,7 +623,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/status.png",
       "sha256": "f0f70c442c497a2bd66fd25046f85ebafce84e51e27c8326e1e572520ae479e2",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-status.png"
+      "url": "https://camo.githubusercontent.com/f7dc8cb2e7ba4653f9518d9adfdcae2861d20bf9d58e5d7e4cfcb2cbaa8a590e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7374617475732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/status.png"
     },
     {
       "id": "host",
@@ -592,7 +636,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/host.png",
       "sha256": "6406bf4361d395e619e3c89012353bc7dcb40401c695afd35686b8adcae6b35e",
-      "url": "https://github.com/user-attachments/assets/adb32109-d139-4771-b4d5-defb517a9027"
+      "url": "https://camo.githubusercontent.com/09372d36da837670ec90320a966a3ac39854e5cdd704725a47a1e123d5ffd7a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f686f73742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/host.png"
     },
     {
       "id": "stats",
@@ -604,7 +649,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/stats.png",
       "sha256": "d0b18adbd987f1512f58f23a055bca2986b94f35608361c22e80e5758d0c21c3",
-      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-stats.png"
+      "url": "https://camo.githubusercontent.com/1633125e760f3896bfad3e8aaddd189d6078bd9553374a77befe971036c31e19/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73746174732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/stats.png"
     },
     {
       "id": "icon",
@@ -616,7 +662,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/icon.png",
       "sha256": "a7638bdf231d351fbb2a029235099a77bd54c222fae9a530a06fd01cb5104989",
-      "url": "https://github.com/user-attachments/assets/a1812b25-70a4-414a-9ed6-7de5564e47b7"
+      "url": "https://camo.githubusercontent.com/327520585fe5c2daefe40b8007cc5ffadb8b85b16de19c5cfa55dc9edf721908/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f69636f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/icon.png"
     },
     {
       "id": "batch",
@@ -628,7 +675,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/batch.png",
       "sha256": "2f62bb3db27cc553120903fd1e9931b85716087902125b1694c156930b08a702",
-      "url": "https://github.com/user-attachments/assets/e278451d-f8b8-40e9-82d8-4de6734b1eb7"
+      "url": "https://camo.githubusercontent.com/c97db719ac36fd0eeb2080cfcdc32234768c72c6954cc138c15bbf2126ee334d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f62617463682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/batch.png"
     },
     {
       "id": "export-csv",
@@ -640,7 +688,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-csv.png",
       "sha256": "632873527fef254ee087c86c5c3c32f63463a3d6995a465d55618d37cb4d4fc9",
-      "url": "https://github.com/user-attachments/assets/6dc38ebb-5d90-46d5-af9d-433e8df60bcf"
+      "url": "https://camo.githubusercontent.com/6eb8c8638a9813fa965020ed0c32b18e62369c72af30719a4adb78a1ec769e80/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d6373762e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/export-csv.png"
     },
     {
       "id": "export-jsonl",
@@ -652,7 +701,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-jsonl.png",
       "sha256": "92c54e7dc770d8f93e59dba55eeaa2807d1416e099c95676c611bf0ad3e25f0e",
-      "url": "https://github.com/user-attachments/assets/6d02ae1c-a2be-471a-8774-bc50c64ef4b0"
+      "url": "https://camo.githubusercontent.com/b51413771fdde1962429291ec5f4ce56985250bfb1db20f0ceaab0083f6a4f6f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d6a736f6e6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/export-jsonl.png"
     },
     {
       "id": "export-xlsx",
@@ -664,7 +714,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-xlsx.png",
       "sha256": "d4d8efa76b1916f9c80dcab1b6158ec0a13aef4ef7a9b6f46a62fbf750aff15e",
-      "url": "https://github.com/user-attachments/assets/9767a188-637c-49bc-a7e9-4b0623eed9c1"
+      "url": "https://camo.githubusercontent.com/d8707f374009d143ccd7ad8e088b3d772915ae57ff666de4da6a82b9cf5e14d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d786c73782e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/export-xlsx.png"
     },
     {
       "id": "json",
@@ -676,7 +727,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/json.png",
       "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e",
-      "url": "https://github.com/user-attachments/assets/f52b42ae-ee1a-4a1f-8909-fdcd207810af"
+      "url": "https://camo.githubusercontent.com/f7e59f632d0d4d2b87b5cae9f33220e42d8c328207ae3bd0c863a2aa8c61f3a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6a736f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/json.png"
     },
     {
       "id": "agent",
@@ -688,7 +740,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/agent.png",
       "sha256": "030035ff3c428ff01116d35293fb330f677973c34067f33317e58c04138b22cb",
-      "url": "https://github.com/user-attachments/assets/61bfc421-0a16-4ffd-9afb-1dd17326a9a2"
+      "url": "https://camo.githubusercontent.com/a8a0964fe45f80fe86e796add37fd86167e932be768345328a7a1c453feecdf3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6167656e742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/agent.png"
     },
     {
       "id": "approval",
@@ -700,7 +753,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/approval.png",
       "sha256": "7f2df3888ea1404f9fa9f9dfd8986fdbd118b726775906ee982024cd8b838b15",
-      "url": "https://github.com/user-attachments/assets/c5aa598b-3640-4c7f-b495-c88e6962c0a4"
+      "url": "https://camo.githubusercontent.com/1503b9f5b5d39312fc0795db35b453a4cebb7a5f6a37dab70f9084bd18870385/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f617070726f76616c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/approval.png"
     },
     {
       "id": "quick-install",
@@ -712,7 +766,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/quick-install.png",
       "sha256": "4e1e655bc77ec75b4d226feb34097401a4928aa8218a6bf4ec25c7a0051e2928",
-      "url": "https://github.com/user-attachments/assets/89337539-90a4-4e42-a439-4829bee434e7"
+      "url": "https://camo.githubusercontent.com/000a4eec019eba8c95489cd658c1a460c42ac35c391d918cc518efce527722d0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f717569636b2d696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/zh/quick-install.png"
     },
     {
       "id": "exposure",
@@ -724,7 +779,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/exposure.png",
       "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7",
-      "url": "https://github.com/user-attachments/assets/a786d6ea-ecaa-4158-acb5-83835ea4287f"
+      "url": "https://camo.githubusercontent.com/00399541a83215ebe40f2fc07a7af0e6ccf2a3ec2f2548d28728c635824cad54/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f737572652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/exposure.png"
     },
     {
       "id": "setup",
@@ -736,7 +792,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/setup.png",
       "sha256": "bf3858fbbd852f5e0da8ecdf787946e4f329c717cdd1e127726ad3cbac1f84ce",
-      "url": "https://github.com/user-attachments/assets/83cb38df-7099-4963-a2b5-347288dd6d06"
+      "url": "https://camo.githubusercontent.com/817d77c4d72d474ecc3dbc01204a1831001b33f165c2f69a8aca47f7e8fcb136/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73657475702e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/setup.png"
     },
     {
       "id": "account",
@@ -748,7 +805,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/account.png",
       "sha256": "cdd897a03d7da40ad35a6d2289c27c6fe3c4505fd1cfd390949e55cae1fd75ff",
-      "url": "https://github.com/user-attachments/assets/c77c3c32-53ad-4439-a8c5-1124e4ed707a"
+      "url": "https://camo.githubusercontent.com/5b4bac8de5b6a704a33635396b84f0a50799d8ac8e9a5f04272a1004e4af9fb2/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6163636f756e742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/account.png"
     },
     {
       "id": "fields",
@@ -760,7 +818,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/fields.png",
       "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc",
-      "url": "https://github.com/user-attachments/assets/3280985b-6857-4549-8f90-d724bd719a27"
+      "url": "https://camo.githubusercontent.com/cca35d13935c5c3a6699f30a550232ba744bc1e5fab213c439187b97c4348d3c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6669656c64732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/fields.png"
     },
     {
       "id": "syntax",
@@ -772,7 +831,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/syntax.png",
       "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba",
-      "url": "https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30"
+      "url": "https://camo.githubusercontent.com/4b2c1d1c9da076b744439a93607e482cdd1d240bf8445e06fadda9f1a3ee6d08/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73796e7461782e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/syntax.png"
     },
     {
       "id": "agent",
@@ -784,7 +844,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/agent.png",
       "sha256": "945781226db7196a534dc5f07ce56a298d72f471ec3ad5787d87ebbdc981b021",
-      "url": "https://github.com/user-attachments/assets/f18d81a1-a0f5-4b78-bc1e-974d6f42616d"
+      "url": "https://camo.githubusercontent.com/7669ab8c777323af1b679d03c418f9effa28949741b8d2e1343ac5acde5d1b64/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6167656e742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/agent.png"
     },
     {
       "id": "hosts",
@@ -796,7 +857,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/hosts.png",
       "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e",
-      "url": "https://github.com/user-attachments/assets/a57c365f-c8c0-491c-81fe-4eda2ad089e7"
+      "url": "https://camo.githubusercontent.com/9ddd481fe3263f34f9b1435f774c85a83ae3291e8e4ac8fc83fdf2111df7efd3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f7374732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/hosts.png"
     },
     {
       "id": "integrate",
@@ -808,7 +870,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/integrate.png",
       "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958",
-      "url": "https://github.com/user-attachments/assets/6135e6e4-b7ce-47d6-80fa-b162567ff247"
+      "url": "https://camo.githubusercontent.com/0ac0b92e63976dd8b66a7397d6fe87a9a113483204901f7436911fbd6c4ae950/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e746567726174652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/integrate.png"
     },
     {
       "id": "skill-check",
@@ -820,7 +883,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/skill-check.png",
       "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3",
-      "url": "https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5"
+      "url": "https://camo.githubusercontent.com/2a1e6f4d3fdfc1a8bbbcfd9d5d9649803c016fe65a73584ecf1870ab55a152d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d636865636b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/skill-check.png"
     },
     {
       "id": "skill-package",
@@ -832,7 +896,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/skill-package.png",
       "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7",
-      "url": "https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44"
+      "url": "https://camo.githubusercontent.com/84f9cd72ec8aaed3ff162de966c786bf084f4f17f68c165f478f735430b53ee0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d7061636b6167652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/skill-package.png"
     },
     {
       "id": "mcp-task",
@@ -844,7 +909,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/mcp-task.png",
       "sha256": "9f33a84a2ffcda6a463924d57a8536c3dd73c34e201ecb6c28b41b9ce7149b83",
-      "url": "https://github.com/user-attachments/assets/3156fa30-a416-4d23-9f11-241b0b5df11d"
+      "url": "https://camo.githubusercontent.com/2c980c666ba4492409c4ed08507948eb2fb7b92aa958f6293f438f5383cf6128/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d63702d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/mcp-task.png"
     },
     {
       "id": "schedule-list",
@@ -856,7 +922,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/schedule-list.png",
       "sha256": "9812e4e51fa90b8b61558fa9b8a33bf81955b08c95dbd235809eb7f6a7aa2a4d",
-      "url": "https://github.com/user-attachments/assets/655afeb3-e7ea-4782-8dd1-fab721a6d639"
+      "url": "https://camo.githubusercontent.com/b682da3a0708927fb4440bad57b5c71f823ea78d397d08fe42aaafe99b9468d7/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363686564756c652d6c6973742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/schedule-list.png"
     },
     {
       "id": "schedule-task",
@@ -868,7 +935,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/schedule-task.png",
       "sha256": "fc585ed8cd4c00f859fe9ff2a4c944e54559e5e12f1f48a4261f1ec635add5d4",
-      "url": "https://github.com/user-attachments/assets/f093e71f-5919-4adc-9f36-66aabf951cce"
+      "url": "https://camo.githubusercontent.com/1f995117c5a2d9e7a36e649adefbadc1da15105d9d39b647d0c4f0c688323a7f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363686564756c652d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/schedule-task.png"
     },
     {
       "id": "nuclei",
@@ -880,7 +948,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/nuclei.png",
       "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628",
-      "url": "https://github.com/user-attachments/assets/acb715e5-0533-43e7-8781-4d8277c8fd2d"
+      "url": "https://camo.githubusercontent.com/aac6d4dea8c9d56b3f23f39b556afd109db9a2246c873c53162dbc6b6142f8c4/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6e75636c65692e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/nuclei.png"
     },
     {
       "id": "scan-task",
@@ -892,7 +961,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/scan-task.png",
       "sha256": "d225f03d73e32efbce3ffce8a657f1f7b9d5c1ade130d6f18b3531c13abaef0d",
-      "url": "https://github.com/user-attachments/assets/a39055a6-62cb-439e-9fd3-2a24b737c65d"
+      "url": "https://camo.githubusercontent.com/154cbdd4306871005d02efe531b6995d278c9dc62ac910bef78ce7ce0d4e02da/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7363616e2d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/scan-task.png"
     },
     {
       "id": "rest-task",
@@ -904,7 +974,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rest-task.png",
       "sha256": "bc3b0b84b27ae1d020349933c2202b8e1ac48f4eeacae38185f3190136b60c7a",
-      "url": "https://github.com/user-attachments/assets/60a24925-7e3e-4882-bcda-ac45b2dfa708"
+      "url": "https://camo.githubusercontent.com/69e93de6fb7cf55d64ba947d5c31865eff5259dd980bb6db159875afa8b32d09/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f726573742d7461736b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rest-task.png"
     },
     {
       "id": "invalid-query",
@@ -916,7 +987,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/invalid-query.png",
       "sha256": "eee4ea77cf116de94ae6ffe39aee0a8308f515baf18e76245f6b486a2ac9767f",
-      "url": "https://github.com/user-attachments/assets/3a1a3573-a6f7-4e71-b628-3c829137c05b"
+      "url": "https://camo.githubusercontent.com/d36061b54bd412f70d78b19f7287ab572530cfafade4e9da7f17dcb03073250d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e76616c69642d71756572792e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/invalid-query.png"
     },
     {
       "id": "install",
@@ -928,7 +1000,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install.png",
       "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8",
-      "url": "https://github.com/user-attachments/assets/5347e6b6-2bb4-4113-95ed-2a24cab41470"
+      "url": "https://camo.githubusercontent.com/5edd4b75c1dd373838248906bb64c4bbe259ec586200f06d506ad409820a509b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/install.png"
     },
     {
       "id": "transports",
@@ -940,7 +1013,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/transports.png",
       "sha256": "7633e2b50bfcbf41ab11f12684e97b5d3c8abf76581aa7dc81a5359507c20e85",
-      "url": "https://github.com/user-attachments/assets/2030d85f-3827-410d-88a5-15687bfdee66"
+      "url": "https://camo.githubusercontent.com/a636df7b09e782f9fdc4fc92370cf0406232a1c2cd260db66e0372133617b7b5/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7472616e73706f7274732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/transports.png"
     },
     {
       "id": "rules",
@@ -952,7 +1026,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rules.png",
       "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf",
-      "url": "https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f"
+      "url": "https://camo.githubusercontent.com/1a15e9e6b5ace00f5d2389cfef2d02eaf4aedbb3799c3084164a2ec17c4e31aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c65732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rules.png"
     },
     {
       "id": "rule-categories",
@@ -964,7 +1039,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-categories.png",
       "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a",
-      "url": "https://github.com/user-attachments/assets/3e7bb7d1-3391-4da9-95d2-88aafc76083a"
+      "url": "https://camo.githubusercontent.com/26f2e3e929218cbcbf5fe547d770dd207619ec8b2ace279c7327f45dbbca7070/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d63617465676f726965732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-categories.png"
     },
     {
       "id": "rule-industrial",
@@ -976,7 +1052,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-industrial.png",
       "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e",
-      "url": "https://github.com/user-attachments/assets/bc07ddc4-499e-4d6c-b18d-af6e9f2ed008"
+      "url": "https://camo.githubusercontent.com/fcee58946e817428d7010516ff3fd5bc353eecc2a10709497f030fd8d4980326/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d696e647573747269616c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-industrial.png"
     },
     {
       "id": "rule-ai",
@@ -988,7 +1065,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-ai.png",
       "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15",
-      "url": "https://github.com/user-attachments/assets/9b9ffedc-79f2-4f68-82e6-b1d6b66756b2"
+      "url": "https://camo.githubusercontent.com/64fdb65fa38a6f3b706060f4f0b52dd2e4301e67c1d55d32297494c31da91198/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d61692e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/rule-ai.png"
     },
     {
       "id": "mcp-check",
@@ -1000,7 +1078,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/mcp-check.png",
       "sha256": "aa56d58f66ee0cd5216e97144484b2b99ef1eeed6e96048440a6b167bd542e8a",
-      "url": "https://github.com/user-attachments/assets/bb373d8b-fbcd-4ddd-86f1-25e083544142"
+      "url": "https://camo.githubusercontent.com/387531e71ca7a8247a977dc129377e3588f55d2128e748037e1ae9f903a982f8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d63702d636865636b2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/mcp-check.png"
     },
     {
       "id": "update",
@@ -1012,7 +1091,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/update.png",
       "sha256": "57053f438b5f52121e243365b0a62f5807cd28913205ea4a3b1982fa58f0416b",
-      "url": "https://github.com/user-attachments/assets/555b32e9-7279-4d77-8b9e-f4f9ab335325"
+      "url": "https://camo.githubusercontent.com/327b5e70a07f7a3fd8f9b0d9ba8f5295a19e23375541ea06d721628329a7a1ef/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7570646174652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/update.png"
     },
     {
       "id": "onboarding",
@@ -1024,7 +1104,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/onboarding.png",
       "sha256": "ab72fe1c178eb0c249344b6f6c778228940d6f7eacbc8c916e7f187f6fef0982",
-      "url": "https://github.com/user-attachments/assets/a45e37a4-7346-4834-893e-98a62fe008d2"
+      "url": "https://camo.githubusercontent.com/6883169ba25a830c0e6f72f3aa3fbb768aef18a39662a5be7051ecd0ea44cb1f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6f6e626f617264696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/onboarding.png"
     },
     {
       "id": "version",
@@ -1036,7 +1117,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/version.png",
       "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37",
-      "url": "https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f"
+      "url": "https://camo.githubusercontent.com/93589e8baf8acda4891f52934d77334eaa538a67b7e605b29692cc0a500b0444/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f76657273696f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/version.png"
     },
     {
       "id": "models",
@@ -1048,7 +1130,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/models.png",
       "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff",
-      "url": "https://github.com/user-attachments/assets/27006a6d-f2e2-4475-a6f4-a1a58c73898c"
+      "url": "https://camo.githubusercontent.com/4013adbb3afc0220b5817b4c1788f481f709f4870f314fcc67058adc1e2202aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/models.png"
     },
     {
       "id": "model-presets",
@@ -1060,7 +1143,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/model-presets.png",
       "sha256": "1399e0fe8fee6c9f63498b27b39627260258295d1df487b570ef77e716c3f413",
-      "url": "https://github.com/user-attachments/assets/76af0b37-5d53-4f5a-9feb-5f4804b8f21b"
+      "url": "https://camo.githubusercontent.com/0356dc76997432b28a4c8b4dbc45edc776ed0f855c86340538eb461e42ab9fde/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c2d707265736574732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/model-presets.png"
     },
     {
       "id": "menu",
@@ -1072,7 +1156,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/menu.png",
       "sha256": "42432720001e5037e4c33707b3456296fa7b839a1e4610380304d797211c602d",
-      "url": "https://github.com/user-attachments/assets/4774a661-f8fe-4c28-a581-c658e34f01b9"
+      "url": "https://camo.githubusercontent.com/aa4978dd5e8055df5028f7a6073026de6d99d196378695957f044bec53ec548c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/menu.png"
     },
     {
       "id": "first-search",
@@ -1084,7 +1169,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/first-search.png",
       "sha256": "f020bbbfe924756a03261947c9c17d87aec344566104ac1a42c9cceafa48746b",
-      "url": "https://github.com/user-attachments/assets/2a4e6a26-5390-4806-9b98-dbb978fdc8b9"
+      "url": "https://camo.githubusercontent.com/63240ac6147348c1b1eb18a7e5f0fb65a68249e9c90d4b15fb5124557563d72b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f66697273742d7365617263682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/first-search.png"
     },
     {
       "id": "smart-fields-setting",
@@ -1096,7 +1182,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/smart-fields-setting.png",
       "sha256": "9701e14bcdd6e965481007297856cb35631aee3982f3ed337316129386fd727f",
-      "url": "https://github.com/user-attachments/assets/7fd2a6b7-c189-4b53-81a8-28a17d97dfd2"
+      "url": "https://camo.githubusercontent.com/b547237a040fab4c886c33dde444835e394056c15046e1fe0050a409bd07d4ac/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736d6172742d6669656c64732d73657474696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/smart-fields-setting.png"
     },
     {
       "id": "language-setting",
@@ -1108,7 +1195,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/language-setting.png",
       "sha256": "f89b9a94a66c1257f233641492b6559f11593c5417fe9ec4cdba5d2e84673caa",
-      "url": "https://github.com/user-attachments/assets/c0602109-02db-4f31-b2d6-d827cb9007e4"
+      "url": "https://camo.githubusercontent.com/be4338f93645351525a278a01067e7faee5ad4b0a85c9cb9bbe3f47da4963859/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6c616e67756167652d73657474696e672e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/language-setting.png"
     },
     {
       "id": "settings-menu",
@@ -1120,7 +1208,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/settings-menu.png",
       "sha256": "42f24a55ade07652cd0bab5fee43b22f88f45fd946accb8fe08550b4d576e1fd",
-      "url": "https://github.com/user-attachments/assets/5ed568af-1624-4b6f-bc96-ce971312a76b"
+      "url": "https://camo.githubusercontent.com/1a4b82e49687ac62b6f1bcba8db5226d4bd921764b2dec2b1006efe6f6af562e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73657474696e67732d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/settings-menu.png"
     },
     {
       "id": "help",
@@ -1132,7 +1221,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/help.png",
       "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269",
-      "url": "https://github.com/user-attachments/assets/3f2d9989-5a67-4202-87f4-8f7a125b4eeb"
+      "url": "https://camo.githubusercontent.com/8a41de2d2287e248bdff2f7de84dfc1f59f722d6d300f1011579b083d221a58b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f68656c702e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/help.png"
     },
     {
       "id": "wizard",
@@ -1144,7 +1234,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/wizard.png",
       "sha256": "ab523494a38a27eab5f2a965a82349fc1f154c30adeabcd6675dccf9eb0bf857",
-      "url": "https://github.com/user-attachments/assets/6d7273f0-531b-4aae-a5b3-d6b02beceaff"
+      "url": "https://camo.githubusercontent.com/fa235eb3a7025289c08156ba499c77ab78f3dacf985e427060e6f0359a2f6648/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f77697a6172642e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/wizard.png"
     },
     {
       "id": "install-language",
@@ -1156,7 +1247,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install-language.png",
       "sha256": "792d99c297504d8ba9b09f4e68537aa62bc6ef61913928a9a2f2d8e5664a03a1",
-      "url": "https://github.com/user-attachments/assets/18df691a-7f97-4b48-bd24-22a38e621eec"
+      "url": "https://camo.githubusercontent.com/ffbed96d5c525d5d27a1a485a35fb6defa1991234f835760fc1e4da75791d59a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2d6c616e67756167652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/install-language.png"
     },
     {
       "id": "install-menu",
@@ -1168,7 +1260,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install-menu.png",
       "sha256": "ada8e099df235a7337026c4ed73a1238e2c65ff0b8ac771b9b3b0d68c6610272",
-      "url": "https://github.com/user-attachments/assets/fd8ee903-bd65-4401-b29f-c9ba5c1ab283"
+      "url": "https://camo.githubusercontent.com/5bd79dbbfb14e26c56bf7768ce3897aa288d5c50fef99a20eb1d7d045dfdca3e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e7374616c6c2d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/install-menu.png"
     },
     {
       "id": "repair-menu",
@@ -1180,7 +1273,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/repair-menu.png",
       "sha256": "d1612b27a12022720d641f838a539876f9dbcfb72a2237f1439dace1bd4d5e0d",
-      "url": "https://github.com/user-attachments/assets/1e0b0b40-564e-4fd8-98ae-e2b4cd2cbcf2"
+      "url": "https://camo.githubusercontent.com/07830293766726e6b87b8965095117587eeb9b6a80a8a89b41b621cc5c30b335/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7265706169722d6d656e752e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/repair-menu.png"
     },
     {
       "id": "component-install",
@@ -1192,7 +1286,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/component-install.png",
       "sha256": "3e358595dacf9dc1bf4b704b5d42165dc795170fb22c9d883003f3e276b8dcb6",
-      "url": "https://github.com/user-attachments/assets/5a042dd6-20ba-4e1b-8fd5-f33bdeffda15"
+      "url": "https://camo.githubusercontent.com/8f4f628fcb8b1a847200a2972de0c658dceeab91229e4d316959a12ef3223580/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f636f6d706f6e656e742d696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/component-install.png"
     },
     {
       "id": "pagination",
@@ -1204,7 +1299,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/pagination.png",
       "sha256": "02e2ec1df3932045f3d25e5d7db77d9d2b6e7e0266ee3be7f83e46d93f187099",
-      "url": "https://github.com/user-attachments/assets/041494c0-8d61-4b4c-8e8b-67a52fda525f"
+      "url": "https://camo.githubusercontent.com/84194e6528d1dac6f85ac43105db3cbe9e3abe24dc89a74a1cd0ccc939d17574/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f706167696e6174696f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/pagination.png"
     },
     {
       "id": "filters",
@@ -1216,7 +1312,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/filters.png",
       "sha256": "2f549dbe9a6e1d2b2318907665f993b48a2fc2995408b22ed08c6edcf61aee33",
-      "url": "https://github.com/user-attachments/assets/53c83b6d-1f91-44f8-a3f8-70424bcd800b"
+      "url": "https://camo.githubusercontent.com/ffe0a71dffeb35341d7f48335097eceff6c9aa299b9aa1d4fc8d130215f62c19/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f66696c746572732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/filters.png"
     },
     {
       "id": "alive",
@@ -1228,7 +1325,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/alive.png",
       "sha256": "2d2383b9045c6e96a34c8a6641ca42be2b0bf89c6310eb6ef1efd8c31aa7c855",
-      "url": "https://github.com/user-attachments/assets/f24e6760-fdbb-4da1-aa78-5a4b2bdd875b"
+      "url": "https://camo.githubusercontent.com/6be0ef09f882d0171e522212b92a3d89356d8c8f9f2f976e4aa9d050896c4793/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f616c6976652e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/alive.png"
     },
     {
       "id": "search",
@@ -1240,7 +1338,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/search.png",
       "sha256": "3dc890cbda58a99baa85b59a8c695c6802a9669fcbfbc752d3e31fe879fe61ba",
-      "url": "https://github.com/user-attachments/assets/907709ef-3fd2-4b77-a6eb-50fb6dae55c7"
+      "url": "https://camo.githubusercontent.com/fc92f07318c5b90c67ca6a3fb9894e6c6432253bfee18e249c1d93d90d1dc00a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7365617263682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/search.png"
     },
     {
       "id": "status",
@@ -1252,7 +1351,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/status.png",
       "sha256": "fa10870a93951772e0be6b5c403883147453a32596ec3828c608a827e703cfa3",
-      "url": "https://github.com/user-attachments/assets/0ed2f6e6-61a7-4e47-a20e-71bdb49a3086"
+      "url": "https://camo.githubusercontent.com/52331e5203e7ea2776c37ee1a1c80ba7e72585d916f92b22fbbbf56e837c044d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f7374617475732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/status.png"
     },
     {
       "id": "host",
@@ -1264,7 +1364,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/host.png",
       "sha256": "656ada7e9aef740d97ce177a7abe7f77e845a1d6f16adfbbf2e984071baab0c9",
-      "url": "https://github.com/user-attachments/assets/b2e0fdc0-7deb-4790-9596-809215e5e469"
+      "url": "https://camo.githubusercontent.com/294ed2acb8e165843114ac90382897c34f9a8d7a6e15b88a9acd0d274f6fd1a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f73742e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/host.png"
     },
     {
       "id": "stats",
@@ -1276,7 +1377,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/stats.png",
       "sha256": "d7e97d261f42e5251f49c165721cec146ac3002f0d06f807f98423450fdb4e03",
-      "url": "https://github.com/user-attachments/assets/87cbefe2-dd2c-44c0-9ea5-88bd38a0275b"
+      "url": "https://camo.githubusercontent.com/02f8dc10ad02b4c2620ff25252486669c1e507faa346e5159d9348923878a748/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73746174732e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/stats.png"
     },
     {
       "id": "icon",
@@ -1288,7 +1390,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/icon.png",
       "sha256": "36ef2f9149824fc0da1dfa0497606f2ad4c21e497248db48e6c73aa8c3b3ed4b",
-      "url": "https://github.com/user-attachments/assets/6a4572ec-9796-45b9-8689-548eaff3ab80"
+      "url": "https://camo.githubusercontent.com/8d4302828ee5c541e8e77753bba537a7582bf259008d903e99e90a49e4e4488b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f69636f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/icon.png"
     },
     {
       "id": "batch",
@@ -1300,7 +1403,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/batch.png",
       "sha256": "ad8a68fcdc2dad3e6df972a4b04a4f116dd7310beb33a3545ceb57eec9c2f0a8",
-      "url": "https://github.com/user-attachments/assets/970f5731-6315-4ddb-9946-eb8d930206b4"
+      "url": "https://camo.githubusercontent.com/495470474a9796a3c44ec4cd408fc885fa61861e2b196ab9368260459a2dc83a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f62617463682e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/batch.png"
     },
     {
       "id": "export-csv",
@@ -1312,7 +1416,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-csv.png",
       "sha256": "02952d2325cc1233833feb434d6c7ce60a0362683a6bd781b6730056033a6495",
-      "url": "https://github.com/user-attachments/assets/072015da-8b71-4deb-9060-1cbe888b1641"
+      "url": "https://camo.githubusercontent.com/b0adb84d8ef0d4d3e1f8d210280a121382ede57923aaf95a49273e2b8b7049ae/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d6373762e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/export-csv.png"
     },
     {
       "id": "export-jsonl",
@@ -1324,7 +1429,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-jsonl.png",
       "sha256": "78b9d3effabed68e3fc98e9469be373deee30319a211b2c4dc57f5494576a571",
-      "url": "https://github.com/user-attachments/assets/f38e30ab-7bd6-4584-8e53-365a8e340cf5"
+      "url": "https://camo.githubusercontent.com/4ef1f602e376f0854b2cb71637aad5f969cef1130ba2bef4883b209149234938/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d6a736f6e6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/export-jsonl.png"
     },
     {
       "id": "export-xlsx",
@@ -1336,7 +1442,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-xlsx.png",
       "sha256": "958951569dbd4825f5b320c331417dfa3806ab74e27303a55890a672ef6fe46c",
-      "url": "https://github.com/user-attachments/assets/664d64f6-34d7-4948-974a-02334b83734c"
+      "url": "https://camo.githubusercontent.com/0988e1c467a914e71d12312c715ff4549a8e897871a45194bde934261e53bcbe/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f72742d786c73782e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/export-xlsx.png"
     },
     {
       "id": "json",
@@ -1348,7 +1455,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/json.png",
       "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e",
-      "url": "https://github.com/user-attachments/assets/e73a0aa2-aa05-4822-8cec-38e22af6d3ea"
+      "url": "https://camo.githubusercontent.com/f7e59f632d0d4d2b87b5cae9f33220e42d8c328207ae3bd0c863a2aa8c61f3a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6a736f6e2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/json.png"
     },
     {
       "id": "approval",
@@ -1360,7 +1468,8 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/approval.png",
       "sha256": "e0a0c0c219f593f2d18306ce9b5d9429af57bb06e4dc7b547fa0b87b7e0505f7",
-      "url": "https://github.com/user-attachments/assets/01e3121a-50f8-4dab-a1d8-cf20da9c1ef6"
+      "url": "https://camo.githubusercontent.com/a7fabef9bfb8a767568c4da7f386fdf056d77587e44f882c32cf2c13564284a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f617070726f76616c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/approval.png"
     },
     {
       "id": "quick-install",
@@ -1372,25 +1481,29 @@
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/quick-install.png",
       "sha256": "2dd236b640515193c7cb732bbe10dc37ab40fc54c2468e3eb15b1122dd016bab",
-      "url": "https://github.com/user-attachments/assets/2c3b48f3-ddb6-4a6f-b47a-122c8dbeccc2"
+      "url": "https://camo.githubusercontent.com/b15dbcafb6e1ad0401fd16c2aa7860c90b1edb919e46c351f7c5dce27c3ef628/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f717569636b2d696e7374616c6c2e706e67",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/en/quick-install.png"
     }
   ],
   "boundary": "Active scan execution targets temporary loopback HTTP only. Public-domain scan screen was cancelled at approval.",
   "brand_images": [
     {
       "image": "docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover-en.png",
-      "url": "https://github.com/user-attachments/assets/2705da2b-aadf-413e-95ce-18ebefc1fc57",
-      "sha256": "f26b3ec61294510d196ce91884f07dfd71de342853f3938ca6f28ddd8bac1745"
+      "url": "https://camo.githubusercontent.com/16bb7c23ff95938f25784f7fa9824fe2f09fbcff44cb1f9e76c1be31648f655c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f666f66616d61702d322e302e322d636f7665722d656e2e706e67",
+      "sha256": "f26b3ec61294510d196ce91884f07dfd71de342853f3938ca6f28ddd8bac1745",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover-en.png"
     },
     {
       "image": "docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover.png",
-      "url": "https://github.com/user-attachments/assets/03465bd2-3ae5-4c6d-b1af-0649f51ebfb9",
-      "sha256": "92463e6141da75983ede19155772d99bfe2bc36a315b329b0c788dbca462b600"
+      "url": "https://camo.githubusercontent.com/f1837ad5586cd6e79f39b1f8d9f462f6fd481f24e50ef36a2ea3dac141e4ff14/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f666f66616d61702d322e302e322d636f7665722e706e67",
+      "sha256": "92463e6141da75983ede19155772d99bfe2bc36a315b329b0c788dbca462b600",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover.png"
     },
     {
       "image": "docs/assets/readme/2.0.2/brand/hx0-studio.png",
-      "url": "https://github.com/user-attachments/assets/dce7a454-0a1c-4224-a099-2c4c8c5158cb",
-      "sha256": "854575742a411927ab3b0e8c4d89a8507d5f20cc3eb1fca66a6b56ccb1633b3c"
+      "url": "https://camo.githubusercontent.com/7e60d91ede6ac02739b119dedec240ebc487454962404c4ba814974935af06dd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f6878302d73747564696f2e706e67",
+      "sha256": "854575742a411927ab3b0e8c4d89a8507d5f20cc3eb1fca66a6b56ccb1633b3c",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/docs/assets/readme/2.0.2/brand/hx0-studio.png"
     },
     {
       "image": "docs/assets/readme/2.0.2/brand/badge-version.svg",
@@ -1426,13 +1539,15 @@
   "report_images": [
     {
       "image": "core/assets/hx0-lockup.png",
-      "url": "https://github.com/user-attachments/assets/136e3f9b-e536-480c-b47f-7363de68315f",
-      "sha256": "bacd461a5e6cc80e03e47934f9a125dfb5dc41dd8b9d83c18d0583daec868322"
+      "url": "https://camo.githubusercontent.com/2d88eb63f952def2230b53836c320c953e5dd0642f147f77a32d15340cb41fa3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f636f72652f6173736574732f6878302d6c6f636b75702e706e67",
+      "sha256": "bacd461a5e6cc80e03e47934f9a125dfb5dc41dd8b9d83c18d0583daec868322",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/core/assets/hx0-lockup.png"
     },
     {
       "image": "core/assets/hx0-mark.png",
-      "url": "https://github.com/user-attachments/assets/2ee3a530-ad74-4dec-91c2-80516233b9f8",
-      "sha256": "14c1ee8c1f844697996d503cd3d42fbfdb385787598c4bd46898504d67cdd5f0"
+      "url": "https://camo.githubusercontent.com/2033a21c466c50e7156ae083cc023de23501e68c42c58fddccae1a4f57fc964c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f636f72652f6173736574732f6878302d6d61726b2e706e67",
+      "sha256": "14c1ee8c1f844697996d503cd3d42fbfdb385787598c4bd46898504d67cdd5f0",
+      "source": "https://raw.github.com/asaotomo/FofaMap/bddba53c0b8bca31dff3792c274ce764549d5336/core/assets/hx0-mark.png"
     }
   ]
 }

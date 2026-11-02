@@ -2,7 +2,7 @@
 
 **中文** · [English](README_EN.md)
 
-![FofaMap 2.0.2 · 资产发现、AI 分析与证据报告](https://github.com/user-attachments/assets/03465bd2-3ae5-4c6d-b1af-0649f51ebfb9)
+![FofaMap 2.0.2 · 资产发现、AI 分析与证据报告](https://camo.githubusercontent.com/f1837ad5586cd6e79f39b1f8d9f462f6fd481f24e50ef36a2ea3dac141e4ff14/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f666f66616d61702d322e302e322d636f7665722e706e67)
 
 <p align="center">
   <img alt="Version 2.0.2" src="https://camo.githubusercontent.com/99c5262e5a7aa000f2de7d43d75b9fe7ee02e63ece87a8649bb405878eddec84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56657273696f6e2d322e302e322d3045373439303f7374796c653d666c61742d737175617265">
@@ -11,9 +11,11 @@
   <img alt="Apache 2.0" src="https://camo.githubusercontent.com/00ca4663013d91953dfeee230ab95eef262b3c3d17e2abe9755ed98dcadbd9f9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d417061636865253230322e302d3437353536393f7374796c653d666c61742d737175617265">
 </p>
 
-**找资产、理证据、出报告，需要扫描时由你确认。**
+**证据驱动的 AI 资产测绘与安全研判工具。**
 
-FofaMap 是 **Hx0 工作室**开发的 FOFA 资产测绘工具。新手用方向键向导，熟悉 FOFA 的用户直接写查询；需要自动分析时，可以用自然语言描述任务，也可以把工具接入自己常用的 AI 助手。**普通查询只需 FOFA API Key，无需配置模型。**
+FofaMap 由 **Hx0 工作室**开发，将 **FOFA 资产发现、AI 反思、Nuclei 授权验证与交互式报告**融入同一工作流，让查询依据、分析过程与验证结果可追溯、可复核。
+
+你可以通过方向键向导快速上手，继续使用经典命令行，或通过 **MCP / Skill / REST API** 接入 AI 助手与自动化流程。**普通查询仅需 FOFA API Key，无需配置模型；主动扫描需经用户确认。**
 
 <a id="whats-new"></a>
 
@@ -51,14 +53,14 @@ FofaMap 是 **Hx0 工作室**开发的 FOFA 资产测绘工具。新手用方向
 
 **先选安装语言。** 安装器首先显示 **简体中文 / English**，选定后，安装提示、账号配置和后续界面沿用这个选择，无需编辑配置文件。直接回车沿用上次安装语言或系统语言默认值。
 
-![安装时选择语言](https://github.com/user-attachments/assets/b9467c26-67ca-460b-a8e0-8225653432e0)
+![安装时选择语言](https://camo.githubusercontent.com/dbad5cc768c41204bddcde0c1d696b99b13e19047841220daab5e6faa6e332ce/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e7374616c6c2d6c616e67756167652e706e67)
 
 首次需要联网。安装器会准备独立 Python 和依赖、检查安装，并配置 `fofamap` 命令。**不需要手动激活环境，也不需要管理员权限。安装结束后会进入账号配置，接着做第 2 步。** 如果找不到命令，先关闭旧终端并新开一个。
 
 <details>
 <summary>查看首次安装菜单</summary>
 
-![首次安装菜单](https://github.com/user-attachments/assets/9ee30e33-56cc-4225-819a-c324fe4fa282)
+![首次安装菜单](https://camo.githubusercontent.com/cab2e26a3f8a94b9de18549d10b10893907bbe73aa0323b9e720820de4e21a88/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e7374616c6c2d6d656e752e706e67)
 
 </details>
 
@@ -77,7 +79,7 @@ bash start.sh --version
 <details>
 <summary>查看实操结果：一键安装与自检</summary>
 
-![一键安装与自检](https://github.com/user-attachments/assets/89337539-90a4-4e42-a439-4829bee434e7)
+![一键安装与自检](https://camo.githubusercontent.com/000a4eec019eba8c95489cd658c1a460c42ac35c391d918cc518efce527722d0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f717569636b2d696e7374616c6c2e706e67)
 
 </details>
 
@@ -103,7 +105,7 @@ Windows 遇到问题，按 [Windows 详细步骤与排错](docs/INSTALL_WINDOWS.
 fofamap --setup
 ```
 
-![账号配置：在自己的终端输入 FOFA Key](https://github.com/user-attachments/assets/52322746-2569-425b-ba72-3d6a384385b4)
+![账号配置：在自己的终端输入 FOFA Key](https://camo.githubusercontent.com/d8c5be8005e7515035b722b378c54be5cb1a5c167450f85b2d395a945893636f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6f6e626f617264696e672e706e67)
 
 **FOFA Key 用来查询资产，模型 Key 用来调用 AI，两者不同。** 不要把真实 Key 发到聊天、Issue 或截图中。后续打开时，如果必要配置缺失、损坏或凭据失效，程序会引导修复。
 
@@ -117,7 +119,7 @@ fofamap --setup
 fofamap
 ```
 
-![当前版本：选择资产搜索后输入查询](https://github.com/user-attachments/assets/449b070e-dc61-45a4-af83-1c48f4a3dfb0)
+![当前版本：选择资产搜索后输入查询](https://camo.githubusercontent.com/943432736653be07de36a261e26588f47cb8f01c3dc1b53f1a141111021fd696/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f66697273742d7365617263682e706e67)
 
 1. 用方向键选择 **资产搜索**，回车确认。
 2. 粘贴 `domain="baidu.com"`，查询百度公开网站；这是输入到程序里的 FOFA 语法，不需要再加外层引号。
@@ -136,7 +138,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,protocol,title \
   --no-check-alive --no-full --no-save
 ```
 
-![查询百度公开网站](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-search.png)
+![查询百度公开网站](https://camo.githubusercontent.com/921f4543804a1b61bb0f18d36bb5328e5f57c43e36c9e9b159798219d6e50bcd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7365617263682e706e67)
 
 看到主机、IP、端口、协议和标题表，表示真实查询已成功。截图展示 FOFA 匹配总量与本次实际取回的最多 3 条记录；**总量不等于已收集数量**。HTTP 和 HTTPS、主域名和 www 可能是不同端点，不应只因同 IP 就合并。
 
@@ -165,9 +167,9 @@ Windows 新手优先使用上面的向导，避免 CMD / PowerShell 对引号的
 
 首页按使用频率保留 AI 任务助手、资产搜索、主机详情、分布统计；批量查询与图标反查放在「更多查询方式」，规则和字段放在「查询参考」。账号、模型、界面语言、默认返回字段、偏好和更新统一放在「设置与维护」。进入子菜单按 Esc 返回，不会退出程序。
 
-![精简首页菜单](https://github.com/user-attachments/assets/718fc3c4-509b-4286-9aab-7de893ffb50f)
+![精简首页菜单](https://camo.githubusercontent.com/217eb7ec6c3608df106de50310d525544f73c7eb4de73c29cb3cb6ea0110ccae/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d656e752e706e67)
 
-![分组设置菜单](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-settings-menu.png)
+![分组设置菜单](https://camo.githubusercontent.com/19f8b118178e35665d2485ac9e5fd238fa7bc3fb52f1cb90360d557efd4ed4f5/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73657474696e67732d6d656e752e706e67)
 
 ### 随时切换界面语言
 
@@ -177,7 +179,7 @@ Windows 新手优先使用上面的向导，避免 CMD / PowerShell 对引号的
 fofamap
 ```
 
-![直接切换界面语言](https://github.com/user-attachments/assets/233557c3-f747-4e46-a452-a7dd15933f50)
+![直接切换界面语言](https://camo.githubusercontent.com/8e6db0e2a2c62a01215f7eae310eb2a1752b53e318f330b4a54c86ce0a610aea/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6c616e67756167652d73657474696e672e706e67)
 
 <a id="query-language"></a>
 
@@ -211,7 +213,7 @@ fofamap syntax
 
 <summary>查看实操结果：查本地语法目录</summary>
 
-![查本地语法目录](https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30)
+![查本地语法目录](https://camo.githubusercontent.com/4b2c1d1c9da076b744439a93607e482cdd1d240bf8445e06fadda9f1a3ee6d08/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f73796e7461782e706e67)
 
 </details>
 
@@ -227,7 +229,7 @@ fofamap fields
 
 <summary>查看实操结果：查返回字段和会员能力</summary>
 
-![查返回字段和会员能力](https://github.com/user-attachments/assets/97f5f5e4-5c65-4bfc-a315-eaad83562260)
+![查返回字段和会员能力](https://camo.githubusercontent.com/cca35d13935c5c3a6699f30a550232ba744bc1e5fab213c439187b97c4348d3c/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6669656c64732e706e67)
 
 </details>
 
@@ -241,7 +243,7 @@ fofamap fields
 fofamap
 ```
 
-![智能字段：填写页数后直接选择](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-smart-fields-setting.png)
+![智能字段：填写页数后直接选择](https://camo.githubusercontent.com/67164d69962895f90706b74e2ad38e1447a9998fc9628c59e92d14c9334c0977/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f736d6172742d6669656c64732d73657474696e672e706e67)
 
 普通查询初始默认不开启，可在设置中修改；AI 任务默认开启；命令行加 `--smart-fields` 开启、`--no-smart-fields` 关闭。它根据账号可用字段和任务内容选择返回列，**普通查询使用此功能不需要额外模型 Key**。查询概览显示“智能字段：是”即可确认；想固定字段用 `-f host,ip,port,title` 并关闭智能字段。两者同时开启时，智能选择优先。
 
@@ -261,7 +263,7 @@ fofamap rules --rule ThinkPHP
 
 <summary>查看实操结果：产品搜索先查官方 app 名</summary>
 
-![产品搜索先查官方 app 名](https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f)
+![产品搜索先查官方 app 名](https://camo.githubusercontent.com/1a15e9e6b5ace00f5d2389cfef2d02eaf4aedbb3799c3084164a2ec17c4e31aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c65732e706e67)
 
 </details>
 
@@ -278,7 +280,7 @@ fofamap rules --rule-categories
 <details>
 <summary>查看实操结果：全部分类与数量</summary>
 
-![全部分类与数量](https://github.com/user-attachments/assets/fb90ea1b-9ed7-47f7-9131-83f42d98aa08)
+![全部分类与数量](https://camo.githubusercontent.com/26f2e3e929218cbcbf5fe547d770dd207619ec8b2ace279c7327f45dbbca7070/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d63617465676f726965732e706e67)
 
 </details>
 
@@ -293,7 +295,7 @@ fofamap rules --rule-category 工业控制
 <details>
 <summary>查看实操结果：工业控制规则</summary>
 
-![工业控制规则](https://github.com/user-attachments/assets/83fcb3f6-1893-45af-b299-951b129964cc)
+![工业控制规则](https://camo.githubusercontent.com/fcee58946e817428d7010516ff3fd5bc353eecc2a10709497f030fd8d4980326/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d696e647573747269616c2e706e67)
 
 </details>
 
@@ -308,7 +310,7 @@ fofamap rules --rule-category 人工智能
 <details>
 <summary>查看实操结果：人工智能规则</summary>
 
-![人工智能规则](https://github.com/user-attachments/assets/f441a60b-7d81-4ba0-bccf-c703ae8d0dc6)
+![人工智能规则](https://camo.githubusercontent.com/64fdb65fa38a6f3b706060f4f0b52dd2e4301e67c1d55d32297494c31da91198/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f72756c652d61692e706e67)
 
 </details>
 
@@ -327,7 +329,7 @@ fofamap -q 'domain="baidu.com" && status_code=200' -f host,port,status_code --si
 
 <summary>查看实操结果：组合域名和 HTTP 状态条件</summary>
 
-![组合域名和 HTTP 状态条件](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-status.png)
+![组合域名和 HTTP 状态条件](https://camo.githubusercontent.com/f7dc8cb2e7ba4653f9518d9adfdcae2861d20bf9d58e5d7e4cfcb2cbaa8a590e/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7374617475732e706e67)
 
 </details>
 
@@ -343,7 +345,7 @@ fofamap -q 'domain="baidu.com"' -f host,port,status_code,title -i 200 -k 百度 
 
 <summary>查看实操结果：在已取回数据中筛选状态码和关键词</summary>
 
-![在已取回数据中筛选状态码和关键词](https://github.com/user-attachments/assets/650ce9cb-022f-4807-9da0-6992a85024f7)
+![在已取回数据中筛选状态码和关键词](https://camo.githubusercontent.com/0ccf1ad455c97153b417550062f0baf2ab4441c9241312a732a55e4cf57755a1/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f66696c746572732e706e67)
 
 </details>
 
@@ -359,7 +361,7 @@ fofamap -q 'domain="bing.com" && host="www.bing.com"' -f host,port --size 1 --pa
 
 <summary>查看实操结果：可选：实际检查一个网站当前是否响应</summary>
 
-![可选：实际检查一个网站当前是否响应](https://github.com/user-attachments/assets/fbdded95-7c41-4518-bfa9-e7b8281708d9)
+![可选：实际检查一个网站当前是否响应](https://camo.githubusercontent.com/3cf3072fcaf8db7c0a907f92bfc3113ba9ccfe4fa61ee4db4bfbd1c82535a69b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f616c6976652e706e67)
 
 </details>
 
@@ -375,7 +377,7 @@ fofamap -hq www.bing.com --no-host-detail --no-save
 
 <summary>查看实操结果：查看单台主机的聚合画像</summary>
 
-![查看单台主机的聚合画像](https://github.com/user-attachments/assets/adb32109-d139-4771-b4d5-defb517a9027)
+![查看单台主机的聚合画像](https://camo.githubusercontent.com/09372d36da837670ec90320a966a3ac39854e5cdd704725a47a1e123d5ffd7a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f686f73742e706e67)
 
 </details>
 
@@ -391,7 +393,7 @@ fofamap -cq 'domain="baidu.com"' -f port,protocol --size 5 --no-save
 
 <summary>查看实操结果：统计端口和协议分布</summary>
 
-![统计端口和协议分布](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-stats.png)
+![统计端口和协议分布](https://camo.githubusercontent.com/1633125e760f3896bfad3e8aaddd189d6078bd9553374a77befe971036c31e19/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73746174732e706e67)
 
 </details>
 
@@ -409,7 +411,7 @@ fofamap -ico https://www.bing.com --size 3 --pages 1 --max-records 3 --no-check-
 <details>
 <summary>查看实操结果：计算网站图标哈希并反查</summary>
 
-![计算网站图标哈希并反查](https://github.com/user-attachments/assets/a1812b25-70a4-414a-9ed6-7de5564e47b7)
+![计算网站图标哈希并反查](https://camo.githubusercontent.com/327520585fe5c2daefe40b8007cc5ffadb8b85b16de19c5cfa55dc9edf721908/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f69636f6e2e706e67)
 
 </details>
 
@@ -426,7 +428,7 @@ fofamap -bq examples/queries.txt --batch-group-size 1 --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：按文件批量查询</summary>
 
-![按文件批量查询](https://github.com/user-attachments/assets/e278451d-f8b8-40e9-82d8-4de6734b1eb7)
+![按文件批量查询](https://camo.githubusercontent.com/c97db719ac36fd0eeb2080cfcdc32234768c72c6954cc138c15bbf2126ee334d/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f62617463682e706e67)
 
 </details>
 
@@ -449,7 +451,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 CSV</summary>
 
-![导出 CSV](https://github.com/user-attachments/assets/6dc38ebb-5d90-46d5-af9d-433e8df60bcf)
+![导出 CSV](https://camo.githubusercontent.com/6eb8c8638a9813fa965020ed0c32b18e62369c72af30719a4adb78a1ec769e80/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d6373762e706e67)
 
 </details>
 
@@ -464,7 +466,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 JSONL</summary>
 
-![导出 JSONL](https://github.com/user-attachments/assets/6d02ae1c-a2be-471a-8774-bc50c64ef4b0)
+![导出 JSONL](https://camo.githubusercontent.com/b51413771fdde1962429291ec5f4ce56985250bfb1db20f0ceaab0083f6a4f6f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d6a736f6e6c2e706e67)
 
 </details>
 
@@ -479,7 +481,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 XLSX</summary>
 
-![导出 XLSX](https://github.com/user-attachments/assets/9767a188-637c-49bc-a7e9-4b0623eed9c1)
+![导出 XLSX](https://camo.githubusercontent.com/d8707f374009d143ccd7ad8e088b3d772915ae57ff666de4da6a82b9cf5e14d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6578706f72742d786c73782e706e67)
 
 </details>
 
@@ -494,7 +496,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 1 --pages 1 --max-records
 <details>
 <summary>查看实操结果：把稳定 JSON 交给其他程序</summary>
 
-![把稳定 JSON 交给其他程序](https://github.com/user-attachments/assets/f52b42ae-ee1a-4a1f-8909-fdcd207810af)
+![把稳定 JSON 交给其他程序](https://camo.githubusercontent.com/f7e59f632d0d4d2b87b5cae9f33220e42d8c328207ae3bd0c863a2aa8c61f3a8/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6a736f6e2e706e67)
 
 </details>
 
@@ -526,7 +528,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 2 --pages 2 --max-records
 <details>
 <summary>查看实操结果：真实取两页：每页 2 条，总上限 4 条</summary>
 
-![真实取两页：每页 2 条，总上限 4 条](https://github.com/user-attachments/assets/e26b47bb-a401-4be6-b5a2-a609a39c6efa)
+![真实取两页：每页 2 条，总上限 4 条](https://camo.githubusercontent.com/04d9884ca1be0c008625308959c23b7fd0eb8a326a4513b66695772a338ed98f/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f706167696e6174696f6e2e706e67)
 
 </details>
 
@@ -549,7 +551,7 @@ fofamap
 <details>
 <summary>查看实操结果：更新后的模型默认配置</summary>
 
-![最新默认模型与常用服务](https://github.com/user-attachments/assets/ace266f4-5e46-47dc-838e-cb0e95877a66)
+![最新默认模型与常用服务](https://camo.githubusercontent.com/69a76a48908a44851a464c483aa70964bd4b7ec1aa8a585828086c70afc02595/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d6f64656c2d707265736574732e706e67)
 
 </details>
 
@@ -564,7 +566,7 @@ fofamap models
 <details>
 <summary>查看实操结果：检查已配置模型</summary>
 
-![检查已配置模型](https://github.com/user-attachments/assets/d46542fb-4fe8-4591-8460-c9ea80af0aae)
+![检查已配置模型](https://camo.githubusercontent.com/4013adbb3afc0220b5817b4c1788f481f709f4870f314fcc67058adc1e2202aa/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6d6f64656c732e706e67)
 
 </details>
 
@@ -576,7 +578,7 @@ fofamap models
 fofamap -ai '仅查询 domain="baidu.com" 的公开网站资产，最多2条，不扩展范围，不扫描。生成中文简报。' --size 2 --pages 1 --max-records 2 --no-check-alive --no-deepseek-search --no-save --report-lang zh --report-file results/readme-demo/report-zh.md
 ```
 
-![执行一个有边界的真实 Agent 任务](https://github.com/user-attachments/assets/61bfc421-0a16-4ffd-9afb-1dd17326a9a2)
+![执行一个有边界的真实 Agent 任务](https://camo.githubusercontent.com/a8a0964fe45f80fe86e796add37fd86167e932be768345328a7a1c453feecdf3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6167656e742e706e67)
 
 模型正文是建议，可能存在推断偏差；复核查询证据、缺口和数量。不要把“证据交叉印证”读成法律归属，或将“未见命中”写成没有漏洞。不同主机名即便同 IP，也应保留独立端点。
 
@@ -603,7 +605,7 @@ python scripts/readme_demo.py exposure --language zh --output results/readme-dem
 <details>
 <summary>查看实操结果：产品暴露面复核：统计与最多 1 条样本</summary>
 
-![产品暴露面复核：统计与最多 1 条样本](https://github.com/user-attachments/assets/3f67426c-c967-4641-ab3b-842872ada754)
+![产品暴露面复核：统计与最多 1 条样本](https://camo.githubusercontent.com/00399541a83215ebe40f2fc07a7af0e6ccf2a3ec2f2548d28728c635824cad54/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6578706f737572652e706e67)
 
 </details>
 
@@ -619,7 +621,7 @@ fofamap
 
 <summary>查看实操结果：不想记参数：用方向键向导</summary>
 
-![不想记参数：用方向键向导](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-wizard.png)
+![不想记参数：用方向键向导](https://camo.githubusercontent.com/a27f10aafffa455bba820cf70de09e09ddc9d2ccf3ecbd3d2eaa6e4de39d978a/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f77697a6172642e706e67)
 
 </details>
 
@@ -658,7 +660,7 @@ fofamap integrate --list
 <details>
 <summary>查看实操结果：查看支持的宿主</summary>
 
-![查看支持的宿主](https://github.com/user-attachments/assets/fec11383-e9de-47d1-9514-7cd5ba35f9ed)
+![查看支持的宿主](https://camo.githubusercontent.com/9ddd481fe3263f34f9b1435f774c85a83ae3291e8e4ac8fc83fdf2111df7efd3/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f686f7374732e706e67)
 
 </details>
 
@@ -682,7 +684,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：在隔离项目目录实际安装一份集成</summary>
 
-![在隔离项目目录实际安装一份集成](https://github.com/user-attachments/assets/84258705-578f-4cc8-85d0-13e75baa1a96)
+![在隔离项目目录实际安装一份集成](https://camo.githubusercontent.com/0ac0b92e63976dd8b66a7397d6fe87a9a113483204901f7436911fbd6c4ae950/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f696e746567726174652e706e67)
 
 </details>
 
@@ -699,7 +701,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：核对已安装 Skill 是否过期</summary>
 
-![核对已安装 Skill 是否过期](https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5)
+![核对已安装 Skill 是否过期](https://camo.githubusercontent.com/2a1e6f4d3fdfc1a8bbbcfd9d5d9649803c016fe65a73584ecf1870ab55a152d9/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d636865636b2e706e67)
 
 </details>
 
@@ -716,7 +718,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：导出、导入并验证 .skill</summary>
 
-![导出、导入并验证 .skill](https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44)
+![导出、导入并验证 .skill](https://camo.githubusercontent.com/84f9cd72ec8aaed3ff162de966c786bf084f4f17f68c165f478f735430b53ee0/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f736b696c6c2d7061636b6167652e706e67)
 
 </details>
 
@@ -731,7 +733,7 @@ fofamap-mcp --check --expect-version 2.0.2 --expect-build-date 2026-11-02 --expe
 <details>
 <summary>查看实操结果：真正握手检查版本、工具和源码</summary>
 
-![真正握手检查版本、工具和源码](https://github.com/user-attachments/assets/037c1b36-c6ee-47f6-b99b-8a9a027cff76)
+![真正握手检查版本、工具和源码](https://camo.githubusercontent.com/3eb961ad7b1e772a3a292900024a5f4bd77eef31413d1c6fe114f90f01bcf763/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d63702d636865636b2e706e67)
 
 </details>
 
@@ -746,7 +748,7 @@ python scripts/readme_demo.py mcp --language zh --output results/readme-demo/mcp
 <details>
 <summary>查看实操结果：跑一次真实 MCP 查询流程</summary>
 
-![跑一次真实 MCP 查询流程](https://github.com/user-attachments/assets/7fbd897b-cb43-4e64-906c-2bc0f6a2147a)
+![跑一次真实 MCP 查询流程](https://camo.githubusercontent.com/6ca4c1123e920f6393f42a5ce3a7a8cf4d10517bc9ae0e7b75cfc30367825fba/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6d63702d7461736b2e706e67)
 
 
 </details>
@@ -792,7 +794,7 @@ python scripts/readme_demo.py transports --language zh --output results/readme-d
 <details>
 <summary>查看实操结果：复现 HTTP 与 SSE 的真实启动和检查</summary>
 
-![复现 HTTP 与 SSE 的真实启动和检查](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-transports.png)
+![复现 HTTP 与 SSE 的真实启动和检查](https://camo.githubusercontent.com/cd66602aa26155f0f57fa88fc23fe0e2034bb0086d95255d06c25f0d2388c393/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7472616e73706f7274732e706e67)
 
 </details>
 
@@ -813,7 +815,7 @@ fofamap schedule --schedule-action list --json
 <details>
 <summary>查看实操结果：查看计划与 worker 心跳</summary>
 
-![查看计划与 worker 心跳](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-list.png)
+![查看计划与 worker 心跳](https://camo.githubusercontent.com/0d28102e4073839a8f3ffe8313e81100067b665686646620e8e2a2f1a33ba468/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363686564756c652d6c6973742e706e67)
 
 </details>
 
@@ -830,7 +832,7 @@ python scripts/readme_demo.py schedule --language zh --output results/readme-dem
 <details>
 <summary>查看实操结果：真实到期执行：创建 → worker → 历史 → 报告</summary>
 
-![真实到期执行：创建 → worker → 历史 → 报告](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-task.png)
+![真实到期执行：创建 → worker → 历史 → 报告](https://camo.githubusercontent.com/127f2dfb41187cd189ad2ec1eb887685cf134c61f35ab10d6b372b8d510b8a94/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363686564756c652d7461736b2e706e67)
 
 </details>
 
@@ -864,7 +866,7 @@ fofamap --update-nuclei
 <details>
 <summary>查看实操结果：缺少扫描组件时询问 Y/N</summary>
 
-![Nuclei 安装选择](https://github.com/user-attachments/assets/df53a070-2be2-46c6-9478-42341fd6366c)
+![Nuclei 安装选择](https://camo.githubusercontent.com/6d81d58a13eed62ae43da0e19cd1f8ac6e81bdbe4387dcde4998db914795b401/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f636f6d706f6e656e742d696e7374616c6c2e706e67)
 
 </details>
 
@@ -875,7 +877,7 @@ nuclei -version
 <details>
 <summary>查看实操结果：确认本机 Nuclei 可用</summary>
 
-![确认本机 Nuclei 可用](https://github.com/user-attachments/assets/45801b70-bd72-4a1a-abe1-10be3f5fafd3)
+![确认本机 Nuclei 可用](https://camo.githubusercontent.com/aac6d4dea8c9d56b3f23f39b556afd109db9a2246c873c53162dbc6b6142f8c4/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f6e75636c65692e706e67)
 
 </details>
 
@@ -890,7 +892,7 @@ fofamap -q 'domain="baidu.com"' --size 1 --pages 1 --max-records 1 --no-check-al
 <details>
 <summary>查看实操结果：查看真实公共范围的审批画面，不执行</summary>
 
-![查看真实公共范围的审批画面，不执行](https://github.com/user-attachments/assets/c5aa598b-3640-4c7f-b495-c88e6962c0a4)
+![查看真实公共范围的审批画面，不执行](https://camo.githubusercontent.com/1503b9f5b5d39312fc0795db35b453a4cebb7a5f6a37dab70f9084bd18870385/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f617070726f76616c2e706e67)
 
 </details>
 
@@ -907,7 +909,7 @@ python scripts/readme_demo.py scan --approve-local-fixture --language zh --outpu
 <details>
 <summary>查看实操结果：真正执行一次安全的本机扫描任务</summary>
 
-![真正执行一次安全的本机扫描任务](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-scan-task.png)
+![真正执行一次安全的本机扫描任务](https://camo.githubusercontent.com/ea648e8e4bd8f8efd4f0c6a01b7dacc70e394a55d89db994be199b61b316b6bd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7363616e2d7461736b2e706e67)
 
 </details>
 
@@ -940,7 +942,7 @@ fofamap --update
 <details>
 <summary>查看实操结果：检查 GitHub 最新正式版本</summary>
 
-![一键更新检查](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-update.png)
+![一键更新检查](https://camo.githubusercontent.com/31e3b247868e86bebdafa6f9e157ba6fe04d84d99edd6eff39adb080cae25284/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7570646174652e706e67)
 
 </details>
 
@@ -964,7 +966,7 @@ fofamap --update
 <details>
 <summary>查看已有安装的修复与卸载菜单</summary>
 
-![已有安装的修复与卸载菜单](https://github.com/user-attachments/assets/ffd59e76-dfbc-408a-821b-ce5cf4fc92a2)
+![已有安装的修复与卸载菜单](https://camo.githubusercontent.com/5a213a5b75d52a90ff125656e07d216a190219532633b0ef25e7ac9f33b34804/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f7265706169722d6d656e752e706e67)
 
 </details>
 
@@ -996,7 +998,7 @@ python --version
 
 <summary>查看实操结果：确认版本与 Python</summary>
 
-![确认版本与 Python](https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f)
+![确认版本与 Python](https://camo.githubusercontent.com/93589e8baf8acda4891f52934d77334eaa538a67b7e605b29692cc0a500b0444/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f76657273696f6e2e706e67)
 
 </details>
 
@@ -1012,7 +1014,7 @@ fofamap --help
 
 <summary>查看实操结果：查看当前版本的完整帮助</summary>
 
-![查看当前版本的完整帮助](https://github.com/user-attachments/assets/ea448df2-de97-40ec-b3eb-4c9d28de7dd7)
+![查看当前版本的完整帮助](https://camo.githubusercontent.com/8a41de2d2287e248bdff2f7de84dfc1f59f722d6d300f1011579b083d221a58b/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f656e2f68656c702e706e67)
 
 </details>
 
@@ -1136,7 +1138,7 @@ fofamap -q 'title="x" &&' --no-save --size 1 --pages 1 --max-records 1
 <details>
 <summary>查看实操结果：真实错误示例：错误不会伪装成空结果</summary>
 
-![真实错误示例：错误不会伪装成空结果](https://github.com/user-attachments/assets/9aae0733-c90c-41f4-a291-4a5b0b45f4e3)
+![真实错误示例：错误不会伪装成空结果](https://camo.githubusercontent.com/280b170eae3f8c21ff91660d311aa49bd50ff1fef9f588632b6327254440e738/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f696e76616c69642d71756572792e706e67)
 
 </details>
 
@@ -1313,7 +1315,7 @@ fofamap init
 
 <summary>查看实操结果：首次启动安全初始化</summary>
 
-![首次启动安全初始化](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-setup.png)
+![首次启动安全初始化](https://camo.githubusercontent.com/e2612233330e69b9a661914db261ff0d0f8b996b3a41201b20d7fe0555874158/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f73657475702e706e67)
 
 </details>
 
@@ -1333,7 +1335,7 @@ fofamap account
 
 <summary>查看实操结果：验证 FOFA 登录、会员和额度</summary>
 
-![验证 FOFA 登录、会员和额度](https://github.com/user-attachments/assets/c0e6ac5d-bdf0-4bec-a42e-b7c8e9ca6589)
+![验证 FOFA 登录、会员和额度](https://camo.githubusercontent.com/a0028835a665fb42766a11708e4ca11f8535459bba7a700772320f26dea3da26/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f6163636f756e742e706e67)
 
 </details>
 
@@ -1365,7 +1367,7 @@ python scripts/readme_demo.py rest --language zh --output results/readme-demo/re
 <details>
 <summary>查看实操结果：真实 REST 服务：启动 → 请求 → 返回 1 条</summary>
 
-![真实 REST 服务：启动 → 请求 → 返回 1 条](https://github.com/user-attachments/assets/359847ff-b2cc-43e7-b856-7e7c29399509)
+![真实 REST 服务：启动 → 请求 → 返回 1 条](https://camo.githubusercontent.com/667ba9bff93ff5b18efd7b085503875dbafceaf9d6b010867dff2a61ff9954fb/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f7a682f726573742d7461736b2e706e67)
 
 </details>
 
@@ -1417,7 +1419,7 @@ REST 搜索请求体的基本字段为 query、fields、size、page；续页还�
 
 FofaMap 由 **Hx0 工作室**开发维护。欢迎通过 [Issue](https://github.com/asaotomo/FofaMap/issues)反馈使用问题，通过 Pull Request 参与改进，或用 Star 支持项目。
 
-<img src="https://github.com/user-attachments/assets/dce7a454-0a1c-4224-a099-2c4c8c5158cb" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
+<img src="https://camo.githubusercontent.com/7e60d91ede6ac02739b119dedec240ebc487454962404c4ba814974935af06dd/68747470733a2f2f7261772e6769746875622e636f6d2f6173616f746f6d6f2f466f66614d61702f626464626135336330623862636133316466663337393263323734636537363435343964353333362f646f63732f6173736574732f726561646d652f322e302e322f6272616e642f6878302d73747564696f2e706e67" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
 
 [工作室官网](https://hx0studio.com) · [项目仓库](https://github.com/asaotomo/FofaMap)
 
