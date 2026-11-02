@@ -3,12 +3,16 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import importlib
 import json
 import os
 import shutil
 import subprocess
 import sys
+import tempfile
+import time
+import zipfile
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
@@ -16,9 +20,26 @@ from urllib.parse import quote
 
 import yaml
 
+try:
+    import tomllib
+except ImportError:  # Python 3.10
+    import tomli as tomllib
+
+from core.version import VERSION
+
 
 class IntegrationError(ValueError):
     """Raised when an integration cannot be changed without risking user data."""
+
+
+def _toml_value(value: Any) -> str:
+    if isinstance(value, dict):
+        return "{ " + ", ".join(f"{json.dumps(key, ensure_ascii=False)} = {_toml_value(item)}" for key, item in value.items()) + " }"
+    if isinstance(value, list):
+        return "[" + ", ".join(_toml_value(item) for item in value) + "]"
+    if isinstance(value, (str, int, float, bool)):
+        return json.dumps(value, ensure_ascii=False, allow_nan=False)
+    raise IntegrationError(f"Unsupported TOML value: {type(value).__name__}; configuration was not overwritten")
 
 
 @dataclass(frozen=True)
@@ -133,7 +154,7 @@ def resolve_mcp_stdio(server_command: str | None = None) -> dict[str, Any]:
         importlib.import_module("mcp.server.mcpserver")
     except ImportError as exc:
         raise IntegrationError(
-            "当前 Python 环境缺少 FofaMap 2.0.1 所需的 mcp>=2,<3。"
+            f"当前 Python 环境缺少 FofaMap {VERSION} 所需的 mcp>=2,<3。"
             "请先在虚拟环境中安装 Wheel 或执行 `python -m pip install .`，再重新运行 integrate。"
         ) from exc
     return {"command": python, "args": ["-u", server]}
@@ -143,11 +164,14 @@ def _backup(path: Path, dry_run: bool, changes: list[str]) -> None:
     if not path.exists():
         return
     backup = path.with_name(f"{path.name}.fofamap.bak")
-    if not backup.exists():
-        changes.append(f"backup {path} -> {backup}")
-        if not dry_run:
-            backup.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(path, backup)
+    if backup.exists():
+        if backup.read_bytes() == path.read_bytes():
+            return
+        backup = path.with_name(f"{path.name}.fofamap.{time.time_ns()}.bak")
+    changes.append(f"backup {path} -> {backup}")
+    if not dry_run:
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, backup)
 
 
 def _write_text(path: Path, content: str, *, dry_run: bool, changes: list[str]) -> None:
@@ -218,6 +242,11 @@ def _json_config(
     if uninstall:
         changed = _remove_nested(data, keys)
     else:
+        prior = data
+        for key in keys:
+            prior = prior.get(key, {}) if isinstance(prior, dict) else {}
+        if isinstance(prior, dict):
+            entry = {**prior, **entry, **({"cwd": prior["cwd"]} if prior.get("cwd") else {})}
         _set_nested(data, keys, entry)
         changed = True
     if not changed:
@@ -240,11 +269,14 @@ def _replace_managed_block(content: str, block: str | None) -> str:
     return content.rstrip() + "\n" if content.strip() else ""
 
 
-def _managed_config(
-    path: Path, block: str, *, uninstall: bool, dry_run: bool, changes: list[str], remove_empty: bool = False
-) -> None:
+def _managed_config(path: Path, block: str, *, uninstall: bool, dry_run: bool, changes: list[str], remove_empty: bool = False) -> None:
     old = path.read_text(encoding="utf-8") if path.exists() else ""
     new = _replace_managed_block(old, None if uninstall else block)
+    if path.suffix == ".toml":
+        try:
+            tomllib.loads(new)
+        except ValueError as exc:
+            raise IntegrationError("Generated TOML conflicts with existing user configuration; nothing was overwritten") from exc
     if uninstall and not new and remove_empty:
         if not path.exists():
             changes.append(f"absent {path}")
@@ -279,7 +311,7 @@ def _copy_managed(source: Path, destination: Path, *, kind: str, force: bool, dr
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copytree(source, destination)
         (destination / _MARKER).write_text(
-            json.dumps({"managed_by": "fofamap", "kind": kind, "version": "2.0.1"}, indent=2) + "\n", encoding="utf-8"
+            json.dumps({"managed_by": "fofamap", "kind": kind, "version": VERSION}, indent=2) + "\n", encoding="utf-8"
         )
 
 
@@ -309,9 +341,7 @@ def _remove_managed(destination: Path, *, kind: str, dry_run: bool, changes: lis
         shutil.rmtree(destination)
 
 
-def _install_skill(
-    destination: Path, *, uninstall: bool, force: bool, dry_run: bool, changes: list[str]
-) -> None:
+def _install_skill(destination: Path, *, uninstall: bool, force: bool, dry_run: bool, changes: list[str]) -> None:
     if uninstall:
         _remove_managed(destination, kind="skill", dry_run=dry_run, changes=changes)
     else:
@@ -351,6 +381,8 @@ def _set_plugin_launch(destination: Path, stdio: dict[str, Any]) -> None:
             raise IntegrationError(f"插件清单 mcpServers.fofamap 必须是对象：{path}")
         entry["command"] = stdio["command"]
         entry["args"] = list(stdio["args"])
+        if stdio.get("cwd"):
+            entry.setdefault("cwd", stdio["cwd"])
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -393,7 +425,7 @@ def _install_openclaw_plugin(
     if not uninstall:
         marker = destination / _MARKER
         marker.write_text(
-            json.dumps({"managed_by": "fofamap", "kind": "plugin", "version": "2.0.1"}, indent=2) + "\n",
+            json.dumps({"managed_by": "fofamap", "kind": "plugin", "version": VERSION}, indent=2) + "\n",
             encoding="utf-8",
         )
         _set_plugin_launch(destination, stdio)
@@ -440,6 +472,44 @@ def _paths(host: str, scope: str, root: Path, home: Path) -> tuple[Path | None, 
     return mapping[host]
 
 
+def _skill_hashes(root: Path) -> dict[str, str]:
+    return {
+        path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in sorted(root.rglob("*"))
+        if path.is_file() and not path.is_symlink() and not any(part.startswith(".") for part in path.relative_to(root).parts)
+    }
+
+
+def integration_status(target: str, *, scope: str = "user", root: Path | None = None, home: Path | None = None) -> dict[str, Any]:
+    """Read-only byte-level check of installed Skill content and managed release marker."""
+    host = normalize_host(target)
+    if scope not in {"user", "project"}:
+        raise IntegrationError("scope 必须是 user 或 project")
+    config_path, destination = _paths(host.id, scope, (root or Path.cwd()).resolve(), (home or Path.home()).resolve())
+    marker_root = destination
+    if destination is None:
+        assert config_path is not None
+        marker_root = config_path
+        destination = config_path / "skills/fofamap"
+    expected = _skill_hashes(_asset_root() / "skills/fofamap")
+    actual = _skill_hashes(destination) if destination.is_dir() else {}
+    marker = marker_root / _MARKER
+    installed_version = None
+    try:
+        managed = json.loads(marker.read_text(encoding="utf-8"))
+        owned = managed.get("managed_by") == "fofamap"
+        installed_version = managed.get("version")
+    except (OSError, ValueError, AttributeError):
+        owned = False
+    missing = sorted(expected.keys() - actual.keys())
+    extra = sorted(actual.keys() - expected.keys())
+    changed = sorted(name for name in expected.keys() & actual.keys() if expected[name] != actual[name])
+    status = ("missing" if not destination.exists() else "unmanaged" if not owned
+              else "stale" if missing or extra or changed or installed_version != VERSION else "current")
+    return {"target": host.id, "scope": scope, "status": status, "ok": status == "current", "skill_path": str(destination),
+            "expected_version": VERSION, "installed_version": installed_version, "missing": missing, "extra": extra, "changed": changed}
+
+
 def integrate_host(
     target: str,
     *,
@@ -462,8 +532,9 @@ def integrate_host(
     if host.notes:
         result.notes.append(host.notes)
     config_path, skill_path = _paths(host.id, scope, root, home)
-    stdio = resolve_mcp_stdio(server_command) if not uninstall else {"command": "", "args": []}
+    stdio = resolve_mcp_stdio(server_command) if not uninstall else {"command": "", "args": [], "cwd": str(root)}
     if not uninstall:
+        stdio["cwd"] = str(root)
         result.notes.append("MCP 启动配置已固定为当前 Python 与服务入口的绝对路径，不依赖 GUI 应用的 PATH。")
 
     if host.id in {"openclaw", "grok"}:
@@ -515,23 +586,49 @@ def integrate_host(
             changes=result.changes,
         )
     elif host.id == "codex":
-        block = f'[mcp_servers.fofamap]\ncommand = {json.dumps(stdio["command"])}\nargs = {json.dumps(stdio["args"])}'
+        prior = {}
+        if config_path.exists() and not uninstall:
+            try:
+                parsed = tomllib.loads(config_path.read_text(encoding="utf-8"))
+                prior = parsed.get("mcp_servers", {}).get("fofamap", {})
+            except (ValueError, TypeError) as exc:
+                raise IntegrationError("Existing Codex TOML cannot be safely parsed; configuration was not overwritten") from exc
+        entry = {**prior, **stdio, **({"cwd": prior["cwd"]} if prior.get("cwd") else {})}
+        block = "[mcp_servers.fofamap]\n" + "\n".join(
+            f"{key} = {_toml_value(value)}" for key, value in entry.items()
+        )
         _managed_config(config_path, block, uninstall=uninstall, dry_run=dry_run, changes=result.changes)
     elif host.id == "deepseek-harness":
-        block = (
-            "- insert:\n"
-            "    - id: mcp-fofamap\n"
-            "      name: '@deepseek-ai/dsh-mcp-client'\n"
-            "      config:\n"
-            "        serverName: fofamap\n"
-            "        transport: stdio\n"
-            f"        command: {json.dumps(stdio['command'])}\n"
-            f"        args: {json.dumps(stdio['args'])}\n"
-            "        failOnStartupError: true"
+        prior = {}
+        if config_path.exists():
+            old = config_path.read_text(encoding="utf-8")
+            if _BEGIN in old and _END in old:
+                old = old.split(_BEGIN, 1)[1].split(_END, 1)[0]
+                try:
+                    parsed = yaml.safe_load(old)
+                    prior = next(
+                        (item["config"] for patch in parsed or [] for item in patch.get("insert", []) if item.get("id") == "mcp-fofamap"),
+                        {},
+                    )
+                except (ValueError, TypeError, KeyError, yaml.YAMLError):
+                    raise IntegrationError(
+                        "Existing DSH managed block cannot be safely parsed; configuration was not overwritten"
+                    ) from None
+        config = {
+            **prior,
+            "serverName": "fofamap",
+            "transport": "stdio",
+            "command": stdio["command"],
+            "args": stdio["args"],
+            "cwd": prior.get("cwd") or stdio["cwd"],
+            "failOnStartupError": True,
+        }
+        block = yaml.safe_dump(
+            [{"insert": [{"id": "mcp-fofamap", "name": "@deepseek-ai/dsh-mcp-client", "config": config}]}],
+            allow_unicode=True,
+            sort_keys=False,
         )
-        _managed_config(
-            config_path, block, uninstall=uninstall, dry_run=dry_run, changes=result.changes, remove_empty=scope == "project"
-        )
+        _managed_config(config_path, block, uninstall=uninstall, dry_run=dry_run, changes=result.changes, remove_empty=scope == "project")
         if scope == "project":
             result.notes.append(f"启动 DeepSeek Harness 时请加上 --patch {config_path}，以启用此项目级 MCP 桥接。")
     elif host.id == "hermes":
@@ -546,7 +643,11 @@ def integrate_host(
         if uninstall:
             changed = _remove_nested(data, ("mcp_servers", "fofamap"))
         else:
-            _set_nested(data, ("mcp_servers", "fofamap"), {**stdio, "enabled": True, "trust": "untrusted"})
+            prior = data.get("mcp_servers", {}).get("fofamap", {})
+            entry = {**prior, **stdio, "enabled": True, "trust": prior.get("trust", "untrusted")}
+            if prior.get("cwd"):
+                entry["cwd"] = prior["cwd"]
+            _set_nested(data, ("mcp_servers", "fofamap"), entry)
             changed = True
         if changed:
             _write_text(
@@ -563,3 +664,72 @@ def integrate_host(
         encoded = base64.b64encode(json.dumps(stdio, separators=(",", ":")).encode()).decode()
         result.deeplink = f"lmstudio://add_mcp?name=fofamap&config={quote(encoded, safe='')}"
     return result
+
+
+def export_skill(destination: Path) -> Path:
+    """Create an importable ZIP-based .skill containing only the bundled skill."""
+    destination = destination.expanduser().resolve()
+    if destination.suffix != ".skill":
+        raise IntegrationError("Skill archive must use the .skill extension")
+    if destination.exists():
+        raise IntegrationError(f"Refusing to overwrite an existing archive: {destination}")
+    source = _asset_root() / "skills" / "fofamap"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(destination, "x", compression=zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(source.rglob("*")):
+            if path.is_file() and not path.is_symlink() and not path.name.startswith("."):
+                archive.write(path, Path("fofamap") / path.relative_to(source))
+    return destination
+
+
+def import_skill(
+    source: Path,
+    target: str,
+    *,
+    scope: str = "user",
+    root: Path | None = None,
+    home: Path | None = None,
+    force: bool = False,
+    dry_run: bool = False,
+) -> list[str]:
+    """Install a bounded .skill archive without executing it or changing MCP configuration."""
+    host = normalize_host(target)
+    if scope not in {"user", "project"}:
+        raise IntegrationError("scope must be user or project")
+    _, destination = _paths(host.id, scope, (root or Path.cwd()).resolve(), (home or Path.home()).expanduser().resolve())
+    if destination is None:
+        raise IntegrationError(f"{host.name} uses a plugin bundle; install with integrate --agent {host.id}")
+    if source.suffix != ".skill":
+        raise IntegrationError("Skill archive must use the .skill extension")
+    changes: list[str] = []
+    try:
+        with zipfile.ZipFile(source) as archive, tempfile.TemporaryDirectory(prefix="fofamap-skill-") as temporary:
+            members = archive.infolist()
+            if len(members) > 100 or sum(item.file_size for item in members) > 16 * 1024 * 1024:
+                raise IntegrationError("Skill archive exceeds the 100-file / 16 MiB limit")
+            for item in members:
+                name = item.filename
+                parts = Path(name).parts
+                mode = item.external_attr >> 16
+                if (
+                    not parts
+                    or parts[0] != "fofamap"
+                    or ".." in parts
+                    or "\\" in name
+                    or mode & 0o170000 == 0o120000
+                    or item.file_size > 4 * 1024 * 1024
+                ):
+                    raise IntegrationError(f"Unsafe skill archive entry: {name}")
+            if "fofamap/SKILL.md" not in archive.namelist():
+                raise IntegrationError("Skill archive must contain fofamap/SKILL.md")
+            for item in members:
+                path = Path(temporary) / item.filename
+                if item.is_dir():
+                    path.mkdir(parents=True, exist_ok=True)
+                else:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(archive.read(item))
+            _copy_managed(Path(temporary) / "fofamap", destination, kind="skill", force=force, dry_run=dry_run, changes=changes)
+    except (zipfile.BadZipFile, OSError) as exc:
+        raise IntegrationError(f"Could not import skill archive: {exc}") from exc
+    return changes

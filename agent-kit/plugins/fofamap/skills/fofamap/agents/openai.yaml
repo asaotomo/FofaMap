@@ -1,0 +1,12 @@
+interface:
+  display_name: "FofaMap"
+  short_description: "Search and analyze FOFA assets safely"
+  default_prompt: "Use $fofamap to validate and run a bounded FOFA asset search."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "fofamap"
+      description: "Local FofaMap MCP server"
+      transport: "stdio"
+policy:
+  allow_implicit_invocation: true

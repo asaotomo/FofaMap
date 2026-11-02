@@ -1,6 +1,6 @@
 {
   "name": "fofamap-agent-plugin",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Cross-host FofaMap MCP and Agent Skill bundle.",
   "license": "Apache-2.0",
   "private": true

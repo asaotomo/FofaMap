@@ -32,6 +32,32 @@ def _strip_think_blocks(text: str) -> str:
     return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE).strip()
 
 
+def catalog_traits(item: dict[str, Any]) -> dict[str, Any]:
+    """Read published thinking levels and multimodal input. Do not infer either from the model name."""
+    effort_source = item.get("effort") if isinstance(item.get("effort"), dict) else {}
+    raw_levels = effort_source.get("supported_levels") or item.get("supported_efforts") or []
+    levels = [str(level).strip() for level in raw_levels if str(level).strip()]
+    thinking = bool(levels) or item.get("supports_reasoning") is True or item.get("reasoning") is True
+    words: set[str] = set()
+    for key in ("modalities", "input_modalities", "output_modalities", "modality"):
+        value = item.get(key)
+        if isinstance(value, str):
+            words.update(re.split(r"[^a-z0-9]+", value.lower()))
+        elif isinstance(value, list):
+            for part in value:
+                words.update(re.split(r"[^a-z0-9]+", str(part).lower()))
+    architecture = item.get("architecture") if isinstance(item.get("architecture"), dict) else {}
+    words.update(re.split(r"[^a-z0-9]+", str(architecture.get("modality") or "").lower()))
+    capabilities = item.get("capabilities") if isinstance(item.get("capabilities"), dict) else {}
+    vision_names = {"image", "vision", "audio", "video", "multimodal"}
+    vision = bool(words & vision_names) or any(bool(capabilities.get(name)) for name in vision_names)
+    return {"effort": levels, "thinking": thinking, "vision": vision}
+
+
+_THINKING_OFF = {"", "none", "off", "disabled"}
+_ANTHROPIC_THINKING_BUDGET = {"minimal": 1024, "low": 2048, "medium": 8192, "high": 16000, "max": 32000, "xhigh": 32000}
+
+
 def assistant_message_text(message: Any) -> str:
     """User-facing assistant text. Hidden reasoning is never treated as the answer."""
     if not isinstance(message, dict):
@@ -46,6 +72,12 @@ class HttpModelProvider:
     ) -> None:
         self.name = name
         self.profile = profile
+        if profile.thinking_mode == "auto":
+            from providers.registry import preset_model_traits
+
+            mode = preset_model_traits(profile.model).get("thinking_mode")
+            if mode:
+                self.profile = profile.model_copy(update={"thinking_mode": mode})
         self._client = client
         self._owns_client = client is None
         self.execution_mode = execution_mode
@@ -152,20 +184,85 @@ class HttpModelProvider:
             )
         return data
 
-    async def discover_models(self) -> list[str]:
+    async def discover_catalog(self) -> list[dict[str, Any]]:
+        """Read the provider's live model list, including context and output limits when published."""
         if self.profile.protocol == "ollama_native":
             data = await self._json("GET", "/api/tags")
-            return [item.get("name") or item.get("model") for item in data.get("models", []) if item.get("name") or item.get("model")]
-        data = await self._json("GET", "/models")
-        return [item["id"] for item in data.get("data", []) if item.get("id")]
+            catalog: list[dict[str, Any]] = []
+            for item in data.get("models", []):
+                model_id = item.get("name") or item.get("model")
+                if not model_id:
+                    continue
+                details = item.get("details") if isinstance(item.get("details"), dict) else {}
+                catalog.append(
+                    {
+                        "id": model_id,
+                        "name": model_id,
+                        "context_window": item.get("context_length") or details.get("context_length"),
+                        "max_output_tokens": None,
+                        "effort": [],
+                        "thinking": False,
+                        "vision": False,
+                    }
+                )
+            return catalog
+        path = "/v1/models" if self.profile.protocol == "anthropic_messages" else "/models"
+        data = await self._json("GET", path)
+        rows = data.get("data")
+        if rows is None and isinstance(data.get("models"), list):
+            rows = data["models"]
+        catalog = []
+        for item in rows or []:
+            if not isinstance(item, dict):
+                continue
+            model_id = item.get("id") or item.get("name")
+            if not model_id:
+                continue
+            traits = catalog_traits(item)
+            catalog.append(
+                {
+                    "id": str(model_id),
+                    "name": str(item.get("name") or model_id),
+                    "context_window": item.get("context_window") or item.get("context_length"),
+                    "max_output_tokens": item.get("max_output_tokens") or item.get("max_completion_tokens"),
+                    "effort": traits["effort"],
+                    "thinking": traits["thinking"],
+                    "vision": traits["vision"],
+                }
+            )
+        return catalog
+
+    async def discover_models(self) -> list[str]:
+        return [item["id"] for item in await self.discover_catalog()]
+
+    async def web_search(
+        self,
+        query: str,
+        *,
+        count: int = 5,
+        original_question: str = "",
+        need_content: bool = False,
+    ) -> list[dict[str, Any]]:
+        """DeepSeek Search API. Official endpoint: POST /v1/tools/search."""
+        text = " ".join(query.split())[:128]
+        if not text:
+            return []
+        body: dict[str, Any] = {"query": text, "count": max(1, min(int(count), 50)), "need_content": bool(need_content)}
+        question = " ".join(original_question.split())[:128]
+        if question:
+            body["ori_question"] = question
+        data = await self._json("POST", "/tools/search", json=body)
+        results = data.get("results")
+        return [item for item in results if isinstance(item, dict)] if isinstance(results, list) else []
 
     async def capabilities(self, model: str | None = None) -> ModelCapabilities:
         protocol = self.profile.protocol
         return ModelCapabilities(
             tool_calling=True if protocol in {"openai_responses", "openai_chat", "anthropic_messages", "ollama_native"} else None,
             structured_output=True,
+            vision=bool(self.profile.vision_enabled),
             streaming=True,
-            reasoning_effort=protocol == "openai_responses",
+            reasoning_effort=bool(self._reasoning_effort()) or protocol == "openai_responses",
             max_output_tokens=self.profile.max_output_tokens,
         )
 
@@ -198,18 +295,39 @@ class HttpModelProvider:
         haystack = f"{self.name} {self.profile.base_url} {self.profile.model}".lower()
         return "deepseek" in haystack
 
+    def _reasoning_effort(self) -> str:
+        return (self.profile.reasoning_effort or "").strip().lower()
+
     def _chat_thinking_payload(self, *, omit_thinking: bool) -> dict[str, Any]:
-        if omit_thinking or not self._uses_deepseek_thinking():
+        effort = self._reasoning_effort()
+        if self.profile.thinking_mode == "required":
+            return {"reasoning_effort": effort if effort not in _THINKING_OFF else "low"}
+        if self._uses_deepseek_thinking():
+            if omit_thinking or effort in _THINKING_OFF:
+                # DeepSeek thinks by default. Reasoning tokens share max_tokens
+                # with the answer and can come back empty when thinking stays on.
+                return {"thinking": {"type": "disabled"}}
+            payload: dict[str, Any] = {"thinking": {"type": "enabled"}}
+            if effort not in {"enabled", "on"}:
+                payload["reasoning_effort"] = effort
+            return payload
+        if omit_thinking or effort in _THINKING_OFF or effort in {"", "enabled", "on"}:
             return {}
-        effort = (self.profile.reasoning_effort or "").strip().lower()
-        if effort in {"", "none", "off", "disabled"}:
-            # DeepSeek V4 Flash thinks by default; reasoning tokens share max_tokens
-            # with content and can return HTTP 200 with an empty final answer.
-            return {"thinking": {"type": "disabled"}}
-        payload: dict[str, Any] = {"thinking": {"type": "enabled"}}
-        if effort in {"low", "high", "max"}:
-            payload["reasoning_effort"] = effort
-        return payload
+        return {"reasoning_effort": effort}
+
+    def _anthropic_thinking(self, *, omit_thinking: bool) -> dict[str, Any] | None:
+        effort = self._reasoning_effort()
+        if self.profile.thinking_mode == "adaptive":
+            return {"type": "adaptive"}
+        if omit_thinking or not effort:
+            return None
+        if effort in _THINKING_OFF:
+            return {"type": "disabled"}
+        budget = _ANTHROPIC_THINKING_BUDGET.get(effort, 4096)
+        ceiling = int(self.profile.max_output_tokens) - 1024
+        if ceiling < 1024:
+            return None
+        return {"type": "enabled", "budget_tokens": min(budget, ceiling)}
 
     async def generate(
         self,
@@ -297,8 +415,9 @@ class HttpModelProvider:
                 "input": prompt if native_structured else prompt + schema_suffix,
                 "max_output_tokens": self.profile.max_output_tokens,
             }
-            if self.profile.reasoning_effort:
-                body["reasoning"] = {"effort": self.profile.reasoning_effort}
+            effort = self._reasoning_effort()
+            if not omit_thinking and effort and effort not in _THINKING_OFF:
+                body["reasoning"] = {"effort": effort}
             if schema and native_structured:
                 body["text"] = {"format": {"type": "json_schema", "name": "fofamap_output", "strict": True, "schema": schema}}
             data = await self._json("POST", "/responses", json=body)
@@ -318,6 +437,11 @@ class HttpModelProvider:
                 "messages": [{"role": "user", "content": prompt + schema_suffix}],
                 "max_tokens": self.profile.max_output_tokens,
             }
+            thinking = self._anthropic_thinking(omit_thinking=omit_thinking)
+            if thinking is not None:
+                body["thinking"] = thinking
+            if self.profile.thinking_mode == "adaptive" and self._reasoning_effort() not in _THINKING_OFF:
+                body["output_config"] = {"effort": self._reasoning_effort()}
             data = await self._json("POST", "/v1/messages", json=body)
             text = "".join(item.get("text", "") for item in data.get("content", []) if item.get("type") == "text")
             usage = data.get("usage") or {}

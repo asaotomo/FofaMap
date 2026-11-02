@@ -1,0 +1,16 @@
+[Unit]
+Description=FofaMap scheduled passive asset mapping
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fofamap
+EnvironmentFile=-/root/.fofamap.env
+ExecStart=/opt/fofamap/.venv/bin/fofamap-scheduler --interval 30
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

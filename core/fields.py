@@ -6,10 +6,10 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
-from core.membership import MEMBERSHIP_SOURCE, membership_catalog, membership_for
+from core.membership import MEMBERSHIP_SOURCE, MEMBERSHIP_VERIFIED, MEMBERSHIP_VIP_SOURCE, membership_catalog, membership_for
 from core.syntax import syntax_catalog
 
-CATALOG_VERSION = "2026-08-official"
+CATALOG_VERSION = "2026-11-official"
 
 # Return fields documented for /api/v1/search/all and /api/v1/search/next (GoFOFA / 官方附录).
 BASE_FIELDS = {
@@ -46,6 +46,7 @@ BASE_FIELDS = {
     "cert.not_before",
     "cert.not_after",
     "cert.domain",
+    "status_code",
 }
 TIER_FIELDS = {
     "personal": {"header_hash", "banner_hash", "banner_fid"},
@@ -53,10 +54,10 @@ TIER_FIELDS = {
     "business": {"product.version", "icon_hash", "cert.is_valid", "cname_domain", "body", "cert.is_match", "cert.is_equal"},
     "enterprise": {"icon", "fid", "structinfo"},
 }
-# Not in the official return-field appendix, but still accepted by some accounts / older docs.
-COMPAT_RETURN_FIELDS = {"status_code", "asset_type"}
+# Query-side names that are not in the /search/all return appendix.
+COMPAT_RETURN_FIELDS = {"asset_type"}
 
-# Official /api/v1/search/stats dimensions (top-N per field, default size=5).
+# Official /api/v1/search/stats dimensions. Other names return [820027] 不支持的聚合字段.
 STATS_FIELDS = {
     "protocol",
     "domain",
@@ -70,29 +71,6 @@ STATS_FIELDS = {
     "asset_type",
     "fid",
     "icp",
-    "country_name",
-    "region",
-    "city",
-    "cert.sn",
-    "cert.issuer.org",
-    "cert.subject.org",
-    "cert.subject.cn",
-    "tls.ja3s",
-    "tls.version",
-    "cert.not_after",
-    "cert.not_before",
-    "cert.is_valid",
-    "cert.is_match",
-    "cert.is_equal",
-    "icon_hash",
-    "jarm",
-    "header",
-    "banner",
-    "base_protocol",
-    "product",
-    "product_category",
-    "product.version",
-    "lastupdatetime",
 }
 
 DEFAULT_SEARCH_FIELDS = "host,protocol,ip,port,title,domain,country"
@@ -132,6 +110,13 @@ def fofa_request_fields(fields: list[str] | None) -> list[str]:
     return [field for field in (fields or []) if field and field not in LOCAL_RESULT_FIELDS]
 
 
+def search_page_size(size: int, fields: list[str]) -> int:
+    """Official search/all field-dependent page limits also apply to continuations."""
+    names = set(fields)
+    limit = 500 if "body" in names else 2000 if names & {"cert", "banner", "header"} else 10_000
+    return min(size, limit)
+
+
 def available_fields(account_tier: str | None = None) -> set[str]:
     allowed = set(BASE_FIELDS) | set(COMPAT_RETURN_FIELDS)
     order = ["personal", "professional", "business", "enterprise"]
@@ -168,6 +153,10 @@ def suggest_fields(intent: str, *, account_tier_name: str | None = None, query: 
                 selected.append(name)
 
     add(*CORE_RETURN_FIELDS)
+    # PHP / CVE exposure tasks need the fingerprint columns before website
+    # attribution fields consume the membership field budget.
+    if re.search(r"php|cve-\d|漏洞", haystack, re.IGNORECASE):
+        add("server", "product")
     for pattern, names in _INTENT_FIELD_HINTS:
         if re.search(pattern, haystack, re.IGNORECASE):
             add(*names)
@@ -204,6 +193,9 @@ def field_catalog() -> dict:
         "version": CATALOG_VERSION,
         "source": "https://fofa.info/api/introd",
         "membership_source": MEMBERSHIP_SOURCE,
+        "membership_vip_source": MEMBERSHIP_VIP_SOURCE,
+        "verified_at": MEMBERSHIP_VERIFIED,
+        "page_limits": {"default": 10000, "cert_banner_header": 2000, "body": 500},
         "base": sorted(BASE_FIELDS),
         "compat": sorted(COMPAT_RETURN_FIELDS),
         "tiers": {k: sorted(v) for k, v in TIER_FIELDS.items()},

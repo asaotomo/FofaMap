@@ -17,9 +17,11 @@ class FofaConfig(BaseModel):
     base_url: str = "https://fofa.info"
     email: str = ""
     api_key: str = ""
+    fallback_api_keys: list[str] = Field(default_factory=list, exclude=True, repr=False)
 
 
 class SearchConfig(BaseModel):
+    smart_fields: bool = False
     fields: str = "host,protocol,ip,port,title,domain,country"
     size: int = Field(default=100, ge=1, le=10_000)
     full: bool = False
@@ -32,9 +34,11 @@ class SearchConfig(BaseModel):
 class FastCheckConfig(BaseModel):
     check_alive: bool = False
     timeout: int = Field(default=5, ge=1, le=60)
+    concurrency: int = Field(default=80, ge=1, le=500)
 
 
 class SystemConfig(BaseModel):
+    language: Literal["zh", "en"] = "zh"
     logger: bool = True
     sheet_merge: bool = True
     concurrency: int = Field(default=10, ge=1, le=100)
@@ -43,16 +47,20 @@ class SystemConfig(BaseModel):
     output_dir: str = "results"
     artifact_retention_days: int = Field(default=7, ge=1)
     allow_private_network: bool = True
+    scan_ai_dedupe: bool = False
 
 
 class ProviderProfile(BaseModel):
     protocol: Literal["openai_responses", "openai_chat", "anthropic_messages", "ollama_native"]
+    thinking_mode: Literal["auto", "required", "adaptive"] = "auto"
     base_url: str
     model: str = ""
     api_key_env: str = ""
     credential_kind: Literal["api_key", "subscription", "interactive_only", "none"] = "api_key"
     structured_output_mode: Literal["auto", "native", "prompt"] = "auto"
+    search_enabled: bool = False
     reasoning_effort: str | None = None
+    vision_enabled: bool = False
     max_output_tokens: int = Field(default=32768, ge=1, le=524288)
     timeout: float = Field(default=120.0, gt=0)
     api_key: str = Field(default="", exclude=True, repr=False)
@@ -168,8 +176,13 @@ def load_config(path: str | Path | None = None, environ: dict[str, str] | None =
         )
 
     email = env.get("FOFA_EMAIL", yaml_email)
-    api_key = env.get("FOFA_API_KEY") or env.get("FOFA_KEY") or _keyring_secret(email) or yaml_key
-    fofa_data.update({"email": email, "api_key": api_key})
+    env_key = env.get("FOFA_API_KEY") or env.get("FOFA_KEY") or ""
+    ordered: list[str] = []
+    for candidate in (env_key, _keyring_secret(email), yaml_key):
+        if candidate and candidate not in ordered:
+            ordered.append(candidate)
+    api_key = ordered[0] if ordered else ""
+    fofa_data.update({"email": email, "api_key": api_key, "fallback_api_keys": ordered[1:]})
     data["fofa"] = fofa_data
 
     providers_json = env.get("FOFAMAP_PROVIDERS_JSON")
@@ -227,6 +240,8 @@ def load_config(path: str | Path | None = None, environ: dict[str, str] | None =
             )
             provider_data["api_key"] = provider_data.get("api_key") or provider_data.get("key")
     system_data = dict(data.get("system") or {})
+    if env.get("FOFAMAP_LANGUAGE") in {"zh", "en"}:
+        system_data["language"] = env["FOFAMAP_LANGUAGE"]
     if "FOFAMAP_ALLOW_PRIVATE_NETWORK" in env:
         system_data["allow_private_network"] = env["FOFAMAP_ALLOW_PRIVATE_NETWORK"].lower() == "true"
     if "FOFAMAP_ARTIFACT_RETENTION_DAYS" in env:
@@ -246,4 +261,25 @@ def load_config(path: str | Path | None = None, environ: dict[str, str] | None =
     return Config.model_validate(data)
 
 
-settings = load_config()
+configuration_problem: Path | None = None
+
+
+def load_runtime_config() -> Config:
+    """Keep the CLI available so a damaged configuration can be repaired."""
+    global configuration_problem
+    try:
+        loaded = load_config()
+    except (ValueError, TypeError, AttributeError, OSError, yaml.YAMLError):
+        configuration_problem = _default_read_path(os.environ)
+        preferred = os.environ.get("FOFAMAP_LANGUAGE")
+        if preferred not in {"zh", "en"}:
+            try:
+                preferred = (_read_yaml(configuration_problem).get("system") or {}).get("language")
+            except (ValueError, TypeError, AttributeError, OSError, yaml.YAMLError):
+                preferred = None
+        return Config(system=SystemConfig(language="en" if preferred == "en" else "zh"))
+    configuration_problem = None
+    return loaded
+
+
+settings = load_runtime_config()

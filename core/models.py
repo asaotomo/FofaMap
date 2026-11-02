@@ -16,6 +16,7 @@ class FofaErrorCode(str, Enum):
     INVALID_QUERY = "invalid_query"
     TRANSPORT_ERROR = "transport_error"
     INVALID_RESPONSE = "invalid_response"
+    CURSOR_EXPIRED = "cursor_expired"
 
 
 class FofaError(Exception):
@@ -27,6 +28,7 @@ class FofaError(Exception):
         retryable: bool = False,
         alternatives: list[str] | None = None,
         status_code: int | None = None,
+        api_code: int | None = None,
     ):
         super().__init__(message)
         self.code = code
@@ -34,6 +36,7 @@ class FofaError(Exception):
         self.retryable = retryable
         self.alternatives = alternatives or []
         self.status_code = status_code
+        self.api_code = api_code
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -42,6 +45,7 @@ class FofaError(Exception):
             "retryable": self.retryable,
             "alternatives": self.alternatives,
             "status_code": self.status_code,
+            "api_code": self.api_code,
         }
 
 

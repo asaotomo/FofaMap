@@ -1,7 +1,7 @@
 {
   "id": "fofamap",
   "name": "FofaMap",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Safe FOFA asset research through FofaMap MCP and Agent Skills.",
   "configSchema": {
     "type": "object",
@@ -14,5 +14,7 @@
       "args": []
     }
   },
-  "skills": ["./skills/fofamap"]
+  "skills": [
+    "./skills/fofamap"
+  ]
 }

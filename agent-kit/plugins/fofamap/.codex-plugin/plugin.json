@@ -1,6 +1,6 @@
 {
   "name": "fofamap",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Safe FOFA asset research through the local FofaMap MCP server and Agent Skill.",
   "author": {
     "name": "FofaMap"

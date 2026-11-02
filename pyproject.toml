@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fofamap"
-version = "2.0.1"
+version = "2.0.2"
 description = "FOFA API, MCP 2.0 and vendor-neutral workflow agent"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -26,6 +26,8 @@ dependencies = [
   "uvicorn[standard]>=0.35,<1",
   "xlsxwriter>=3.2,<4",
   "keyring>=25,<26",
+  "tzdata>=2025.2",
+  "tomli>=2,<3; python_version < '3.11'",
 ]
 
 [project.optional-dependencies]
@@ -37,17 +39,15 @@ test = ["pytest>=9.0.3,<10", "pytest-asyncio>=1.1,<2", "ruff>=0.12,<1"]
 fofamap = "fofamap:main"
 fofamap-api = "service.api:main"
 fofamap-mcp = "mcp_server:run_server"
+fofamap-scheduler = "service.scheduler:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["config", "core", "providers", "service", "utils"]
-
-[tool.hatch.build.targets.wheel.force-include]
-"fofamap.py" = "fofamap.py"
-"mcp_server.py" = "mcp_server.py"
-"agent-kit" = "agent-kit"
+only-include = ["config", "core", "providers", "service", "utils", "fofamap.py", "mcp_server.py", "agent-kit"]
+dev-mode-dirs = ["."]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
 testpaths = ["tests"]
 pythonpath = ["."]
 markers = ["live: opt-in tests that call real FOFA/model APIs and may consume quota"]

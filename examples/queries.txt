@@ -1,0 +1,2 @@
+domain="baidu.com"
+domain="bing.com"

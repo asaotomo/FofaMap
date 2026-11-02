@@ -1,4 +1,4 @@
-"""FastAPI surface for FofaMap 2.0.1."""
+"""FastAPI surface for FofaMap."""
 
 from __future__ import annotations
 
@@ -18,12 +18,14 @@ from core.fields import field_catalog
 from core.models import ExportRequest, FofaError, SearchPage, SearchRequest
 from core.scanner import NucleiScanner
 from core.scans import ScanApproval, ScanPlanRequest
+from core.version import VERSION
 from providers.registry import ProviderRegistry, ProviderRouter
 from service.auth import require_service_auth
+from service.paths import database_url, output_root
 from service.store import JobStore
 
-app = FastAPI(title="FofaMap API", version="2.0.1", description="只读 FOFA 检索、导出与厂商无关智能体接口")
-store = JobStore(os.getenv("FOFAMAP_DATABASE_URL", "sqlite:///./fofamap.sqlite3"))
+app = FastAPI(title="FofaMap API", version=VERSION, description="只读 FOFA 检索、导出与厂商无关智能体接口")
+store = JobStore(database_url())
 store.purge_expired(Path(settings.system.output_dir))
 
 
@@ -99,7 +101,7 @@ async def rules(keyword: str = ""):
 async def _run_export(job_id: str, request: ExportRequest) -> None:
     store.update(job_id, status="running")
     try:
-        root = Path(settings.system.output_dir).resolve()
+        root = output_root()
         filename = Path(request.filename or f"{job_id}.{request.format}").name
         destination = root / filename
         async with FofaClient() as client:
@@ -134,7 +136,7 @@ async def artifact(job_id: str):
     except KeyError as exc:
         raise _not_found(exc) from exc
     path = Path(job.get("artifact_path") or "")
-    root = Path(settings.system.output_dir).resolve()
+    root = output_root()
     try:
         resolved = path.resolve(strict=True)
         resolved.relative_to(root)
@@ -177,6 +179,7 @@ async def scan_plan(request: ScanPlanRequest):
 
 class ScanExecuteRequest(BaseModel):
     approval_token: str
+    install_if_missing: bool = False
 
 
 @app.post("/v1/scans/{plan_id}/execute", dependencies=[Depends(require_service_auth)])
@@ -185,14 +188,22 @@ async def scan_execute(plan_id: str, request: ScanExecuteRequest):
         raise HTTPException(status_code=403, detail="active scanning is disabled")
     approval = ScanApproval(store, allow_private=settings.system.allow_private_network)
     try:
-        job = approval.consume(plan_id, request.approval_token)
+        approval.verify(plan_id, request.approval_token)
     except (ValueError, KeyError) as exc:
         raise HTTPException(status_code=403, detail=str(exc)) from exc
+    from core.nuclei_install import ensure_installed, needs_setup
+
+    if needs_setup(NucleiScanner().executable):
+        if not request.install_if_missing:
+            raise HTTPException(status_code=409, detail="Nuclei needs installation. Ask the user for consent first; "
+                                "retry with install_if_missing=true only after consent, or install it manually.")
+        await ensure_installed(consent=True)
+    job = approval.consume(plan_id, request.approval_token)
     store.update(plan_id, status="running")
     try:
         scan = await NucleiScanner().run_plan(
             ScanPlanRequest.model_validate(job["payload"]),
-            Path(settings.system.output_dir).resolve() / f"scan-{plan_id}",
+            output_root() / f"scan-{plan_id}",
         )
         return store.update(
             plan_id,

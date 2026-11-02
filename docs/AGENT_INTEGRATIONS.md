@@ -1,6 +1,6 @@
 # 智能体 MCP 与 Skills 集成
 
-FofaMap 2.0.1 提供一个可回滚的跨宿主安装器、一个通用 Agent Skill，以及兼容 Codex、Claude、Cursor、OpenClaw 和 Grok Build 的插件包。安装器默认把当前 Python 与 `mcp_server.py` 的绝对路径写入 stdio 配置，避免 Cursor 等 GUI 应用因没有继承终端 `PATH` 而出现 `spawn fofamap-mcp ENOENT`；配置中不写入 FOFA 或模型密钥。
+FofaMap 2.0.2 提供一个可回滚的跨宿主安装器、一个通用 Agent Skill，以及兼容 Codex、Claude、Cursor、OpenClaw 和 Grok Build 的插件包。安装器默认把当前 Python 与 `mcp_server.py` 的绝对路径写入 stdio 配置，避免 Cursor 等 GUI 应用因没有继承终端 `PATH` 而出现 `spawn fofamap-mcp ENOENT`；配置中不写入 FOFA 或模型密钥。
 
 ## 快速使用
 
@@ -78,7 +78,7 @@ Grok Build 会直接读取插件内的 Claude 格式；无需维护第二套 MCP
 
 - 安装器只写 MCP command/args，不读取或复制 `FOFA_API_KEY`、模型密钥或 bearer token。
 - 默认 command/args 固定为执行安装器的 Python 环境和同一安装包中的 MCP 入口；虚拟环境路径不会被解析成缺少依赖的基础 Python。
-- 写入配置前会确认当前环境包含 FofaMap 2.0.1 所需的 MCP 2.x SDK；依赖不完整时明确停止，避免产生路径正确但进程无法启动的假成功配置。
+- 写入配置前会确认当前环境包含 FofaMap 2.0.2 所需的 MCP 2.x SDK；依赖不完整时明确停止，避免产生路径正确但进程无法启动的假成功配置。
 - 已存在的配置文件首次修改前备份为 `<name>.fofamap.bak`，之后不会覆盖该备份。
 - JSON/YAML 无法安全解析时立即停止，不猜测或重写损坏配置。
 - 同名 Skill/插件如果没有 FofaMap 管理标记，默认拒绝覆盖；`--force` 会先移动到 `.fofamap.bak`。
@@ -108,3 +108,11 @@ fofamap integrate --agent codex --uninstall
 - [OpenClaw plugin manifest](https://github.com/openclaw/openclaw/blob/main/docs/plugins/manifest.md)
 - [Hermes MCP config](https://hermes-agent.nousresearch.com/docs/reference/mcp-config-reference)
 - [Grok Build skills, plugins and marketplaces](https://docs.x.ai/build/features/skills-plugins-marketplaces)
+
+## AI 全程安装与 .skill 分发
+
+[官方复制提示词及通用宿主接入](AI_INSTALL.md) 支持让当前 AI 完成下载、环境、账号引导、当前宿主配置与实际加载检查。专用安装器的支持范围仍以本文矩阵和 `fofamap integrate --list` 为准。
+
+MCP 服务支持 stdio、旧 SSE 和 Streamable HTTP；`http` 是 Streamable HTTP 别名。使用 `fofamap-mcp --check` 检查真实 stdio 握手，使用 `--check-url` 检查已经启动的 HTTP/SSE 服务。检查不会调用 FOFA 或模型。
+
+通用 Skill 分发包位于 [agent-kit/fofamap.skill](../agent-kit/fofamap.skill)。可运行 `fofamap integrate --export-skill ./fofamap.skill` 导出；`fofamap integrate --agent codex --import-skill ./fofamap.skill` 仅导入 Skill，不修改 MCP。原生导入 UI 取决于宿主；LM Studio 使用兼容层，OpenClaw/Grok 使用插件包。

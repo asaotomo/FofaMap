@@ -3,6 +3,7 @@ fofa:
   # 密钥来自 FOFA_API_KEY / FOFA_EMAIL、系统钥匙串或容器密钥。
 
 search:
+  smart_fields: false # Ordinary query default; AI tasks still default to smart selection.
   fields: "host,protocol,ip,port,title,domain,country"
   size: 100
   full: false
@@ -14,8 +15,10 @@ search:
 fast_check:
   check_alive: false
   timeout: 5
+  concurrency: 80
 
 system:
+  language: zh
   logger: true
   sheet_merge: true
   concurrency: 10
@@ -24,47 +27,97 @@ system:
   output_dir: results
   artifact_retention_days: 7
   allow_private_network: true
+  scan_ai_dedupe: false  # AI 按任务筛选并去重扫描候选，审批前展示逐项理由
 
 providers:
+  deepseek:  # 推荐 / Recommended
+    protocol: openai_chat
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-flash"
+    api_key_env: DEEPSEEK_API_KEY
+    structured_output_mode: prompt
+    search_enabled: false
+    reasoning_effort: disabled
+    max_output_tokens: 32768
+    timeout: 120
   openai:
     protocol: openai_responses
     base_url: "https://api.openai.com/v1"
-    model: "gpt-5.6"
+    model: "gpt-6.1-sol"
+    thinking_mode: required
+    reasoning_effort: low
     api_key_env: OPENAI_API_KEY
-    max_output_tokens: 32768
-    timeout: 120
-  deepseek:
-    protocol: openai_chat
-    base_url: "https://api.deepseek.com/v1"
-    model: "deepseek-v4-flash"
-    api_key_env: DEEPSEEK_API_KEY
-    structured_output_mode: prompt
     max_output_tokens: 32768
     timeout: 120
   anthropic:
     protocol: anthropic_messages
     base_url: "https://api.anthropic.com"
-    model: "claude-opus-5"
+    model: "claude-opus-5-5"
+    thinking_mode: adaptive
+    reasoning_effort: low
     api_key_env: ANTHROPIC_API_KEY
     max_output_tokens: 32768
     timeout: 120
   ollama:
     protocol: ollama_native
     base_url: "http://127.0.0.1:11434"
-    model: "qwen3"
+    model: ""  # 自动获取本机已经安装的模型，不猜测本机版本
     api_key_env: ""
   lmstudio:
-    protocol: openai_responses
+    protocol: openai_chat
     base_url: "http://127.0.0.1:1234/v1"
     model: ""
     api_key_env: ""
+  kimi:
+    protocol: openai_chat
+    base_url: "https://api.moonshot.cn/v1"
+    model: "kimi-k3.1-pro"
+    api_key_env: MOONSHOT_API_KEY
+    thinking_mode: required
+    reasoning_effort: low
+  minimax:
+    protocol: openai_chat
+    base_url: "https://api.minimax.cn/v1"
+    model: "MiniMax-M3.1-Flash"
+    api_key_env: MINIMAX_API_KEY
+    reasoning_effort: low
+  mimo:
+    protocol: openai_chat
+    base_url: "https://api.xiaomimimo.com/v1"
+    model: "mimo-v2.6-pro"
+    api_key_env: MIMO_API_KEY
+  zhipu:  # GLM / 智谱
+    protocol: openai_chat
+    base_url: "https://open.bigmodel.cn/api/paas/v4"
+    model: "glm-5.3"
+    api_key_env: ZHIPU_API_KEY
+    thinking_mode: required
+    reasoning_effort: low
+  siliconflow:
+    protocol: openai_chat
+    base_url: "https://api.siliconflow.cn/v1"
+    model: "deepseek-ai/DeepSeek-V4-Flash"
+    api_key_env: SILICONFLOW_API_KEY
+    structured_output_mode: prompt
+  xai:
+    protocol: openai_chat
+    base_url: "https://api.x.ai/v1"
+    model: "grok-4.7"
+    api_key_env: XAI_API_KEY
+  gemini:
+    protocol: openai_chat
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai"
+    model: "gemini-4-argon"
+    api_key_env: GEMINI_API_KEY
+  # 官方默认模型核验日期：2026-11-02。选择模型时仍优先获取当前账号的实时列表。
+  # 硅基流动的模型 ID 与原厂不同，必须保留厂商前缀、大小写和完整名称。
 
 routing:
-  default: openai
-  planner: openai
+  default: deepseek
+  planner: deepseek
   query_repair: deepseek
-  reflector: openai
-  summarizer: openai
+  reflector: deepseek
+  summarizer: deepseek
   allow_cross_provider_fallback: false
   fallbacks: []
 

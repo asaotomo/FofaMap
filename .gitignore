@@ -17,3 +17,13 @@ config/settings.yaml
 results/
 artifacts/
 *.sqlite3
+
+# Project-local installer tooling and managed Python
+.fofamap-tools/
+.venv.backup-*/
+.venv.incomplete-*/
+.fofamap-updates/
+.fofamap-update.lock
+.fofamap-install
+.fofamap-language
+config/settings.yaml.broken-*

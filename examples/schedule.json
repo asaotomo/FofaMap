@@ -1,0 +1,12 @@
+{
+  "name": "Baidu public inventory every 10 minutes",
+  "task": "Map the specified public domain only; no liveness checks or scanning.",
+  "queries": ["domain=\"baidu.com\""],
+  "when": "every 10 minutes",
+  "timezone": "Asia/Shanghai",
+  "max_records": 10,
+  "max_pages": 1,
+  "analyze": false,
+  "check_alive": false,
+  "language": "zh"
+}
