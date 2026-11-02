@@ -2,13 +2,13 @@
 
 **中文** · [English](README_EN.md)
 
-![FofaMap 2.0.2 · 资产发现、AI 分析与证据报告](docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover.png)
+![FofaMap 2.0.2 · 资产发现、AI 分析与证据报告](https://github.com/user-attachments/assets/03465bd2-3ae5-4c6d-b1af-0649f51ebfb9)
 
 <p align="center">
-  <img alt="Version 2.0.2" src="https://img.shields.io/badge/Version-2.0.2-0E7490?style=flat-square">
-  <img alt="Windows, macOS, Linux" src="https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-475569?style=flat-square">
-  <img alt="31 MCP tools" src="https://img.shields.io/badge/MCP-31%20tools-6366F1?style=flat-square">
-  <img alt="Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-475569?style=flat-square">
+  <img alt="Version 2.0.2" src="https://camo.githubusercontent.com/99c5262e5a7aa000f2de7d43d75b9fe7ee02e63ece87a8649bb405878eddec84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56657273696f6e2d322e302e322d3045373439303f7374796c653d666c61742d737175617265">
+  <img alt="Windows, macOS, Linux" src="https://camo.githubusercontent.com/f44502ccf16b217b029d53692ca1377f8e14b8b69d82823d32441b0c61db26db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f57696e646f77732532302537432532306d61634f532532302537432532304c696e75782d3437353536393f7374796c653d666c61742d737175617265">
+  <img alt="31 MCP tools" src="https://camo.githubusercontent.com/005b331a0b899ffdd07b16adfb816612187c17c8e7abc91fc7d5d38873ac4b11/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d43502d3331253230746f6f6c732d3633363646313f7374796c653d666c61742d737175617265">
+  <img alt="Apache 2.0" src="https://camo.githubusercontent.com/00ca4663013d91953dfeee230ab95eef262b3c3d17e2abe9755ed98dcadbd9f9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d417061636865253230322e302d3437353536393f7374796c653d666c61742d737175617265">
 </p>
 
 **找资产、理证据、出报告，需要扫描时由你确认。**
@@ -51,14 +51,14 @@ FofaMap 是 **Hx0 工作室**开发的 FOFA 资产测绘工具。新手用方向
 
 **先选安装语言。** 安装器首先显示 **简体中文 / English**，选定后，安装提示、账号配置和后续界面沿用这个选择，无需编辑配置文件。直接回车沿用上次安装语言或系统语言默认值。
 
-![安装时选择语言](docs/assets/readme/2.0.2/zh/install-language.png)
+![安装时选择语言](https://github.com/user-attachments/assets/b9467c26-67ca-460b-a8e0-8225653432e0)
 
 首次需要联网。安装器会准备独立 Python 和依赖、检查安装，并配置 `fofamap` 命令。**不需要手动激活环境，也不需要管理员权限。安装结束后会进入账号配置，接着做第 2 步。** 如果找不到命令，先关闭旧终端并新开一个。
 
 <details>
 <summary>查看首次安装菜单</summary>
 
-![首次安装菜单](docs/assets/readme/2.0.2/zh/install-menu.png)
+![首次安装菜单](https://github.com/user-attachments/assets/9ee30e33-56cc-4225-819a-c324fe4fa282)
 
 </details>
 
@@ -77,7 +77,7 @@ bash start.sh --version
 <details>
 <summary>查看实操结果：一键安装与自检</summary>
 
-![一键安装与自检](docs/assets/readme/2.0.2/zh/quick-install.png)
+![一键安装与自检](https://github.com/user-attachments/assets/89337539-90a4-4e42-a439-4829bee434e7)
 
 </details>
 
@@ -103,7 +103,7 @@ Windows 遇到问题，按 [Windows 详细步骤与排错](docs/INSTALL_WINDOWS.
 fofamap --setup
 ```
 
-![账号配置：在自己的终端输入 FOFA Key](docs/assets/readme/2.0.2/zh/onboarding.png)
+![账号配置：在自己的终端输入 FOFA Key](https://github.com/user-attachments/assets/52322746-2569-425b-ba72-3d6a384385b4)
 
 **FOFA Key 用来查询资产，模型 Key 用来调用 AI，两者不同。** 不要把真实 Key 发到聊天、Issue 或截图中。后续打开时，如果必要配置缺失、损坏或凭据失效，程序会引导修复。
 
@@ -117,7 +117,7 @@ fofamap --setup
 fofamap
 ```
 
-![当前版本：选择资产搜索后输入查询](docs/assets/readme/2.0.2/zh/first-search.png)
+![当前版本：选择资产搜索后输入查询](https://github.com/user-attachments/assets/449b070e-dc61-45a4-af83-1c48f4a3dfb0)
 
 1. 用方向键选择 **资产搜索**，回车确认。
 2. 粘贴 `domain="baidu.com"`，查询百度公开网站；这是输入到程序里的 FOFA 语法，不需要再加外层引号。
@@ -136,7 +136,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,protocol,title \
   --no-check-alive --no-full --no-save
 ```
 
-![查询百度公开网站](docs/assets/readme/2.0.2/zh/search.png)
+![查询百度公开网站](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-search.png)
 
 看到主机、IP、端口、协议和标题表，表示真实查询已成功。截图展示 FOFA 匹配总量与本次实际取回的最多 3 条记录；**总量不等于已收集数量**。HTTP 和 HTTPS、主域名和 www 可能是不同端点，不应只因同 IP 就合并。
 
@@ -165,9 +165,9 @@ Windows 新手优先使用上面的向导，避免 CMD / PowerShell 对引号的
 
 首页按使用频率保留 AI 任务助手、资产搜索、主机详情、分布统计；批量查询与图标反查放在「更多查询方式」，规则和字段放在「查询参考」。账号、模型、界面语言、默认返回字段、偏好和更新统一放在「设置与维护」。进入子菜单按 Esc 返回，不会退出程序。
 
-![精简首页菜单](docs/assets/readme/2.0.2/zh/menu.png)
+![精简首页菜单](https://github.com/user-attachments/assets/718fc3c4-509b-4286-9aab-7de893ffb50f)
 
-![分组设置菜单](docs/assets/readme/2.0.2/zh/settings-menu.png)
+![分组设置菜单](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-settings-menu.png)
 
 ### 随时切换界面语言
 
@@ -177,7 +177,7 @@ Windows 新手优先使用上面的向导，避免 CMD / PowerShell 对引号的
 fofamap
 ```
 
-![直接切换界面语言](docs/assets/readme/2.0.2/zh/language-setting.png)
+![直接切换界面语言](https://github.com/user-attachments/assets/233557c3-f747-4e46-a452-a7dd15933f50)
 
 <a id="query-language"></a>
 
@@ -211,7 +211,7 @@ fofamap syntax
 
 <summary>查看实操结果：查本地语法目录</summary>
 
-![查本地语法目录](docs/assets/readme/2.0.2/zh/syntax.png)
+![查本地语法目录](https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30)
 
 </details>
 
@@ -227,7 +227,7 @@ fofamap fields
 
 <summary>查看实操结果：查返回字段和会员能力</summary>
 
-![查返回字段和会员能力](docs/assets/readme/2.0.2/zh/fields.png)
+![查返回字段和会员能力](https://github.com/user-attachments/assets/97f5f5e4-5c65-4bfc-a315-eaad83562260)
 
 </details>
 
@@ -241,7 +241,7 @@ fofamap fields
 fofamap
 ```
 
-![智能字段：填写页数后直接选择](docs/assets/readme/2.0.2/zh/smart-fields-setting.png)
+![智能字段：填写页数后直接选择](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-smart-fields-setting.png)
 
 普通查询初始默认不开启，可在设置中修改；AI 任务默认开启；命令行加 `--smart-fields` 开启、`--no-smart-fields` 关闭。它根据账号可用字段和任务内容选择返回列，**普通查询使用此功能不需要额外模型 Key**。查询概览显示“智能字段：是”即可确认；想固定字段用 `-f host,ip,port,title` 并关闭智能字段。两者同时开启时，智能选择优先。
 
@@ -261,7 +261,7 @@ fofamap rules --rule ThinkPHP
 
 <summary>查看实操结果：产品搜索先查官方 app 名</summary>
 
-![产品搜索先查官方 app 名](docs/assets/readme/2.0.2/zh/rules.png)
+![产品搜索先查官方 app 名](https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f)
 
 </details>
 
@@ -278,7 +278,7 @@ fofamap rules --rule-categories
 <details>
 <summary>查看实操结果：全部分类与数量</summary>
 
-![全部分类与数量](docs/assets/readme/2.0.2/zh/rule-categories.png)
+![全部分类与数量](https://github.com/user-attachments/assets/fb90ea1b-9ed7-47f7-9131-83f42d98aa08)
 
 </details>
 
@@ -293,7 +293,7 @@ fofamap rules --rule-category 工业控制
 <details>
 <summary>查看实操结果：工业控制规则</summary>
 
-![工业控制规则](docs/assets/readme/2.0.2/zh/rule-industrial.png)
+![工业控制规则](https://github.com/user-attachments/assets/83fcb3f6-1893-45af-b299-951b129964cc)
 
 </details>
 
@@ -308,7 +308,7 @@ fofamap rules --rule-category 人工智能
 <details>
 <summary>查看实操结果：人工智能规则</summary>
 
-![人工智能规则](docs/assets/readme/2.0.2/zh/rule-ai.png)
+![人工智能规则](https://github.com/user-attachments/assets/f441a60b-7d81-4ba0-bccf-c703ae8d0dc6)
 
 </details>
 
@@ -327,7 +327,7 @@ fofamap -q 'domain="baidu.com" && status_code=200' -f host,port,status_code --si
 
 <summary>查看实操结果：组合域名和 HTTP 状态条件</summary>
 
-![组合域名和 HTTP 状态条件](docs/assets/readme/2.0.2/zh/status.png)
+![组合域名和 HTTP 状态条件](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-status.png)
 
 </details>
 
@@ -343,7 +343,7 @@ fofamap -q 'domain="baidu.com"' -f host,port,status_code,title -i 200 -k 百度 
 
 <summary>查看实操结果：在已取回数据中筛选状态码和关键词</summary>
 
-![在已取回数据中筛选状态码和关键词](docs/assets/readme/2.0.2/zh/filters.png)
+![在已取回数据中筛选状态码和关键词](https://github.com/user-attachments/assets/650ce9cb-022f-4807-9da0-6992a85024f7)
 
 </details>
 
@@ -359,7 +359,7 @@ fofamap -q 'domain="bing.com" && host="www.bing.com"' -f host,port --size 1 --pa
 
 <summary>查看实操结果：可选：实际检查一个网站当前是否响应</summary>
 
-![可选：实际检查一个网站当前是否响应](docs/assets/readme/2.0.2/zh/alive.png)
+![可选：实际检查一个网站当前是否响应](https://github.com/user-attachments/assets/fbdded95-7c41-4518-bfa9-e7b8281708d9)
 
 </details>
 
@@ -375,7 +375,7 @@ fofamap -hq www.bing.com --no-host-detail --no-save
 
 <summary>查看实操结果：查看单台主机的聚合画像</summary>
 
-![查看单台主机的聚合画像](docs/assets/readme/2.0.2/zh/host.png)
+![查看单台主机的聚合画像](https://github.com/user-attachments/assets/adb32109-d139-4771-b4d5-defb517a9027)
 
 </details>
 
@@ -391,7 +391,7 @@ fofamap -cq 'domain="baidu.com"' -f port,protocol --size 5 --no-save
 
 <summary>查看实操结果：统计端口和协议分布</summary>
 
-![统计端口和协议分布](docs/assets/readme/2.0.2/zh/stats.png)
+![统计端口和协议分布](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-stats.png)
 
 </details>
 
@@ -409,7 +409,7 @@ fofamap -ico https://www.bing.com --size 3 --pages 1 --max-records 3 --no-check-
 <details>
 <summary>查看实操结果：计算网站图标哈希并反查</summary>
 
-![计算网站图标哈希并反查](docs/assets/readme/2.0.2/zh/icon.png)
+![计算网站图标哈希并反查](https://github.com/user-attachments/assets/a1812b25-70a4-414a-9ed6-7de5564e47b7)
 
 </details>
 
@@ -426,7 +426,7 @@ fofamap -bq examples/queries.txt --batch-group-size 1 --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：按文件批量查询</summary>
 
-![按文件批量查询](docs/assets/readme/2.0.2/zh/batch.png)
+![按文件批量查询](https://github.com/user-attachments/assets/e278451d-f8b8-40e9-82d8-4de6734b1eb7)
 
 </details>
 
@@ -449,7 +449,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 CSV</summary>
 
-![导出 CSV](docs/assets/readme/2.0.2/zh/export-csv.png)
+![导出 CSV](https://github.com/user-attachments/assets/6dc38ebb-5d90-46d5-af9d-433e8df60bcf)
 
 </details>
 
@@ -464,7 +464,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 JSONL</summary>
 
-![导出 JSONL](docs/assets/readme/2.0.2/zh/export-jsonl.png)
+![导出 JSONL](https://github.com/user-attachments/assets/6d02ae1c-a2be-471a-8774-bc50c64ef4b0)
 
 </details>
 
@@ -479,7 +479,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port,title --size 3 --pages 1 --max-r
 <details>
 <summary>查看实操结果：导出 XLSX</summary>
 
-![导出 XLSX](docs/assets/readme/2.0.2/zh/export-xlsx.png)
+![导出 XLSX](https://github.com/user-attachments/assets/9767a188-637c-49bc-a7e9-4b0623eed9c1)
 
 </details>
 
@@ -494,7 +494,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 1 --pages 1 --max-records
 <details>
 <summary>查看实操结果：把稳定 JSON 交给其他程序</summary>
 
-![把稳定 JSON 交给其他程序](docs/assets/readme/2.0.2/zh/json.png)
+![把稳定 JSON 交给其他程序](https://github.com/user-attachments/assets/f52b42ae-ee1a-4a1f-8909-fdcd207810af)
 
 </details>
 
@@ -526,7 +526,7 @@ fofamap -q 'domain="baidu.com"' -f host,ip,port --size 2 --pages 2 --max-records
 <details>
 <summary>查看实操结果：真实取两页：每页 2 条，总上限 4 条</summary>
 
-![真实取两页：每页 2 条，总上限 4 条](docs/assets/readme/2.0.2/zh/pagination.png)
+![真实取两页：每页 2 条，总上限 4 条](https://github.com/user-attachments/assets/e26b47bb-a401-4be6-b5a2-a609a39c6efa)
 
 </details>
 
@@ -549,7 +549,7 @@ fofamap
 <details>
 <summary>查看实操结果：更新后的模型默认配置</summary>
 
-![最新默认模型与常用服务](docs/assets/readme/2.0.2/zh/model-presets.png)
+![最新默认模型与常用服务](https://github.com/user-attachments/assets/ace266f4-5e46-47dc-838e-cb0e95877a66)
 
 </details>
 
@@ -564,7 +564,7 @@ fofamap models
 <details>
 <summary>查看实操结果：检查已配置模型</summary>
 
-![检查已配置模型](docs/assets/readme/2.0.2/zh/models.png)
+![检查已配置模型](https://github.com/user-attachments/assets/d46542fb-4fe8-4591-8460-c9ea80af0aae)
 
 </details>
 
@@ -576,7 +576,7 @@ fofamap models
 fofamap -ai '仅查询 domain="baidu.com" 的公开网站资产，最多2条，不扩展范围，不扫描。生成中文简报。' --size 2 --pages 1 --max-records 2 --no-check-alive --no-deepseek-search --no-save --report-lang zh --report-file results/readme-demo/report-zh.md
 ```
 
-![执行一个有边界的真实 Agent 任务](docs/assets/readme/2.0.2/zh/agent.png)
+![执行一个有边界的真实 Agent 任务](https://github.com/user-attachments/assets/61bfc421-0a16-4ffd-9afb-1dd17326a9a2)
 
 模型正文是建议，可能存在推断偏差；复核查询证据、缺口和数量。不要把“证据交叉印证”读成法律归属，或将“未见命中”写成没有漏洞。不同主机名即便同 IP，也应保留独立端点。
 
@@ -603,7 +603,7 @@ python scripts/readme_demo.py exposure --language zh --output results/readme-dem
 <details>
 <summary>查看实操结果：产品暴露面复核：统计与最多 1 条样本</summary>
 
-![产品暴露面复核：统计与最多 1 条样本](docs/assets/readme/2.0.2/zh/exposure.png)
+![产品暴露面复核：统计与最多 1 条样本](https://github.com/user-attachments/assets/3f67426c-c967-4641-ab3b-842872ada754)
 
 </details>
 
@@ -619,7 +619,7 @@ fofamap
 
 <summary>查看实操结果：不想记参数：用方向键向导</summary>
 
-![不想记参数：用方向键向导](docs/assets/readme/2.0.2/zh/wizard.png)
+![不想记参数：用方向键向导](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-wizard.png)
 
 </details>
 
@@ -658,7 +658,7 @@ fofamap integrate --list
 <details>
 <summary>查看实操结果：查看支持的宿主</summary>
 
-![查看支持的宿主](docs/assets/readme/2.0.2/zh/hosts.png)
+![查看支持的宿主](https://github.com/user-attachments/assets/fec11383-e9de-47d1-9514-7cd5ba35f9ed)
 
 </details>
 
@@ -682,7 +682,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：在隔离项目目录实际安装一份集成</summary>
 
-![在隔离项目目录实际安装一份集成](docs/assets/readme/2.0.2/zh/integrate.png)
+![在隔离项目目录实际安装一份集成](https://github.com/user-attachments/assets/84258705-578f-4cc8-85d0-13e75baa1a96)
 
 </details>
 
@@ -699,7 +699,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：核对已安装 Skill 是否过期</summary>
 
-![核对已安装 Skill 是否过期](docs/assets/readme/2.0.2/zh/skill-check.png)
+![核对已安装 Skill 是否过期](https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5)
 
 </details>
 
@@ -716,7 +716,7 @@ fofamap integrate --agent cursor --scope project --project-root results/readme-d
 <details>
 <summary>查看实操结果：导出、导入并验证 .skill</summary>
 
-![导出、导入并验证 .skill](docs/assets/readme/2.0.2/zh/skill-package.png)
+![导出、导入并验证 .skill](https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44)
 
 </details>
 
@@ -731,7 +731,7 @@ fofamap-mcp --check --expect-version 2.0.2 --expect-build-date 2026-11-02 --expe
 <details>
 <summary>查看实操结果：真正握手检查版本、工具和源码</summary>
 
-![真正握手检查版本、工具和源码](docs/assets/readme/2.0.2/zh/mcp-check.png)
+![真正握手检查版本、工具和源码](https://github.com/user-attachments/assets/037c1b36-c6ee-47f6-b99b-8a9a027cff76)
 
 </details>
 
@@ -746,7 +746,7 @@ python scripts/readme_demo.py mcp --language zh --output results/readme-demo/mcp
 <details>
 <summary>查看实操结果：跑一次真实 MCP 查询流程</summary>
 
-![跑一次真实 MCP 查询流程](docs/assets/readme/2.0.2/zh/mcp-task.png)
+![跑一次真实 MCP 查询流程](https://github.com/user-attachments/assets/7fbd897b-cb43-4e64-906c-2bc0f6a2147a)
 
 
 </details>
@@ -792,7 +792,7 @@ python scripts/readme_demo.py transports --language zh --output results/readme-d
 <details>
 <summary>查看实操结果：复现 HTTP 与 SSE 的真实启动和检查</summary>
 
-![复现 HTTP 与 SSE 的真实启动和检查](docs/assets/readme/2.0.2/zh/transports.png)
+![复现 HTTP 与 SSE 的真实启动和检查](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-transports.png)
 
 </details>
 
@@ -813,7 +813,7 @@ fofamap schedule --schedule-action list --json
 <details>
 <summary>查看实操结果：查看计划与 worker 心跳</summary>
 
-![查看计划与 worker 心跳](docs/assets/readme/2.0.2/zh/schedule-list.png)
+![查看计划与 worker 心跳](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-list.png)
 
 </details>
 
@@ -830,7 +830,7 @@ python scripts/readme_demo.py schedule --language zh --output results/readme-dem
 <details>
 <summary>查看实操结果：真实到期执行：创建 → worker → 历史 → 报告</summary>
 
-![真实到期执行：创建 → worker → 历史 → 报告](docs/assets/readme/2.0.2/zh/schedule-task.png)
+![真实到期执行：创建 → worker → 历史 → 报告](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-task.png)
 
 </details>
 
@@ -864,7 +864,7 @@ fofamap --update-nuclei
 <details>
 <summary>查看实操结果：缺少扫描组件时询问 Y/N</summary>
 
-![Nuclei 安装选择](docs/assets/readme/2.0.2/zh/component-install.png)
+![Nuclei 安装选择](https://github.com/user-attachments/assets/df53a070-2be2-46c6-9478-42341fd6366c)
 
 </details>
 
@@ -875,7 +875,7 @@ nuclei -version
 <details>
 <summary>查看实操结果：确认本机 Nuclei 可用</summary>
 
-![确认本机 Nuclei 可用](docs/assets/readme/2.0.2/zh/nuclei.png)
+![确认本机 Nuclei 可用](https://github.com/user-attachments/assets/45801b70-bd72-4a1a-abe1-10be3f5fafd3)
 
 </details>
 
@@ -890,7 +890,7 @@ fofamap -q 'domain="baidu.com"' --size 1 --pages 1 --max-records 1 --no-check-al
 <details>
 <summary>查看实操结果：查看真实公共范围的审批画面，不执行</summary>
 
-![查看真实公共范围的审批画面，不执行](docs/assets/readme/2.0.2/zh/approval.png)
+![查看真实公共范围的审批画面，不执行](https://github.com/user-attachments/assets/c5aa598b-3640-4c7f-b495-c88e6962c0a4)
 
 </details>
 
@@ -907,7 +907,7 @@ python scripts/readme_demo.py scan --approve-local-fixture --language zh --outpu
 <details>
 <summary>查看实操结果：真正执行一次安全的本机扫描任务</summary>
 
-![真正执行一次安全的本机扫描任务](docs/assets/readme/2.0.2/zh/scan-task.png)
+![真正执行一次安全的本机扫描任务](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-scan-task.png)
 
 </details>
 
@@ -940,7 +940,7 @@ fofamap --update
 <details>
 <summary>查看实操结果：检查 GitHub 最新正式版本</summary>
 
-![一键更新检查](docs/assets/readme/2.0.2/zh/update.png)
+![一键更新检查](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-update.png)
 
 </details>
 
@@ -964,7 +964,7 @@ fofamap --update
 <details>
 <summary>查看已有安装的修复与卸载菜单</summary>
 
-![已有安装的修复与卸载菜单](docs/assets/readme/2.0.2/zh/repair-menu.png)
+![已有安装的修复与卸载菜单](https://github.com/user-attachments/assets/ffd59e76-dfbc-408a-821b-ce5cf4fc92a2)
 
 </details>
 
@@ -996,7 +996,7 @@ python --version
 
 <summary>查看实操结果：确认版本与 Python</summary>
 
-![确认版本与 Python](docs/assets/readme/2.0.2/zh/version.png)
+![确认版本与 Python](https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f)
 
 </details>
 
@@ -1012,7 +1012,7 @@ fofamap --help
 
 <summary>查看实操结果：查看当前版本的完整帮助</summary>
 
-![查看当前版本的完整帮助](docs/assets/readme/2.0.2/zh/help.png)
+![查看当前版本的完整帮助](https://github.com/user-attachments/assets/ea448df2-de97-40ec-b3eb-4c9d28de7dd7)
 
 </details>
 
@@ -1136,7 +1136,7 @@ fofamap -q 'title="x" &&' --no-save --size 1 --pages 1 --max-records 1
 <details>
 <summary>查看实操结果：真实错误示例：错误不会伪装成空结果</summary>
 
-![真实错误示例：错误不会伪装成空结果](docs/assets/readme/2.0.2/zh/invalid-query.png)
+![真实错误示例：错误不会伪装成空结果](https://github.com/user-attachments/assets/9aae0733-c90c-41f4-a291-4a5b0b45f4e3)
 
 </details>
 
@@ -1313,7 +1313,7 @@ fofamap init
 
 <summary>查看实操结果：首次启动安全初始化</summary>
 
-![首次启动安全初始化](docs/assets/readme/2.0.2/zh/setup.png)
+![首次启动安全初始化](https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-setup.png)
 
 </details>
 
@@ -1333,7 +1333,7 @@ fofamap account
 
 <summary>查看实操结果：验证 FOFA 登录、会员和额度</summary>
 
-![验证 FOFA 登录、会员和额度](docs/assets/readme/2.0.2/zh/account.png)
+![验证 FOFA 登录、会员和额度](https://github.com/user-attachments/assets/c0e6ac5d-bdf0-4bec-a42e-b7c8e9ca6589)
 
 </details>
 
@@ -1365,7 +1365,7 @@ python scripts/readme_demo.py rest --language zh --output results/readme-demo/re
 <details>
 <summary>查看实操结果：真实 REST 服务：启动 → 请求 → 返回 1 条</summary>
 
-![真实 REST 服务：启动 → 请求 → 返回 1 条](docs/assets/readme/2.0.2/zh/rest-task.png)
+![真实 REST 服务：启动 → 请求 → 返回 1 条](https://github.com/user-attachments/assets/359847ff-b2cc-43e7-b856-7e7c29399509)
 
 </details>
 
@@ -1417,7 +1417,7 @@ REST 搜索请求体的基本字段为 query、fields、size、page；续页还�
 
 FofaMap 由 **Hx0 工作室**开发维护。欢迎通过 [Issue](https://github.com/asaotomo/FofaMap/issues)反馈使用问题，通过 Pull Request 参与改进，或用 Star 支持项目。
 
-<img src="docs/assets/readme/2.0.2/brand/hx0-studio.png" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
+<img src="https://github.com/user-attachments/assets/dce7a454-0a1c-4224-a099-2c4c8c5158cb" width="318" alt="Hx0 工作室 · 探索无极限 / Hx0 Studio" />
 
 [工作室官网](https://hx0studio.com) · [项目仓库](https://github.com/asaotomo/FofaMap)
 
@@ -1441,4 +1441,4 @@ FofaMap 由 **Hx0 工作室**开发维护。欢迎通过 [Issue](https://github.
 
 请仅在合法授权范围内使用。FOFA 命中和模型总结不等于已确认归属或漏洞，扫描结果需复核。反馈问题时附上版本、系统和脱敏命令，不上传密钥、审批令牌或私人资产清单。
 
-[![Star History](https://api.star-history.com/svg?repos=asaotomo/FofaMap&type=Date)](https://www.star-history.com/#asaotomo/FofaMap&Date)
+[![Star History](https://camo.githubusercontent.com/8bafa56c3225c98457b4b8ce06eabdf11c12f958fc05af9f734b2523c3629158/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d6173616f746f6d6f2f466f66614d617026747970653d44617465)](https://www.star-history.com/#asaotomo/FofaMap&Date)

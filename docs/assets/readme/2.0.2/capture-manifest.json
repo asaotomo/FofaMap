@@ -63,7 +63,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/exposure.png",
-      "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7"
+      "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7",
+      "url": "https://github.com/user-attachments/assets/3f67426c-c967-4641-ab3b-842872ada754"
     },
     {
       "id": "setup",
@@ -74,7 +75,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/setup.png",
-      "sha256": "c155f35a820b1b40a32be57862a1421c76cbb8c4d10e12fc40b1741a205a42ea"
+      "sha256": "c155f35a820b1b40a32be57862a1421c76cbb8c4d10e12fc40b1741a205a42ea",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-setup.png"
     },
     {
       "id": "account",
@@ -85,7 +87,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/account.png",
-      "sha256": "df7a8314a23700bf2eda751f1fc2f1cadfbc592d82c61e2ad997111dd1a83d25"
+      "sha256": "df7a8314a23700bf2eda751f1fc2f1cadfbc592d82c61e2ad997111dd1a83d25",
+      "url": "https://github.com/user-attachments/assets/c0e6ac5d-bdf0-4bec-a42e-b7c8e9ca6589"
     },
     {
       "id": "fields",
@@ -96,7 +99,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/fields.png",
-      "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc"
+      "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc",
+      "url": "https://github.com/user-attachments/assets/97f5f5e4-5c65-4bfc-a315-eaad83562260"
     },
     {
       "id": "syntax",
@@ -107,7 +111,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/syntax.png",
-      "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba"
+      "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba",
+      "url": "https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30"
     },
     {
       "id": "hosts",
@@ -118,7 +123,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/hosts.png",
-      "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e"
+      "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e",
+      "url": "https://github.com/user-attachments/assets/fec11383-e9de-47d1-9514-7cd5ba35f9ed"
     },
     {
       "id": "integrate",
@@ -129,7 +135,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/integrate.png",
-      "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958"
+      "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958",
+      "url": "https://github.com/user-attachments/assets/84258705-578f-4cc8-85d0-13e75baa1a96"
     },
     {
       "id": "skill-check",
@@ -140,7 +147,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/skill-check.png",
-      "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3"
+      "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3",
+      "url": "https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5"
     },
     {
       "id": "skill-package",
@@ -151,7 +159,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/skill-package.png",
-      "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7"
+      "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7",
+      "url": "https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44"
     },
     {
       "id": "mcp-task",
@@ -162,7 +171,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/mcp-task.png",
-      "sha256": "35ff56b3223fabca3b03049167a6b773a21278fb9a1afd2083709d03f9f785f1"
+      "sha256": "35ff56b3223fabca3b03049167a6b773a21278fb9a1afd2083709d03f9f785f1",
+      "url": "https://github.com/user-attachments/assets/7fbd897b-cb43-4e64-906c-2bc0f6a2147a"
     },
     {
       "id": "schedule-list",
@@ -173,7 +183,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/schedule-list.png",
-      "sha256": "14d310fa44bf84cce90e23be2cdcaa8a1cae6b03e6647bd5b39bdfbcbc475b0a"
+      "sha256": "14d310fa44bf84cce90e23be2cdcaa8a1cae6b03e6647bd5b39bdfbcbc475b0a",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-list.png"
     },
     {
       "id": "schedule-task",
@@ -184,7 +195,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/schedule-task.png",
-      "sha256": "cd866d83255baae9fbf07fa4cfe4fea250864091ed3e542e36bcff13d3b6b4ad"
+      "sha256": "cd866d83255baae9fbf07fa4cfe4fea250864091ed3e542e36bcff13d3b6b4ad",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-schedule-task.png"
     },
     {
       "id": "nuclei",
@@ -195,7 +207,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/nuclei.png",
-      "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628"
+      "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628",
+      "url": "https://github.com/user-attachments/assets/45801b70-bd72-4a1a-abe1-10be3f5fafd3"
     },
     {
       "id": "scan-task",
@@ -206,7 +219,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/scan-task.png",
-      "sha256": "56bedd14f007a4357f95c613ddfc1ca8a0741d94ec0a80c7e5784d0b8ea873cf"
+      "sha256": "56bedd14f007a4357f95c613ddfc1ca8a0741d94ec0a80c7e5784d0b8ea873cf",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-scan-task.png"
     },
     {
       "id": "rest-task",
@@ -217,7 +231,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rest-task.png",
-      "sha256": "1d65ea97cfc524802d931fcb1fa23edc250b0ab5ee14f0249c17be3d0977c150"
+      "sha256": "1d65ea97cfc524802d931fcb1fa23edc250b0ab5ee14f0249c17be3d0977c150",
+      "url": "https://github.com/user-attachments/assets/359847ff-b2cc-43e7-b856-7e7c29399509"
     },
     {
       "id": "invalid-query",
@@ -228,7 +243,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/invalid-query.png",
-      "sha256": "75dabcad39e59da82264230ec34aa36f3cc779e12e92b0e8d2fda30eb929cef2"
+      "sha256": "75dabcad39e59da82264230ec34aa36f3cc779e12e92b0e8d2fda30eb929cef2",
+      "url": "https://github.com/user-attachments/assets/9aae0733-c90c-41f4-a291-4a5b0b45f4e3"
     },
     {
       "id": "install",
@@ -239,7 +255,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install.png",
-      "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8"
+      "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8",
+      "url": "https://github.com/user-attachments/assets/be63f48b-bfdb-431e-a488-19ef96abfea7"
     },
     {
       "id": "transports",
@@ -250,7 +267,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/transports.png",
-      "sha256": "a0b181b7a6109cd38a67c5377a0bae9617c8b3d7a55a8769af1b1b383902f029"
+      "sha256": "a0b181b7a6109cd38a67c5377a0bae9617c8b3d7a55a8769af1b1b383902f029",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-transports.png"
     },
     {
       "id": "rules",
@@ -261,7 +279,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rules.png",
-      "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf"
+      "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf",
+      "url": "https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f"
     },
     {
       "id": "rule-categories",
@@ -272,7 +291,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-categories.png",
-      "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a"
+      "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a",
+      "url": "https://github.com/user-attachments/assets/fb90ea1b-9ed7-47f7-9131-83f42d98aa08"
     },
     {
       "id": "rule-industrial",
@@ -283,7 +303,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-industrial.png",
-      "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e"
+      "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e",
+      "url": "https://github.com/user-attachments/assets/83fcb3f6-1893-45af-b299-951b129964cc"
     },
     {
       "id": "rule-ai",
@@ -294,7 +315,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/rule-ai.png",
-      "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15"
+      "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15",
+      "url": "https://github.com/user-attachments/assets/f441a60b-7d81-4ba0-bccf-c703ae8d0dc6"
     },
     {
       "id": "mcp-check",
@@ -305,7 +327,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/mcp-check.png",
-      "sha256": "bf2ace0a42f00db5eb50126a096b33371578c95775e9b6656d522319d8bc6b5e"
+      "sha256": "bf2ace0a42f00db5eb50126a096b33371578c95775e9b6656d522319d8bc6b5e",
+      "url": "https://github.com/user-attachments/assets/037c1b36-c6ee-47f6-b99b-8a9a027cff76"
     },
     {
       "id": "update",
@@ -316,7 +339,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/update.png",
-      "sha256": "8d3604fd1c00c572e8d8ac25b075226e5afd76a943bb3354de5f04d8033eaced"
+      "sha256": "8d3604fd1c00c572e8d8ac25b075226e5afd76a943bb3354de5f04d8033eaced",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-update.png"
     },
     {
       "id": "onboarding",
@@ -327,7 +351,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/onboarding.png",
-      "sha256": "425cea0b24bd0790becd5e9153195950bf460360ec40dfdca08cc10e67fab772"
+      "sha256": "425cea0b24bd0790becd5e9153195950bf460360ec40dfdca08cc10e67fab772",
+      "url": "https://github.com/user-attachments/assets/52322746-2569-425b-ba72-3d6a384385b4"
     },
     {
       "id": "version",
@@ -338,7 +363,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/version.png",
-      "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37"
+      "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37",
+      "url": "https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f"
     },
     {
       "id": "models",
@@ -349,7 +375,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/models.png",
-      "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff"
+      "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff",
+      "url": "https://github.com/user-attachments/assets/d46542fb-4fe8-4591-8460-c9ea80af0aae"
     },
     {
       "id": "model-presets",
@@ -360,7 +387,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/model-presets.png",
-      "sha256": "daccc6d5d27001c0d1f9fb42f315fc49dcd6d513fb804e3c6353ed6c4a26aa2f"
+      "sha256": "daccc6d5d27001c0d1f9fb42f315fc49dcd6d513fb804e3c6353ed6c4a26aa2f",
+      "url": "https://github.com/user-attachments/assets/ace266f4-5e46-47dc-838e-cb0e95877a66"
     },
     {
       "id": "menu",
@@ -371,7 +399,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/menu.png",
-      "sha256": "b3bff32a958b4e51aa97ae31487177abad2ccd2b67193de23885408e4ed954d1"
+      "sha256": "b3bff32a958b4e51aa97ae31487177abad2ccd2b67193de23885408e4ed954d1",
+      "url": "https://github.com/user-attachments/assets/718fc3c4-509b-4286-9aab-7de893ffb50f"
     },
     {
       "id": "first-search",
@@ -382,7 +411,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/first-search.png",
-      "sha256": "e672e30a82609262b6b3b4a2271e97f5257dd66ba324a9bd24a9c5f0069b50b1"
+      "sha256": "e672e30a82609262b6b3b4a2271e97f5257dd66ba324a9bd24a9c5f0069b50b1",
+      "url": "https://github.com/user-attachments/assets/449b070e-dc61-45a4-af83-1c48f4a3dfb0"
     },
     {
       "id": "smart-fields-setting",
@@ -393,7 +423,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/smart-fields-setting.png",
-      "sha256": "493b565763d7ecfbb44db869cbea7386ad0fce5066c4e977c4e8c592ab30eba0"
+      "sha256": "493b565763d7ecfbb44db869cbea7386ad0fce5066c4e977c4e8c592ab30eba0",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-smart-fields-setting.png"
     },
     {
       "id": "language-setting",
@@ -404,7 +435,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/language-setting.png",
-      "sha256": "2a4d979cacad0d1bd8d47c5239e3b84d25a914f72e1c30f04c380a7074aa6b5b"
+      "sha256": "2a4d979cacad0d1bd8d47c5239e3b84d25a914f72e1c30f04c380a7074aa6b5b",
+      "url": "https://github.com/user-attachments/assets/233557c3-f747-4e46-a452-a7dd15933f50"
     },
     {
       "id": "settings-menu",
@@ -415,7 +447,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/settings-menu.png",
-      "sha256": "50ad8fa4871fa2eb060d679a3f75e4da450f4351687813b3ee0e2ddae0981f05"
+      "sha256": "50ad8fa4871fa2eb060d679a3f75e4da450f4351687813b3ee0e2ddae0981f05",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-settings-menu.png"
     },
     {
       "id": "help",
@@ -426,7 +459,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/help.png",
-      "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269"
+      "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269",
+      "url": "https://github.com/user-attachments/assets/ea448df2-de97-40ec-b3eb-4c9d28de7dd7"
     },
     {
       "id": "wizard",
@@ -437,7 +471,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/wizard.png",
-      "sha256": "f8ee7c1ad43009178185ba2cd4bf54c66ae765c97212c62f7bf0dbb94ca37062"
+      "sha256": "f8ee7c1ad43009178185ba2cd4bf54c66ae765c97212c62f7bf0dbb94ca37062",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-wizard.png"
     },
     {
       "id": "install-language",
@@ -448,7 +483,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install-language.png",
-      "sha256": "9c3723a6307f056545191203aefaa66f906c082b13671bb8fd2819181e605c16"
+      "sha256": "9c3723a6307f056545191203aefaa66f906c082b13671bb8fd2819181e605c16",
+      "url": "https://github.com/user-attachments/assets/b9467c26-67ca-460b-a8e0-8225653432e0"
     },
     {
       "id": "install-menu",
@@ -459,7 +495,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/install-menu.png",
-      "sha256": "bb301169de5bc91babd696f6e90c7f0627bb8af72926fe751c0b9954fdb8810b"
+      "sha256": "bb301169de5bc91babd696f6e90c7f0627bb8af72926fe751c0b9954fdb8810b",
+      "url": "https://github.com/user-attachments/assets/9ee30e33-56cc-4225-819a-c324fe4fa282"
     },
     {
       "id": "repair-menu",
@@ -470,7 +507,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/repair-menu.png",
-      "sha256": "69008098d4b9ca90f4eff5166d25df074f6cc4e6c249bf72018aaa4c12f6b7ec"
+      "sha256": "69008098d4b9ca90f4eff5166d25df074f6cc4e6c249bf72018aaa4c12f6b7ec",
+      "url": "https://github.com/user-attachments/assets/ffd59e76-dfbc-408a-821b-ce5cf4fc92a2"
     },
     {
       "id": "component-install",
@@ -481,7 +519,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/component-install.png",
-      "sha256": "92144ff83d7c5e8f38a3c5488182fb5a706c2db721dd2f93c7255a92d226b4b2"
+      "sha256": "92144ff83d7c5e8f38a3c5488182fb5a706c2db721dd2f93c7255a92d226b4b2",
+      "url": "https://github.com/user-attachments/assets/df53a070-2be2-46c6-9478-42341fd6366c"
     },
     {
       "id": "pagination",
@@ -492,7 +531,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/pagination.png",
-      "sha256": "f1bd944ad3c3b159fa5049806ee01247df54683923d447c22e6d32a4157f8bc9"
+      "sha256": "f1bd944ad3c3b159fa5049806ee01247df54683923d447c22e6d32a4157f8bc9",
+      "url": "https://github.com/user-attachments/assets/e26b47bb-a401-4be6-b5a2-a609a39c6efa"
     },
     {
       "id": "filters",
@@ -503,7 +543,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/filters.png",
-      "sha256": "35bdb41f18ecfe437602d5be9737ecd1aedd7fc4fb584623d69daa7e2c052af7"
+      "sha256": "35bdb41f18ecfe437602d5be9737ecd1aedd7fc4fb584623d69daa7e2c052af7",
+      "url": "https://github.com/user-attachments/assets/650ce9cb-022f-4807-9da0-6992a85024f7"
     },
     {
       "id": "alive",
@@ -514,7 +555,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/alive.png",
-      "sha256": "cb526c737c851d9c887d6b54794a07c6868a06ddaffdf25e63908ee509b9500f"
+      "sha256": "cb526c737c851d9c887d6b54794a07c6868a06ddaffdf25e63908ee509b9500f",
+      "url": "https://github.com/user-attachments/assets/fbdded95-7c41-4518-bfa9-e7b8281708d9"
     },
     {
       "id": "search",
@@ -525,7 +567,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/search.png",
-      "sha256": "f7fabfbb46694edb88b8fc162885111d91e04774d7dac1dac515d1cefa50f79c"
+      "sha256": "f7fabfbb46694edb88b8fc162885111d91e04774d7dac1dac515d1cefa50f79c",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-search.png"
     },
     {
       "id": "status",
@@ -536,7 +579,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/status.png",
-      "sha256": "f0f70c442c497a2bd66fd25046f85ebafce84e51e27c8326e1e572520ae479e2"
+      "sha256": "f0f70c442c497a2bd66fd25046f85ebafce84e51e27c8326e1e572520ae479e2",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-status.png"
     },
     {
       "id": "host",
@@ -547,7 +591,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/host.png",
-      "sha256": "6406bf4361d395e619e3c89012353bc7dcb40401c695afd35686b8adcae6b35e"
+      "sha256": "6406bf4361d395e619e3c89012353bc7dcb40401c695afd35686b8adcae6b35e",
+      "url": "https://github.com/user-attachments/assets/adb32109-d139-4771-b4d5-defb517a9027"
     },
     {
       "id": "stats",
@@ -558,7 +603,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/stats.png",
-      "sha256": "d0b18adbd987f1512f58f23a055bca2986b94f35608361c22e80e5758d0c21c3"
+      "sha256": "d0b18adbd987f1512f58f23a055bca2986b94f35608361c22e80e5758d0c21c3",
+      "url": "https://github.com/asaotomo/FofaMap/releases/download/v2.0.2/fofamap-2.0.2-zh-stats.png"
     },
     {
       "id": "icon",
@@ -569,7 +615,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/icon.png",
-      "sha256": "a7638bdf231d351fbb2a029235099a77bd54c222fae9a530a06fd01cb5104989"
+      "sha256": "a7638bdf231d351fbb2a029235099a77bd54c222fae9a530a06fd01cb5104989",
+      "url": "https://github.com/user-attachments/assets/a1812b25-70a4-414a-9ed6-7de5564e47b7"
     },
     {
       "id": "batch",
@@ -580,7 +627,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/batch.png",
-      "sha256": "2f62bb3db27cc553120903fd1e9931b85716087902125b1694c156930b08a702"
+      "sha256": "2f62bb3db27cc553120903fd1e9931b85716087902125b1694c156930b08a702",
+      "url": "https://github.com/user-attachments/assets/e278451d-f8b8-40e9-82d8-4de6734b1eb7"
     },
     {
       "id": "export-csv",
@@ -591,7 +639,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-csv.png",
-      "sha256": "632873527fef254ee087c86c5c3c32f63463a3d6995a465d55618d37cb4d4fc9"
+      "sha256": "632873527fef254ee087c86c5c3c32f63463a3d6995a465d55618d37cb4d4fc9",
+      "url": "https://github.com/user-attachments/assets/6dc38ebb-5d90-46d5-af9d-433e8df60bcf"
     },
     {
       "id": "export-jsonl",
@@ -602,7 +651,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-jsonl.png",
-      "sha256": "92c54e7dc770d8f93e59dba55eeaa2807d1416e099c95676c611bf0ad3e25f0e"
+      "sha256": "92c54e7dc770d8f93e59dba55eeaa2807d1416e099c95676c611bf0ad3e25f0e",
+      "url": "https://github.com/user-attachments/assets/6d02ae1c-a2be-471a-8774-bc50c64ef4b0"
     },
     {
       "id": "export-xlsx",
@@ -613,7 +663,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/export-xlsx.png",
-      "sha256": "d4d8efa76b1916f9c80dcab1b6158ec0a13aef4ef7a9b6f46a62fbf750aff15e"
+      "sha256": "d4d8efa76b1916f9c80dcab1b6158ec0a13aef4ef7a9b6f46a62fbf750aff15e",
+      "url": "https://github.com/user-attachments/assets/9767a188-637c-49bc-a7e9-4b0623eed9c1"
     },
     {
       "id": "json",
@@ -624,7 +675,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/json.png",
-      "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e"
+      "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e",
+      "url": "https://github.com/user-attachments/assets/f52b42ae-ee1a-4a1f-8909-fdcd207810af"
     },
     {
       "id": "agent",
@@ -635,7 +687,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/agent.png",
-      "sha256": "030035ff3c428ff01116d35293fb330f677973c34067f33317e58c04138b22cb"
+      "sha256": "030035ff3c428ff01116d35293fb330f677973c34067f33317e58c04138b22cb",
+      "url": "https://github.com/user-attachments/assets/61bfc421-0a16-4ffd-9afb-1dd17326a9a2"
     },
     {
       "id": "approval",
@@ -646,7 +699,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/approval.png",
-      "sha256": "7f2df3888ea1404f9fa9f9dfd8986fdbd118b726775906ee982024cd8b838b15"
+      "sha256": "7f2df3888ea1404f9fa9f9dfd8986fdbd118b726775906ee982024cd8b838b15",
+      "url": "https://github.com/user-attachments/assets/c5aa598b-3640-4c7f-b495-c88e6962c0a4"
     },
     {
       "id": "quick-install",
@@ -657,7 +711,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/zh/quick-install.png",
-      "sha256": "4e1e655bc77ec75b4d226feb34097401a4928aa8218a6bf4ec25c7a0051e2928"
+      "sha256": "4e1e655bc77ec75b4d226feb34097401a4928aa8218a6bf4ec25c7a0051e2928",
+      "url": "https://github.com/user-attachments/assets/89337539-90a4-4e42-a439-4829bee434e7"
     },
     {
       "id": "exposure",
@@ -668,7 +723,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/exposure.png",
-      "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7"
+      "sha256": "4dc643d49e43a6ec4310323600dec922d7f7ea7f2e0343d0c106003eb22417d7",
+      "url": "https://github.com/user-attachments/assets/a786d6ea-ecaa-4158-acb5-83835ea4287f"
     },
     {
       "id": "setup",
@@ -679,7 +735,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/setup.png",
-      "sha256": "bf3858fbbd852f5e0da8ecdf787946e4f329c717cdd1e127726ad3cbac1f84ce"
+      "sha256": "bf3858fbbd852f5e0da8ecdf787946e4f329c717cdd1e127726ad3cbac1f84ce",
+      "url": "https://github.com/user-attachments/assets/83cb38df-7099-4963-a2b5-347288dd6d06"
     },
     {
       "id": "account",
@@ -690,7 +747,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/account.png",
-      "sha256": "cdd897a03d7da40ad35a6d2289c27c6fe3c4505fd1cfd390949e55cae1fd75ff"
+      "sha256": "cdd897a03d7da40ad35a6d2289c27c6fe3c4505fd1cfd390949e55cae1fd75ff",
+      "url": "https://github.com/user-attachments/assets/c77c3c32-53ad-4439-a8c5-1124e4ed707a"
     },
     {
       "id": "fields",
@@ -701,7 +759,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/fields.png",
-      "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc"
+      "sha256": "e1779f67297cb45c30e4129de471c8576bcc402645aed2df9f0a6e183460adfc",
+      "url": "https://github.com/user-attachments/assets/3280985b-6857-4549-8f90-d724bd719a27"
     },
     {
       "id": "syntax",
@@ -712,7 +771,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/syntax.png",
-      "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba"
+      "sha256": "80613d75f0be008b72ca9befabc9dc964a56259410c5fef7b9ce9ca00022e1ba",
+      "url": "https://github.com/user-attachments/assets/65bb1aef-b7a8-4db7-9cfb-25718c2c9e30"
     },
     {
       "id": "agent",
@@ -723,7 +783,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/agent.png",
-      "sha256": "945781226db7196a534dc5f07ce56a298d72f471ec3ad5787d87ebbdc981b021"
+      "sha256": "945781226db7196a534dc5f07ce56a298d72f471ec3ad5787d87ebbdc981b021",
+      "url": "https://github.com/user-attachments/assets/f18d81a1-a0f5-4b78-bc1e-974d6f42616d"
     },
     {
       "id": "hosts",
@@ -734,7 +795,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/hosts.png",
-      "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e"
+      "sha256": "638ca5dcfae58f10e0217ab2f94e4b6858ec09faa51a8a67301a77add2c78f3e",
+      "url": "https://github.com/user-attachments/assets/a57c365f-c8c0-491c-81fe-4eda2ad089e7"
     },
     {
       "id": "integrate",
@@ -745,7 +807,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/integrate.png",
-      "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958"
+      "sha256": "78f79d15360daf4d6bd307ffe48fce89e6fb5c82126f64b7e21a6df3e66e1958",
+      "url": "https://github.com/user-attachments/assets/6135e6e4-b7ce-47d6-80fa-b162567ff247"
     },
     {
       "id": "skill-check",
@@ -756,7 +819,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/skill-check.png",
-      "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3"
+      "sha256": "c2e2e9f26650aa1bf0adb477a284be09a18cac2767ca06b18ceceab4ed5098c3",
+      "url": "https://github.com/user-attachments/assets/bf7a0f4a-552e-4d3c-9389-daf1e8ae11a5"
     },
     {
       "id": "skill-package",
@@ -767,7 +831,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/skill-package.png",
-      "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7"
+      "sha256": "fb9c0c47fabc2a1fd8a9b83edc31327ecd8640b4a5fa23fde2fdf331176e16a7",
+      "url": "https://github.com/user-attachments/assets/8cf942dc-83c0-4611-aa27-30a64f34af44"
     },
     {
       "id": "mcp-task",
@@ -778,7 +843,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/mcp-task.png",
-      "sha256": "9f33a84a2ffcda6a463924d57a8536c3dd73c34e201ecb6c28b41b9ce7149b83"
+      "sha256": "9f33a84a2ffcda6a463924d57a8536c3dd73c34e201ecb6c28b41b9ce7149b83",
+      "url": "https://github.com/user-attachments/assets/3156fa30-a416-4d23-9f11-241b0b5df11d"
     },
     {
       "id": "schedule-list",
@@ -789,7 +855,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/schedule-list.png",
-      "sha256": "9812e4e51fa90b8b61558fa9b8a33bf81955b08c95dbd235809eb7f6a7aa2a4d"
+      "sha256": "9812e4e51fa90b8b61558fa9b8a33bf81955b08c95dbd235809eb7f6a7aa2a4d",
+      "url": "https://github.com/user-attachments/assets/655afeb3-e7ea-4782-8dd1-fab721a6d639"
     },
     {
       "id": "schedule-task",
@@ -800,7 +867,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/schedule-task.png",
-      "sha256": "fc585ed8cd4c00f859fe9ff2a4c944e54559e5e12f1f48a4261f1ec635add5d4"
+      "sha256": "fc585ed8cd4c00f859fe9ff2a4c944e54559e5e12f1f48a4261f1ec635add5d4",
+      "url": "https://github.com/user-attachments/assets/f093e71f-5919-4adc-9f36-66aabf951cce"
     },
     {
       "id": "nuclei",
@@ -811,7 +879,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/nuclei.png",
-      "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628"
+      "sha256": "167389199478c5b783e9063dc081c31c7da809f4b308d17a5fec6e0dc4904628",
+      "url": "https://github.com/user-attachments/assets/acb715e5-0533-43e7-8781-4d8277c8fd2d"
     },
     {
       "id": "scan-task",
@@ -822,7 +891,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/scan-task.png",
-      "sha256": "d225f03d73e32efbce3ffce8a657f1f7b9d5c1ade130d6f18b3531c13abaef0d"
+      "sha256": "d225f03d73e32efbce3ffce8a657f1f7b9d5c1ade130d6f18b3531c13abaef0d",
+      "url": "https://github.com/user-attachments/assets/a39055a6-62cb-439e-9fd3-2a24b737c65d"
     },
     {
       "id": "rest-task",
@@ -833,7 +903,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rest-task.png",
-      "sha256": "bc3b0b84b27ae1d020349933c2202b8e1ac48f4eeacae38185f3190136b60c7a"
+      "sha256": "bc3b0b84b27ae1d020349933c2202b8e1ac48f4eeacae38185f3190136b60c7a",
+      "url": "https://github.com/user-attachments/assets/60a24925-7e3e-4882-bcda-ac45b2dfa708"
     },
     {
       "id": "invalid-query",
@@ -844,7 +915,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/invalid-query.png",
-      "sha256": "eee4ea77cf116de94ae6ffe39aee0a8308f515baf18e76245f6b486a2ac9767f"
+      "sha256": "eee4ea77cf116de94ae6ffe39aee0a8308f515baf18e76245f6b486a2ac9767f",
+      "url": "https://github.com/user-attachments/assets/3a1a3573-a6f7-4e71-b628-3c829137c05b"
     },
     {
       "id": "install",
@@ -855,7 +927,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install.png",
-      "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8"
+      "sha256": "065adf77c8f7f743f508ac4d8be43d662ff34df900576cc954db67e628e5d1c8",
+      "url": "https://github.com/user-attachments/assets/5347e6b6-2bb4-4113-95ed-2a24cab41470"
     },
     {
       "id": "transports",
@@ -866,7 +939,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/transports.png",
-      "sha256": "7633e2b50bfcbf41ab11f12684e97b5d3c8abf76581aa7dc81a5359507c20e85"
+      "sha256": "7633e2b50bfcbf41ab11f12684e97b5d3c8abf76581aa7dc81a5359507c20e85",
+      "url": "https://github.com/user-attachments/assets/2030d85f-3827-410d-88a5-15687bfdee66"
     },
     {
       "id": "rules",
@@ -877,7 +951,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rules.png",
-      "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf"
+      "sha256": "57cfbbfeabd7f62bfec43575edd5497ae0118509d75ad2e42bdc153c0b51f1cf",
+      "url": "https://github.com/user-attachments/assets/717ac63f-4d14-4274-b4a2-bef1d811042f"
     },
     {
       "id": "rule-categories",
@@ -888,7 +963,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-categories.png",
-      "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a"
+      "sha256": "db494cfe178b5065f7e2e67592a6e7a623efdf902d4e3384e1012db7b690180a",
+      "url": "https://github.com/user-attachments/assets/3e7bb7d1-3391-4da9-95d2-88aafc76083a"
     },
     {
       "id": "rule-industrial",
@@ -899,7 +975,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-industrial.png",
-      "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e"
+      "sha256": "7e3ebf67c5e0dc47d87112d69dd20c4f7d4cbd3c9eb864cd913727c787f0960e",
+      "url": "https://github.com/user-attachments/assets/bc07ddc4-499e-4d6c-b18d-af6e9f2ed008"
     },
     {
       "id": "rule-ai",
@@ -910,7 +987,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/rule-ai.png",
-      "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15"
+      "sha256": "bd68da886f1ae0cd04dce71d53dd9e5ec8aa3fa39b53f20936569c170a74bc15",
+      "url": "https://github.com/user-attachments/assets/9b9ffedc-79f2-4f68-82e6-b1d6b66756b2"
     },
     {
       "id": "mcp-check",
@@ -921,7 +999,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/mcp-check.png",
-      "sha256": "aa56d58f66ee0cd5216e97144484b2b99ef1eeed6e96048440a6b167bd542e8a"
+      "sha256": "aa56d58f66ee0cd5216e97144484b2b99ef1eeed6e96048440a6b167bd542e8a",
+      "url": "https://github.com/user-attachments/assets/bb373d8b-fbcd-4ddd-86f1-25e083544142"
     },
     {
       "id": "update",
@@ -932,7 +1011,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/update.png",
-      "sha256": "57053f438b5f52121e243365b0a62f5807cd28913205ea4a3b1982fa58f0416b"
+      "sha256": "57053f438b5f52121e243365b0a62f5807cd28913205ea4a3b1982fa58f0416b",
+      "url": "https://github.com/user-attachments/assets/555b32e9-7279-4d77-8b9e-f4f9ab335325"
     },
     {
       "id": "onboarding",
@@ -943,7 +1023,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/onboarding.png",
-      "sha256": "ab72fe1c178eb0c249344b6f6c778228940d6f7eacbc8c916e7f187f6fef0982"
+      "sha256": "ab72fe1c178eb0c249344b6f6c778228940d6f7eacbc8c916e7f187f6fef0982",
+      "url": "https://github.com/user-attachments/assets/a45e37a4-7346-4834-893e-98a62fe008d2"
     },
     {
       "id": "version",
@@ -954,7 +1035,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/version.png",
-      "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37"
+      "sha256": "0e05864b387c9211ae05ef61d1d37da424a6632d43407b87faf6955dd2aacd37",
+      "url": "https://github.com/user-attachments/assets/68e3a3ad-8858-43c9-95e1-1a1b91671d9f"
     },
     {
       "id": "models",
@@ -965,7 +1047,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/models.png",
-      "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff"
+      "sha256": "8ebb47141af3893bf805854c18f6d0ca4c1407ed3dd06432efdc020ff3fbb0ff",
+      "url": "https://github.com/user-attachments/assets/27006a6d-f2e2-4475-a6f4-a1a58c73898c"
     },
     {
       "id": "model-presets",
@@ -976,7 +1059,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/model-presets.png",
-      "sha256": "1399e0fe8fee6c9f63498b27b39627260258295d1df487b570ef77e716c3f413"
+      "sha256": "1399e0fe8fee6c9f63498b27b39627260258295d1df487b570ef77e716c3f413",
+      "url": "https://github.com/user-attachments/assets/76af0b37-5d53-4f5a-9feb-5f4804b8f21b"
     },
     {
       "id": "menu",
@@ -987,7 +1071,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/menu.png",
-      "sha256": "42432720001e5037e4c33707b3456296fa7b839a1e4610380304d797211c602d"
+      "sha256": "42432720001e5037e4c33707b3456296fa7b839a1e4610380304d797211c602d",
+      "url": "https://github.com/user-attachments/assets/4774a661-f8fe-4c28-a581-c658e34f01b9"
     },
     {
       "id": "first-search",
@@ -998,7 +1083,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/first-search.png",
-      "sha256": "f020bbbfe924756a03261947c9c17d87aec344566104ac1a42c9cceafa48746b"
+      "sha256": "f020bbbfe924756a03261947c9c17d87aec344566104ac1a42c9cceafa48746b",
+      "url": "https://github.com/user-attachments/assets/2a4e6a26-5390-4806-9b98-dbb978fdc8b9"
     },
     {
       "id": "smart-fields-setting",
@@ -1009,7 +1095,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/smart-fields-setting.png",
-      "sha256": "9701e14bcdd6e965481007297856cb35631aee3982f3ed337316129386fd727f"
+      "sha256": "9701e14bcdd6e965481007297856cb35631aee3982f3ed337316129386fd727f",
+      "url": "https://github.com/user-attachments/assets/7fd2a6b7-c189-4b53-81a8-28a17d97dfd2"
     },
     {
       "id": "language-setting",
@@ -1020,7 +1107,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/language-setting.png",
-      "sha256": "f89b9a94a66c1257f233641492b6559f11593c5417fe9ec4cdba5d2e84673caa"
+      "sha256": "f89b9a94a66c1257f233641492b6559f11593c5417fe9ec4cdba5d2e84673caa",
+      "url": "https://github.com/user-attachments/assets/c0602109-02db-4f31-b2d6-d827cb9007e4"
     },
     {
       "id": "settings-menu",
@@ -1031,7 +1119,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/settings-menu.png",
-      "sha256": "42f24a55ade07652cd0bab5fee43b22f88f45fd946accb8fe08550b4d576e1fd"
+      "sha256": "42f24a55ade07652cd0bab5fee43b22f88f45fd946accb8fe08550b4d576e1fd",
+      "url": "https://github.com/user-attachments/assets/5ed568af-1624-4b6f-bc96-ce971312a76b"
     },
     {
       "id": "help",
@@ -1042,7 +1131,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/help.png",
-      "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269"
+      "sha256": "de6c8280edee26b17aeaa1d7bf52925f786fb4be6d253d54edbe45b737c5c269",
+      "url": "https://github.com/user-attachments/assets/3f2d9989-5a67-4202-87f4-8f7a125b4eeb"
     },
     {
       "id": "wizard",
@@ -1053,7 +1143,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/wizard.png",
-      "sha256": "ab523494a38a27eab5f2a965a82349fc1f154c30adeabcd6675dccf9eb0bf857"
+      "sha256": "ab523494a38a27eab5f2a965a82349fc1f154c30adeabcd6675dccf9eb0bf857",
+      "url": "https://github.com/user-attachments/assets/6d7273f0-531b-4aae-a5b3-d6b02beceaff"
     },
     {
       "id": "install-language",
@@ -1064,7 +1155,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install-language.png",
-      "sha256": "792d99c297504d8ba9b09f4e68537aa62bc6ef61913928a9a2f2d8e5664a03a1"
+      "sha256": "792d99c297504d8ba9b09f4e68537aa62bc6ef61913928a9a2f2d8e5664a03a1",
+      "url": "https://github.com/user-attachments/assets/18df691a-7f97-4b48-bd24-22a38e621eec"
     },
     {
       "id": "install-menu",
@@ -1075,7 +1167,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/install-menu.png",
-      "sha256": "ada8e099df235a7337026c4ed73a1238e2c65ff0b8ac771b9b3b0d68c6610272"
+      "sha256": "ada8e099df235a7337026c4ed73a1238e2c65ff0b8ac771b9b3b0d68c6610272",
+      "url": "https://github.com/user-attachments/assets/fd8ee903-bd65-4401-b29f-c9ba5c1ab283"
     },
     {
       "id": "repair-menu",
@@ -1086,7 +1179,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/repair-menu.png",
-      "sha256": "d1612b27a12022720d641f838a539876f9dbcfb72a2237f1439dace1bd4d5e0d"
+      "sha256": "d1612b27a12022720d641f838a539876f9dbcfb72a2237f1439dace1bd4d5e0d",
+      "url": "https://github.com/user-attachments/assets/1e0b0b40-564e-4fd8-98ae-e2b4cd2cbcf2"
     },
     {
       "id": "component-install",
@@ -1097,7 +1191,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/component-install.png",
-      "sha256": "3e358595dacf9dc1bf4b704b5d42165dc795170fb22c9d883003f3e276b8dcb6"
+      "sha256": "3e358595dacf9dc1bf4b704b5d42165dc795170fb22c9d883003f3e276b8dcb6",
+      "url": "https://github.com/user-attachments/assets/5a042dd6-20ba-4e1b-8fd5-f33bdeffda15"
     },
     {
       "id": "pagination",
@@ -1108,7 +1203,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/pagination.png",
-      "sha256": "02e2ec1df3932045f3d25e5d7db77d9d2b6e7e0266ee3be7f83e46d93f187099"
+      "sha256": "02e2ec1df3932045f3d25e5d7db77d9d2b6e7e0266ee3be7f83e46d93f187099",
+      "url": "https://github.com/user-attachments/assets/041494c0-8d61-4b4c-8e8b-67a52fda525f"
     },
     {
       "id": "filters",
@@ -1119,7 +1215,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/filters.png",
-      "sha256": "2f549dbe9a6e1d2b2318907665f993b48a2fc2995408b22ed08c6edcf61aee33"
+      "sha256": "2f549dbe9a6e1d2b2318907665f993b48a2fc2995408b22ed08c6edcf61aee33",
+      "url": "https://github.com/user-attachments/assets/53c83b6d-1f91-44f8-a3f8-70424bcd800b"
     },
     {
       "id": "alive",
@@ -1130,7 +1227,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/alive.png",
-      "sha256": "2d2383b9045c6e96a34c8a6641ca42be2b0bf89c6310eb6ef1efd8c31aa7c855"
+      "sha256": "2d2383b9045c6e96a34c8a6641ca42be2b0bf89c6310eb6ef1efd8c31aa7c855",
+      "url": "https://github.com/user-attachments/assets/f24e6760-fdbb-4da1-aa78-5a4b2bdd875b"
     },
     {
       "id": "search",
@@ -1141,7 +1239,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/search.png",
-      "sha256": "3dc890cbda58a99baa85b59a8c695c6802a9669fcbfbc752d3e31fe879fe61ba"
+      "sha256": "3dc890cbda58a99baa85b59a8c695c6802a9669fcbfbc752d3e31fe879fe61ba",
+      "url": "https://github.com/user-attachments/assets/907709ef-3fd2-4b77-a6eb-50fb6dae55c7"
     },
     {
       "id": "status",
@@ -1152,7 +1251,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/status.png",
-      "sha256": "fa10870a93951772e0be6b5c403883147453a32596ec3828c608a827e703cfa3"
+      "sha256": "fa10870a93951772e0be6b5c403883147453a32596ec3828c608a827e703cfa3",
+      "url": "https://github.com/user-attachments/assets/0ed2f6e6-61a7-4e47-a20e-71bdb49a3086"
     },
     {
       "id": "host",
@@ -1163,7 +1263,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/host.png",
-      "sha256": "656ada7e9aef740d97ce177a7abe7f77e845a1d6f16adfbbf2e984071baab0c9"
+      "sha256": "656ada7e9aef740d97ce177a7abe7f77e845a1d6f16adfbbf2e984071baab0c9",
+      "url": "https://github.com/user-attachments/assets/b2e0fdc0-7deb-4790-9596-809215e5e469"
     },
     {
       "id": "stats",
@@ -1174,7 +1275,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/stats.png",
-      "sha256": "d7e97d261f42e5251f49c165721cec146ac3002f0d06f807f98423450fdb4e03"
+      "sha256": "d7e97d261f42e5251f49c165721cec146ac3002f0d06f807f98423450fdb4e03",
+      "url": "https://github.com/user-attachments/assets/87cbefe2-dd2c-44c0-9ea5-88bd38a0275b"
     },
     {
       "id": "icon",
@@ -1185,7 +1287,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/icon.png",
-      "sha256": "36ef2f9149824fc0da1dfa0497606f2ad4c21e497248db48e6c73aa8c3b3ed4b"
+      "sha256": "36ef2f9149824fc0da1dfa0497606f2ad4c21e497248db48e6c73aa8c3b3ed4b",
+      "url": "https://github.com/user-attachments/assets/6a4572ec-9796-45b9-8689-548eaff3ab80"
     },
     {
       "id": "batch",
@@ -1196,7 +1299,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/batch.png",
-      "sha256": "ad8a68fcdc2dad3e6df972a4b04a4f116dd7310beb33a3545ceb57eec9c2f0a8"
+      "sha256": "ad8a68fcdc2dad3e6df972a4b04a4f116dd7310beb33a3545ceb57eec9c2f0a8",
+      "url": "https://github.com/user-attachments/assets/970f5731-6315-4ddb-9946-eb8d930206b4"
     },
     {
       "id": "export-csv",
@@ -1207,7 +1311,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-csv.png",
-      "sha256": "02952d2325cc1233833feb434d6c7ce60a0362683a6bd781b6730056033a6495"
+      "sha256": "02952d2325cc1233833feb434d6c7ce60a0362683a6bd781b6730056033a6495",
+      "url": "https://github.com/user-attachments/assets/072015da-8b71-4deb-9060-1cbe888b1641"
     },
     {
       "id": "export-jsonl",
@@ -1218,7 +1323,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-jsonl.png",
-      "sha256": "78b9d3effabed68e3fc98e9469be373deee30319a211b2c4dc57f5494576a571"
+      "sha256": "78b9d3effabed68e3fc98e9469be373deee30319a211b2c4dc57f5494576a571",
+      "url": "https://github.com/user-attachments/assets/f38e30ab-7bd6-4584-8e53-365a8e340cf5"
     },
     {
       "id": "export-xlsx",
@@ -1229,7 +1335,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/export-xlsx.png",
-      "sha256": "958951569dbd4825f5b320c331417dfa3806ab74e27303a55890a672ef6fe46c"
+      "sha256": "958951569dbd4825f5b320c331417dfa3806ab74e27303a55890a672ef6fe46c",
+      "url": "https://github.com/user-attachments/assets/664d64f6-34d7-4948-974a-02334b83734c"
     },
     {
       "id": "json",
@@ -1240,7 +1347,8 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/json.png",
-      "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e"
+      "sha256": "d2e9a51e5c257d7f2cd8a71d6fe0269c37557163e3198fd75ef150a30f9e367e",
+      "url": "https://github.com/user-attachments/assets/e73a0aa2-aa05-4822-8cec-38e22af6d3ea"
     },
     {
       "id": "approval",
@@ -1251,7 +1359,8 @@
       "interactive_frame": true,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/approval.png",
-      "sha256": "e0a0c0c219f593f2d18306ce9b5d9429af57bb06e4dc7b547fa0b87b7e0505f7"
+      "sha256": "e0a0c0c219f593f2d18306ce9b5d9429af57bb06e4dc7b547fa0b87b7e0505f7",
+      "url": "https://github.com/user-attachments/assets/01e3121a-50f8-4dab-a1d8-cf20da9c1ef6"
     },
     {
       "id": "quick-install",
@@ -1262,8 +1371,68 @@
       "interactive_frame": false,
       "border_geometry_verified": true,
       "image": "docs/assets/readme/2.0.2/en/quick-install.png",
-      "sha256": "2dd236b640515193c7cb732bbe10dc37ab40fc54c2468e3eb15b1122dd016bab"
+      "sha256": "2dd236b640515193c7cb732bbe10dc37ab40fc54c2468e3eb15b1122dd016bab",
+      "url": "https://github.com/user-attachments/assets/2c3b48f3-ddb6-4a6f-b47a-122c8dbeccc2"
     }
   ],
-  "boundary": "Active scan execution targets temporary loopback HTTP only. Public-domain scan screen was cancelled at approval."
+  "boundary": "Active scan execution targets temporary loopback HTTP only. Public-domain scan screen was cancelled at approval.",
+  "brand_images": [
+    {
+      "image": "docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover-en.png",
+      "url": "https://github.com/user-attachments/assets/2705da2b-aadf-413e-95ce-18ebefc1fc57",
+      "sha256": "f26b3ec61294510d196ce91884f07dfd71de342853f3938ca6f28ddd8bac1745"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/fofamap-2.0.2-cover.png",
+      "url": "https://github.com/user-attachments/assets/03465bd2-3ae5-4c6d-b1af-0649f51ebfb9",
+      "sha256": "92463e6141da75983ede19155772d99bfe2bc36a315b329b0c788dbca462b600"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/hx0-studio.png",
+      "url": "https://github.com/user-attachments/assets/dce7a454-0a1c-4224-a099-2c4c8c5158cb",
+      "sha256": "854575742a411927ab3b0e8c4d89a8507d5f20cc3eb1fca66a6b56ccb1633b3c"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/badge-version.svg",
+      "url": "https://camo.githubusercontent.com/99c5262e5a7aa000f2de7d43d75b9fe7ee02e63ece87a8649bb405878eddec84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56657273696f6e2d322e302e322d3045373439303f7374796c653d666c61742d737175617265",
+      "sha256": "ef54348016cf7929532ffa1ae2c45b1856e64b497527dfe7051fdd7b2f66b4c4",
+      "source": "https://img.shields.io/badge/Version-2.0.2-0E7490?style=flat-square"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/badge-platforms.svg",
+      "url": "https://camo.githubusercontent.com/f44502ccf16b217b029d53692ca1377f8e14b8b69d82823d32441b0c61db26db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f57696e646f77732532302537432532306d61634f532532302537432532304c696e75782d3437353536393f7374796c653d666c61742d737175617265",
+      "sha256": "773e759d76044b66cdcf5e6b0be5a6c37128c3138677bf2c4c089c6968f4baa9",
+      "source": "https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-475569?style=flat-square"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/badge-mcp.svg",
+      "url": "https://camo.githubusercontent.com/005b331a0b899ffdd07b16adfb816612187c17c8e7abc91fc7d5d38873ac4b11/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d43502d3331253230746f6f6c732d3633363646313f7374796c653d666c61742d737175617265",
+      "sha256": "36173296497af482e9ba5a8bb6600937edb518d27dcc87483ef357ab90bf3442",
+      "source": "https://img.shields.io/badge/MCP-31%20tools-6366F1?style=flat-square"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/badge-license.svg",
+      "url": "https://camo.githubusercontent.com/00ca4663013d91953dfeee230ab95eef262b3c3d17e2abe9755ed98dcadbd9f9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d417061636865253230322e302d3437353536393f7374796c653d666c61742d737175617265",
+      "sha256": "8c5ee29cd8c767744d2ce6719872a39577819bcb46d169614d15907bbd757eec",
+      "source": "https://img.shields.io/badge/License-Apache%202.0-475569?style=flat-square"
+    },
+    {
+      "image": "docs/assets/readme/2.0.2/brand/star-history-20261102.svg",
+      "url": "https://camo.githubusercontent.com/8bafa56c3225c98457b4b8ce06eabdf11c12f958fc05af9f734b2523c3629158/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d6173616f746f6d6f2f466f66614d617026747970653d44617465",
+      "sha256": "5466b8b3e60fcee13a301dfd02b06f1c189553747ae2d5e3da882bef785a48c1",
+      "source": "https://api.star-history.com/svg?repos=asaotomo/FofaMap&type=Date"
+    }
+  ],
+  "report_images": [
+    {
+      "image": "core/assets/hx0-lockup.png",
+      "url": "https://github.com/user-attachments/assets/136e3f9b-e536-480c-b47f-7363de68315f",
+      "sha256": "bacd461a5e6cc80e03e47934f9a125dfb5dc41dd8b9d83c18d0583daec868322"
+    },
+    {
+      "image": "core/assets/hx0-mark.png",
+      "url": "https://github.com/user-attachments/assets/2ee3a530-ad74-4dec-91c2-80516233b9f8",
+      "sha256": "14c1ee8c1f844697996d503cd3d42fbfdb385787598c4bd46898504d67cdd5f0"
+    }
+  ]
 }

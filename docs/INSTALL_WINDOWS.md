@@ -8,7 +8,7 @@
 
 推荐双击源码目录里的 `install.bat`。安装后自动注册当前用户 PATH，新开 CMD / PowerShell，在任意目录输入 `fofamap` 即可打开，也能双击 `start.bat`。首次使用或配置损坏时，安装结束直接进入账号配置，保存并验证后可继续配置模型。安装器选择兼容的 x64 Python；Windows 11 ARM 也使用这一环境。下方手动步骤用于排错和自定义环境。
 
-**关于 `fofamap.exe`：**源码 ZIP 不自带独立 EXE。`pip install -e .` 会根据 [pyproject.toml](../pyproject.toml) 的 `[project.scripts]` 自动在 `.venv\Scripts` 生成这个启动器；也可以直接用 `.\.venv\Scripts\python.exe .\fofamap.py`，两者进入相同的 CLI。
+**关于 `fofamap.exe`：** 源码 ZIP 不自带独立 EXE。`pip install -e .` 会根据 [pyproject.toml](../pyproject.toml) 的 `[project.scripts]` 自动在 `.venv\Scripts` 生成这个启动器；也可以直接用 `.\.venv\Scripts\python.exe .\fofamap.py`，两者进入相同的 CLI。
 
 一键安装器会复制生成的启动器到 `%LOCALAPPDATA%\FofaMap\bin\fofamap.exe` 并写入当前用户 PATH；不使用会截断 PATH 的 `setx`，不需要管理员权限。重复安装不会重复添加同一项。手动安装要获得相同短命令，可在完成 pip 安装后执行 `python scripts/register_command.py`。在 CMD 中运行 `install.bat` 后会刷新该 CMD 的 PATH；安装前已经打开的其他终端需要重新打开。不要删除安装目录及 `.venv`，移动目录后重新安装。
 
@@ -17,7 +17,7 @@
 <a id="windows-install"></a>
 
 
-**ARM64 注意：**截图中的 `cryptography` 源码构建 / `cffi>=2.0.0` 错误，来自原生 ARM64 依赖链缺少匹配的包或镜像同步问题。Windows 11 ARM 请优先用 `install.bat`，它自动选择 x64 Python，不要求用户安装 Rust/C++。下方手动流程要求 Python 的 `sysconfig.get_platform()` 返回 `win-amd64`，不是 `win-arm64`；`py -3` 在 ARM 机器上可能选到原生 ARM64 Python，不能仅凭“64 位”就认为等价。
+**ARM64 注意：** 截图中的 `cryptography` 源码构建 / `cffi>=2.0.0` 错误，来自原生 ARM64 依赖链缺少匹配的包或镜像同步问题。Windows 11 ARM 请优先用 `install.bat`，它自动选择 x64 Python，不要求用户安装 Rust/C++。下方手动流程要求 Python 的 `sysconfig.get_platform()` 返回 `win-amd64`，不是 `win-arm64`；`py -3` 在 ARM 机器上可能选到原生 ARM64 Python，不能仅凭“64 位”就认为等价。
 
 ### Windows 10 / 11：从安装 Python 到第一次查询
 

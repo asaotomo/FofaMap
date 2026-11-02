@@ -21,7 +21,7 @@ fofamap --version
 
 <summary>查看实操结果：macOS / Linux：四步安装</summary>
 
-![macOS / Linux：四步安装](assets/readme/2.0.2/zh/install.png)
+![macOS / Linux：四步安装](https://github.com/user-attachments/assets/be63f48b-bfdb-431e-a488-19ef96abfea7)
 
 </details>
 

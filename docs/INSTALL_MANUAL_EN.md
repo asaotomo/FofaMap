@@ -20,7 +20,7 @@ fofamap --version
 <details>
 <summary>Actual task output: macOS / Linux: four installation steps</summary>
 
-![macOS / Linux: four installation steps](assets/readme/2.0.2/en/install.png)
+![macOS / Linux: four installation steps](https://github.com/user-attachments/assets/5347e6b6-2bb4-4113-95ed-2a24cab41470)
 
 </details>
 
